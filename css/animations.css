@@ -1,0 +1,584 @@
+/* ===========================
+   Al-Asmaa — Animations
+   =========================== */
+
+/* --- Bomb SVG animation --- */
+.bomb-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bomb-svg {
+  width: 140px;
+  height: 140px;
+  transition: filter 0.3s;
+}
+
+.bomb-body {
+  fill: #2c2c2c;
+  stroke: #444;
+  stroke-width: 2;
+}
+
+.bomb-highlight {
+  fill: rgba(255, 255, 255, 0.1);
+}
+
+.bomb-fuse-line {
+  stroke: #8b6914;
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+}
+
+/* --- Fuse spark --- */
+.fuse-spark {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #ffaa00 40%, transparent 70%);
+  animation: sparkFlicker 0.15s infinite alternate;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes sparkFlicker {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.4); }
+}
+
+/* --- Fuse progress bar (mèche) --- */
+.fuse-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  margin-top: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fuse-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.1s linear, background-color 0.5s;
+  position: relative;
+}
+
+.fuse-bar-fill.safe {
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+}
+
+.fuse-bar-fill.warning {
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+}
+
+.fuse-bar-fill.danger {
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+  animation: dangerPulse 0.4s infinite alternate;
+}
+
+@keyframes dangerPulse {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+/* --- Timer text --- */
+.timer-text {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 8px;
+  transition: color 0.3s;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-text.safe { color: #2ecc71; }
+.timer-text.warning { color: #f39c12; }
+.timer-text.danger {
+  color: #e74c3c;
+  animation: timerShake 0.1s infinite alternate;
+}
+
+@keyframes timerShake {
+  0% { transform: translateX(-1px); }
+  100% { transform: translateX(1px); }
+}
+
+/* --- Bomb shake when danger --- */
+.bomb-container.danger {
+  animation: bombShake 0.08s infinite alternate;
+}
+
+@keyframes bombShake {
+  0% { transform: translate(-2px, -1px) rotate(-1deg); }
+  25% { transform: translate(2px, 1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-0.5deg); }
+  75% { transform: translate(1px, -2px) rotate(0.5deg); }
+  100% { transform: translate(-2px, 1px) rotate(-1deg); }
+}
+
+/* --- Bomb glow effect --- */
+.bomb-container.warning .bomb-svg {
+  filter: drop-shadow(0 0 10px rgba(243, 156, 18, 0.4));
+}
+
+.bomb-container.danger .bomb-svg {
+  filter: drop-shadow(0 0 20px rgba(231, 76, 60, 0.6));
+}
+
+/* --- Explosion animation --- */
+.explosion-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.explosion-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+  animation: explosionFlash 0.3s ease-out;
+}
+
+@keyframes explosionFlash {
+  0% { background: rgba(231, 76, 60, 0.8); }
+  50% { background: rgba(255, 165, 0, 0.6); }
+  100% { background: rgba(0, 0, 0, 0); }
+}
+
+/* --- Explosion particles --- */
+.particle {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 201;
+}
+
+.particle.fire {
+  background: radial-gradient(circle, #fff, #ffaa00, #ff4400);
+  animation: particleFly var(--duration) ease-out forwards;
+}
+
+.particle.smoke {
+  background: radial-gradient(circle, rgba(100,100,100,0.6), transparent);
+  width: 16px;
+  height: 16px;
+  animation: smokeFly var(--duration) ease-out forwards;
+}
+
+.particle.ember {
+  background: #ffcc00;
+  width: 4px;
+  height: 4px;
+  animation: emberFly var(--duration) ease-out forwards;
+}
+
+@keyframes particleFly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes smokeFly {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes emberFly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* --- Silent mode explosion (flash discret) --- */
+.silent-flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 200;
+  pointer-events: none;
+  animation: silentFlashAnim 0.5s ease-out forwards;
+}
+
+@keyframes silentFlashAnim {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* --- Victory animation — Mashallah calligraphy --- */
+.victory-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 71, 42, 0.95);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.victory-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.victory-text {
+  font-family: 'Amiri', serif;
+  font-size: 4rem;
+  color: var(--gold);
+  text-shadow: 0 4px 20px rgba(201, 168, 76, 0.5);
+  animation: victoryReveal 1.5s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+@keyframes victoryReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-5deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.victory-subtitle {
+  font-size: 1.2rem;
+  color: var(--cream);
+  margin-top: 16px;
+  opacity: 0;
+  animation: fadeInUp 0.8s 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Victory star particles --- */
+.victory-star {
+  position: fixed;
+  font-size: 1.5rem;
+  pointer-events: none;
+  z-index: 201;
+  animation: starFloat var(--duration) ease-out forwards;
+}
+
+@keyframes starFloat {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) rotate(360deg) scale(0);
+  }
+}
+
+/* --- Player turn highlight --- */
+.player-turn-enter {
+  animation: turnEnter 0.4s ease-out;
+}
+
+@keyframes turnEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- Correct answer flash --- */
+.correct-flash {
+  animation: correctFlash 0.6s ease-out;
+}
+
+@keyframes correctFlash {
+  0% { background: rgba(46, 204, 113, 0.3); }
+  100% { background: transparent; }
+}
+
+/* --- Wrong answer flash --- */
+.wrong-flash {
+  animation: wrongFlash 0.6s ease-out;
+}
+
+@keyframes wrongFlash {
+  0% { background: rgba(231, 76, 60, 0.3); }
+  100% { background: transparent; }
+}
+
+/* --- Name reveal animation --- */
+.name-reveal {
+  animation: nameReveal 0.5s ease-out;
+}
+
+@keyframes nameReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* --- Podium animation --- */
+.podium-place {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.podium-place.animate {
+  animation: podiumRise 0.6s ease-out forwards;
+}
+
+.podium-place.third.animate {
+  animation-delay: 0.2s;
+}
+
+.podium-place.second.animate {
+  animation-delay: 0.5s;
+}
+
+.podium-place.first.animate {
+  animation-delay: 0.8s;
+}
+
+@keyframes podiumRise {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Flashcard animations --- */
+.flashcard-slide-left {
+  animation: slideLeft 0.3s ease-out;
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.flashcard-slide-right {
+  animation: slideRight 0.3s ease-out;
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* --- Pulse animation for active elements --- */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(201, 168, 76, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
+}
+
+/* --- Swipe indicator --- */
+.swipe-indicator {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
+  font-size: 0.75rem;
+  animation: swipeHint 2s infinite;
+}
+
+@keyframes swipeHint {
+  0%, 100% { transform: translateX(-50%) translateX(0); }
+  50% { transform: translateX(-50%) translateX(15px); }
+}
+
+/* --- Score share generation --- */
+.share-canvas-generating {
+  animation: canvasGen 1s infinite;
+}
+
+@keyframes canvasGen {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* --- Badge unlock animation --- */
+.badge-unlock {
+  animation: badgeUnlock 1s ease-out;
+}
+
+@keyframes badgeUnlock {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* --- Loading dots --- */
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+}
+
+/* --- Bomb pass animation (swipe) --- */
+.bomb-pass-left {
+  animation: bombPassLeft 0.4s ease-in-out;
+}
+
+@keyframes bombPassLeft {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(-60px) rotate(-15deg); opacity: 0.5; }
+  51% { transform: translateX(60px) rotate(15deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+.bomb-pass-right {
+  animation: bombPassRight 0.4s ease-in-out;
+}
+
+@keyframes bombPassRight {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(60px) rotate(15deg); opacity: 0.5; }
+  51% { transform: translateX(-60px) rotate(-15deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+/* --- Category change animation --- */
+.category-change {
+  animation: categoryChange 0.5s ease-out;
+}
+
+@keyframes categoryChange {
+  0% { transform: rotateX(90deg); opacity: 0; }
+  100% { transform: rotateX(0deg); opacity: 1; }
+}
+
+/* --- Phase transition --- */
+.phase-transition {
+  animation: phaseTransition 1s ease-in-out;
+}
+
+@keyframes phaseTransition {
+  0% { opacity: 0; transform: scale(1.5); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 1; }
+}
+
+/* --- Consultation timer bar --- */
+.consultation-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.consultation-fill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+/* --- Touch ripple effect --- */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.3);
+  transform: scale(0);
+  animation: rippleEffect 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

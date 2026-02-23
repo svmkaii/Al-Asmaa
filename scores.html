@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a472a">
+  <title>Al-Asmaa — Scores</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="container">
+    <div class="game-header">
+      <a href="index.html" class="btn btn-small btn-secondary" style="text-decoration:none;">Retour</a>
+      <div class="game-info">Scores & Historique</div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('history', this)">Historique</button>
+      <button class="tab" onclick="showTab('stats', this)">Statistiques</button>
+    </div>
+
+    <div id="tab-history"></div>
+    <div id="tab-stats" class="hidden"></div>
+  </div>
+
+  <script src="data/names.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/bomb.js"></script>
+  <script src="js/players.js"></script>
+  <script src="js/modes.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+      renderHistory();
+      renderStats();
+    });
+
+    function showTab(tab, el) {
+      document.getElementById('tab-history').classList.toggle('hidden', tab !== 'history');
+      document.getElementById('tab-stats').classList.toggle('hidden', tab !== 'stats');
+      document.querySelectorAll('.tabs .tab').forEach(t => t.classList.remove('active'));
+      if (el) el.classList.add('active');
+    }
+
+    function renderHistory() {
+      const container = document.getElementById('tab-history');
+      const history = Modes.getGameHistory();
+
+      if (history.length === 0) {
+        container.innerHTML = '<div class="text-center mt-24" style="opacity:0.5;">Aucune partie jouée</div>';
+        return;
+      }
+
+      let html = '';
+      history.forEach((game, i) => {
+        const date = new Date(game.date);
+        const dateStr = date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+        const modeInfo = Modes.getModeInfo()[game.mode];
+        html += `<div class="score-entry">
+          <div class="score-rank">${i + 1}</div>
+          <div class="score-details">
+            <div class="score-mode">${modeInfo ? modeInfo.icon + ' ' + UI.t(modeInfo.nameKey) : game.mode}</div>
+            <div class="score-players">${game.players.map(p => p.name + ' (' + p.score + ' pts)').join(', ')}</div>
+            <div class="score-date">${dateStr}</div>
+            <div style="font-size:0.75rem;opacity:0.6;">
+              ${game.namesUsed}/99 noms — ${game.rounds} tours${game.victory ? ' — Victoire !' : ''}
+            </div>
+          </div>
+        </div>`;
+      });
+      container.innerHTML = html;
+    }
+
+    function renderStats() {
+      const container = document.getElementById('tab-stats');
+      const playerStats = Players.getAllPlayerStats();
+      const entries = Object.entries(playerStats);
+
+      if (entries.length === 0) {
+        container.innerHTML = '<div class="text-center mt-24" style="opacity:0.5;">Aucune statistique</div>';
+        return;
+      }
+
+      let html = '';
+      entries.sort((a, b) => b[1].namesSet.length - a[1].namesSet.length);
+
+      entries.forEach(([name, stats]) => {
+        const pct = Math.round((stats.namesSet.length / 99) * 100);
+        html += `<div class="card">
+          <div class="card-title">${name}</div>
+          <div style="font-size:0.9rem;margin-bottom:8px;">${stats.gamesPlayed} parties jouées — ${stats.totalNames} noms cités au total</div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width:${pct}%"></div>
+          </div>
+          <div class="progress-text">${stats.namesSet.length}/99 noms uniques maîtrisés (${pct}%)</div>
+        </div>`;
+      });
+
+      if (localStorage.getItem('al-asmaa-hafidh') === 'true') {
+        html += `<div class="text-center mt-16">
+          <div class="badge badge-unlock">
+            <span class="badge-icon">🏆</span>
+            <span>Hafidh Al-Asma — Badge débloqué !</span>
+          </div>
+        </div>`;
+      }
+
+      container.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

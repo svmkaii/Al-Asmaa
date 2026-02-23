@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a472a">
+  <title>Al-Asmaa — Apprentissage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="container">
+    <div class="game-header">
+      <a href="index.html" class="btn btn-small btn-secondary" style="text-decoration:none;">Retour</a>
+      <div class="game-info">Apprentissage — Les 99 Noms</div>
+    </div>
+
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="learn-progress" style="width:0%"></div>
+    </div>
+    <div class="progress-text" id="learn-progress-text">1/99</div>
+
+    <div id="learn-flashcard-area"></div>
+
+    <div class="btn-group mt-16">
+      <button class="btn btn-secondary" id="btn-prev" onclick="learnNav(-1)">&larr;</button>
+      <button class="btn btn-primary" id="btn-next" onclick="learnNav(1)">&rarr;</button>
+    </div>
+
+    <!-- Category filter -->
+    <div class="card mt-16">
+      <div class="card-title">Filtrer par catégorie</div>
+      <div id="category-filters" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+    </div>
+
+    <!-- Browse all names -->
+    <div class="card mt-16">
+      <div class="card-title">Tous les noms (99)</div>
+      <div id="all-names-list" style="max-height:300px;overflow-y:auto;"></div>
+    </div>
+  </div>
+
+  <script src="data/names.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/bomb.js"></script>
+  <script src="js/players.js"></script>
+  <script src="js/modes.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    let learnIndex = 0;
+    let filteredNames = [...ASMA_UL_HUSNA];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+      renderLearnPage();
+      renderCategoryFilters();
+      renderAllNames();
+    });
+
+    function renderLearnPage() {
+      const name = filteredNames[learnIndex];
+      if (!name) return;
+
+      const area = document.getElementById('learn-flashcard-area');
+      UI.renderFlashcard(area, name, 'view');
+
+      document.getElementById('learn-progress').style.width =
+        ((learnIndex + 1) / filteredNames.length * 100) + '%';
+      document.getElementById('learn-progress-text').textContent =
+        `${learnIndex + 1}/${filteredNames.length}`;
+    }
+
+    function learnNav(dir) {
+      learnIndex = Math.max(0, Math.min(filteredNames.length - 1, learnIndex + dir));
+      const area = document.getElementById('learn-flashcard-area');
+      area.classList.add(dir > 0 ? 'flashcard-slide-left' : 'flashcard-slide-right');
+      setTimeout(() => {
+        area.classList.remove('flashcard-slide-left', 'flashcard-slide-right');
+      }, 300);
+      renderLearnPage();
+    }
+
+    function renderCategoryFilters() {
+      const container = document.getElementById('category-filters');
+      let html = `<button class="btn btn-small btn-primary" onclick="filterCategory(null)">Tous</button>`;
+      Object.entries(CATEGORIES).forEach(([key, cat]) => {
+        html += `<button class="btn btn-small btn-secondary" onclick="filterCategory('${key}')">${cat.icon} ${cat.fr}</button>`;
+      });
+      container.innerHTML = html;
+    }
+
+    function filterCategory(cat) {
+      if (cat) {
+        filteredNames = ASMA_UL_HUSNA.filter(n => n.category === cat);
+      } else {
+        filteredNames = [...ASMA_UL_HUSNA];
+      }
+      learnIndex = 0;
+      renderLearnPage();
+      renderAllNames();
+    }
+
+    function renderAllNames() {
+      const container = document.getElementById('all-names-list');
+      let html = '';
+      filteredNames.forEach((name, i) => {
+        const cat = CATEGORIES[name.category];
+        html += `<div class="names-review-item" style="cursor:pointer;" onclick="learnIndex=${i};renderLearnPage();window.scrollTo(0,0);">
+          <span class="nr-arabic">${name.arabic}</span>
+          <span class="nr-trans">${name.transliteration}</span>
+          <span class="nr-meaning">${cat.icon} ${name.french}</span>
+        </div>`;
+      });
+      container.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

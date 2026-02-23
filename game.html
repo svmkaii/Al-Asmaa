@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a472a">
+  <title>Al-Asmaa — Jeu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="container">
+    <div id="page-game" class="page active">
+      <div id="game-area">
+        <div class="text-center mt-24">
+          <p style="opacity:0.7;">Veuillez lancer le jeu depuis le menu principal.</p>
+          <a href="index.html" class="btn btn-primary mt-16" style="display:inline-block;width:auto;padding:12px 32px;">
+            Menu Principal
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/names.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/bomb.js"></script>
+  <script src="js/players.js"></script>
+  <script src="js/modes.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Redirect to index if accessed directly
+      if (!window.opener && !document.referrer.includes('index.html')) {
+        // Stay on page, show redirect message
+      }
+    });
+  </script>
+</body>
+</html>
