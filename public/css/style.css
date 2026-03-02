@@ -9337,11 +9337,21 @@ input[type="search"]::placeholder {
 
 .tr-stat {
   text-align: center;
-  padding: 12px 6px 10px;
-  background: rgba(255, 255, 255, 0.015);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 14px 8px 12px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.025) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius);
   transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.tr-stat::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 20%; right: 20%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+  border-radius: 1px;
 }
 
 .tr-stat:hover {
@@ -9425,6 +9435,27 @@ input[type="search"]::placeholder {
 }
 .tr-stat-num.gold { color: var(--gold); }
 .tr-stat-num.ruby { color: var(--ruby); }
+
+/* ---- Secondary info (score & streak) ---- */
+.tr-progress-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+.tr-secondary-item {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.tr-secondary-item strong {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
 
 /* ---- Continue button ---- */
 .tr-continue-btn {

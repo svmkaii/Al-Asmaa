@@ -10,6 +10,7 @@
   let players = [];
   let usedNames = [];
   let gameState = null;
+  let gameConfig = {};
 
   const pages = {
     lobby: document.getElementById('spectatorLobby'),
@@ -34,6 +35,7 @@
     socket.emit('join-spectator', { code: roomCode }, (response) => {
       if (response.success) {
         players = response.players;
+        gameConfig = response.config || {};
         renderLobbyPlayers();
 
         if (response.state === 'playing') {
@@ -59,17 +61,65 @@
   }
 
   function setupSocketEvents() {
-    // Joueur rejoint (lobby)
+    // --- Disconnect / reconnect handling ---
+    let disconnectTimer = null;
+
+    socket.on('disconnect', () => {
+      Bomb.showToast('Connexion perdue...', 'warning');
+      disconnectTimer = setTimeout(() => {
+        window.location.href = '/';
+      }, 60000);
+    });
+
+    socket.on('connect', () => {
+      if (disconnectTimer) {
+        clearTimeout(disconnectTimer);
+        disconnectTimer = null;
+        // Re-join as spectator after reconnection
+        if (roomCode) {
+          socket.emit('join-spectator', { code: roomCode }, (response) => {
+            if (response && response.success) {
+              players = response.players;
+              gameConfig = response.config || gameConfig;
+              if (response.state === 'playing') {
+                gameState = response.game;
+                showPage('game');
+                renderGamePlayers();
+              } else {
+                renderLobbyPlayers();
+              }
+              Bomb.showToast('Reconnecté !', 'correct');
+            }
+          });
+        }
+      }
+    });
+
+    // --- Lobby events ---
     socket.on('player-joined', (data) => {
       players = data.players;
       renderLobbyPlayers();
-      document.getElementById('specLobbyCount').textContent = data.count;
     });
 
-    // Partie lancée
+    socket.on('player-left', (data) => {
+      players = data.players;
+      renderLobbyPlayers();
+    });
+
+    socket.on('player-ready-changed', (data) => {
+      players = data.players;
+      renderLobbyPlayers();
+    });
+
+    socket.on('config-updated', (cfg) => {
+      gameConfig = cfg;
+    });
+
+    // --- Game events ---
     socket.on('game-started', (data) => {
       players = data.players;
       gameState = data.game;
+      gameConfig = data.config || gameConfig;
       usedNames = [];
 
       showPage('game');
@@ -78,7 +128,6 @@
       updateNamesCount();
     });
 
-    // Résultat réponse
     socket.on('answer-result', (data) => {
       if (data.result === 'correct') {
         Bomb.showFeedback('correct');
@@ -91,6 +140,7 @@
         }
 
         if (data.usedNames) usedNames = data.usedNames;
+        if (data.players) players = data.players;
         if (data.nextPlayer) updateActivePlayer(data.nextPlayer);
         updateNamesCount();
         renderGamePlayers();
@@ -105,34 +155,45 @@
       }
     });
 
-    // Bombe explose
     socket.on('bomb-exploded', (data) => {
       Bomb.triggerExplosionAnimation();
       Bomb.playExplosion();
+      // Update local player data
+      const bombed = players.find(p => p.id === data.player.id);
+      if (bombed) {
+        bombed.lives = data.lives;
+        if (data.eliminated) bombed.eliminated = true;
+      }
       renderGamePlayers();
     });
 
-    // Joueur éliminé
     socket.on('player-eliminated', (data) => {
       players = data.players;
       Bomb.showToast(`${data.player.name} est éliminé !`, 'error');
       renderGamePlayers();
     });
 
-    // Nouveau tour
     socket.on('new-round', (data) => {
       players = data.players;
-      updateActivePlayer(data.currentPlayer);
+      if (data.currentPlayer) {
+        updateActivePlayer(data.currentPlayer);
+        // Update gameState currentPlayerIndex
+        if (gameState) {
+          gameState.currentPlayerIndex = players.findIndex(p => p.id === data.currentPlayer.id);
+        }
+      }
       renderGamePlayers();
     });
 
-    // Tous les noms cités
+    socket.on('bomb-passed', (data) => {
+      // Visual update only — spectator doesn't control timer
+    });
+
     socket.on('all-names-complete', () => {
       Bomb.showConfetti();
       Bomb.showToast('Tous les 99 noms !', 'correct');
     });
 
-    // Fin de partie
     socket.on('game-over', (data) => {
       showPage('results');
       AudioFX.playVictory();
@@ -146,10 +207,35 @@
       renderNamesGrid(data.usedNames);
     });
 
+    // Player left during game
+    socket.on('player-left-game', (data) => {
+      players = data.players;
+      Bomb.showToast(`${data.playerName} a quitté`, 'warning');
+      renderGamePlayers();
+    });
+
+    // Host left during game
+    socket.on('host-left-game', () => {
+      Bomb.showToast('L\'hôte a quitté la partie', 'error');
+      setTimeout(() => { window.location.href = '/'; }, 2500);
+    });
+
+    // Replay — back to lobby
+    socket.on('replay-lobby', (data) => {
+      players = data.players;
+      gameConfig = data.config || gameConfig;
+      gameState = null;
+      usedNames = [];
+      showPage('lobby');
+      renderLobbyPlayers();
+      Bomb.showToast('Nouvelle partie !', 'correct');
+    });
+
     // Joueur kick
     socket.on('player-kicked', (data) => {
       players = data.players;
       renderGamePlayers();
+      renderLobbyPlayers();
       Bomb.showToast(`${data.kickedPlayer.name} a été exclu`, 'warning');
     });
 
@@ -157,6 +243,15 @@
     socket.on('player-disconnected', (data) => {
       players = data.players;
       renderGamePlayers();
+    });
+
+    // Pause
+    socket.on('game-paused', (data) => {
+      if (data.paused) {
+        Bomb.showToast('Partie en pause', 'info');
+      } else {
+        Bomb.showToast('Reprise !', 'info');
+      }
     });
 
     let hostCountdown = null;
@@ -225,7 +320,8 @@
       const isActive = gameState && players[gameState.currentPlayerIndex] &&
                        players[gameState.currentPlayerIndex].id === p.id;
 
-      const hearts = Array(3).fill(0).map((_, i) =>
+      const maxLives = (gameConfig && gameConfig.lives) || 3;
+      const hearts = Array(maxLives).fill(0).map((_, i) =>
         `<svg class="life-icon ${i < p.lives ? '' : 'lost'}" viewBox="0 0 24 24">
           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
         </svg>`

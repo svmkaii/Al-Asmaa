@@ -394,7 +394,7 @@
       if (socket.connected) {
         tryReconnect();
       } else {
-        socket.on('connect', tryReconnect);
+        socket.once('connect', tryReconnect);
       }
     }
 
@@ -479,13 +479,27 @@
     var existing = document.querySelector('.classic-leave-popup');
     if (existing) existing.remove();
 
-    var initial = name ? name.charAt(0).toUpperCase() : '?';
+    var safeName = name || '';
+    var initial = safeName ? safeName.charAt(0).toUpperCase() : '?';
     var label = isDisconnect ? 's\u2019est déconnecté' : 'a quitté';
     var popup = document.createElement('div');
     popup.className = 'classic-leave-popup';
-    popup.innerHTML =
-      '<div class="classic-leave-popup-avatar" style="background:' + (color || 'var(--gold)') + '">' + initial + '</div>' +
-      '<div class="classic-leave-popup-text"><span class="classic-leave-popup-name">' + name + '</span> ' + label + '</div>';
+
+    var avatar = document.createElement('div');
+    avatar.className = 'classic-leave-popup-avatar';
+    avatar.style.background = color || 'var(--gold)';
+    avatar.textContent = initial;
+
+    var text = document.createElement('div');
+    text.className = 'classic-leave-popup-text';
+    var nameSpan = document.createElement('span');
+    nameSpan.className = 'classic-leave-popup-name';
+    nameSpan.textContent = safeName;
+    text.appendChild(nameSpan);
+    text.appendChild(document.createTextNode(' ' + label));
+
+    popup.appendChild(avatar);
+    popup.appendChild(text);
     document.body.appendChild(popup);
 
     requestAnimationFrame(function() { popup.classList.add('popup-in'); });
@@ -1438,19 +1452,54 @@
     socket.on('disconnect', () => {
       const overlay = document.getElementById('disconnectOverlay');
       if (overlay) overlay.classList.remove('hidden');
+      Bomb.stop();
+      // Match server's 60s host disconnect timeout
       disconnectTimer = setTimeout(() => {
         Bomb.showToast('Connexion perdue', 'error');
+        gameState = null;
+        isMyTurn = false;
+        activePlayerId = null;
         history.replaceState({}, '', '/');
         showPage('home');
         if (overlay) overlay.classList.add('hidden');
-      }, 15000);
+      }, 60000);
     });
 
     socket.on('connect', () => {
       const overlay = document.getElementById('disconnectOverlay');
       if (overlay && !overlay.classList.contains('hidden')) {
         overlay.classList.add('hidden');
-        Bomb.showToast('Reconnecté !', 'correct');
+        // Auto-reconnect as host if we have a room code
+        if (roomCode) {
+          socket.emit('host-reconnect', { code: roomCode }, (response) => {
+            if (response && response.success) {
+              players = response.players || [];
+              hostPlayer = players.find(p => p.isHost) || players[0];
+              if (response.state === 'playing' && response.game) {
+                gameState = response.game;
+                const currentPlayer = players[response.game.currentPlayerIndex] || null;
+                activePlayerId = currentPlayer ? currentPlayer.id : null;
+                isMyTurn = currentPlayer && hostPlayer && currentPlayer.id === hostPlayer.id && !hostPlayer.eliminated;
+                renderHostArena();
+                updateHostControls(currentPlayer);
+                updateTurnIndicator(currentPlayer);
+                renderScoreboard('hostScoreboard', players, hostPlayer ? hostPlayer.id : null);
+                const elapsed = (Date.now() - response.game.timerStart) / 1000;
+                const remaining = Math.max(1, response.game.timerDuration - elapsed);
+                Bomb.start(remaining, () => { socket.emit('bomb-explode'); });
+              } else {
+                renderLobbyPlayers();
+              }
+              Bomb.showToast('Reconnecté !', 'correct');
+            } else {
+              Bomb.showToast('Salon perdu', 'warning');
+              history.replaceState({}, '', '/');
+              showPage('home');
+            }
+          });
+        } else {
+          Bomb.showToast('Reconnecté !', 'correct');
+        }
       }
       if (disconnectTimer) {
         clearTimeout(disconnectTimer);
@@ -2186,7 +2235,10 @@
     // Animate banner (with tie awareness)
     renderResultsBanner('resultsBanner', 'resultsBannerIcon', 'resultsBannerTitle', 'resultsBannerRank', 'resultsBannerParticles', 'resultsGlow', myRank, isTie);
 
-    Bomb.showConfetti();
+    // Confetti for victory or tie only
+    if (isTie || myRank === 0) {
+      Bomb.showConfetti();
+    }
 
     // Podium
     renderPodium(data.ranking, 'podiumContainer', isTie);
@@ -4384,9 +4436,6 @@
         <div class="writing-card">
           <div class="writing-prompt-header">
             <div class="writing-prompt-arabic" lang="ar" dir="rtl">${name.arabic}</div>
-            <button class="writing-speak-btn" id="writingSpeakBtn" aria-label="Écouter">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/></svg>
-            </button>
           </div>
           <div class="writing-prompt-meaning">${name.french}</div>
           <div class="writing-input-wrap">
@@ -4414,12 +4463,6 @@
     const checkBtn = document.getElementById('btnWritingCheck');
     const feedback = document.getElementById('writingFeedback');
     const hintBtn = document.getElementById('btnWritingHint');
-    const speakBtn = document.getElementById('writingSpeakBtn');
-
-    // Speak button
-    speakBtn.addEventListener('click', () => {
-      speakArabic(name.arabic);
-    });
 
     // Virtual keyboard
     document.getElementById('writingKeyboard').addEventListener('click', (e) => {

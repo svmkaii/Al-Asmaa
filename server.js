@@ -156,10 +156,10 @@ setInterval(() => {
       delete rooms[code]; delete qrCache[code];
       console.log(`[Cleanup] Room ${code} supprimée (lobby inactif >1h)`);
     }
-    // Partie finished depuis >30min ou playing depuis >3h (zombie)
-    else if (room.state === 'finished' && age > 30 * 60 * 1000) {
+    // Partie ended/finished depuis >30min ou playing depuis >3h (zombie)
+    else if ((room.state === 'finished' || room.state === 'ended') && age > 30 * 60 * 1000) {
       delete rooms[code]; delete qrCache[code];
-      console.log(`[Cleanup] Room ${code} supprimée (finished >30min)`);
+      console.log(`[Cleanup] Room ${code} supprimée (${room.state} >30min)`);
     }
     else if (room.state === 'playing' && age > 3 * 60 * 60 * 1000) {
       io.to(code).emit('room-closed');
@@ -230,7 +230,7 @@ app.get('/join/:code', (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate');
   const code = (req.params.code || '').toUpperCase().trim();
   const room = rooms[code];
-  if (!room || room.state === 'finished') {
+  if (!room || room.state === 'finished' || room.state === 'ended') {
     return res.status(404).sendFile(path.join(__dirname, 'public', 'room-not-found.html'));
   }
   res.sendFile(path.join(__dirname, 'public', 'player.html'));
@@ -241,7 +241,7 @@ app.get('/lobby/:code', (req, res) => {
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate');
   const code = (req.params.code || '').toUpperCase().trim();
   const room = rooms[code];
-  if (!room || room.state === 'finished') {
+  if (!room || room.state === 'finished' || room.state === 'ended') {
     return res.status(404).sendFile(path.join(__dirname, 'public', 'room-not-found.html'));
   }
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -275,7 +275,7 @@ app.get('/api/qrcode/:code', async (req, res) => {
 app.get('/api/check-room/:code', (req, res) => {
   const code = (req.params.code || '').toUpperCase().trim();
   const room = rooms[code];
-  if (room && room.state !== 'finished') {
+  if (room && room.state !== 'finished' && room.state !== 'ended') {
     return res.json({
       exists: true,
       gameType: 'classic',
@@ -1574,7 +1574,7 @@ io.on('connection', (socket) => {
       visibility: data.visibility || 'private', // 'public' | 'private'
       hostName: hostName,
       maxPlayers: Math.min(Math.max(parseInt(data.maxPlayers) || 8, 2), 8),
-      kickedIds: [],
+      kickedNames: [],
       config: {
         difficulty: data.difficulty || 'intermediate',
         lives: data.lives || 3,
@@ -1689,7 +1689,7 @@ io.on('connection', (socket) => {
       return callback({ success: false, message: 'Room introuvable' });
     }
     room._lastActivity = Date.now();
-    if (room.kickedIds.includes(socket.id)) {
+    if (room.kickedNames.includes(name)) {
       return callback({ success: false, message: 'Tu as été exclu de cette room' });
     }
 
@@ -1801,6 +1801,9 @@ io.on('connection', (socket) => {
     const code = socket.roomCode;
     const room = rooms[code];
     if (!room || room.host !== socket.id) return;
+
+    // Clear bomb timer if game is in progress
+    clearServerBombTimer(room);
 
     // Annuler le timer de suppression s'il existe
     if (room._destroyTimer) {
@@ -1971,6 +1974,7 @@ io.on('connection', (socket) => {
 
     if (validation.valid && validation.nameId) {
       // Réponse correcte validée par le serveur
+      clearServerBombTimer(room);
       room.game._lastAnswerTime = Date.now();
       room.game.usedNames.push(validation.nameId);
       currentPlayer.namesUsed.push(validation.nameId);
@@ -1994,6 +1998,11 @@ io.on('connection', (socket) => {
       // Passer au joueur suivant
       nextPlayer(room);
 
+      // Nouveau timer pour le prochain joueur
+      const timer = room.game.timerConfig;
+      room.game.timerDuration = randomBetween(timer.min, timer.max);
+      room.game.timerStart = Date.now();
+
       io.to(socket.roomCode).emit('answer-result', {
         playerId: socket.id,
         playerName: currentPlayer.name,
@@ -2008,6 +2017,7 @@ io.on('connection', (socket) => {
         players: room.players
       });
 
+      startServerBombTimer(room);
       callback && callback({ success: true, result: 'correct' });
     } else if (validation.message === 'already-used') {
       // Nom déjà cité
@@ -2097,6 +2107,8 @@ io.on('connection', (socket) => {
   socket.on('bomb-pass', () => {
     const room = rooms[socket.roomCode];
     if (!room || room.state !== 'playing') return;
+    // Only the host can trigger bomb-pass
+    if (room.host !== socket.id) return;
     clearServerBombTimer(room);
 
     const timer = room.game.timerConfig;
@@ -2149,17 +2161,17 @@ io.on('connection', (socket) => {
     const targetPlayer = room.players.find(p => p.id === targetId);
     if (!targetPlayer) return;
 
-    // Ajouter aux bannis
-    room.kickedIds.push(targetId);
+    // Ajouter aux bannis (par nom pour persister après reconnexion)
+    room.kickedNames.push(targetPlayer.name);
 
     // Si en jeu, ajuster le currentPlayerIndex avant de retirer le joueur
+    let wasCurrentTurn = false;
     if (room.state === 'playing' && room.game) {
+      clearServerBombTimer(room);
       const kickedIndex = room.players.indexOf(targetPlayer);
+      wasCurrentTurn = kickedIndex === room.game.currentPlayerIndex;
       if (kickedIndex !== -1 && kickedIndex < room.game.currentPlayerIndex) {
         room.game.currentPlayerIndex--;
-      } else if (kickedIndex === room.game.currentPlayerIndex) {
-        // C'est le tour du joueur kick — passer au suivant après retrait
-        room.game.currentPlayerIndex = Math.min(room.game.currentPlayerIndex, room.players.length - 2);
       }
     }
 
@@ -2167,24 +2179,34 @@ io.on('connection', (socket) => {
     room.players = room.players.filter(p => p.id !== targetId);
 
     // Ajuster l'index si nécessaire après retrait
-    if (room.state === 'playing' && room.game) {
+    if (room.state === 'playing' && room.game && room.players.length > 0) {
       if (room.game.currentPlayerIndex >= room.players.length) {
         room.game.currentPlayerIndex = 0;
       }
-      // Trouver le prochain joueur actif
-      nextPlayer(room);
-      // Si c'était son tour, relancer un round
-      const timer = room.game.timerConfig;
-      room.game.timerDuration = randomBetween(timer.min, timer.max);
-      room.game.timerStart = Date.now();
 
-      io.to(socket.roomCode).emit('new-round', {
-        currentPlayer: room.players[room.game.currentPlayerIndex],
-        round: room.game.round,
-        timerDuration: room.game.timerDuration,
-        players: room.players,
-        reason: 'kick'
-      });
+      // Vérifier fin de partie
+      const alivePlayers = room.players.filter(p => !p.eliminated);
+      if (alivePlayers.length <= 1) {
+        endGame(room);
+      } else {
+        // Trouver le prochain joueur actif (skip eliminated/disconnected)
+        nextPlayer(room);
+        // Relancer un round seulement si c'était le tour du joueur kick
+        if (wasCurrentTurn) {
+          const timer = room.game.timerConfig;
+          room.game.timerDuration = randomBetween(timer.min, timer.max);
+          room.game.timerStart = Date.now();
+          room.game.round++;
+        }
+        io.to(socket.roomCode).emit('new-round', {
+          currentPlayer: room.players[room.game.currentPlayerIndex],
+          round: room.game.round,
+          timerDuration: room.game.timerDuration,
+          players: room.players,
+          reason: 'kick'
+        });
+        startServerBombTimer(room);
+      }
     }
 
     // Notifier le joueur kick
@@ -2235,6 +2257,7 @@ io.on('connection', (socket) => {
 
       // Si en jeu et c'est le tour de l'hôte, passer au suivant
       if (room.state === 'playing' && room.game) {
+        clearServerBombTimer(room);
         const currentPlayer = room.players[room.game.currentPlayerIndex];
         if (currentPlayer && currentPlayer.id === socket.id) {
           nextPlayer(room);
@@ -2250,6 +2273,7 @@ io.on('connection', (socket) => {
             reason: 'host-disconnect'
           });
         }
+        startServerBombTimer(room);
       }
 
       // Supprimer la room après 60s si l'hôte ne revient pas
@@ -2345,6 +2369,7 @@ io.on('connection', (socket) => {
     // Si c'est l'hôte → détruire la room et notifier tout le monde
     if (socket.isHost) {
       console.log(`[Host Leave] L'hôte a quitté la room ${code} — suppression`);
+      clearServerBombTimer(room);
       // D'abord retirer l'hôte de la room pour qu'il ne reçoive plus d'événements
       socket.leave(code);
       socket.roomCode = null;
@@ -2376,6 +2401,11 @@ io.on('connection', (socket) => {
     const playerName = player.name;
     const wasCurrentTurn = room.players[room.game.currentPlayerIndex]?.id === socket.id;
 
+    // Clear bomb timer if it was the leaving player's turn
+    if (wasCurrentTurn) {
+      clearServerBombTimer(room);
+    }
+
     // Retirer le joueur
     room.players = room.players.filter(p => p.id !== socket.id);
     socket.leave(code);
@@ -2403,11 +2433,15 @@ io.on('connection', (socket) => {
       }
 
       if (wasCurrentTurn) {
+        // Skip eliminated/disconnected players
         let tries = 0;
-        while (room.players[room.game.currentPlayerIndex]?.eliminated && tries < room.players.length) {
+        while ((room.players[room.game.currentPlayerIndex]?.eliminated || !room.players[room.game.currentPlayerIndex]?.connected) && tries < room.players.length) {
           room.game.currentPlayerIndex = (room.game.currentPlayerIndex + 1) % room.players.length;
           tries++;
         }
+        const timer = room.game.timerConfig;
+        room.game.timerDuration = randomBetween(timer.min, timer.max);
+        room.game.timerStart = Date.now();
         room.game.round++;
         io.to(code).emit('new-round', {
           currentPlayer: room.players[room.game.currentPlayerIndex],
@@ -2416,6 +2450,7 @@ io.on('connection', (socket) => {
           players: room.players,
           reason: 'player-left'
         });
+        startServerBombTimer(room);
       }
     }
   });
@@ -2436,6 +2471,16 @@ io.on('connection', (socket) => {
       return;
     }
 
+    // Guard: only allow replay from ended state
+    if (room.state !== 'ended') {
+      console.log(`[Replay] Room ${code} state=${room.state}, pas ended — ignoré`);
+      socket.emit('replay-error', { message: 'La partie n\'est pas terminée' });
+      return;
+    }
+
+    // Clear any remaining bomb timer
+    clearServerBombTimer(room);
+
     // Reset la room en lobby
     room.state = 'lobby';
     room.game = null;
@@ -2445,6 +2490,7 @@ io.on('connection', (socket) => {
     room.players = room.players.filter(p => p.connected !== false).map(p => ({
       ...p,
       ready: p.isHost ? true : false,
+      lives: room.config.lives,
       score: 0,
       namesUsed: [],
       eliminated: false,

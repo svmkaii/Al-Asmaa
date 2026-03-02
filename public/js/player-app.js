@@ -26,13 +26,27 @@
     var existing = document.querySelector('.classic-leave-popup');
     if (existing) existing.remove();
 
-    var initial = name ? name.charAt(0).toUpperCase() : '?';
+    var safeName = name || '';
+    var initial = safeName ? safeName.charAt(0).toUpperCase() : '?';
     var label = isDisconnect ? 's\u2019est déconnecté' : 'a quitté';
     var popup = document.createElement('div');
     popup.className = 'classic-leave-popup';
-    popup.innerHTML =
-      '<div class="classic-leave-popup-avatar" style="background:' + (color || 'var(--gold)') + '">' + initial + '</div>' +
-      '<div class="classic-leave-popup-text"><span class="classic-leave-popup-name">' + name + '</span> ' + label + '</div>';
+
+    var avatar = document.createElement('div');
+    avatar.className = 'classic-leave-popup-avatar';
+    avatar.style.background = color || 'var(--gold)';
+    avatar.textContent = initial;
+
+    var text = document.createElement('div');
+    text.className = 'classic-leave-popup-text';
+    var nameSpan = document.createElement('span');
+    nameSpan.className = 'classic-leave-popup-name';
+    nameSpan.textContent = safeName;
+    text.appendChild(nameSpan);
+    text.appendChild(document.createTextNode(' ' + label));
+
+    popup.appendChild(avatar);
+    popup.appendChild(text);
     document.body.appendChild(popup);
 
     requestAnimationFrame(function() { popup.classList.add('popup-in'); });
@@ -453,10 +467,11 @@
     socket.on('disconnect', () => {
       const overlay = document.getElementById('disconnectOverlay');
       if (overlay) overlay.classList.remove('hidden');
-      // Si pas reconnecté en 15s, rediriger
+      Bomb.stop();
+      // Match server's 60s grace period (30s player elimination + margin)
       disconnectTimer = setTimeout(() => {
         window.location.href = '/?join=expired';
-      }, 15000);
+      }, 60000);
     });
 
     socket.on('connect', () => {
@@ -464,6 +479,26 @@
       if (overlay && !overlay.classList.contains('hidden')) {
         overlay.classList.add('hidden');
         Bomb.showToast('Reconnecté !', 'correct');
+        // Re-join the room after reconnection (new socket ID)
+        if (roomCode && myPlayer) {
+          socket.emit('join-room', { code: roomCode, name: myPlayer.name }, (response) => {
+            if (response && response.success) {
+              myPlayer = response.player;
+              players = response.players;
+              if (response.state === 'playing' && response.game) {
+                gameState = response.game;
+                activePlayerId = response.game.currentPlayerIndex != null
+                  ? players[response.game.currentPlayerIndex]?.id : null;
+                isMyTurn = activePlayerId === myPlayer.id && !myPlayer.eliminated;
+                updateGameUI();
+                renderPlayerArena();
+                renderScoreboard('playerScoreboard', players, myPlayer.id);
+              } else {
+                renderLobbyPlayers();
+              }
+            }
+          });
+        }
       }
       if (disconnectTimer) {
         clearTimeout(disconnectTimer);
@@ -684,9 +719,13 @@
       }, 950);
     });
 
-    // Bombe passée (reset timer)
+    // Bombe passée (reset timer visuel)
     socket.on('bomb-passed', (data) => {
-      // Le timer visuel est géré par le host
+      Bomb.stop();
+      Bomb.resetDisplay();
+      if (data && data.timerDuration) {
+        Bomb.start(data.timerDuration, null);
+      }
     });
 
     // Tous les noms complétés
@@ -738,6 +777,7 @@
     let hostCountdown = null;
 
     socket.on('host-disconnected', (data) => {
+      Bomb.stop();
       const seconds = (data && data.timeout) || 60;
       let remaining = seconds;
       Bomb.showToast(`L'hôte s'est déconnecté — fermeture dans ${remaining}s`, 'warning');
@@ -793,13 +833,9 @@
 
     // Player typing (from active player)
     socket.on('player-typing', (data) => {
-      // Only accept typing from the active player
-      if (data.playerId && data.playerId !== myPlayer.id) {
+      // Only accept typing from the active player — don't override activePlayerId
+      if (data.playerId && data.playerId === activePlayerId && data.playerId !== myPlayer.id) {
         currentTypingText = data.text || '';
-        // Sync activePlayerId if server says this player is typing
-        if (data.playerId !== activePlayerId) {
-          activePlayerId = data.playerId;
-        }
         updatePlayerTypingDisplay();
       }
     });
@@ -868,13 +904,10 @@
     // Animate banner (with tie awareness)
     renderResultsBanner('playerResultsBanner', 'playerResultsBannerIcon', 'playerResultsBannerTitle', 'playerResultsBannerRank', 'playerResultsBannerParticles', 'playerResultsGlow', myRank, isTie);
 
-    // Confetti only for victory (not tie)
+    // Confetti for victory or tie only, not for defeat
     if (!isTie && myRank === 0) {
       Bomb.showConfetti();
     } else if (isTie) {
-      // Subtle confetti for tie
-      Bomb.showConfetti();
-    } else {
       Bomb.showConfetti();
     }
 
