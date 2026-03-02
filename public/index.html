@@ -106,10 +106,10 @@
   <link rel="icon" type="image/svg+xml" href="/contenu/al_asma_logo_icon.svg">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=18.0">
+  <link rel="stylesheet" href="/css/style.css?v=17.1">
   <link rel="stylesheet" href="/css/animations.css?v=15.0">
   <link rel="stylesheet" href="/css/modes.css?v=16.0">
-  <link rel="stylesheet" href="/css/mini-games.css?v=15.6">
+  <link rel="stylesheet" href="/css/mini-games.css?v=15.5">
   <link rel="stylesheet" href="/css/ilm-quest.css?v=1.1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap">
 </head>
@@ -511,78 +511,6 @@
     </div>
   </div>
 
-  <!-- ==================== REPORT MODAL ==================== -->
-  <div class="modal-overlay hidden" id="reportModal">
-    <div class="modal-card report-card">
-      <button class="report-close" id="btnCloseReport" type="button" aria-label="Fermer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="report-header">
-        <div class="report-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-        </div>
-        <div class="report-title">Signaler un probl&egrave;me</div>
-        <div class="report-subtitle">Aide-nous &agrave; am&eacute;liorer Al-Asmaa</div>
-      </div>
-
-      <form id="reportForm" autocomplete="off">
-        <div class="report-field">
-          <label class="report-label">Type de signalement</label>
-          <div class="report-type-grid">
-            <label class="report-type-option">
-              <input type="radio" name="reportType" value="bug" checked>
-              <span class="report-type-card">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l1.88 1.88M14.12 3.88L16 2M9 7.13v-1a3 3 0 0 1 6 0v1M12 20c-3.3 0-6-2.7-6-6v-3a6 6 0 0 1 12 0v3c0 3.3-2.7 6-6 6zM5 11H2M22 11h-3M5 16H3M21 16h-2"/></svg>
-                <span>Bug technique</span>
-              </span>
-            </label>
-            <label class="report-type-option">
-              <input type="radio" name="reportType" value="content">
-              <span class="report-type-card">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="6" x2="12" y2="12"/><circle cx="12" cy="15" r="0.5" fill="currentColor"/></svg>
-                <span>Erreur de contenu</span>
-              </span>
-            </label>
-            <label class="report-type-option">
-              <input type="radio" name="reportType" value="suggestion">
-              <span class="report-type-card">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><polyline points="18 14 12 8 6 14"/></svg>
-                <span>Suggestion</span>
-              </span>
-            </label>
-          </div>
-        </div>
-
-        <div class="report-field">
-          <label class="report-label" for="reportPage">Page / Section concern&eacute;e <span class="report-optional">(optionnel)</span></label>
-          <input type="text" class="input-field" id="reportPage" placeholder="Ex : Encyclop&eacute;die, Quiz, Nom Ar-Rahman..." maxlength="100">
-        </div>
-
-        <div class="report-field">
-          <label class="report-label" for="reportDesc">Description</label>
-          <textarea class="input-field report-textarea" id="reportDesc" placeholder="D&eacute;cris le probl&egrave;me ou l'erreur que tu as rencontr&eacute;(e)..." maxlength="1000" rows="4" required></textarea>
-          <div class="report-char-count"><span id="reportCharCount">0</span> / 1000</div>
-        </div>
-
-        <button type="submit" class="btn btn-primary report-submit" id="btnReportSubmit" disabled>
-          <span class="report-submit-text">Envoyer le signalement</span>
-          <span class="report-submit-loader hidden">
-            <svg class="report-spinner" width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="31.4" stroke-dashoffset="10" stroke-linecap="round"/></svg>
-          </span>
-        </button>
-      </form>
-
-      <div class="report-success hidden" id="reportSuccess">
-        <div class="report-success-icon">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <div class="report-success-title">Jazak Allahu khayran</div>
-        <div class="report-success-desc">Ton signalement a bien &eacute;t&eacute; envoy&eacute;. On s'en occupe in sha Allah.</div>
-        <button type="button" class="btn btn-secondary" id="btnReportDone">Fermer</button>
-      </div>
-    </div>
-  </div>
-
   <!-- ==================== JOIN MODAL ==================== -->
   <div class="modal-overlay hidden" id="joinModal">
     <div class="modal-card">
@@ -597,157 +525,49 @@
     <!-- ==================== HOME PAGE ==================== -->
     <div class="page active" id="pageHome">
       <div class="container home-container">
-
-        <!-- Floating orbs -->
-        <div class="home-orbs" aria-hidden="true">
-          <div class="home-orb home-orb-1"></div>
-          <div class="home-orb home-orb-2"></div>
-          <div class="home-orb home-orb-3"></div>
-        </div>
-
-        <!-- Hero premium -->
-        <div class="hero hero-compact" id="heroSection">
+        <!-- Hero compact -->
+        <div class="hero hero-compact">
           <div class="hero-glow" aria-hidden="true"></div>
-
-          <!-- Geometric ornament ring -->
-          <div class="hero-ring" aria-hidden="true">
-            <svg viewBox="0 0 200 200" class="hero-ring-svg">
-              <circle cx="100" cy="100" r="90" fill="none" stroke="url(#heroRingGrad)" stroke-width="0.5" opacity="0.3"/>
-              <circle cx="100" cy="100" r="80" fill="none" stroke="url(#heroRingGrad)" stroke-width="0.3" opacity="0.15" stroke-dasharray="4 8"/>
-              <circle cx="100" cy="100" r="70" fill="none" stroke="url(#heroRingGrad)" stroke-width="0.3" opacity="0.1" stroke-dasharray="2 12"/>
-              <g opacity="0.4">
-                <circle cx="100" cy="10" r="1.5" fill="#d4a24c"/>
-                <circle cx="163.6" cy="36.4" r="1.5" fill="#d4a24c"/>
-                <circle cx="190" cy="100" r="1.5" fill="#d4a24c"/>
-                <circle cx="163.6" cy="163.6" r="1.5" fill="#d4a24c"/>
-                <circle cx="100" cy="190" r="1.5" fill="#d4a24c"/>
-                <circle cx="36.4" cy="163.6" r="1.5" fill="#d4a24c"/>
-                <circle cx="10" cy="100" r="1.5" fill="#d4a24c"/>
-                <circle cx="36.4" cy="36.4" r="1.5" fill="#d4a24c"/>
-              </g>
-              <defs>
-                <linearGradient id="heroRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#FFE7A3"/>
-                  <stop offset="50%" stop-color="#d4a24c"/>
-                  <stop offset="100%" stop-color="#a67c2e"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
           <div class="hero-arabic" id="heroArabic">الأسماء</div>
           <div class="hero-sub">
-            <svg class="hero-ornament hero-ornament-left" viewBox="0 0 60 12" width="60" height="12" aria-hidden="true">
-              <path d="M58 6 C50 6 46 2 38 2 C30 2 26 6 18 6 C12 6 8 5 4 4" stroke="var(--gold)" stroke-width="0.7" fill="none" opacity="0.5"/>
+            <svg class="hero-ornament hero-ornament-left" viewBox="0 0 40 12" width="40" height="12" aria-hidden="true">
+              <path d="M38 6 C32 6 30 2 24 2 C18 2 16 6 10 6 C7 6 5 5 3 4" stroke="var(--gold)" stroke-width="0.8" fill="none" opacity="0.5"/>
               <circle cx="2" cy="4" r="1.5" fill="var(--gold)" opacity="0.4"/>
-              <circle cx="58" cy="6" r="1" fill="var(--gold)" opacity="0.6"/>
-              <path d="M58 6 C50 6 46 10 38 10 C30 10 26 6 18 6" stroke="var(--gold)" stroke-width="0.4" fill="none" opacity="0.25"/>
+              <circle cx="38" cy="6" r="1" fill="var(--gold)" opacity="0.6"/>
+              <path d="M38 6 C32 6 30 10 24 10 C18 10 16 6 10 6" stroke="var(--gold)" stroke-width="0.5" fill="none" opacity="0.3"/>
             </svg>
             <span class="hero-tagline">Les 99 Noms d'Allah</span>
-            <svg class="hero-ornament hero-ornament-right" viewBox="0 0 60 12" width="60" height="12" aria-hidden="true">
-              <path d="M2 6 C10 6 14 2 22 2 C30 2 34 6 42 6 C48 6 52 5 56 4" stroke="var(--gold)" stroke-width="0.7" fill="none" opacity="0.5"/>
-              <circle cx="58" cy="4" r="1.5" fill="var(--gold)" opacity="0.4"/>
+            <svg class="hero-ornament hero-ornament-right" viewBox="0 0 40 12" width="40" height="12" aria-hidden="true">
+              <path d="M2 6 C8 6 10 2 16 2 C22 2 24 6 30 6 C33 6 35 5 37 4" stroke="var(--gold)" stroke-width="0.8" fill="none" opacity="0.5"/>
+              <circle cx="38" cy="4" r="1.5" fill="var(--gold)" opacity="0.4"/>
               <circle cx="2" cy="6" r="1" fill="var(--gold)" opacity="0.6"/>
-              <path d="M2 6 C10 6 14 10 22 10 C30 10 34 6 42 6" stroke="var(--gold)" stroke-width="0.4" fill="none" opacity="0.25"/>
+              <path d="M2 6 C8 6 10 10 16 10 C22 10 24 6 30 6" stroke="var(--gold)" stroke-width="0.5" fill="none" opacity="0.3"/>
             </svg>
-          </div>
-          <div class="hero-counter" aria-hidden="true">
-            <span class="hero-counter-num">99</span>
-            <span class="hero-counter-label">Noms &agrave; d&eacute;couvrir</span>
           </div>
           <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
         </div>
 
-        <!-- Pseudo Badge -->
-        <button class="pseudo-badge home-stagger" id="pseudoBadge" style="--stagger:0">
+        <!-- Pseudo Badge compact -->
+        <button class="pseudo-badge" id="pseudoBadge">
           <span class="pseudo-avatar" id="pseudoAvatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
           <span class="pseudo-name" id="pseudoName">Choisir ton pseudo</span>
           <svg class="pseudo-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
 
-        <!-- Feature Cards Grid -->
-        <div class="home-cards" id="homeCards">
-          <!-- CTA Principal -->
-          <button class="home-card home-card-cta home-stagger" id="btnCreateRoom" style="--stagger:1">
-            <div class="home-card-shine" aria-hidden="true"></div>
-            <div class="home-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-            </div>
-            <div class="home-card-text">
-              <span class="home-card-title">Cr&eacute;er une partie</span>
-              <span class="home-card-desc">Lance un salon multijoueur</span>
-            </div>
-            <svg class="home-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-
-          <!-- Duo row -->
-          <div class="home-cards-duo home-stagger" style="--stagger:2">
-            <button class="home-card home-card-sm" id="btnJoinRoom">
-              <div class="home-card-icon-sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-              </div>
-              <span class="home-card-title-sm">Rejoindre</span>
-            </button>
-            <button class="home-card home-card-sm" id="btnBrowseRooms">
-              <div class="home-card-icon-sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
-              </div>
-              <span class="home-card-title-sm">Parcourir</span>
-            </button>
-          </div>
-
-          <!-- Ornamental divider -->
-          <div class="home-divider" aria-hidden="true">
-            <span class="home-divider-dot"></span>
-            <span class="home-divider-line"></span>
-            <span class="home-divider-star">
-              <svg width="10" height="10" viewBox="0 0 20 20" fill="var(--gold)" opacity="0.5"><path d="M10 0l2.4 7.6H20l-6.2 4.5 2.4 7.6L10 15.2 3.8 19.7l2.4-7.6L0 7.6h7.6z"/></svg>
-            </span>
-            <span class="home-divider-line"></span>
-            <span class="home-divider-dot"></span>
-          </div>
-
-          <!-- Feature cards -->
-          <button class="home-card home-card-feature home-stagger" id="btnEncyclopedia" style="--stagger:3">
-            <div class="home-card-icon-feat" style="--feat-color: #60a5fa; --feat-glow: rgba(96,165,250,0.2);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <div class="home-card-feat-text">
-              <span class="home-card-title">Encyclop&eacute;die</span>
-              <span class="home-card-desc">D&eacute;couvre chaque Nom en d&eacute;tail</span>
-            </div>
-            <svg class="home-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-
-          <button class="home-card home-card-feature home-stagger" id="btnTraining" style="--stagger:4">
-            <div class="home-card-icon-feat" style="--feat-color: #2dd4a0; --feat-glow: rgba(45,212,160,0.2);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-            </div>
-            <div class="home-card-feat-text">
-              <span class="home-card-title">S'entra&icirc;ner</span>
-              <span class="home-card-desc">Flashcards, quiz &amp; r&eacute;p&eacute;tition espac&eacute;e</span>
-            </div>
-            <svg class="home-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-
-          <div class="home-cards-duo home-stagger" style="--stagger:5">
-            <button class="home-card home-card-sm" id="btnGuide">
-              <div class="home-card-icon-sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-              </div>
-              <span class="home-card-title-sm">Guide</span>
-            </button>
-            <button class="home-card home-card-sm" id="btnMiniGames">
-              <div class="home-card-icon-sm">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="10" r="1"/><circle cx="18" cy="12" r="1"/></svg>
-              </div>
-              <span class="home-card-title-sm">Mini-jeux</span>
-            </button>
-          </div>
+        <!-- Buttons grid -->
+        <div class="home-grid">
+          <button class="btn btn-primary home-grid-full" id="btnCreateRoom">Créer une partie</button>
+          <button class="btn btn-secondary" id="btnJoinRoom">Rejoindre</button>
+          <button class="btn btn-secondary" id="btnBrowseRooms">Parcourir</button>
+          <button class="btn btn-secondary" id="btnEncyclopedia">Encyclopédie</button>
+          <button class="btn btn-secondary" id="btnTraining">S'entraîner</button>
+          <button class="btn btn-secondary" id="btnGuide">Guide</button>
+          <button class="btn btn-secondary" id="btnMiniGames">Mini-jeux</button>
         </div>
 
+
         <!-- ====== Soutenir des associations ====== -->
-        <div class="support-block home-stagger" style="--stagger:6">
+        <div class="support-block">
           <div class="support-heading">
             <span class="support-heading-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20v-6a7 7 0 0 1 14 0v6"/><path d="M12 6V3"/><path d="M9 20v-3a3 3 0 0 1 6 0v3"/><circle cx="12" cy="3" r="1" fill="currentColor"/></svg></span>
             <span>Soutenir des associations</span>
@@ -828,12 +648,7 @@
         </details>
 
         <!-- ====== Hadith — raison d'être du projet ====== -->
-        <div class="hadith-section home-stagger" style="--stagger:7">
-          <div class="hadith-ornament" aria-hidden="true">
-            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" opacity="0.3">
-              <path d="M20 2l3.6 11.4H35l-9.2 6.7 3.5 10.9L20 24.3 10.7 31l3.5-10.9L5 13.4h11.4z" stroke="var(--gold)" stroke-width="0.8" fill="none"/>
-            </svg>
-          </div>
+        <div class="hadith-section">
           <blockquote class="hadith-quote" dir="rtl" lang="ar">
             <p class="hadith-arabic">لِلَّهِ تِسْعَةٌ وَتِسْعُونَ اسْمًا، مِائَةٌ إِلاَّ وَاحِدًا، لاَ يَحْفَظُهَا أَحَدٌ إِلاَّ دَخَلَ الْجَنَّةَ، وَهْوَ وَتْرٌ يُحِبُّ الْوَتْرَ</p>
           </blockquote>
