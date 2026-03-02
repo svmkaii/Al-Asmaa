@@ -9457,6 +9457,103 @@ input[type="search"]::placeholder {
   font-weight: 700;
 }
 
+/* ---- Custom Reset Dialog ---- */
+.tr-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  padding: 24px;
+}
+.tr-dialog-overlay.show {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+}
+.tr-dialog {
+  background: linear-gradient(160deg, rgba(18, 22, 42, 0.98) 0%, rgba(10, 13, 28, 0.98) 100%);
+  border: 1px solid rgba(212, 162, 76, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px 24px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  transform: scale(0.85) translateY(20px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+}
+.tr-dialog-overlay.show .tr-dialog {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+.tr-dialog-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+.tr-dialog-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+.tr-dialog-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+.tr-dialog-actions {
+  display: flex;
+  gap: 10px;
+}
+.tr-dialog-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+.tr-dialog-cancel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+}
+.tr-dialog-cancel:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+}
+.tr-dialog-confirm {
+  background: linear-gradient(135deg, var(--ruby) 0%, #dc2626 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.25);
+}
+.tr-dialog-confirm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(239, 68, 68, 0.35);
+  filter: brightness(1.1);
+}
+.tr-dialog-confirm:active {
+  transform: scale(0.97);
+}
+
 /* ---- Continue button ---- */
 .tr-continue-btn {
   display: flex;
