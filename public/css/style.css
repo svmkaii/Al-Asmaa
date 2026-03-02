@@ -182,10 +182,17 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(20, 12, 40, 0.9) 0%, transparent 70%),
-    radial-gradient(ellipse 80% 60% at 15% 90%, rgba(10, 40, 60, 0.5) 0%, transparent 60%),
-    radial-gradient(ellipse 80% 60% at 85% 70%, rgba(50, 20, 60, 0.35) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(212, 162, 76, 0.06) 0%, transparent 50%),
+    /* Deep celestial nebulae — layered for depth */
+    radial-gradient(ellipse 130% 90% at 50% -25%, rgba(12, 6, 30, 0.95) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 70% at 8% 88%, rgba(6, 30, 50, 0.65) 0%, transparent 50%),
+    radial-gradient(ellipse 85% 65% at 92% 62%, rgba(40, 12, 50, 0.5) 0%, transparent 50%),
+    /* Warm golden crown where lanterns hang */
+    radial-gradient(ellipse 70% 50% at 50% -5%, rgba(212, 162, 76, 0.09) 0%, transparent 40%),
+    /* Deep color pools */
+    radial-gradient(ellipse 55% 40% at 25% 50%, rgba(15, 40, 70, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 35% at 78% 32%, rgba(55, 20, 72, 0.25) 0%, transparent 50%),
+    /* Subtle moon glow, upper right */
+    radial-gradient(ellipse 14% 11% at 83% 7%, rgba(255, 248, 216, 0.05) 0%, rgba(255, 248, 216, 0.015) 50%, transparent 70%),
     var(--bg-deep);
 }
 
@@ -194,10 +201,12 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle 600px at 20% 30%, rgba(45, 90, 160, 0.07) 0%, transparent 70%),
-    radial-gradient(circle 500px at 80% 60%, rgba(120, 50, 120, 0.06) 0%, transparent 70%),
-    radial-gradient(circle 400px at 50% 80%, rgba(45, 212, 160, 0.03) 0%, transparent 70%);
-  animation: atmosphereShift 20s ease-in-out infinite alternate;
+    /* Aurora-like color bands — slowly shifting */
+    radial-gradient(circle 750px at 18% 22%, rgba(35, 75, 150, 0.12) 0%, transparent 60%),
+    radial-gradient(circle 650px at 82% 50%, rgba(100, 40, 125, 0.1) 0%, transparent 60%),
+    radial-gradient(circle 550px at 50% 78%, rgba(40, 170, 130, 0.06) 0%, transparent 60%),
+    radial-gradient(circle 450px at 65% 12%, rgba(190, 145, 55, 0.05) 0%, transparent 55%);
+  animation: auroraShift 30s ease-in-out infinite alternate;
 }
 
 .bg-atmosphere::after {
@@ -205,15 +214,18 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle 300px at 30% 20%, rgba(212, 162, 76, 0.04) 0%, transparent 70%),
-    radial-gradient(circle 250px at 70% 40%, rgba(212, 162, 76, 0.03) 0%, transparent 70%);
-  animation: atmosphereShift 15s ease-in-out infinite alternate-reverse;
+    radial-gradient(circle 400px at 22% 12%, rgba(212, 162, 76, 0.06) 0%, transparent 60%),
+    radial-gradient(circle 350px at 78% 32%, rgba(212, 162, 76, 0.045) 0%, transparent 60%),
+    radial-gradient(circle 300px at 50% 88%, rgba(40, 100, 180, 0.05) 0%, transparent 55%);
+  animation: auroraShift 22s ease-in-out infinite alternate-reverse;
 }
 
-@keyframes atmosphereShift {
-  0% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
-  100% { opacity: 0.7; transform: scale(0.98); }
+@keyframes auroraShift {
+  0% { opacity: 0.45; transform: scale(1) translateX(0); }
+  25% { opacity: 0.85; transform: scale(1.06) translateX(-1%); }
+  50% { opacity: 0.6; transform: scale(0.97) translateX(0.8%); }
+  75% { opacity: 0.9; transform: scale(1.04) translateX(-0.5%); }
+  100% { opacity: 0.55; transform: scale(1.02) translateX(0.5%); }
 }
 
 /* --- Noise texture overlay --- */
@@ -237,11 +249,13 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.05;
+  opacity: 0.06;
   background-image:
     url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d4a24c' stroke-width='0.5'%3E%3Cpath d='M40 0L50 15L65 10L55 25L70 30L55 35L65 50L50 45L40 60L30 45L15 50L25 35L10 30L25 25L15 10L30 15Z'/%3E%3Ccircle cx='40' cy='30' r='12'/%3E%3Ccircle cx='40' cy='30' r='6'/%3E%3Cpath d='M0 0h80v80H0z'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 80px 80px;
   animation: patternDrift 60s linear infinite;
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 0%, transparent 85%);
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, black 0%, transparent 85%);
 }
 
 @keyframes patternDrift {
@@ -263,6 +277,122 @@ body::after {
     radial-gradient(ellipse 50% 45% at 15% 85%, rgba(45, 212, 160, 0.04) 0%, transparent 50%),
     radial-gradient(ellipse 50% 45% at 85% 65%, rgba(120, 80, 200, 0.035) 0%, transparent 50%),
     radial-gradient(ellipse 35% 30% at 50% 50%, rgba(212, 162, 76, 0.02) 0%, transparent 50%);
+}
+
+/* --- Starfield --- */
+.bg-stars {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-stars::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 0;
+  left: 0;
+  box-shadow:
+    42px 67px rgba(255,255,255,0.5),
+    189px 134px rgba(255,255,255,0.35),
+    312px 45px rgba(255,255,255,0.55),
+    467px 189px rgba(255,255,255,0.3),
+    534px 78px rgba(255,255,255,0.45),
+    623px 234px rgba(255,255,255,0.35),
+    756px 156px rgba(255,255,255,0.5),
+    834px 312px rgba(255,255,255,0.25),
+    912px 67px rgba(255,255,255,0.4),
+    1023px 189px rgba(255,255,255,0.45),
+    1145px 45px rgba(255,255,255,0.35),
+    1234px 256px rgba(255,255,255,0.5),
+    1356px 134px rgba(255,255,255,0.3),
+    1467px 312px rgba(255,255,255,0.45),
+    1534px 78px rgba(255,255,255,0.35),
+    1645px 234px rgba(255,255,255,0.55),
+    1756px 167px rgba(255,255,255,0.3),
+    1834px 289px rgba(255,255,255,0.45),
+    78px 378px rgba(255,255,255,0.35),
+    234px 445px rgba(255,255,255,0.5),
+    367px 523px rgba(255,255,255,0.3),
+    489px 412px rgba(255,255,255,0.45),
+    612px 567px rgba(255,255,255,0.35),
+    734px 445px rgba(255,255,255,0.5),
+    856px 534px rgba(255,255,255,0.25),
+    978px 612px rgba(255,255,255,0.4),
+    1089px 489px rgba(255,255,255,0.45),
+    1212px 567px rgba(255,255,255,0.35),
+    1334px 445px rgba(255,255,255,0.5),
+    1456px 534px rgba(255,255,255,0.3),
+    1567px 612px rgba(255,255,255,0.45),
+    1689px 478px rgba(255,255,255,0.35),
+    1823px 556px rgba(255,255,255,0.5),
+    123px 656px rgba(255,255,255,0.3),
+    256px 734px rgba(255,255,255,0.45),
+    389px 812px rgba(255,255,255,0.35),
+    512px 689px rgba(255,255,255,0.5),
+    645px 767px rgba(255,255,255,0.3),
+    778px 845px rgba(255,255,255,0.45),
+    901px 723px rgba(255,255,255,0.35),
+    1034px 801px rgba(255,255,255,0.5),
+    1167px 878px rgba(255,255,255,0.3),
+    1289px 756px rgba(255,255,255,0.45),
+    1412px 834px rgba(255,255,255,0.35),
+    1534px 912px rgba(255,255,255,0.5),
+    1667px 789px rgba(255,255,255,0.3),
+    1800px 867px rgba(255,255,255,0.45),
+    56px 923px rgba(255,255,255,0.4),
+    345px 978px rgba(255,255,255,0.3),
+    678px 956px rgba(255,255,255,0.45),
+    1012px 934px rgba(255,255,255,0.35),
+    1345px 967px rgba(255,255,255,0.4),
+    1678px 945px rgba(255,255,255,0.3),
+    1890px 978px rgba(255,255,255,0.45);
+  animation: starsTwinkle1 8s ease-in-out infinite alternate;
+}
+
+.bg-stars::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  box-shadow:
+    145px 89px 1px rgba(255,255,255,0.65),
+    478px 234px 1px rgba(255,248,216,0.7),
+    712px 67px 1px rgba(255,255,255,0.55),
+    956px 312px 1px rgba(255,248,216,0.7),
+    1189px 134px 1px rgba(255,255,255,0.6),
+    1423px 267px 1px rgba(255,248,216,0.65),
+    1667px 89px 1px rgba(255,255,255,0.55),
+    1878px 345px 1px rgba(255,248,216,0.7),
+    334px 512px 1px rgba(255,255,255,0.65),
+    567px 678px 1px rgba(255,248,216,0.6),
+    812px 534px 1px rgba(255,255,255,0.65),
+    1045px 712px 1px rgba(255,248,216,0.55),
+    1278px 589px 1px rgba(255,255,255,0.6),
+    1512px 734px 1px rgba(255,248,216,0.65),
+    1745px 612px 1px rgba(255,255,255,0.55),
+    234px 845px 1px rgba(255,248,216,0.6),
+    890px 890px 1px rgba(255,255,255,0.65),
+    1456px 867px 1px rgba(255,248,216,0.55);
+  animation: starsTwinkle2 6s ease-in-out infinite alternate;
+}
+
+@keyframes starsTwinkle1 {
+  0% { opacity: 0.35; }
+  50% { opacity: 0.65; }
+  100% { opacity: 0.45; }
+}
+
+@keyframes starsTwinkle2 {
+  0% { opacity: 0.45; }
+  50% { opacity: 0.85; }
+  100% { opacity: 0.55; }
 }
 
 /* ===========================

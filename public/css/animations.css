@@ -1014,7 +1014,8 @@
     animation: none !important;
   }
 
-  .bg-lanterns {
+  .bg-lanterns,
+  .bg-stars {
     display: none;
   }
 
