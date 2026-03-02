@@ -248,6 +248,44 @@ const IlmQuest = (() => {
           state.targetScore = msg.targetScore;
         }
         break;
+      case 'back-to-lobby':
+        if (!state.isHost) {
+          state.players = msg.players;
+          state.scores = msg.scores || {};
+          state.streaks = msg.streaks || {};
+          state.answers = {};
+          state.winner = null;
+          state.phase = 'lobby';
+          stopGamePolling();
+          clearInterval(state.timerInterval);
+          showIlmQuestLobby();
+          renderLobbyPlayers();
+          updateStartButton();
+          startPlayerPolling();
+        }
+        break;
+      case 'replay-request':
+        if (state.isHost) {
+          // Host auto-accepts replay: reset and go to lobby
+          state.phase = 'lobby';
+          state.players.forEach(function(p) {
+            state.scores[p.id] = 0;
+            state.streaks[p.id] = 0;
+          });
+          state.answers = {};
+          state.winner = null;
+          broadcast({
+            type: 'back-to-lobby',
+            players: state.players,
+            scores: state.scores,
+            streaks: state.streaks
+          });
+          showIlmQuestLobby();
+          renderLobbyPlayers();
+          updateStartButton();
+          startPlayerPolling();
+        }
+        break;
       case 'join-rejected':
         if (!state.isHost && msg.targetId === state.playerId) {
           if (typeof Bomb !== 'undefined') Bomb.showToast('Partie déjà en cours', 'warning');
@@ -726,7 +764,11 @@ const IlmQuest = (() => {
     const el = document.getElementById('iqTimerCircle');
     const timeEl = document.getElementById('iqTimerText');
     const pointsEl = document.getElementById('iqPotentialPoints');
+    const timerArea = document.querySelector('.iq-timer-area');
     const totalDash = 283; // 2 * PI * 45
+
+    // Reset critical state
+    if (timerArea) timerArea.classList.remove('iq-timer-critical');
 
     state.timerInterval = setInterval(() => {
       const elapsed = (Date.now() - startTime) / 1000;
@@ -742,6 +784,12 @@ const IlmQuest = (() => {
         else el.style.stroke = '#ef4444';
       }
 
+      // Critical state when < 20% time remaining
+      if (timerArea) {
+        if (fraction <= 0.2) timerArea.classList.add('iq-timer-critical');
+        else timerArea.classList.remove('iq-timer-critical');
+      }
+
       // Update time text
       if (timeEl) timeEl.textContent = Math.ceil(state.timerRemaining);
 
@@ -751,6 +799,7 @@ const IlmQuest = (() => {
 
       if (state.timerRemaining <= 0) {
         clearInterval(state.timerInterval);
+        if (timerArea) timerArea.classList.remove('iq-timer-critical');
         onTimerEnd();
       }
     }, 50);
@@ -1231,12 +1280,19 @@ const IlmQuest = (() => {
       container.classList.remove('iq-sb-multi');
     }
 
-    container.innerHTML = sorted.map(p => {
+    const leaderId = sorted.length > 0 && (state.scores[sorted[0].id] || 0) > 0 ? sorted[0].id : null;
+
+    container.innerHTML = sorted.map((p, idx) => {
       const score = state.scores[p.id] || 0;
       const pct = Math.min(100, (score / maxScore) * 100);
       const streak = state.streaks[p.id] || 0;
+      const isMe = p.id === state.playerId;
+      const isLead = p.id === leaderId && idx === 0;
+      const rowClasses = ['iq-score-row'];
+      if (isMe) rowClasses.push('iq-score-me');
+      if (isLead) rowClasses.push('iq-score-lead');
       return `
-        <div class="iq-score-row">
+        <div class="${rowClasses.join(' ')}">
           <div class="iq-score-player">
             <div class="iq-score-avatar" style="background:${p.color}">${getInitials(p.name)}</div>
             <span class="iq-score-name">${p.name}</span>
@@ -1258,10 +1314,13 @@ const IlmQuest = (() => {
     container.innerHTML = state.players.map(p => {
       const answered = state.answers[p.id];
       const statusClass = answered ? 'iq-answered' : 'iq-waiting';
+      const icon = answered
+        ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2dd4a0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
+        : '<span class="iq-dots-anim"><span>.</span><span>.</span><span>.</span></span>';
       return `
         <div class="iq-status-player ${statusClass}">
           <div class="iq-status-avatar" style="background:${p.color}">${getInitials(p.name)}</div>
-          <div class="iq-status-icon">${answered ? '?' : '...'}</div>
+          <div class="iq-status-icon">${icon}</div>
         </div>
       `;
     }).join('');
@@ -1453,12 +1512,18 @@ const IlmQuest = (() => {
           state.answers = {};
           state.winner = null;
           broadcast({
-            type: 'player-list',
+            type: 'back-to-lobby',
             players: state.players,
             scores: state.scores,
             streaks: state.streaks
           });
           showIlmQuestLobby();
+          renderLobbyPlayers();
+          updateStartButton();
+          startPlayerPolling();
+        } else {
+          // Non-host: request replay from host
+          broadcast({ type: 'replay-request', playerId: state.playerId });
         }
       };
     }

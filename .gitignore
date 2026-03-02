@@ -29,5 +29,8 @@ npm-debug.log*
 # Claude memory
 .claude/
 
+# Reports (user submissions)
+data/reports/
+
 # Build artifacts
 dist/

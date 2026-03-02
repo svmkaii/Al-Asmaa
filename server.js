@@ -3,6 +3,7 @@
  * Express + Socket.io pour le jeu en réseau local
  */
 
+require('dotenv').config();
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
@@ -11,6 +12,7 @@ const compression = require('compression');
 const os = require('os');
 const path = require('path');
 const fs = require('fs');
+const nodemailer = require('nodemailer');
 const {
   NameEntryGenerator,
   AuditTrail,
@@ -2732,6 +2734,122 @@ async function getQRCode(code) {
   qrCache[code] = { qr, url };
   return qrCache[code];
 }
+
+// --- Bug / Content Report ---
+// --- Report rate limiting (par IP) ---
+const reportRateMap = new Map();
+const REPORT_MAX = 3;           // max 3 signalements
+const REPORT_WINDOW = 15 * 60 * 1000; // par fenêtre de 15 minutes
+
+function isReportRateLimited(ip) {
+  const now = Date.now();
+  const entry = reportRateMap.get(ip);
+  if (!entry || now - entry.start > REPORT_WINDOW) {
+    reportRateMap.set(ip, { start: now, count: 1 });
+    return false;
+  }
+  entry.count++;
+  return entry.count > REPORT_MAX;
+}
+
+// Nettoyage périodique de la map (toutes les 30 min)
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, entry] of reportRateMap) {
+    if (now - entry.start > REPORT_WINDOW) reportRateMap.delete(ip);
+  }
+}, 30 * 60 * 1000);
+
+// --- Email transporter (Gmail) ---
+const REPORT_EMAIL = process.env.REPORT_EMAIL;
+const REPORT_EMAIL_PASSWORD = process.env.REPORT_EMAIL_PASSWORD;
+let mailTransporter = null;
+
+if (REPORT_EMAIL && REPORT_EMAIL_PASSWORD) {
+  mailTransporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: { user: REPORT_EMAIL, pass: REPORT_EMAIL_PASSWORD }
+  });
+  mailTransporter.verify((err) => {
+    if (err) console.error('[Mail] Connexion Gmail échouée :', err.message);
+    else console.log('[Mail] Connexion Gmail OK —', REPORT_EMAIL);
+  });
+} else {
+  console.warn('[Mail] REPORT_EMAIL ou REPORT_EMAIL_PASSWORD manquant dans .env — les signalements seront sauvegardés localement uniquement.');
+}
+
+const REPORT_TYPE_LABELS = { bug: 'Bug technique', content: 'Erreur de contenu', suggestion: 'Suggestion' };
+
+app.post('/api/report', async (req, res) => {
+  const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket.remoteAddress || 'unknown';
+  if (isReportRateLimited(ip)) {
+    return res.status(429).json({ error: 'Trop de signalements. Réessaie dans quelques minutes.' });
+  }
+  const { type, page, description } = req.body;
+  if (!description || typeof description !== 'string' || !description.trim()) {
+    return res.status(400).json({ error: 'Description requise' });
+  }
+  const allowed = ['bug', 'content', 'suggestion'];
+  const safeType = allowed.includes(type) ? type : 'bug';
+  const safePage = typeof page === 'string' ? sanitizeHtml(page.slice(0, 100)) : '';
+  const safeDesc = sanitizeHtml(description.trim().slice(0, 1000));
+
+  const report = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+    type: safeType,
+    page: safePage,
+    description: safeDesc,
+    date: new Date().toISOString(),
+    userAgent: (req.headers['user-agent'] || '').slice(0, 200)
+  };
+
+  // Sauvegarde locale (backup)
+  const reportsDir = path.join(__dirname, 'data', 'reports');
+  if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });
+  const reportsFile = path.join(reportsDir, 'reports.json');
+  let reports = [];
+  try { reports = JSON.parse(fs.readFileSync(reportsFile, 'utf8')); } catch {}
+  reports.push(report);
+  fs.writeFileSync(reportsFile, JSON.stringify(reports, null, 2), 'utf8');
+
+  // Envoi email
+  if (mailTransporter) {
+    const typeLabel = REPORT_TYPE_LABELS[safeType] || safeType;
+    const typeEmoji = safeType === 'bug' ? '\uD83D\uDC1B' : safeType === 'content' ? '\uD83D\uDCD6' : '\uD83D\uDCA1';
+    try {
+      await mailTransporter.sendMail({
+        from: `"Al-Asmaa Reports" <${REPORT_EMAIL}>`,
+        to: REPORT_EMAIL,
+        subject: `${typeEmoji} [Al-Asmaa] ${typeLabel}${safePage ? ' — ' + safePage : ''}`,
+        html: `
+          <div style="font-family: -apple-system, 'Segoe UI', sans-serif; max-width: 520px; margin: 0 auto; background: #0a0e1a; color: #eae6df; border-radius: 16px; overflow: hidden; border: 1px solid rgba(212,162,76,0.15);">
+            <div style="background: linear-gradient(135deg, #1a1400, #0a0e1a); padding: 24px 28px 18px; border-bottom: 1px solid rgba(212,162,76,0.12);">
+              <div style="font-size: 22px; margin-bottom: 4px;">${typeEmoji}</div>
+              <h2 style="margin: 0 0 4px; color: #f0cc7a; font-size: 18px;">${typeLabel}</h2>
+              <div style="font-size: 12px; color: #9a978f;">#${report.id} &mdash; ${new Date(report.date).toLocaleString('fr-FR', { dateStyle: 'long', timeStyle: 'short' })}</div>
+            </div>
+            <div style="padding: 22px 28px;">
+              ${safePage ? `<div style="margin-bottom: 14px;"><div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #d4a24c; margin-bottom: 4px;">Page / Section</div><div style="font-size: 14px; color: #eae6df; background: rgba(255,255,255,0.04); padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);">${safePage}</div></div>` : ''}
+              <div style="margin-bottom: 14px;">
+                <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #d4a24c; margin-bottom: 4px;">Description</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #eae6df; background: rgba(255,255,255,0.04); padding: 12px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); white-space: pre-wrap;">${safeDesc}</div>
+              </div>
+              <div style="font-size: 11px; color: #5c5952; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 12px; margin-top: 8px;">
+                <strong>User-Agent :</strong> ${report.userAgent || 'N/A'}
+              </div>
+            </div>
+          </div>
+        `
+      });
+      console.log(`[Report] Email envoyé — ${safeType} — ${safePage || '(aucune page)'}`);
+    } catch (mailErr) {
+      console.error('[Report] Erreur email :', mailErr.message);
+    }
+  }
+
+  console.log(`[Report] ${safeType} — ${safePage || '(aucune page)'} — ${safeDesc.slice(0, 60)}...`);
+  res.json({ success: true, id: report.id });
+});
 
 // Health check
 app.get('/api/health', (req, res) => {

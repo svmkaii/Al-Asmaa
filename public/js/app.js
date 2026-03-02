@@ -312,6 +312,7 @@
     setupPseudoSystem();
     setupHeroInteractions();
     setupDonateCollapse();
+    setupReportSystem();
 
     // Événements UI
     setupHomeEvents();
@@ -3643,17 +3644,17 @@
         <div class="tr-stats">
           <div class="tr-stat">
             <span class="tr-stat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             </span>
-            <span class="tr-stat-num gold">${lastScore}</span>
-            <span class="tr-stat-lbl">Dernier score</span>
+            <span class="tr-stat-num emerald">${prog.mastered}</span>
+            <span class="tr-stat-lbl">Maîtrisés</span>
           </div>
           <div class="tr-stat">
             <span class="tr-stat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.09 6.26L20.18 9l-5 4.24L16.82 20 12 16.27 7.18 20l1.64-6.76-5-4.24 6.09-.74z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
             </span>
-            <span class="tr-stat-num amber">${streak}</span>
-            <span class="tr-stat-lbl">Série (jours)</span>
+            <span class="tr-stat-num amber">${prog.inProgress}</span>
+            <span class="tr-stat-lbl">En cours</span>
           </div>
           <div class="tr-stat">
             <span class="tr-stat-ico">
@@ -3663,6 +3664,10 @@
             <span class="tr-stat-lbl">À revoir</span>
           </div>
         </div>
+        ${(lastScore > 0 || streak > 0) ? `<div class="tr-progress-secondary">
+          ${lastScore > 0 ? `<span class="tr-secondary-item">Dernier score : <strong>${lastScore}</strong>${lastModeLabel ? ' (' + lastModeLabel + ')' : ''}</span>` : ''}
+          ${streak > 0 ? `<span class="tr-secondary-item">Série : <strong>${streak}</strong> jour${streak > 1 ? 's' : ''}</span>` : ''}
+        </div>` : ''}
         ${lastMode ? `<button class="tr-continue-btn" id="btnContinueMode">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           Continuer — ${lastModeLabel}
@@ -3889,18 +3894,11 @@
     const name = trainingSession[trainingIndex];
     const body = document.getElementById('trainingSessionBody');
     const cat = CATEGORIES[name.category] || {};
-    const progress = Training.getProgress();
-    const entry = progress[name.id];
-    const status = !entry || entry.score === 0 ? 'new' : entry.score >= 4 ? 'mastered' : 'learning';
-    const statusLabel = status === 'mastered' ? 'Maîtrisé' : status === 'learning' ? 'En cours' : 'Nouveau';
-    const statusClass = status === 'mastered' ? 'status-mastered' : status === 'learning' ? 'status-learning' : 'status-new';
-
     body.innerHTML = `
       <div class="fc-progress">${trainingIndex + 1} / ${trainingSession.length}</div>
       <div class="fc-card-wrapper fc-slide-in">
       <div class="fc-card" id="flashcard" role="button" tabindex="0" aria-label="Cliquer pour retourner la carte">
         <div class="fc-front">
-          <span class="fc-status ${statusClass}">${statusLabel}</span>
           <div class="fc-arabic" lang="ar" dir="rtl">${name.arabic}</div>
           <button class="fc-speak-btn" id="fcSpeakBtn" aria-label="Écouter">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 010 7.07"/><path d="M19.07 4.93a10 10 0 010 14.14"/></svg>
@@ -3921,15 +3919,15 @@
           <div class="fc-rating" id="flashcardActions">
             <button class="fc-rate-btn fc-hard" data-quality="0">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 105.64-8.36L1 10"/></svg>
-              Revoir
+              À revoir
             </button>
             <button class="fc-rate-btn fc-ok" data-quality="1">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              Difficile
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12c0-3 2.5-6 5-7.5s5.5-1 7.5 1"/><path d="M22 12c0 3-2.5 6-5 7.5s-5.5 1-7.5-1"/></svg>
+              Presque
             </button>
             <button class="fc-rate-btn fc-easy" data-quality="2">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Facile
+              Acquis
             </button>
           </div>
         </div>
@@ -4485,6 +4483,95 @@
     });
 
     setTimeout(() => input.focus(), 200);
+  }
+
+  // --- Report System ---
+  function setupReportSystem() {
+    const openBtn = document.getElementById('btnOpenReport');
+    const modal = document.getElementById('reportModal');
+    const closeBtn = document.getElementById('btnCloseReport');
+    const form = document.getElementById('reportForm');
+    const desc = document.getElementById('reportDesc');
+    const charCount = document.getElementById('reportCharCount');
+    const submitBtn = document.getElementById('btnReportSubmit');
+    const successView = document.getElementById('reportSuccess');
+    const doneBtn = document.getElementById('btnReportDone');
+
+    if (!openBtn || !modal || !form) return;
+
+    function openReportModal() {
+      modal.classList.remove('hidden');
+      form.style.display = '';
+      successView.classList.add('hidden');
+      form.reset();
+      if (charCount) charCount.textContent = '0';
+      submitBtn.disabled = true;
+      resetSubmitBtn();
+    }
+
+    function closeReportModal() {
+      modal.classList.add('hidden');
+    }
+
+    function resetSubmitBtn() {
+      const textEl = submitBtn.querySelector('.report-submit-text');
+      const loaderEl = submitBtn.querySelector('.report-submit-loader');
+      if (textEl) textEl.classList.remove('hidden');
+      if (loaderEl) loaderEl.classList.add('hidden');
+      submitBtn.disabled = !desc.value.trim();
+    }
+
+    openBtn.addEventListener('click', openReportModal);
+    closeBtn.addEventListener('click', closeReportModal);
+    if (doneBtn) doneBtn.addEventListener('click', closeReportModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeReportModal();
+    });
+
+    desc.addEventListener('input', () => {
+      const len = desc.value.length;
+      if (charCount) charCount.textContent = len;
+      submitBtn.disabled = !desc.value.trim();
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!desc.value.trim()) return;
+
+      const textEl = submitBtn.querySelector('.report-submit-text');
+      const loaderEl = submitBtn.querySelector('.report-submit-loader');
+      if (textEl) textEl.classList.add('hidden');
+      if (loaderEl) loaderEl.classList.remove('hidden');
+      submitBtn.disabled = true;
+
+      const type = form.querySelector('input[name="reportType"]:checked')?.value || 'bug';
+      const page = document.getElementById('reportPage')?.value.trim() || '';
+      const description = desc.value.trim();
+
+      try {
+        const res = await fetch('/api/report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ type, page, description })
+        });
+        if (res.status === 429) {
+          resetSubmitBtn();
+          if (typeof Bomb !== 'undefined' && Bomb.showToast) {
+            Bomb.showToast('Trop de signalements. R\u00e9essaie dans quelques minutes.', 'warning');
+          }
+          return;
+        }
+        if (!res.ok) throw new Error('Erreur serveur');
+        form.style.display = 'none';
+        successView.classList.remove('hidden');
+      } catch {
+        resetSubmitBtn();
+        if (typeof Bomb !== 'undefined' && Bomb.showToast) {
+          Bomb.showToast('Erreur lors de l\u2019envoi. R\u00e9essaie.', 'error');
+        }
+      }
+    });
   }
 
   // --- Lancement ---
