@@ -106,20 +106,13 @@
   <link rel="icon" type="image/svg+xml" href="/contenu/al_asma_logo_icon.svg">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=17.5">
+  <link rel="stylesheet" href="/css/style.css?v=18.8">
   <link rel="stylesheet" href="/css/animations.css?v=15.0">
   <link rel="stylesheet" href="/css/modes.css?v=16.4">
   <link rel="stylesheet" href="/css/mini-games.css?v=15.6">
   <link rel="stylesheet" href="/css/ilm-quest.css?v=1.1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ6P2VEF0R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LQ6P2VEF0R');
-</script>
+<script src="/js/consent.js?v=1.0"></script>
 </head>
 <body>
 
@@ -179,7 +172,6 @@
           <stop offset="75%" stop-color="#FFB347" stop-opacity="0.55"/>
           <stop offset="100%" stop-color="#FF9F1C" stop-opacity="0"/>
         </radialGradient>
-        <!-- Colored glow halos for light casting -->
         <radialGradient id="blueHalo" cx="50%" cy="40%" r="80%">
           <stop offset="0%" stop-color="#49CDE3" stop-opacity="0.6"/>
           <stop offset="40%" stop-color="#49CDE3" stop-opacity="0.2"/>
@@ -198,15 +190,6 @@
         <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
           <feGaussianBlur stdDeviation="7" result="b"/>
           <feColorMatrix in="b" type="matrix" values="1 0 0 0 0 0 0.9 0 0 0 0 0 0.5 0 0 0 0 0 0.9 0"/>
-        </filter>
-        <!-- Intense glow filter for lit lanterns -->
-        <filter id="lanternLitGlow" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="18" result="b"/>
-          <feColorMatrix in="b" type="matrix" values="1 0.8 0.2 0 0  0 0.7 0.1 0 0  0 0.2 0.5 0 0  0 0 0 1 0" result="colored"/>
-          <feMerge>
-            <feMergeNode in="colored"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
         </filter>
         <filter id="metalShadow" x="-30%" y="-30%" width="160%" height="160%">
           <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#4A2C00" flood-opacity="0.35"/>
@@ -259,21 +242,27 @@
           <path d="M-62 -140 Q-76 -117 -76 -92 L-76 48 Q-76 79 -56 96 Q-35 113 0 122 Q35 113 56 96 Q76 79 76 48 L76 -92 Q76 -117 62 -140 Z"/>
         </clipPath>
 
-        <!-- Inner flame with SMIL flicker -->
+        <!-- Inner flame with multi-layer SMIL flicker — premium -->
         <g id="innerFlame">
-          <ellipse cx="0" cy="18" rx="58" ry="86" fill="url(#candleGlow)" filter="url(#softGlow)">
-            <animate attributeName="opacity" values="0.6;0.82;0.65;0.78;0.6" dur="3s" repeatCount="indefinite"/>
-          </ellipse>
-          <ellipse cx="0" cy="34" rx="34" ry="54" fill="url(#candleGlow)">
-            <animate attributeName="opacity" values="0.5;0.72;0.55;0.68;0.5" dur="2.4s" repeatCount="indefinite"/>
-          </ellipse>
-          <path d="M0 -8 C18 10 18 36 0 50 C-18 36 -18 10 0 -8Z" fill="#FFF6CE">
-            <animate attributeName="opacity" values="0.85;1;0.88;0.97;0.85" dur="1.8s" repeatCount="indefinite"/>
-          </path>
-          <path d="M0 8 C10 18 10 31 0 39 C-10 31 -10 18 0 8Z" fill="#FFB13C">
-            <animate attributeName="opacity" values="0.9;1;0.92;1;0.9" dur="1.3s" repeatCount="indefinite"/>
-          </path>
-          <rect x="-3" y="43" width="6" height="22" rx="2" fill="#6D3D00" opacity="0.9"/>
+          <g>
+            <animateTransform attributeName="transform" type="scale" values="1 1;1.06 1.1;0.97 0.95;1.05 1.08;0.98 0.97;1.03 1.06;1 1" dur="4.2s" repeatCount="indefinite"/>
+            <ellipse cx="0" cy="18" rx="58" ry="86" fill="url(#candleGlow)" filter="url(#softGlow)">
+              <animate attributeName="opacity" values="0.35;0.9;0.45;0.85;0.4;0.88;0.35" dur="3.4s" repeatCount="indefinite"/>
+              <animate attributeName="ry" values="82;96;78;94;84;98;82" dur="5.6s" repeatCount="indefinite"/>
+              <animate attributeName="rx" values="58;64;54;62;56;66;58" dur="4.8s" repeatCount="indefinite"/>
+            </ellipse>
+            <ellipse cx="0" cy="34" rx="34" ry="54" fill="url(#candleGlow)">
+              <animate attributeName="opacity" values="0.38;0.82;0.44;0.78;0.4;0.76;0.38" dur="2.8s" repeatCount="indefinite"/>
+              <animate attributeName="ry" values="54;60;50;58;54" dur="3.6s" repeatCount="indefinite"/>
+            </ellipse>
+            <path d="M0 -8 C18 10 18 36 0 50 C-18 36 -18 10 0 -8Z" fill="#FFF6CE">
+              <animate attributeName="opacity" values="0.7;1;0.75;0.95;0.72;1;0.7" dur="2s" repeatCount="indefinite"/>
+            </path>
+            <path d="M0 8 C10 18 10 31 0 39 C-10 31 -10 18 0 8Z" fill="#FFB13C">
+              <animate attributeName="opacity" values="0.82;1;0.86;1;0.88;0.95;0.82" dur="1.4s" repeatCount="indefinite"/>
+            </path>
+            <rect x="-3" y="43" width="6" height="22" rx="2" fill="#6D3D00" opacity="0.9"/>
+          </g>
         </g>
 
         <!-- Blue Fanous -->
@@ -340,115 +329,192 @@
         </g>
       </defs>
 
-      <!-- 9 animated lantern instances with on/off glow -->
+      <!-- ======= 9 fanous — premium pendulum with depth, bob & breathing halos ======= -->
 
       <!-- 1: Blue — far left -->
-      <g transform="translate(80 88) scale(0.28)">
+      <g transform="translate(80 78) scale(0.28)">
         <ellipse cx="0" cy="-20" rx="160" ry="260" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0;0.45;0.5;0.35;0.48;0.1;0.05;0;0;0.3;0.45" dur="8s" repeatCount="indefinite" begin="0.3s"/>
+          <animate attributeName="opacity" values="0.18;0.5;0.24;0.46;0.2;0.48;0.18" dur="20s" repeatCount="indefinite" begin="-2s"/>
+          <animate attributeName="rx" values="160;184;152;178;160" dur="22s" repeatCount="indefinite" begin="-2s"/>
+          <animate attributeName="ry" values="260;294;250;288;260" dur="22s" repeatCount="indefinite" begin="-2s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-2.5 0 -280;2.5 0 -280;-2.5 0 -280" dur="5.5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0.7;0.8;0.6;0.75;0.15;0.05;0;0;0.5;0.7" dur="8s" repeatCount="indefinite" begin="0.3s"/>
+          <animateTransform attributeName="transform" type="rotate" values="-3.8 0 -280;1.5 0 -280;3.2 0 -280;-0.8 0 -280;-3.8 0 -280" dur="18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.52;0.78;1" keySplines="0.45 0 0.55 1;0.35 0 0.65 1;0.45 0 0.55 1;0.35 0 0.65 1" begin="-2s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 2;0 -5;0 0" dur="14s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-2s"/>
+          <animate attributeName="opacity" values="0.55;0.88;0.6;0.84;0.57;0.82;0.55" dur="26s" repeatCount="indefinite" begin="-2s"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
 
       <!-- 2: Emerald — left -->
-      <g transform="translate(320 72) scale(0.22)">
+      <g transform="translate(320 65) scale(0.22)">
         <ellipse cx="0" cy="-20" rx="140" ry="240" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.4;0.5;0.35;0.1;0;0;0.2;0.45;0.5;0.42" dur="9s" repeatCount="indefinite" begin="1.2s"/>
+          <animate attributeName="opacity" values="0.22;0.14;0.48;0.2;0.44;0.16;0.22" dur="24s" repeatCount="indefinite" begin="-9s"/>
+          <animate attributeName="rx" values="140;166;132;160;140" dur="26s" repeatCount="indefinite" begin="-9s"/>
+          <animate attributeName="ry" values="240;276;230;270;240" dur="26s" repeatCount="indefinite" begin="-9s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="2 0 -280;-2 0 -280;2 0 -280" dur="7s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.6;0.7;0.55;0.15;0;0;0.35;0.65;0.7;0.62" dur="9s" repeatCount="indefinite" begin="1.2s"/>
+          <animateTransform attributeName="transform" type="rotate" values="3.0 0 -280;-1.2 0 -280;-4.0 0 -280;1.0 0 -280;3.0 0 -280" dur="20s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.5;0.76;1" keySplines="0.4 0 0.6 1;0.38 0 0.62 1;0.4 0 0.6 1;0.38 0 0.62 1" begin="-9s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 3;0 -6;0 0" dur="16s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-9s"/>
+          <animate attributeName="opacity" values="0.5;0.82;0.54;0.78;0.52;0.76;0.5" dur="28s" repeatCount="indefinite" begin="-9s"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
 
-      <!-- 3: Violet — center-left -->
-      <g transform="translate(560 60) scale(0.18)">
+      <!-- 3: Violet — center-left, far -->
+      <g transform="translate(560 52) scale(0.18)">
         <ellipse cx="0" cy="-20" rx="130" ry="220" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0;0;0.3;0.4;0.45;0.35;0.1;0;0;0;0.2;0.38" dur="10s" repeatCount="indefinite" begin="2s"/>
+          <animate attributeName="opacity" values="0.1;0.4;0.14;0.38;0.12;0.36;0.1" dur="28s" repeatCount="indefinite" begin="-15s"/>
+          <animate attributeName="rx" values="130;152;124;148;130" dur="30s" repeatCount="indefinite" begin="-15s"/>
+          <animate attributeName="ry" values="220;254;212;248;220" dur="30s" repeatCount="indefinite" begin="-15s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-1.5 0 -280;1.5 0 -280;-1.5 0 -280" dur="8s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0;0.5;0.6;0.65;0.55;0.15;0;0;0;0.35;0.55" dur="10s" repeatCount="indefinite" begin="2s"/>
+          <animateTransform attributeName="transform" type="rotate" values="-2.2 0 -280;2.4 0 -280;4.0 0 -280;-0.6 0 -280;-2.2 0 -280" dur="24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.26;0.5;0.8;1" keySplines="0.42 0 0.58 1;0.36 0 0.64 1;0.42 0 0.58 1;0.36 0 0.64 1" begin="-15s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 2;0 -3;0 0" dur="19s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-15s"/>
+          <animate attributeName="opacity" values="0.46;0.72;0.5;0.7;0.48;0.68;0.46" dur="32s" repeatCount="indefinite" begin="-15s"/>
           <use href="#fanousViolet"/>
         </g>
       </g>
 
       <!-- 4: Blue — center -->
-      <g transform="translate(780 83) scale(0.26)">
+      <g transform="translate(780 72) scale(0.26)">
         <ellipse cx="0" cy="-20" rx="150" ry="250" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.5;0.45;0.3;0.1;0;0;0;0.25;0.48;0.52;0.5" dur="7.5s" repeatCount="indefinite" begin="0.5s"/>
+          <animate attributeName="opacity" values="0.26;0.16;0.54;0.22;0.5;0.18;0.26" dur="18s" repeatCount="indefinite" begin="-5s"/>
+          <animate attributeName="rx" values="150;176;142;170;150" dur="20s" repeatCount="indefinite" begin="-5s"/>
+          <animate attributeName="ry" values="250;286;240;280;250" dur="20s" repeatCount="indefinite" begin="-5s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="3 0 -280;-3 0 -280;3 0 -280" dur="5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.75;0.65;0.5;0.15;0;0;0;0.4;0.7;0.78;0.75" dur="7.5s" repeatCount="indefinite" begin="0.5s"/>
+          <animateTransform attributeName="transform" type="rotate" values="4.5 0 -280;-1.0 0 -280;-3.5 0 -280;1.5 0 -280;4.5 0 -280" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.52;0.8;1" keySplines="0.44 0 0.56 1;0.36 0 0.64 1;0.44 0 0.56 1;0.36 0 0.64 1" begin="-5s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 3;0 -6;0 0" dur="13s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-5s"/>
+          <animate attributeName="opacity" values="0.58;0.88;0.62;0.84;0.6;0.82;0.58" dur="22s" repeatCount="indefinite" begin="-5s"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
 
-      <!-- 5: Emerald — center, largest -->
-      <g transform="translate(1000 94) scale(0.30)">
+      <!-- 5: Emerald — center, hero -->
+      <g transform="translate(1000 82) scale(0.30)">
         <ellipse cx="0" cy="-20" rx="170" ry="280" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.55;0.5;0.55;0.45;0.3;0.1;0;0;0.2;0.45;0.55" dur="8.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.28;0.6;0.24;0.56;0.26;0.58;0.28" dur="22s" repeatCount="indefinite"/>
+          <animate attributeName="rx" values="170;200;162;194;170" dur="24s" repeatCount="indefinite"/>
+          <animate attributeName="ry" values="280;320;268;314;280" dur="24s" repeatCount="indefinite"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-2.5 0 -280;2.5 0 -280;-2.5 0 -280" dur="6s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.8;0.75;0.8;0.65;0.5;0.15;0;0;0.35;0.65;0.8" dur="8.5s" repeatCount="indefinite"/>
+          <animateTransform attributeName="transform" type="rotate" values="-5.0 0 -280;2.0 0 -280;4.0 0 -280;-1.2 0 -280;-5.0 0 -280" dur="15s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.5;0.76;1" keySplines="0.4 0 0.6 1;0.35 0 0.65 1;0.4 0 0.6 1;0.35 0 0.65 1"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 4;0 -7;0 0" dur="12s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+          <animate attributeName="opacity" values="0.6;0.92;0.64;0.9;0.62;0.88;0.6" dur="20s" repeatCount="indefinite"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
 
       <!-- 6: Violet — center-right -->
-      <g transform="translate(1220 66) scale(0.20)">
+      <g transform="translate(1220 58) scale(0.20)">
         <ellipse cx="0" cy="-20" rx="135" ry="230" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0;0.3;0.42;0.4;0.35;0.15;0;0;0;0.1;0.35;0.42" dur="11s" repeatCount="indefinite" begin="3s"/>
+          <animate attributeName="opacity" values="0.12;0.44;0.16;0.42;0.14;0.4;0.12" dur="26s" repeatCount="indefinite" begin="-12s"/>
+          <animate attributeName="rx" values="135;160;128;154;135" dur="28s" repeatCount="indefinite" begin="-12s"/>
+          <animate attributeName="ry" values="230;266;222;260;230" dur="28s" repeatCount="indefinite" begin="-12s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="2 0 -280;-2 0 -280;2 0 -280" dur="6.5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0.5;0.6;0.58;0.55;0.2;0;0;0;0.15;0.52;0.6" dur="11s" repeatCount="indefinite" begin="3s"/>
+          <animateTransform attributeName="transform" type="rotate" values="2.8 0 -280;-1.5 0 -280;-4.5 0 -280;0.8 0 -280;2.8 0 -280" dur="22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.26;0.52;0.78;1" keySplines="0.42 0 0.58 1;0.38 0 0.62 1;0.42 0 0.58 1;0.38 0 0.62 1" begin="-12s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 2;0 -4;0 0" dur="17s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-12s"/>
+          <animate attributeName="opacity" values="0.48;0.76;0.52;0.74;0.5;0.72;0.48" dur="30s" repeatCount="indefinite" begin="-12s"/>
           <use href="#fanousViolet"/>
         </g>
       </g>
 
       <!-- 7: Blue — right -->
-      <g transform="translate(1440 77) scale(0.24)">
+      <g transform="translate(1440 68) scale(0.24)">
         <ellipse cx="0" cy="-20" rx="145" ry="245" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0;0;0.4;0.48;0.45;0.42;0.2;0;0;0;0.3;0.45" dur="9.5s" repeatCount="indefinite" begin="1.5s"/>
+          <animate attributeName="opacity" values="0.2;0.48;0.16;0.46;0.18;0.44;0.2" dur="21s" repeatCount="indefinite" begin="-3s"/>
+          <animate attributeName="rx" values="145;170;138;164;145" dur="23s" repeatCount="indefinite" begin="-3s"/>
+          <animate attributeName="ry" values="245;280;236;274;245" dur="23s" repeatCount="indefinite" begin="-3s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-1.5 0 -280;1.5 0 -280;-1.5 0 -280" dur="5.5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0;0.6;0.7;0.65;0.6;0.3;0;0;0;0.5;0.65" dur="9.5s" repeatCount="indefinite" begin="1.5s"/>
+          <animateTransform attributeName="transform" type="rotate" values="-3.2 0 -280;1.2 0 -280;3.8 0 -280;-1.0 0 -280;-3.2 0 -280" dur="19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.5;0.76;1" keySplines="0.45 0 0.55 1;0.35 0 0.65 1;0.45 0 0.55 1;0.35 0 0.65 1" begin="-3s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 3;0 -5;0 0" dur="15s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-3s"/>
+          <animate attributeName="opacity" values="0.54;0.84;0.58;0.8;0.56;0.78;0.54" dur="25s" repeatCount="indefinite" begin="-3s"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
 
       <!-- 8: Emerald — far right, small -->
-      <g transform="translate(1640 55) scale(0.16)">
+      <g transform="translate(1640 48) scale(0.16)">
         <ellipse cx="0" cy="-20" rx="120" ry="210" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.3;0.35;0.28;0.1;0;0;0;0;0.15;0.28;0.32;0.3" dur="12s" repeatCount="indefinite" begin="4s"/>
+          <animate attributeName="opacity" values="0.14;0.38;0.1;0.36;0.12;0.34;0.14" dur="30s" repeatCount="indefinite" begin="-19s"/>
+          <animate attributeName="rx" values="120;142;114;138;120" dur="32s" repeatCount="indefinite" begin="-19s"/>
+          <animate attributeName="ry" values="210;244;202;238;210" dur="32s" repeatCount="indefinite" begin="-19s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="1 0 -280;-1 0 -280;1 0 -280" dur="9s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.5;0.55;0.45;0.15;0;0;0;0;0.25;0.45;0.52;0.5" dur="12s" repeatCount="indefinite" begin="4s"/>
+          <animateTransform attributeName="transform" type="rotate" values="2.2 0 -280;-0.8 0 -280;-2.8 0 -280;1.0 0 -280;2.2 0 -280" dur="26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.52;0.78;1" keySplines="0.4 0 0.6 1;0.36 0 0.64 1;0.4 0 0.6 1;0.36 0 0.64 1" begin="-19s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 1;0 -3;0 0" dur="20s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-19s"/>
+          <animate attributeName="opacity" values="0.46;0.72;0.44;0.7;0.46;0.68;0.46" dur="34s" repeatCount="indefinite" begin="-19s"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
 
       <!-- 9: Violet — edge right -->
-      <g transform="translate(1840 86) scale(0.27)">
+      <g transform="translate(1840 75) scale(0.27)">
         <ellipse cx="0" cy="-20" rx="155" ry="255" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.48;0.42;0.1;0;0;0;0.2;0.4;0.48;0.5;0.48" dur="8s" repeatCount="indefinite" begin="1s"/>
+          <animate attributeName="opacity" values="0.24;0.1;0.5;0.18;0.46;0.14;0.24" dur="19s" repeatCount="indefinite" begin="-7s"/>
+          <animate attributeName="rx" values="155;182;148;176;155" dur="21s" repeatCount="indefinite" begin="-7s"/>
+          <animate attributeName="ry" values="255;292;246;286;255" dur="21s" repeatCount="indefinite" begin="-7s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-2.5 0 -280;2.5 0 -280;-2.5 0 -280" dur="7s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.7;0.6;0.15;0;0;0;0.35;0.6;0.7;0.72;0.7" dur="8s" repeatCount="indefinite" begin="1s"/>
+          <animateTransform attributeName="transform" type="rotate" values="-4.5 0 -280;1.8 0 -280;3.6 0 -280;-1.2 0 -280;-4.5 0 -280" dur="17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.5;0.78;1" keySplines="0.44 0 0.56 1;0.36 0 0.64 1;0.44 0 0.56 1;0.36 0 0.64 1" begin="-7s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 3;0 -6;0 0" dur="14s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-7s"/>
+          <animate attributeName="opacity" values="0.56;0.86;0.6;0.84;0.58;0.82;0.56" dur="24s" repeatCount="indefinite" begin="-7s"/>
           <use href="#fanousViolet"/>
         </g>
       </g>
+
+      <!-- Falling golden light particles -->
+      <circle cx="140" cy="-20" r="1.5" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;18 550;32 1100" dur="20s" repeatCount="indefinite" begin="-2s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.55;0.3;0.1;0" keyTimes="0;0.06;0.5;0.94;1" dur="20s" repeatCount="indefinite" begin="-2s"/>
+      </circle>
+      <circle cx="380" cy="-50" r="1" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-20 550;-35 1130" dur="26s" repeatCount="indefinite" begin="-9s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.5;0.28;0.08;0" keyTimes="0;0.06;0.5;0.94;1" dur="26s" repeatCount="indefinite" begin="-9s"/>
+      </circle>
+      <circle cx="560" cy="-30" r="1.2" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;10 540;-12 1110" dur="18s" repeatCount="indefinite" begin="-4s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.5;0.25;0.08;0" keyTimes="0;0.06;0.5;0.94;1" dur="18s" repeatCount="indefinite" begin="-4s"/>
+      </circle>
+      <circle cx="720" cy="-70" r="0.8" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-15 560;-28 1140" dur="28s" repeatCount="indefinite" begin="-14s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.45;0.22;0.06;0" keyTimes="0;0.06;0.5;0.94;1" dur="28s" repeatCount="indefinite" begin="-14s"/>
+      </circle>
+      <circle cx="920" cy="-15" r="1.3" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;22 545;38 1105" dur="22s" repeatCount="indefinite" begin="-7s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.5;0.3;0.1;0" keyTimes="0;0.06;0.5;0.94;1" dur="22s" repeatCount="indefinite" begin="-7s"/>
+      </circle>
+      <circle cx="1100" cy="-45" r="1" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-12 555;8 1120" dur="30s" repeatCount="indefinite" begin="-17s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.42;0.2;0.06;0" keyTimes="0;0.06;0.5;0.94;1" dur="30s" repeatCount="indefinite" begin="-17s"/>
+      </circle>
+      <circle cx="1250" cy="-25" r="1.4" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;16 548;28 1108" dur="19s" repeatCount="indefinite" begin="-3s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.52;0.28;0.08;0" keyTimes="0;0.06;0.5;0.94;1" dur="19s" repeatCount="indefinite" begin="-3s"/>
+      </circle>
+      <circle cx="1400" cy="-60" r="0.9" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-18 558;-32 1125" dur="25s" repeatCount="indefinite" begin="-11s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.48;0.24;0.07;0" keyTimes="0;0.06;0.5;0.94;1" dur="25s" repeatCount="indefinite" begin="-11s"/>
+      </circle>
+      <circle cx="1550" cy="-35" r="1.1" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;8 542;-10 1095" dur="21s" repeatCount="indefinite" begin="-6s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.5;0.26;0.08;0" keyTimes="0;0.06;0.5;0.94;1" dur="21s" repeatCount="indefinite" begin="-6s"/>
+      </circle>
+      <circle cx="1700" cy="-55" r="1.3" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-14 552;-24 1115" dur="27s" repeatCount="indefinite" begin="-15s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.44;0.22;0.06;0" keyTimes="0;0.06;0.5;0.94;1" dur="27s" repeatCount="indefinite" begin="-15s"/>
+      </circle>
+      <circle cx="1800" cy="-20" r="0.8" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;12 548;20 1105" dur="23s" repeatCount="indefinite" begin="-8s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.48;0.25;0.07;0" keyTimes="0;0.06;0.5;0.94;1" dur="23s" repeatCount="indefinite" begin="-8s"/>
+      </circle>
+      <circle cx="1900" cy="-40" r="1" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-8 555;-18 1118" dur="29s" repeatCount="indefinite" begin="-18s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.4;0.2;0.06;0" keyTimes="0;0.06;0.5;0.94;1" dur="29s" repeatCount="indefinite" begin="-18s"/>
+      </circle>
     </svg>
   </div>
 
@@ -533,76 +599,103 @@
   <!-- ==================== REPORT MODAL ==================== -->
   <div class="modal-overlay hidden" id="reportModal">
     <div class="report-card">
-      <div class="report-header">
-        <div class="report-header-left">
-          <div class="report-icon-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-          </div>
-          <div>
-            <div class="report-title">Signaler un probl&egrave;me</div>
-            <div class="report-subtitle">Aide-nous &agrave; am&eacute;liorer Al-Asmaa</div>
-          </div>
+      <div class="report-glow"></div>
+      <div class="report-pattern"></div>
+
+      <button class="report-close" id="btnCloseReport" type="button" aria-label="Fermer">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="report-hero">
+        <div class="report-hero-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <line x1="9" y1="9" x2="15" y2="9"/>
+            <line x1="9" y1="13" x2="13" y2="13"/>
+          </svg>
         </div>
-        <button class="report-close" id="btnCloseReport" type="button" aria-label="Fermer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
+        <h2 class="report-title">Signaler un probl&egrave;me</h2>
+        <p class="report-subtitle">Aide-nous &agrave; am&eacute;liorer Al-Asmaa</p>
       </div>
 
       <form id="reportForm" autocomplete="off">
-        <div class="report-field">
-          <label class="report-label">Type</label>
+        <div class="report-field report-stagger" style="--i:0">
           <div class="report-types">
-            <label class="report-type-chip">
+            <label class="report-type-card" data-type="bug">
               <input type="radio" name="reportType" value="bug" checked>
-              <span class="report-chip-inner">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                Bug
+              <span class="report-card-inner">
+                <span class="report-type-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </span>
+                <span class="report-type-name">Bug</span>
+                <span class="report-type-desc">Quelque chose ne marche pas</span>
               </span>
             </label>
-            <label class="report-type-chip">
+            <label class="report-type-card" data-type="content">
               <input type="radio" name="reportType" value="content">
-              <span class="report-chip-inner">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                Contenu
+              <span class="report-card-inner">
+                <span class="report-type-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </span>
+                <span class="report-type-name">Contenu</span>
+                <span class="report-type-desc">Erreur dans les donn&eacute;es</span>
               </span>
             </label>
-            <label class="report-type-chip">
+            <label class="report-type-card" data-type="suggestion">
               <input type="radio" name="reportType" value="suggestion">
-              <span class="report-chip-inner">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
-                Suggestion
+              <span class="report-card-inner">
+                <span class="report-type-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </span>
+                <span class="report-type-name">Id&eacute;e</span>
+                <span class="report-type-desc">Proposer une am&eacute;lioration</span>
               </span>
             </label>
           </div>
         </div>
 
-        <div class="report-field">
+        <div class="report-divider report-stagger" style="--i:1"></div>
+
+        <div class="report-field report-stagger" style="--i:1">
           <label class="report-label" for="reportPage">Page concern&eacute;e <span class="report-optional">(optionnel)</span></label>
-          <input type="text" class="report-input" id="reportPage" placeholder="Ex: Encyclop&eacute;die, Quiz..." maxlength="100">
+          <div class="report-input-wrap">
+            <svg class="report-input-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            <input type="text" class="report-input" id="reportPage" placeholder="Ex: Encyclop&eacute;die, Quiz..." maxlength="100">
+          </div>
         </div>
 
-        <div class="report-field">
-          <label class="report-label" for="reportDesc">Description</label>
+        <div class="report-field report-stagger" style="--i:2">
+          <label class="report-label" for="reportDesc">Description <span class="report-required">*</span></label>
           <textarea class="report-textarea" id="reportDesc" rows="4" placeholder="D&eacute;cris le probl&egrave;me ou ta suggestion..." maxlength="1000" required></textarea>
           <div class="report-char-row">
+            <div class="report-char-bar"><div class="report-char-fill" id="reportCharFill"></div></div>
             <span class="report-char-count"><span id="reportCharCount">0</span> / 1000</span>
           </div>
         </div>
 
-        <button type="submit" class="report-submit" id="btnReportSubmit" disabled>
-          <span class="report-submit-text">Envoyer</span>
-          <span class="report-submit-loader hidden">
-            <svg class="report-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-dasharray="31.4 31.4" stroke-linecap="round"/></svg>
-          </span>
-        </button>
+        <div class="report-stagger" style="--i:3">
+          <button type="submit" class="report-submit" id="btnReportSubmit" disabled>
+            <span class="report-submit-text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Envoyer
+            </span>
+            <span class="report-submit-loader hidden">
+              <svg class="report-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10" stroke-dasharray="31.4 31.4" stroke-linecap="round"/></svg>
+            </span>
+          </button>
+        </div>
       </form>
 
       <div class="report-success hidden" id="reportSuccess">
+        <div class="report-success-ring"></div>
+        <div class="report-success-ring report-success-ring-2"></div>
         <div class="report-success-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12" class="report-check-path"/>
+          </svg>
         </div>
-        <div class="report-success-title">Merci pour ton retour</div>
-        <div class="report-success-desc">Ton signalement a bien &eacute;t&eacute; envoy&eacute;. Jazak Allahu khayran.</div>
+        <div class="report-success-title">Jazak Allahu khayran</div>
+        <div class="report-success-desc">Ton retour nous aide &agrave; am&eacute;liorer<br>l'exp&eacute;rience pour toute la communaut&eacute;.</div>
         <button type="button" class="report-submit" id="btnReportDone">Fermer</button>
       </div>
     </div>
@@ -611,7 +704,7 @@
     <!-- ==================== HOME PAGE ==================== -->
     <div class="page active" id="pageHome">
       <div class="container home-container">
-        <!-- Hero compact -->
+        <!-- Hero -->
         <div class="hero hero-compact">
           <div class="hero-glow" aria-hidden="true"></div>
           <div class="hero-arabic" id="heroArabic">الأسماء</div>
@@ -631,49 +724,118 @@
             </svg>
           </div>
           <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+          <div class="hero-sacred-line" aria-hidden="true"></div>
         </div>
 
-        <!-- Pseudo Badge compact -->
+        <!-- Pseudo -->
         <button class="pseudo-badge" id="pseudoBadge">
           <span class="pseudo-avatar" id="pseudoAvatar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
           <span class="pseudo-name" id="pseudoName">Choisir ton pseudo</span>
           <svg class="pseudo-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
 
-        <!-- Buttons grid -->
-        <div class="home-grid">
-          <button class="btn btn-primary home-grid-full" id="btnCreateRoom">Créer une partie</button>
-          <button class="btn btn-secondary" id="btnJoinRoom">Rejoindre</button>
-          <button class="btn btn-secondary" id="btnBrowseRooms">Parcourir</button>
-          <button class="btn btn-secondary" id="btnEncyclopedia">Encyclopédie</button>
-          <button class="btn btn-secondary" id="btnTraining">S'entraîner</button>
-          <button class="btn btn-secondary" id="btnGuide">Guide</button>
-          <button class="btn btn-secondary" id="btnMiniGames">Mini-jeux</button>
+        <!-- Primary Actions -->
+        <div class="home-cta-duo">
+          <button class="home-cta home-cta--primary" id="btnCreateRoom">
+            <span class="home-cta__shine"></span>
+            <span class="home-cta__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+            </span>
+            <span class="home-cta__text">Créer une partie</span>
+          </button>
+          <button class="home-cta home-cta--glass" id="btnJoinRoom">
+            <span class="home-cta__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            </span>
+            <span class="home-cta__text">Rejoindre</span>
+          </button>
         </div>
 
+        <!-- Features -->
+        <div class="home-features">
+          <button class="home-feature" id="btnEncyclopedia" style="--feat-color:96,165,250;--feat-hue:217">
+            <div class="home-feature-orb"></div>
+            <div class="home-feature-icon home-feature-icon--sapphire">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <span class="home-feature-name">Encyclopédie</span>
+          </button>
+          <button class="home-feature" id="btnTraining" style="--feat-color:45,212,160;--feat-hue:160">
+            <div class="home-feature-orb"></div>
+            <div class="home-feature-icon home-feature-icon--emerald">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+            </div>
+            <span class="home-feature-name">S'entraîner</span>
+          </button>
+          <button class="home-feature" id="btnMiniGames" style="--feat-color:245,158,11;--feat-hue:38">
+            <div class="home-feature-orb"></div>
+            <div class="home-feature-icon home-feature-icon--amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
+            </div>
+            <span class="home-feature-name">Mini-jeux</span>
+          </button>
+          <button class="home-feature" id="btnBrowseRooms" style="--feat-color:212,162,76;--feat-hue:38">
+            <div class="home-feature-orb"></div>
+            <div class="home-feature-icon home-feature-icon--gold">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="home-feature-name">Salons</span>
+          </button>
+          <button class="home-feature" id="btnGuide" style="--feat-color:154,151,143;--feat-hue:0">
+            <div class="home-feature-orb"></div>
+            <div class="home-feature-icon home-feature-icon--muted">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <span class="home-feature-name">Guide</span>
+          </button>
+        </div>
 
         <!-- ====== Soutenir des associations ====== -->
         <div class="support-block">
           <div class="support-heading">
-            <span class="support-heading-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20v-6a7 7 0 0 1 14 0v6"/><path d="M12 6V3"/><path d="M9 20v-3a3 3 0 0 1 6 0v3"/><circle cx="12" cy="3" r="1" fill="currentColor"/></svg></span>
-            <span>Soutenir des associations</span>
+            <span class="support-heading-line"></span>
+            <span class="support-heading-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <span>Soutenir des associations</span>
+            </span>
+            <span class="support-heading-line"></span>
           </div>
           <div class="asso-grid">
-            <a class="asso-card" href="https://www.islamic-relief.fr/" target="_blank" rel="noopener">
-              <span class="asso-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3a9 9 0 0 0-5.5 16.1A7 7 0 0 1 12 7a7 7 0 0 1 5.5 12.1A9 9 0 0 0 12 3z"/></svg></span>
-              <span class="asso-name">Islamic Relief</span>
+            <a class="asso-card" href="https://www.islamic-relief.fr/" target="_blank" rel="noopener" style="--ac:#3b82f6;--ac-rgb:59,130,246">
+              <span class="asso-card-glow"></span>
+              <span class="asso-card-initial">IR</span>
+              <span class="asso-card-content">
+                <span class="asso-card-label">Islamic Relief</span>
+                <span class="asso-card-desc">Aide humanitaire mondiale</span>
+              </span>
+              <svg class="asso-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-            <a class="asso-card" href="https://www.secours-islamique.org/" target="_blank" rel="noopener">
-              <span class="asso-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-8"/><path d="M12 7v4"/><path d="M5 11c0-3.87 3.13-7 7-7s7 3.13 7 7"/></svg></span>
-              <span class="asso-name">SIF</span>
+            <a class="asso-card" href="https://www.secours-islamique.org/" target="_blank" rel="noopener" style="--ac:#10b981;--ac-rgb:16,185,129">
+              <span class="asso-card-glow"></span>
+              <span class="asso-card-initial">SI</span>
+              <span class="asso-card-content">
+                <span class="asso-card-label">Secours Islamique</span>
+                <span class="asso-card-desc">Solidarité internationale</span>
+              </span>
+              <svg class="asso-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-            <a class="asso-card" href="https://www.muslimhands.fr/" target="_blank" rel="noopener">
-              <span class="asso-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17a4 4 0 0 0 8 0c0-2-2-2-2-5a4 4 0 0 0-8 0"/><path d="M13 17a4 4 0 0 1-8 0c0-2 2-2 2-5a4 4 0 0 1 8 0"/></svg></span>
-              <span class="asso-name">Muslim Hands</span>
+            <a class="asso-card" href="https://www.muslimhands.fr/" target="_blank" rel="noopener" style="--ac:#f59e0b;--ac-rgb:245,158,11">
+              <span class="asso-card-glow"></span>
+              <span class="asso-card-initial">MH</span>
+              <span class="asso-card-content">
+                <span class="asso-card-label">Muslim Hands</span>
+                <span class="asso-card-desc">Projets de développement</span>
+              </span>
+              <svg class="asso-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
-            <a class="asso-card" href="https://www.humanappeal.fr/" target="_blank" rel="noopener">
-              <span class="asso-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
-              <span class="asso-name">Human Appeal</span>
+            <a class="asso-card" href="https://www.humanappeal.fr/" target="_blank" rel="noopener" style="--ac:#ef4444;--ac-rgb:239,68,68">
+              <span class="asso-card-glow"></span>
+              <span class="asso-card-initial">HA</span>
+              <span class="asso-card-content">
+                <span class="asso-card-label">Human Appeal</span>
+                <span class="asso-card-desc">Urgences et éducation</span>
+              </span>
+              <svg class="asso-card-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
             </a>
           </div>
         </div>
@@ -751,21 +913,23 @@
         <!-- ====== Footer légal ====== -->
         <footer class="home-footer">
           <button type="button" class="report-trigger" id="btnOpenReport">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
             <span>Signaler un probl&egrave;me</span>
           </button>
-          <nav class="home-footer-links">
-            <a href="/mentions-legales">Mentions légales</a>
-            <a href="/politique-de-confidentialite">Confidentialité</a>
-            <a href="/conditions-utilisation">CGU</a>
-          </nav>
-          <p class="home-footer-copy">&copy; 2024–2026 Al-Asmaa</p>
+          <div class="home-footer-row">
+            <nav class="home-footer-links">
+              <a href="/mentions-legales">Mentions légales</a>
+              <a href="/politique-de-confidentialite">Confidentialité</a>
+              <a href="/conditions-utilisation">CGU</a>
+              <a href="#" onclick="event.preventDefault();alAsmaaOpenConsentBanner()">Cookies</a>
+            </nav>
+            <span class="home-footer-sep">&middot;</span>
+            <p class="home-footer-copy">&copy; 2024–2026 Al-Asmaa</p>
+          </div>
           <a href="https://noqta.fr" target="_blank" rel="noopener noreferrer" class="noqta-credit">
             <span class="noqta-credit-label">Développé par</span>
-            <span class="noqta-credit-brand">
-              <img src="/contenu/Logo.svg" alt="NOQTA" class="noqta-credit-logo">
-              <span class="noqta-credit-name">NOQTA<span class="noqta-dot">.</span></span>
-            </span>
+            <img src="/contenu/Logo.svg" alt="NOQTA" class="noqta-credit-logo">
+            <span class="noqta-credit-name">NOQTA<span class="noqta-dot">.</span></span>
           </a>
         </footer>
 
@@ -1210,9 +1374,11 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
           <button class="ency-nav-center" id="encyBackToGrid" aria-label="Retour &agrave; la grille">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-            <span id="encyNavCounter"></span>
+            <span class="ency-nav-center-glow"></span>
+            <svg class="ency-nav-center-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            <span class="ency-nav-center-label">Voir tous les noms</span>
           </button>
+          <span class="ency-nav-counter-hidden" id="encyNavCounter"></span>
           <button class="ency-nav-btn" id="encyNext" aria-label="Nom suivant">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
@@ -2022,7 +2188,7 @@
   <script src="/js/mini-games.js?v=15.5"></script>
   <script src="/data/quiz-questions.js?v=1.0"></script>
   <script src="/js/ilm-quest.js?v=1.1"></script>
-  <script src="/js/app.js?v=15.8"></script>
+  <script src="/js/app.js?v=16.0"></script>
   <script>
     // Enregistrer le Service Worker (sans supprimer les caches à chaque chargement)
     if ('serviceWorker' in navigator) {

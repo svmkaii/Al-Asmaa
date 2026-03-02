@@ -4,7 +4,7 @@
  */
 (() => {
   'use strict';
-  console.log('[Host] v14.0 — premium results page redesign');
+  // console.log('[Host] v14.0 — premium results page redesign');
 
   // --- État ---
   let socket = null;
@@ -524,7 +524,7 @@
       gameState = null;
       isMyTurn = false;
       activePlayerId = null;
-      console.log('[Nav] Auto leave-room on page change');
+      // console.log('[Nav] Auto leave-room on page change');
     }
 
     Object.values(pages).forEach(p => {
@@ -539,6 +539,10 @@
       if (window.location.pathname !== url) {
         history.pushState({ page: pageId }, '', url);
       }
+    }
+    // Refresh home stats when returning to home
+    if (pageId === 'home') {
+      updateHomeStats();
     }
   }
 
@@ -693,7 +697,32 @@
     document.getElementById('browseModal').addEventListener('click', (e) => {
       if (e.target === e.currentTarget) closeBrowseModal();
     });
+
+    // Home redesign init
+    updateHomeStats();
   }
+
+  // --- HOME STATS ---
+  function updateHomeStats() {
+    const statsEl = document.getElementById('homeStatsMini');
+    if (!statsEl) return;
+
+    const progress = (typeof Training !== 'undefined' && Training.getProgress) ? Training.getProgress() : { mastered: 0 };
+    const streakData = JSON.parse(localStorage.getItem('al-asmaa-streak') || '{"count":0,"lastDate":""}');
+    const streak = streakData.count || 0;
+    const mastered = progress.mastered || 0;
+
+    if (mastered === 0 && streak === 0) {
+      statsEl.classList.add('hidden');
+    } else {
+      statsEl.classList.remove('hidden');
+      const masteredEl = document.getElementById('homeStatMastered');
+      const streakEl = document.getElementById('homeStatStreak');
+      if (masteredEl) masteredEl.textContent = mastered;
+      if (streakEl) streakEl.textContent = streak;
+    }
+  }
+
 
   // --- BROWSE PUBLIC ROOMS ---
   function openBrowseModal() {
@@ -728,7 +757,7 @@
     fetch('/api/public-rooms')
       .then(r => r.json())
       .then(data => {
-        console.log('[Parcourir] Réponse API:', data);
+        // console.log('[Parcourir] Réponse API:', data);
         renderPublicRooms(data.rooms || []);
       })
       .catch((err) => {
@@ -1055,14 +1084,14 @@
     document.getElementById('btnConfirmCreate').addEventListener('click', () => {
       const hostName = getPseudo() || 'Hôte';
 
-      console.log('[Créer] Socket connecté:', socket.connected);
-      console.log('[Créer] Données envoyées:', { ...config, hostName, visibility });
+      // console.log('[Créer] Socket connecté:', socket.connected);
+      // console.log('[Créer] Données envoyées:', { ...config, hostName, visibility });
 
       Bomb.initAudio();
       AudioFX.init();
 
       socket.emit('create-room', { ...config, hostName, visibility }, (response) => {
-        console.log('[Créer] Réponse serveur:', response);
+        // console.log('[Créer] Réponse serveur:', response);
         if (response.success) {
           roomCode = response.code;
           hostPlayer = response.player;
@@ -1425,14 +1454,14 @@
     if (!replayBtn) return;
 
     replayBtn.addEventListener('click', () => {
-      console.log('[Host] btnPlayAgain cliqué — emit replay-game');
+      // console.log('[Host] btnPlayAgain cliqué — emit replay-game');
       replayBtn.disabled = true;
       replayBtn.textContent = 'Chargement...';
       socket.emit('replay-game');
       // Timeout sécurité — si replay-lobby n'arrive pas après 6s
       setTimeout(() => {
         if (replayBtn.disabled && pages.results.classList.contains('active')) {
-          console.log('[Host] replay timeout — re-enable button');
+          // console.log('[Host] replay timeout — re-enable button');
           replayBtn.disabled = false;
           replayBtn.innerHTML = replayOrigHTML;
           Bomb.showToast('Erreur de connexion, réessayez', 'error');
@@ -1442,7 +1471,7 @@
 
     // Erreur replay
     socket.on('replay-error', (data) => {
-      console.log('[Host] replay-error:', data);
+      // console.log('[Host] replay-error:', data);
       Bomb.showToast(data.message || 'Erreur', 'error');
       replayBtn.disabled = false;
       replayBtn.innerHTML = replayOrigHTML;
@@ -1633,7 +1662,7 @@
       } else if (data.result === 'already-used') {
         Bomb.showFeedback('already-used');
         Bomb.showToast('Déjà cité !', 'warning');
-        showArenaError();
+        showArenaLock();
 
       } else if (data.result === 'invalid') {
         Bomb.showFeedback('invalid');
@@ -1746,7 +1775,7 @@
 
     // Replay — retour en lobby
     socket.on('replay-lobby', (data) => {
-      console.log('[Host] replay-lobby reçu:', data.code, 'players:', data.players.length);
+      // console.log('[Host] replay-lobby reçu:', data.code, 'players:', data.players.length);
       players = data.players;
       config = data.config || config;
       gameState = null;
@@ -1955,6 +1984,15 @@
     setTimeout(() => cross.classList.remove('animate'), 900);
   }
 
+  function showArenaLock() {
+    const lock = document.querySelector('#gameArena .arena-lock-overlay');
+    if (!lock) return;
+    lock.classList.remove('animate');
+    void lock.offsetWidth;
+    lock.classList.add('animate');
+    setTimeout(() => lock.classList.remove('animate'), 1500);
+  }
+
   function animateBombHit(containerId, playerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -2155,10 +2193,20 @@
         </svg>
       </div>`;
 
+    // Lock overlay for already-used names
+    const lockOverlayHtml = `
+      <div class="arena-lock-overlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>`;
+
     container.innerHTML = `
       <div class="arena-circle" style="width:${size}px;height:${size}px;">
         ${bombHtml}
         ${errorCrossHtml}
+        ${lockOverlayHtml}
         ${playersHtml}
       </div>`;
   }
@@ -4591,6 +4639,8 @@
       successView.classList.add('hidden');
       form.reset();
       if (charCount) charCount.textContent = '0';
+      const charFill = document.getElementById('reportCharFill');
+      if (charFill) charFill.style.width = '0%';
       submitBtn.disabled = true;
       resetSubmitBtn();
     }
@@ -4615,9 +4665,11 @@
       if (e.target === modal) closeReportModal();
     });
 
+    const charFillEl = document.getElementById('reportCharFill');
     desc.addEventListener('input', () => {
       const len = desc.value.length;
       if (charCount) charCount.textContent = len;
+      if (charFillEl) charFillEl.style.width = Math.min(len / 1000 * 100, 100) + '%';
       submitBtn.disabled = !desc.value.trim();
     });
 

@@ -4,7 +4,7 @@
  *
  * Ce module fournit :
  *  - La normalisation de texte (latin et arabe)
- *  - La validation d'une reponse (match exact, variantes, puis flou)
+ *  - La validation d'une reponse (match exact, variantes, puis collapsed)
  *  - Des suggestions d'autocompletion en temps reel
  */
 const Validator = (() => {
@@ -43,54 +43,20 @@ const Validator = (() => {
       .trim();
   }
 
-  // ---------------------------------------------------------------------------
-  // Distance de Levenshtein
-  // ---------------------------------------------------------------------------
-
   /**
-   * Calcule la distance d'edition (Levenshtein) entre deux chaines.
-   * Utilise la programmation dynamique classique en O(n*m).
-   *
-   * @param {string} a - Premiere chaine
-   * @param {string} b - Deuxieme chaine
-   * @returns {number} Distance d'edition minimale
+   * Normalisation "collapsed" : tolere les doubles lettres, espaces, tirets
+   * mais preserve les consonnes (pas de substitution).
+   * NE supprime PAS le prefixe article — il est collapsé naturellement.
    */
-  function levenshtein(a, b) {
-    const aLen = a.length;
-    const bLen = b.length;
-
-    // Cas triviaux
-    if (aLen === 0) return bLen;
-    if (bLen === 0) return aLen;
-
-    // Matrice (bLen+1) x (aLen+1)
-    const matrix = [];
-
-    // Initialisation de la premiere colonne
-    for (let i = 0; i <= bLen; i++) {
-      matrix[i] = [i];
-    }
-    // Initialisation de la premiere ligne
-    for (let j = 0; j <= aLen; j++) {
-      matrix[0][j] = j;
-    }
-
-    // Remplissage
-    for (let i = 1; i <= bLen; i++) {
-      for (let j = 1; j <= aLen; j++) {
-        if (b[i - 1] === a[j - 1]) {
-          matrix[i][j] = matrix[i - 1][j - 1]; // Caracteres identiques
-        } else {
-          matrix[i][j] = Math.min(
-            matrix[i - 1][j - 1] + 1, // Substitution
-            matrix[i][j - 1] + 1,      // Insertion
-            matrix[i - 1][j] + 1       // Suppression
-          );
-        }
-      }
-    }
-
-    return matrix[bLen][aLen];
+  function normalizeCollapsed(str) {
+    return str
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[\u064B-\u065F\u0670]/g, '')
+      .replace(/[-\s\u2019\u2018''`\u02BC]/g, '')
+      .replace(/(.)\1+/g, '$1')
+      .trim();
   }
 
   // ---------------------------------------------------------------------------
@@ -102,7 +68,7 @@ const Validator = (() => {
    *
    * Strategie en trois phases :
    *  1. Match exact sur la translitteration normalisee, l'arabe, et les variantes
-   *  2. Match flou (Levenshtein) avec tolerance adaptative
+   *  2. Match collapsed (tolere doubles lettres uniquement)
    *  3. Aucun match => reponse inconnue
    *
    * @param {string}   input     - Texte saisi par le joueur
@@ -151,31 +117,28 @@ const Validator = (() => {
       }
     }
 
-    // --- Phase 2 : Match flou (Levenshtein) -----------------------------------
+    // --- Phase 2 : Match collapsed (tolere doubles lettres) -------------------
 
-    let bestMatch = null;
-    let bestDistance = Infinity;
+    const collapsedInput = normalizeCollapsed(input);
 
     for (const name of namesData) {
-      const nameNorm = normalize(name.transliteration);
-      const dist = levenshtein(normalizedInput, nameNorm);
-
-      // Tolerance adaptative :
-      //  - noms de plus de 6 caracteres (normalises) => distance max de 2
-      //  - noms plus courts => distance max de 1
-      const maxDist = nameNorm.length > 6 ? 2 : 1;
-
-      if (dist <= maxDist && dist < bestDistance) {
-        bestDistance = dist;
-        bestMatch = name;
+      if (normalizeCollapsed(name.transliteration) === collapsedInput) {
+        if (usedNames.includes(name.id)) {
+          return { valid: false, nameId: name.id, canonicalName: name.transliteration, message: 'already-used' };
+        }
+        return { valid: true, nameId: name.id, canonicalName: name.transliteration, message: 'correct' };
       }
-    }
 
-    if (bestMatch) {
-      if (usedNames.includes(bestMatch.id)) {
-        return { valid: false, nameId: bestMatch.id, canonicalName: bestMatch.transliteration, message: 'already-used' };
+      if (name.variants) {
+        for (const variant of name.variants) {
+          if (normalizeCollapsed(variant) === collapsedInput) {
+            if (usedNames.includes(name.id)) {
+              return { valid: false, nameId: name.id, canonicalName: name.transliteration, message: 'already-used' };
+            }
+            return { valid: true, nameId: name.id, canonicalName: name.transliteration, message: 'correct' };
+          }
+        }
       }
-      return { valid: true, nameId: bestMatch.id, canonicalName: bestMatch.transliteration, message: 'correct' };
     }
 
     // --- Phase 3 : Aucun match ------------------------------------------------
@@ -193,7 +156,7 @@ const Validator = (() => {
    * Les resultats sont classes par pertinence :
    *  3 = commence par l'input
    *  2 = contient l'input (ou variante/arabe correspond)
-   *  1 = match flou (distance <= 1 sur le debut)
+   *  1 = match collapsed (debut du nom correspond apres collapsage)
    *
    * Les noms deja utilises sont exclus des suggestions.
    *
@@ -207,6 +170,7 @@ const Validator = (() => {
     if (!input || input.trim().length < 2) return [];
 
     const normalizedInput = normalize(input);
+    const collapsedInput = normalizeCollapsed(input);
     const results = [];
 
     for (const name of namesData) {
@@ -227,10 +191,11 @@ const Validator = (() => {
         continue;
       }
 
-      // Priorite basse : match flou sur le debut du nom
-      const dist = levenshtein(normalizedInput, nameNorm.substring(0, normalizedInput.length));
-      if (dist <= 1) {
+      // Priorite basse : collapsed match sur le debut du nom
+      const nameCollapsed = normalizeCollapsed(name.transliteration);
+      if (nameCollapsed.startsWith(collapsedInput)) {
         results.push({ ...name, relevance: 1 });
+        continue;
       }
 
       // Recherche dans les variantes
@@ -273,6 +238,6 @@ const Validator = (() => {
     suggest: getSuggestions,
     normalize,
     normalizeArabic,
-    levenshtein
+    normalizeCollapsed
   };
 })();

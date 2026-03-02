@@ -21,11 +21,26 @@ const {
   createInsufficientEvidenceFallback
 } = require('./religious-integrity');
 
-// --- Sanitization XSS ---
-function sanitizeHtml(str) {
-  if (typeof str !== 'string') return '';
-  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
+// --- Constantes ---
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const IS_DEV = NODE_ENV === 'development';
+
+// --- Logger conditionnel (silencieux en production sauf erreurs) ---
+const log = {
+  info:  (...args) => { if (IS_DEV) console.log(...args); },
+  warn:  (...args) => console.warn(...args),
+  error: (...args) => console.error(...args),
+  always: (...args) => console.log(...args)
+};
+
+// --- Sanitization & Validation (shared module) ---
+const {
+  sanitizeHtml,
+  normalizeForValidation,
+  normalizeArabicForValidation,
+  normalizeCollapsed,
+  serverValidateAnswer: _serverValidateAnswer
+} = require('./lib/validation');
 
 // Charger les données des 99 noms (sans vm.runInNewContext pour la sécurité)
 let ASMA_UL_HUSNA = [];
@@ -35,14 +50,10 @@ try {
   // Sûr ici car c'est un fichier local contrôlé par le développeur
   const fn = new Function(namesCode + '; return ASMA_UL_HUSNA;');
   ASMA_UL_HUSNA = fn();
-  console.log(`[Names] ${ASMA_UL_HUSNA.length} noms chargés`);
+  log.always(`[Names] ${ASMA_UL_HUSNA.length} noms chargés`);
 } catch (err) {
-  console.error('[Names] Erreur chargement names.js:', err.message);
+  log.error('[Names] Erreur chargement names.js:', err.message);
 }
-
-// --- Constantes ---
-const NODE_ENV = process.env.NODE_ENV || 'development';
-const IS_DEV = NODE_ENV === 'development';
 const MAX_NAME_LENGTH = 20;
 const MAX_CHAT_LENGTH = 200;
 const MAX_TYPING_LENGTH = 40;
@@ -102,6 +113,16 @@ app.use((req, res, next) => {
   res.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=()');
   if (!IS_DEV) {
     res.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+    res.set('Content-Security-Policy', [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: https:",
+      "connect-src 'self' wss: ws: https://www.google-analytics.com https://www.googletagmanager.com https://translate.google.com",
+      "media-src 'self' https://translate.google.com",
+      "frame-ancestors 'self'"
+    ].join('; '));
   }
   next();
 });
@@ -142,12 +163,12 @@ setInterval(() => {
     // Lobby inactif depuis >15min
     if (room.state === 'lobby' && age > 15 * 60 * 1000) {
       delete iqRooms[code];
-      console.log(`[IQ Cleanup] Room ${code} supprimée (lobby inactif >15min)`);
+      log.info(`[IQ Cleanup] Room ${code} supprimée (lobby inactif >15min)`);
     }
     // Autres états inactifs >2h
     else if (age > 2 * 60 * 60 * 1000) {
       delete iqRooms[code];
-      console.log(`[IQ Cleanup] Room ${code} supprimée (inactive >2h)`);
+      log.info(`[IQ Cleanup] Room ${code} supprimée (inactive >2h)`);
     }
   }
 }, 5 * 60 * 1000); // Toutes les 5 minutes
@@ -162,17 +183,17 @@ setInterval(() => {
     if (room.state === 'lobby' && age > 60 * 60 * 1000) {
       io.to(code).emit('room-closed');
       delete rooms[code]; delete qrCache[code];
-      console.log(`[Cleanup] Room ${code} supprimée (lobby inactif >1h)`);
+      log.info(`[Cleanup] Room ${code} supprimée (lobby inactif >1h)`);
     }
     // Partie ended/finished depuis >30min ou playing depuis >3h (zombie)
     else if ((room.state === 'finished' || room.state === 'ended') && age > 30 * 60 * 1000) {
       delete rooms[code]; delete qrCache[code];
-      console.log(`[Cleanup] Room ${code} supprimée (${room.state} >30min)`);
+      log.info(`[Cleanup] Room ${code} supprimée (${room.state} >30min)`);
     }
     else if (room.state === 'playing' && age > 3 * 60 * 60 * 1000) {
       io.to(code).emit('room-closed');
       delete rooms[code]; delete qrCache[code];
-      console.log(`[Cleanup] Room ${code} supprimée (playing zombie >3h)`);
+      log.info(`[Cleanup] Room ${code} supprimée (playing zombie >3h)`);
     }
   }
 }, 10 * 60 * 1000); // Toutes les 10 minutes
@@ -389,7 +410,7 @@ app.post('/api/iq-rooms', (req, res) => {
     createdAt: Date.now(),
     updatedAt: Date.now()
   };
-  console.log(`[IQ] Room ${roomCode} créée par ${hostName} (${visibility})`);
+  log.info(`[IQ] Room ${roomCode} créée par ${hostName} (${visibility})`);
   res.json({ success: true, code: roomCode });
 });
 
@@ -412,7 +433,7 @@ app.post('/api/iq-rooms/:code/join', (req, res) => {
     room.players.push(player);
     room.playerCount = room.players.length;
     room.updatedAt = Date.now();
-    console.log(`[IQ] ${player.name} rejoint ${code} (${room.players.length} joueurs)`);
+    log.info(`[IQ] ${player.name} rejoint ${code} (${room.players.length} joueurs)`);
   }
   res.json({ success: true, players: room.players });
 });
@@ -428,7 +449,7 @@ app.get('/api/iq-rooms/:code/players', (req, res) => {
     response.questions = room.questions;
     response.targetScore = room.targetScore;
     response.difficulty = room.difficulty;
-    console.log(`[IQ GET /players] ${code}: state=playing, sending ${room.questions.length} questions`);
+    log.info(`[IQ GET /players] ${code}: state=playing, sending ${room.questions.length} questions`);
   }
   res.json(response);
 });
@@ -458,7 +479,7 @@ app.patch('/api/iq-rooms/:code', (req, res) => {
   const code = (req.params.code || '').toUpperCase().trim();
   const room = iqRooms[code];
   if (!room) {
-    console.log(`[IQ PATCH] Room ${code} NOT FOUND`);
+    log.info(`[IQ PATCH] Room ${code} NOT FOUND`);
     return res.status(404).json({ error: 'Room introuvable' });
   }
   const allowed = ['state', 'playerCount', 'visibility', 'questions', 'difficulty', 'targetScore'];
@@ -470,7 +491,7 @@ app.patch('/api/iq-rooms/:code', (req, res) => {
     }
   }
   room.updatedAt = Date.now();
-  console.log(`[IQ PATCH] Room ${code}: ${updated.join(', ')}`);
+  log.info(`[IQ PATCH] Room ${code}: ${updated.join(', ')}`);
   res.json({ success: true });
 });
 
@@ -478,7 +499,7 @@ app.delete('/api/iq-rooms/:code', (req, res) => {
   const code = (req.params.code || '').toUpperCase().trim();
   if (iqRooms[code]) {
     delete iqRooms[code];
-    console.log(`[IQ] Room ${code} supprimée`);
+    log.info(`[IQ] Room ${code} supprimée`);
   }
   res.json({ success: true });
 });
@@ -488,7 +509,7 @@ app.post('/api/iq-rooms/:code/close', (req, res) => {
   const code = (req.params.code || '').toUpperCase().trim();
   if (iqRooms[code]) {
     delete iqRooms[code];
-    console.log(`[IQ] Room ${code} fermée (beacon)`);
+    log.info(`[IQ] Room ${code} fermée (beacon)`);
   }
   res.json({ success: true });
 });
@@ -706,6 +727,7 @@ function seoPageHead(title, description, canonicalPath, extraMeta = '') {
       .legal-star { animation: none; opacity: 0.6; }
     }
   </style>
+  <script src="/js/consent.js?v=1.0"></script>
 </head>
 <body>
   <div class="bg-pattern"></div>
@@ -722,6 +744,7 @@ function seoPageFoot(jsonLd = '') {
         <a href="/conditions-utilisation" style="color:var(--text-muted);text-decoration:none;">CGU</a>
         <a href="/encyclopedie" style="color:var(--text-muted);text-decoration:none;">Les 99 Noms</a>
         <a href="/guide" style="color:var(--text-muted);text-decoration:none;">Guide</a>
+        <a href="#" onclick="event.preventDefault();alAsmaaOpenConsentBanner()" style="color:var(--text-muted);text-decoration:none;">Cookies</a>
       </nav>
       <p style="margin-top:0.5rem;">&copy; ${new Date().getFullYear()} Al-Asmaa &mdash; Projet éducatif gratuit et open source.</p>
     </footer>
@@ -773,6 +796,7 @@ function legalPageFoot(currentPath) {
         <a href="/conditions-utilisation" style="color:var(--text-muted);text-decoration:none;">CGU</a>
         <a href="/encyclopedie" style="color:var(--text-muted);text-decoration:none;">Les 99 Noms</a>
         <a href="/guide" style="color:var(--text-muted);text-decoration:none;">Guide</a>
+        <a href="#" onclick="event.preventDefault();alAsmaaOpenConsentBanner()" style="color:var(--text-muted);text-decoration:none;">Cookies</a>
       </nav>
       <p>&copy; ${new Date().getFullYear()} Al-Asmaa &mdash; Projet \u00e9ducatif gratuit et open source.</p>
     </footer>
@@ -837,9 +861,33 @@ app.get('/iq/:code', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// --- API : Leaderboard (en mémoire) ---
-const leaderboard = { quiz: [], daily: [] };
+// --- API : Leaderboard (persisté sur disque) ---
+const LEADERBOARD_FILE = path.join(__dirname, 'data', 'leaderboard.json');
 const MAX_LEADERBOARD = 50;
+let leaderboard = { quiz: [], daily: [] };
+let _leaderboardDirty = false;
+
+// Charger le leaderboard depuis le disque au démarrage
+try {
+  if (fs.existsSync(LEADERBOARD_FILE)) {
+    const raw = fs.readFileSync(LEADERBOARD_FILE, 'utf-8');
+    const parsed = JSON.parse(raw);
+    if (parsed.quiz && parsed.daily) leaderboard = parsed;
+  }
+} catch { /* Fichier absent ou corrompu — on repart à vide */ }
+
+function saveLeaderboard() {
+  if (!_leaderboardDirty) return;
+  try {
+    const dir = path.dirname(LEADERBOARD_FILE);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(LEADERBOARD_FILE, JSON.stringify(leaderboard, null, 2));
+    _leaderboardDirty = false;
+  } catch { /* Silencieux en cas d'erreur d'écriture */ }
+}
+
+// Flush toutes les 5 minutes + au shutdown
+setInterval(saveLeaderboard, 5 * 60 * 1000);
 
 // ============================================================================
 // API Encyclopedie integrite religieuse (mode strict)
@@ -973,6 +1021,7 @@ app.post('/api/leaderboard/:type', (req, res) => {
   if (leaderboard[type].length > MAX_LEADERBOARD) {
     leaderboard[type] = leaderboard[type].slice(0, MAX_LEADERBOARD);
   }
+  _leaderboardDirty = true;
 
   const rank = leaderboard[type].findIndex(e => e === entry) + 1;
   res.json({ rank, total: leaderboard[type].length });
@@ -1005,7 +1054,8 @@ app.get('/mentions-legales', (req, res) => {
         <li><a href="#ml3"><span class="legal-toc-n">3</span>Propriété intellectuelle</a></li>
         <li><a href="#ml4"><span class="legal-toc-n">4</span>Limitation de responsabilité</a></li>
         <li><a href="#ml5"><span class="legal-toc-n">5</span>Données personnelles</a></li>
-        <li><a href="#ml6"><span class="legal-toc-n">6</span>Droit applicable</a></li>
+        <li><a href="#ml6"><span class="legal-toc-n">6</span>Mesure d'audience</a></li>
+        <li><a href="#ml7"><span class="legal-toc-n">7</span>Droit applicable</a></li>
       </ul>
     </nav>
 
@@ -1016,9 +1066,14 @@ app.get('/mentions-legales', (req, res) => {
       </div>
       <p>
         <strong>Al-Asmaa</strong> est un projet éducatif personnel, gratuit et sans but lucratif,
-        créé et développé par <strong>Wazko</strong>.
+        créé et développé par <strong>__NOM_COMPLET__</strong> (ci-après &laquo;&nbsp;le développeur&nbsp;&raquo;).
       </p>
-      <p>Contact : <em>contact [at] al-asmaa.app</em></p>
+      <ul class="legal-ul">
+        <li>Nom du projet : Al-Asmaa</li>
+        <li>Adresse : __ADRESSE__</li>
+        <li>Contact : __EMAIL_CONTACT__</li>
+        <li>Directeur de la publication : __NOM_COMPLET__</li>
+      </ul>
     </section>
 
     <section class="legal-section" id="ml2">
@@ -1026,10 +1081,12 @@ app.get('/mentions-legales', (req, res) => {
         <span class="legal-section-n">2</span>
         <h2>Hébergement</h2>
       </div>
-      <p>
-        Le site est hébergé par le service choisi par le développeur. Les informations
-        d'hébergement précises peuvent être obtenues en contactant l'éditeur.
-      </p>
+      <p>Le site est hébergé par :</p>
+      <ul class="legal-ul">
+        <li>Render Services, Inc.</li>
+        <li>525 Brannan Street, Suite 300, San Francisco, CA 94107, États-Unis</li>
+        <li>Site : <a href="https://render.com" target="_blank" rel="noopener">render.com</a></li>
+      </ul>
     </section>
 
     <section class="legal-section" id="ml3">
@@ -1038,14 +1095,18 @@ app.get('/mentions-legales', (req, res) => {
         <h2>Propriété intellectuelle</h2>
       </div>
       <p>
-        Le code source de l'application Al-Asmaa est un projet personnel. Les textes coraniques
-        et les hadiths cités sur ce site sont issus des sources islamiques authentiques et
-        appartiennent au patrimoine commun de la Oumma.
+        Le code source, le design et les contenus originaux de l'application Al-Asmaa sont la
+        propriété de leur auteur. Les textes coraniques et les hadiths cités sur ce site sont
+        issus des sources islamiques authentiques et appartiennent au patrimoine commun de la Oumma.
       </p>
       <p>
         Les données encyclopédiques (significations, commentaires savants, hadiths) sont compilées
         à partir de sources classiques de la tradition islamique et sont proposées dans un but
         purement éducatif et de vulgarisation.
+      </p>
+      <p>
+        Toute reproduction intégrale de l'application à des fins commerciales est interdite sans
+        autorisation préalable du développeur.
       </p>
     </section>
 
@@ -1055,10 +1116,15 @@ app.get('/mentions-legales', (req, res) => {
         <h2>Limitation de responsabilité</h2>
       </div>
       <p>
-        Al-Asmaa est fourni &laquo;&nbsp;en l'état&nbsp;&raquo;, sans garantie d'aucune sorte. Le développeur s'efforce
-        de fournir des informations exactes mais ne peut garantir l'exactitude, l'exhaustivité
-        ou l'actualité des contenus. L'utilisateur est invité à vérifier les informations
-        auprès de sources savantes reconnues.
+        Al-Asmaa est fourni &laquo;&nbsp;en l'état&nbsp;&raquo;, sans garantie d'aucune sorte. Le développeur
+        s'efforce de fournir des informations exactes mais ne peut garantir l'exactitude,
+        l'exhaustivité ou l'actualité des contenus. L'utilisateur est invité à vérifier
+        les informations auprès de sources savantes reconnues.
+      </p>
+      <p>
+        Le développeur ne garantit pas la disponibilité ininterrompue du service ni l'absence
+        de bugs. En aucun cas il ne pourra être tenu responsable de dommages directs ou
+        indirects liés à l'utilisation de l'application.
       </p>
     </section>
 
@@ -1068,7 +1134,7 @@ app.get('/mentions-legales', (req, res) => {
         <h2>Données personnelles</h2>
       </div>
       <p>
-        Pour toute question relative à vos données personnelles, consultez notre
+        Pour toute information relative au traitement de vos données personnelles, consultez notre
         <a href="/politique-de-confidentialite">Politique de Confidentialité</a>.
       </p>
     </section>
@@ -1076,11 +1142,31 @@ app.get('/mentions-legales', (req, res) => {
     <section class="legal-section" id="ml6">
       <div class="legal-section-head">
         <span class="legal-section-n">6</span>
+        <h2>Mesure d'audience</h2>
+      </div>
+      <p>
+        Le site utilise <strong>Google Analytics</strong> (Google LLC) à des fins de mesure d'audience
+        anonyme. Ce service ne se charge qu'après votre <strong>consentement explicite</strong> via
+        le bandeau de consentement affiché lors de votre première visite.
+      </p>
+      <p>
+        Vous pouvez modifier votre choix à tout moment en cliquant sur
+        « <a href="#" onclick="event.preventDefault();alAsmaaOpenConsentBanner()">Gérer mes cookies</a> »
+        ci-dessous ou via le lien « Cookies » présent en bas de chaque page.
+        Pour plus de détails, consultez la
+        <a href="/politique-de-confidentialite">Politique de Confidentialité</a>.
+      </p>
+    </section>
+
+    <section class="legal-section" id="ml7">
+      <div class="legal-section-head">
+        <span class="legal-section-n">7</span>
         <h2>Droit applicable</h2>
       </div>
       <p>
         Les présentes mentions légales sont soumises au droit français. En cas de litige,
-        les tribunaux français seront seuls compétents.
+        une résolution amiable sera recherchée en priorité. À défaut, les tribunaux français
+        seront seuls compétents.
       </p>
     </section>`;
 
@@ -1115,16 +1201,21 @@ app.get('/politique-de-confidentialite', (req, res) => {
         <li><a href="#pc1"><span class="legal-toc-n">1</span>Qui sommes-nous ?</a></li>
         <li><a href="#pc2"><span class="legal-toc-n">2</span>Données collectées</a></li>
         <li><a href="#pc3"><span class="legal-toc-n">3</span>Ce que nous ne collectons pas</a></li>
-        <li><a href="#pc4"><span class="legal-toc-n">4</span>Cookies et stockage local</a></li>
-        <li><a href="#pc5"><span class="legal-toc-n">5</span>Service Worker</a></li>
-        <li><a href="#pc6"><span class="legal-toc-n">6</span>Partage avec des tiers</a></li>
-        <li><a href="#pc7"><span class="legal-toc-n">7</span>Sécurité</a></li>
-        <li><a href="#pc8"><span class="legal-toc-n">8</span>Droits des utilisateurs</a></li>
-        <li><a href="#pc9"><span class="legal-toc-n">9</span>Mineurs</a></li>
-        <li><a href="#pc10"><span class="legal-toc-n">10</span>Modifications</a></li>
+        <li><a href="#pc4"><span class="legal-toc-n">4</span>Cookies et mesure d'audience</a></li>
+        <li><a href="#pc5"><span class="legal-toc-n">5</span>Base légale du traitement</a></li>
+        <li><a href="#pc6"><span class="legal-toc-n">6</span>Stockage local</a></li>
+        <li><a href="#pc7"><span class="legal-toc-n">7</span>Service Worker</a></li>
+        <li><a href="#pc8"><span class="legal-toc-n">8</span>Services tiers</a></li>
+        <li><a href="#pc9"><span class="legal-toc-n">9</span>Transferts de données</a></li>
+        <li><a href="#pc10"><span class="legal-toc-n">10</span>Signalements</a></li>
+        <li><a href="#pc11"><span class="legal-toc-n">11</span>Sécurité</a></li>
+        <li><a href="#pc12"><span class="legal-toc-n">12</span>Droits des utilisateurs</a></li>
+        <li><a href="#pc13"><span class="legal-toc-n">13</span>Mineurs</a></li>
+        <li><a href="#pc14"><span class="legal-toc-n">14</span>Modifications</a></li>
       </ul>
     </nav>
 
+    <!-- 1. Qui sommes-nous -->
     <section class="legal-section" id="pc1">
       <div class="legal-section-head">
         <span class="legal-section-n">1</span>
@@ -1132,11 +1223,18 @@ app.get('/politique-de-confidentialite', (req, res) => {
       </div>
       <p>
         <strong>Al-Asmaa</strong> est une application web éducative gratuite, sans publicité et
-        sans but lucratif. Elle est développée par Wazko dans le but d'aider les musulmans
+        sans but lucratif, développée par __NOM_COMPLET__ dans le but d'aider les musulmans
         à apprendre et mémoriser les 99 Noms d'Allah.
       </p>
+      <p>
+        En tant que responsable du traitement au sens du RGPD, le développeur s'engage à protéger
+        la vie privée des utilisateurs et à ne collecter que les données strictement nécessaires
+        au fonctionnement du site.
+      </p>
+      <p>Contact : <em>__EMAIL_CONTACT__</em></p>
     </section>
 
+    <!-- 2. Données collectées -->
     <section class="legal-section" id="pc2">
       <div class="legal-section-head">
         <span class="legal-section-n">2</span>
@@ -1144,8 +1242,9 @@ app.get('/politique-de-confidentialite', (req, res) => {
       </div>
       <p>Al-Asmaa collecte le <strong>minimum de données nécessaire</strong> à son fonctionnement :</p>
       <ul class="legal-ul">
-        <li><strong>Pseudo de jeu</strong> : choisi librement par l'utilisateur, stocké uniquement dans le navigateur
-          (<code>localStorage</code>). Aucun pseudo n'est conservé côté serveur de manière permanente.</li>
+        <li><strong>Pseudo de jeu</strong> : choisi librement par l'utilisateur, stocké dans le navigateur
+          (<code>localStorage</code>). Le pseudo est transmis au serveur uniquement pendant une partie
+          multijoueur et supprimé à la fin de la session.</li>
         <li><strong>Progression d'apprentissage</strong> : scores SRS, flashcards consultées, résultats de quiz.
           Toutes ces données sont stockées <strong>uniquement dans le navigateur</strong> (<code>localStorage</code>)
           et ne quittent jamais votre appareil.</li>
@@ -1153,11 +1252,17 @@ app.get('/politique-de-confidentialite', (req, res) => {
           transmis via WebSocket. Ces données sont conservées en mémoire serveur <strong>uniquement
           pendant la durée de la partie</strong> et supprimées à la déconnexion.</li>
         <li><strong>Leaderboard</strong> : si vous soumettez un score au classement, votre pseudo et votre
-          score sont conservés en mémoire serveur. Ces données sont volatiles et perdues au
-          redémarrage du serveur.</li>
+          score sont enregistrés sur le serveur. Ces données ne contiennent aucune information
+          personnelle identifiante au-delà du pseudo choisi.</li>
+        <li><strong>Données d'audience (sous consentement)</strong> : si vous acceptez les cookies via le bandeau
+          de consentement, Google Analytics collecte des données anonymes de navigation
+          (pages visitées, durée de session, type d'appareil, pays). <strong>Ces données ne sont jamais
+          collectées sans votre accord préalable.</strong> Voir la <a href="#pc4">section 4</a> pour le
+          détail complet.</li>
       </ul>
     </section>
 
+    <!-- 3. Ce que nous ne collectons pas -->
     <section class="legal-section" id="pc3">
       <div class="legal-section-head">
         <span class="legal-section-n">3</span>
@@ -1167,33 +1272,173 @@ app.get('/politique-de-confidentialite', (req, res) => {
         <p><strong>Al-Asmaa respecte votre vie privée.</strong> Nous ne collectons aucune donnée superflue.</p>
       </div>
       <ul class="legal-ul legal-shield">
-        <li>Aucune adresse email</li>
-        <li>Aucune donnée de géolocalisation</li>
+        <li>Aucune adresse email (sauf si vous nous contactez volontairement)</li>
+        <li>Aucune donnée de géolocalisation précise</li>
         <li>Aucun identifiant publicitaire</li>
-        <li>Aucun traceur tiers (Google Analytics, Facebook Pixel, etc.)</li>
-        <li>Aucune donnée revendue à des tiers</li>
+        <li>Aucun pixel de suivi ou retargeting (Facebook Pixel, etc.)</li>
+        <li>Aucune donnée revendue ou partagée avec des tiers à des fins commerciales</li>
+        <li>Aucun compte utilisateur ni mot de passe</li>
+        <li>Aucun fingerprinting de navigateur</li>
       </ul>
     </section>
 
+    <!-- 4. Cookies et mesure d'audience -->
     <section class="legal-section" id="pc4">
       <div class="legal-section-head">
         <span class="legal-section-n">4</span>
-        <h2>Cookies et stockage local</h2>
+        <h2>Cookies et mesure d'audience</h2>
+      </div>
+
+      <h3 style="color:var(--gold-light);font-size:1rem;margin:1.5rem 0 0.6rem;">4.1 &mdash; Principe de consentement préalable</h3>
+      <p>
+        <strong>Conformément au RGPD (art.&nbsp;6-1-a) et à la directive ePrivacy</strong>,
+        aucun cookie de mesure d'audience n'est déposé sur votre navigateur tant que vous n'avez pas
+        donné votre <strong>consentement explicite</strong>.
+      </p>
+      <p>
+        Lors de votre première visite, un bandeau de consentement vous propose deux choix clairs :
+        <strong>Accepter</strong> ou <strong>Refuser</strong> les cookies d'analyse.
+        Tant que vous n'avez pas fait votre choix, Google Analytics n'est <strong>pas chargé</strong>
+        et aucun cookie n'est déposé.
+      </p>
+
+      <h3 style="color:var(--gold-light);font-size:1rem;margin:1.5rem 0 0.6rem;">4.2 &mdash; Google Analytics (GA4)</h3>
+      <p>
+        Si vous acceptez, Al-Asmaa charge <strong>Google Analytics 4</strong> (propriété
+        <code>G-LQ6P2VEF0R</code>), un service de mesure d'audience fourni par Google LLC
+        (1600 Amphitheatre Parkway, Mountain View, CA 94043, États-Unis).
+      </p>
+      <p>Ce service nous permet de comprendre :</p>
+      <ul class="legal-ul">
+        <li>Quelles pages sont les plus consultées</li>
+        <li>Combien de temps les utilisateurs restent sur le site</li>
+        <li>Quel type d'appareil et de navigateur est utilisé</li>
+        <li>De quel pays proviennent les visites</li>
+      </ul>
+      <p>
+        Ces informations sont <strong>anonymes</strong> et servent uniquement à améliorer l'application.
+        Elles ne permettent en aucun cas de vous identifier personnellement.
+      </p>
+
+      <h3 style="color:var(--gold-light);font-size:1rem;margin:1.5rem 0 0.6rem;">4.3 &mdash; Liste des cookies déposés</h3>
+      <div style="overflow-x:auto;margin:1rem 0;">
+        <table class="names-table" style="font-size:0.82rem;">
+          <thead>
+            <tr>
+              <th style="font-size:0.78rem;">Cookie</th>
+              <th style="text-align:left;font-family:inherit;font-size:0.78rem;direction:ltr;">Fournisseur</th>
+              <th style="text-align:left;font-family:inherit;font-size:0.78rem;direction:ltr;">Finalité</th>
+              <th style="text-align:left;font-family:inherit;font-size:0.78rem;direction:ltr;">Durée</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-family:monospace;font-size:0.82rem;direction:ltr;text-align:left;color:var(--gold);"><code>_ga</code></td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">Google</td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">Distinguer les utilisateurs uniques</td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">2 ans</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.82rem;direction:ltr;text-align:left;color:var(--gold);"><code>_ga_*</code></td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">Google</td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">Maintenir l'état de la session GA4</td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">2 ans</td>
+            </tr>
+            <tr>
+              <td style="font-family:monospace;font-size:0.82rem;direction:ltr;text-align:left;color:var(--gold);"><code>_gid</code></td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">Google</td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">Distinguer les utilisateurs (24h)</td>
+              <td style="font-family:inherit;font-size:0.82rem;direction:ltr;text-align:left;">24 heures</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <p>
-        Al-Asmaa <strong>n'utilise aucun cookie</strong>. Les données de progression et de préférence
-        sont stockées via <code>localStorage</code>, une technologie de stockage local qui reste
-        sur votre navigateur et n'est jamais envoyée automatiquement au serveur.
+        En dehors de ces cookies de mesure d'audience (et uniquement si vous les acceptez),
+        Al-Asmaa ne dépose <strong>aucun autre cookie</strong> sur votre navigateur.
       </p>
+
+      <h3 style="color:var(--gold-light);font-size:1rem;margin:1.5rem 0 0.6rem;">4.4 &mdash; Gérer votre consentement</h3>
+      <p>
+        Votre choix (accepter ou refuser) est sauvegardé dans le <code>localStorage</code>
+        de votre navigateur sous la clé <code>al-asmaa-cookie-consent</code>.
+        Il n'est jamais transmis au serveur.
+      </p>
+      <p><strong>Vous pouvez modifier votre choix à tout moment</strong> de deux façons :</p>
+      <ul class="legal-ul">
+        <li>En cliquant sur le lien « <strong>Cookies</strong> » présent en bas de chaque page du site</li>
+        <li>En cliquant sur le bouton ci-dessous :</li>
+      </ul>
+      <p style="text-align:center;margin:1.2rem 0;">
+        <a href="#" onclick="event.preventDefault();alAsmaaOpenConsentBanner()"
+           style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.5rem;
+                  background:linear-gradient(175deg,#e8b84a 0%,#c9952e 50%,#a67c2e 100%);
+                  color:#1a1000;font-weight:700;font-size:0.85rem;border-radius:12px;text-decoration:none;
+                  box-shadow:0 4px 16px rgba(212,162,76,0.3),inset 0 1px 0 rgba(255,230,160,0.4);
+                  transition:all .2s;border:1px solid rgba(255,230,160,0.2);">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          Gérer mes cookies
+        </a>
+      </p>
+
+      <h3 style="color:var(--gold-light);font-size:1rem;margin:1.5rem 0 0.6rem;">4.5 &mdash; Que se passe-t-il si vous refusez ?</h3>
+      <p>
+        Si vous cliquez sur « Refuser » ou retirez votre consentement :
+      </p>
+      <ul class="legal-ul">
+        <li>Google Analytics <strong>n'est pas chargé</strong> (aucun script, aucune requête vers Google)</li>
+        <li>Les cookies GA existants (<code>_ga</code>, <code>_ga_*</code>, <code>_gid</code>) sont
+          <strong>automatiquement supprimés</strong></li>
+        <li>L'application fonctionne normalement &mdash; aucune fonctionnalité n'est restreinte</li>
+      </ul>
+    </section>
+
+    <!-- 5. Base légale -->
+    <section class="legal-section" id="pc5">
+      <div class="legal-section-head">
+        <span class="legal-section-n">5</span>
+        <h2>Base légale du traitement</h2>
+      </div>
+      <p>Les traitements de données réalisés par Al-Asmaa reposent sur les bases légales suivantes :</p>
+      <ul class="legal-ul">
+        <li><strong>Consentement</strong> (art.&nbsp;6-1-a du RGPD) : pour le dépôt de cookies
+          Google Analytics. Ce consentement est recueilli via le bandeau de consentement et peut
+          être retiré à tout moment.</li>
+        <li><strong>Intérêt légitime</strong> (art.&nbsp;6-1-f du RGPD) : pour le fonctionnement technique
+          du site (WebSocket, anti-spam sur les signalements, Service Worker).</li>
+        <li><strong>Exécution du service</strong> : pour les données de jeu (pseudo, scores) nécessaires
+          au fonctionnement du multijoueur et du leaderboard.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Stockage local -->
+    <section class="legal-section" id="pc6">
+      <div class="legal-section-head">
+        <span class="legal-section-n">6</span>
+        <h2>Stockage local (<code>localStorage</code>)</h2>
+      </div>
+      <p>
+        Les données de progression, de préférence et de consentement cookies sont stockées via
+        <code>localStorage</code>, une technologie de stockage local du navigateur. Ces données
+        <strong>ne sont jamais envoyées automatiquement au serveur</strong>.
+      </p>
+      <p>Principales clés utilisées :</p>
+      <ul class="legal-ul">
+        <li><code>al-asmaa-cookie-consent</code> &mdash; votre choix de consentement cookies (<em>accepted</em> ou <em>refused</em>)</li>
+        <li><code>al-asmaa-srs-*</code> &mdash; progression d'apprentissage (SRS)</li>
+        <li><code>al-asmaa-settings</code> &mdash; préférences de l'application</li>
+        <li><code>al-asmaa-player-name</code> &mdash; pseudo de jeu choisi</li>
+      </ul>
       <p>
         Vous pouvez à tout moment supprimer ces données en vidant le stockage local de votre
         navigateur (Paramètres &gt; Données de navigation &gt; Stockage local).
       </p>
     </section>
 
-    <section class="legal-section" id="pc5">
+    <!-- 7. Service Worker -->
+    <section class="legal-section" id="pc7">
       <div class="legal-section-head">
-        <span class="legal-section-n">5</span>
+        <span class="legal-section-n">7</span>
         <h2>Service Worker et mise en cache</h2>
       </div>
       <p>
@@ -1203,71 +1448,164 @@ app.get('/politique-de-confidentialite', (req, res) => {
       </p>
     </section>
 
-    <section class="legal-section" id="pc6">
-      <div class="legal-section-head">
-        <span class="legal-section-n">6</span>
-        <h2>Partage avec des tiers</h2>
-      </div>
-      <p>
-        Al-Asmaa ne partage <strong>aucune donnée</strong> avec des tiers. Aucun service d'analyse,
-        de publicité ou de profilage n'est intégré à l'application.
-      </p>
-      <p>
-        Lorsque vous utilisez la fonctionnalité de partage social, vous êtes redirigé vers
-        le service tiers choisi (WhatsApp, Twitter, Telegram). Al-Asmaa ne transmet aucune
-        donnée à ces services &mdash; seul le texte que vous choisissez de partager est concerné.
-      </p>
-    </section>
-
-    <section class="legal-section" id="pc7">
-      <div class="legal-section-head">
-        <span class="legal-section-n">7</span>
-        <h2>Sécurité</h2>
-      </div>
-      <p>
-        Nous mettons en &oelig;uvre des mesures de sécurité appropriées : headers de sécurité HTTP,
-        validation des entrées utilisateur, protection contre les injections. Toutefois,
-        aucune transmission sur Internet ne peut être garantie à 100&nbsp;% sûre.
-      </p>
-    </section>
-
+    <!-- 8. Services tiers -->
     <section class="legal-section" id="pc8">
       <div class="legal-section-head">
         <span class="legal-section-n">8</span>
-        <h2>Droits des utilisateurs</h2>
+        <h2>Services tiers</h2>
       </div>
-      <p>
-        Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
-      </p>
+      <p>L'application interagit avec les services tiers suivants :</p>
       <ul class="legal-ul">
-        <li><strong>Droit d'accès</strong> : vos données étant stockées localement, vous y avez accès directement
-          via les outils développeur de votre navigateur.</li>
-        <li><strong>Droit de suppression</strong> : videz le <code>localStorage</code> de votre navigateur pour supprimer
-          toutes vos données. Aucune donnée n'est retenue côté serveur.</li>
-        <li><strong>Droit de portabilité</strong> : vous pouvez exporter vos données <code>localStorage</code> au format JSON.</li>
+        <li><strong>Google Analytics 4</strong> (mesure d'audience) &mdash; chargé <strong>uniquement
+          après consentement</strong>. Voir la <a href="#pc4">section 4</a> pour tous les détails.</li>
+        <li><strong>Google Translate</strong> &mdash; utilisé pour la fonctionnalité d'écoute audio des noms.
+          Lorsque vous écoutez la prononciation d'un nom, une requête est envoyée à Google Translate.
+          Aucune donnée personnelle n'est transmise.</li>
+        <li><strong>Stripe / PayPal</strong> &mdash; si vous effectuez un don volontaire, vous êtes redirigé vers
+          la plateforme de paiement choisie. Al-Asmaa ne collecte ni ne stocke aucune donnée bancaire.
+          Le traitement du paiement est entièrement géré par Stripe ou PayPal selon leurs propres
+          conditions et politiques de confidentialité.</li>
+        <li><strong>Partage social</strong> &mdash; lorsque vous utilisez les boutons de partage (WhatsApp, Twitter, Telegram),
+          vous êtes redirigé vers le service choisi. Al-Asmaa ne transmet aucune donnée à ces services
+          &mdash; seul le texte que vous choisissez de partager est concerné.</li>
       </ul>
-      <p>Pour toute question : <em>contact [at] al-asmaa.app</em></p>
     </section>
 
+    <!-- 9. Transferts de données -->
     <section class="legal-section" id="pc9">
       <div class="legal-section-head">
         <span class="legal-section-n">9</span>
+        <h2>Transferts de données hors UE</h2>
+      </div>
+      <p>
+        Si vous acceptez les cookies de mesure d'audience, Google Analytics peut transférer des
+        données anonymes vers les serveurs de Google LLC situés aux États-Unis. Ces transferts
+        sont encadrés par les
+        <a href="https://business.safety.google/adprocessorterms/" target="_blank" rel="noopener">clauses contractuelles types</a>
+        de Google et le
+        <a href="https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/eu-us-data-transfers_fr" target="_blank" rel="noopener">cadre de protection des données UE-États-Unis</a>.
+      </p>
+      <p>
+        Les données collectées sont anonymes (aucun identifiant personnel) et ne concernent que
+        des statistiques de navigation agrégées. Google agit en tant que sous-traitant conformément
+        à sa <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité</a>.
+      </p>
+      <p>
+        Si vous refusez les cookies, <strong>aucune donnée n'est transmise à Google</strong>.
+      </p>
+    </section>
+
+    <!-- 10. Signalements -->
+    <section class="legal-section" id="pc10">
+      <div class="legal-section-head">
+        <span class="legal-section-n">10</span>
+        <h2>Signalements</h2>
+      </div>
+      <p>
+        La fonctionnalité &laquo;&nbsp;Signaler un problème&nbsp;&raquo; collecte les données suivantes :
+      </p>
+      <ul class="legal-ul">
+        <li>Le type de signalement (bug, erreur de contenu, suggestion)</li>
+        <li>La page concernée</li>
+        <li>La description rédigée par l'utilisateur</li>
+        <li>L'identifiant du navigateur (<code>User-Agent</code>), pour faciliter le diagnostic technique</li>
+        <li>L'adresse IP, utilisée <strong>uniquement</strong> pour limiter les abus (anti-spam).
+          L'IP n'est pas stockée de manière permanente.</li>
+      </ul>
+      <p>
+        Ces signalements sont conservés sur le serveur et peuvent être envoyés par email au
+        développeur. Ils ne contiennent aucune donnée personnelle identifiante sauf si
+        l'utilisateur en inclut volontairement dans sa description.
+      </p>
+    </section>
+
+    <!-- 11. Sécurité -->
+    <section class="legal-section" id="pc11">
+      <div class="legal-section-head">
+        <span class="legal-section-n">11</span>
+        <h2>Sécurité</h2>
+      </div>
+      <p>
+        Nous mettons en &oelig;uvre des mesures de sécurité appropriées pour protéger les données :
+      </p>
+      <ul class="legal-ul">
+        <li>Communication chiffrée via HTTPS (TLS) en production</li>
+        <li>En-têtes de sécurité HTTP (Content-Security-Policy, X-Content-Type-Options, X-Frame-Options)</li>
+        <li>Validation et assainissement de toutes les entrées utilisateur</li>
+        <li>Protection contre les injections (XSS, injection de code)</li>
+        <li>Limitation de débit sur les événements de jeu et les signalements</li>
+        <li>Consentement préalable avant tout dépôt de cookie tiers</li>
+      </ul>
+      <p>
+        Toutefois, aucune transmission sur Internet ne peut être garantie à 100&nbsp;% sûre.
+      </p>
+    </section>
+
+    <!-- 12. Droits des utilisateurs -->
+    <section class="legal-section" id="pc12">
+      <div class="legal-section-head">
+        <span class="legal-section-n">12</span>
+        <h2>Droits des utilisateurs</h2>
+      </div>
+      <p>
+        Conformément au Règlement Général sur la Protection des Données (RGPD, art.&nbsp;15 à 21),
+        vous disposez des droits suivants :
+      </p>
+      <ul class="legal-ul">
+        <li><strong>Droit d'accès</strong> (art.&nbsp;15) : vos données locales sont accessibles directement
+          via les outils développeur de votre navigateur (onglet Application &gt; Local Storage).</li>
+        <li><strong>Droit de rectification</strong> (art.&nbsp;16) : vous pouvez modifier votre pseudo et vos
+          données locales à tout moment depuis l'application.</li>
+        <li><strong>Droit de suppression</strong> (art.&nbsp;17) : videz le <code>localStorage</code> de votre navigateur pour
+          supprimer vos données locales. Pour le leaderboard, contactez le développeur.</li>
+        <li><strong>Droit d'opposition</strong> (art.&nbsp;21) : vous pouvez refuser ou retirer votre consentement
+          aux cookies à tout moment en cliquant sur
+          « <a href="#" onclick="event.preventDefault();alAsmaaOpenConsentBanner()">Gérer mes cookies</a> »
+          ou via le lien « Cookies » en bas de chaque page.</li>
+        <li><strong>Droit au retrait du consentement</strong> (art.&nbsp;7-3) : le retrait du consentement est aussi
+          simple que son octroi. Il suffit de cliquer sur « Gérer mes cookies » pour rouvrir le bandeau.</li>
+        <li><strong>Droit de portabilité</strong> (art.&nbsp;20) : vous pouvez exporter vos données
+          <code>localStorage</code> au format JSON depuis les outils développeur.</li>
+      </ul>
+      <p>
+        Pour toute question, demande d'exercice de vos droits, ou réclamation :
+        <em>__EMAIL_CONTACT__</em>
+      </p>
+      <p>
+        Vous disposez également du droit d'introduire une réclamation auprès de la
+        <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">CNIL</a>
+        (Commission Nationale de l'Informatique et des Libertés).
+      </p>
+    </section>
+
+    <!-- 13. Mineurs -->
+    <section class="legal-section" id="pc13">
+      <div class="legal-section-head">
+        <span class="legal-section-n">13</span>
         <h2>Mineurs</h2>
       </div>
       <p>
         Al-Asmaa est une application éducative adaptée à tous les âges, incluant un mode enfant.
-        Aucune donnée personnelle n'étant collectée, aucun consentement parental spécifique n'est requis.
+        Aucune inscription ni donnée personnelle identifiante n'est requise pour utiliser l'application.
+      </p>
+      <p>
+        Si un mineur utilise le site, les cookies de mesure d'audience ne seront déposés que si
+        le consentement a été donné via le bandeau. Les données éventuellement collectées par
+        Google Analytics restent anonymes et ne permettent pas d'identifier l'utilisateur.
       </p>
     </section>
 
-    <section class="legal-section" id="pc10">
+    <!-- 14. Modifications -->
+    <section class="legal-section" id="pc14">
       <div class="legal-section-head">
-        <span class="legal-section-n">10</span>
+        <span class="legal-section-n">14</span>
         <h2>Modifications</h2>
       </div>
       <p>
-        Cette politique peut être mise à jour. La date de dernière modification est indiquée
-        en haut de cette page. Nous vous encourageons à la consulter régulièrement.
+        Cette politique peut être mise à jour pour refléter les évolutions légales ou les changements
+        dans le fonctionnement du site. La date de dernière modification est indiquée en haut de
+        cette page. En cas de modification substantielle, un nouveau consentement cookies pourra
+        être demandé.
       </p>
     </section>`;
 
@@ -1337,10 +1675,12 @@ app.get('/conditions-utilisation', (req, res) => {
         d'apprendre et de mémoriser les 99 Noms d'Allah (Asmaul Husna). Elle propose :
       </p>
       <ul class="legal-ul">
-        <li>Un jeu multijoueur en réseau local</li>
-        <li>Une encyclopédie détaillée des 99 Noms</li>
-        <li>Des modes d'apprentissage : flashcards, quiz, écoute, défi quotidien</li>
+        <li>Un jeu multijoueur en temps réel (La Bombe des Noms)</li>
+        <li>Un mode Ilm Quest (quiz multijoueur en ligne)</li>
+        <li>Une encyclopédie détaillée des 99 Noms avec sources savantes</li>
+        <li>Des modes d'apprentissage : flashcards, quiz, écoute audio, défi quotidien</li>
         <li>Un système de répétition espacée (SRS)</li>
+        <li>Des mini-jeux éducatifs</li>
         <li>Un mode entraînement individuel</li>
       </ul>
     </section>
@@ -1422,9 +1762,14 @@ app.get('/conditions-utilisation', (req, res) => {
         <h2>Dons et soutien</h2>
       </div>
       <p>
-        Al-Asmaa propose une fonctionnalité de don volontaire via PayPal et Stripe. Ces dons
-        sont facultatifs et ne conditionnent en rien l'accès aux fonctionnalités. Aucun
-        remboursement n'est possible sur les dons effectués, sauf erreur technique avérée.
+        Al-Asmaa propose une fonctionnalité de don volontaire via <strong>Stripe</strong> (paiement
+        par carte) et <strong>PayPal</strong>. Ces dons sont facultatifs et ne conditionnent en rien
+        l'accès aux fonctionnalités de l'application.
+      </p>
+      <p>
+        Al-Asmaa ne collecte ni ne stocke aucune donnée bancaire. Le traitement des paiements
+        est entièrement délégué à Stripe ou PayPal. Aucun remboursement n'est possible sur les
+        dons effectués, sauf erreur technique avérée.
       </p>
     </section>
 
@@ -1469,7 +1814,7 @@ app.get('/conditions-utilisation', (req, res) => {
         <h2>Contact</h2>
       </div>
       <p>
-        Pour toute question relative aux présentes conditions : <em>contact [at] al-asmaa.app</em>
+        Pour toute question relative aux présentes conditions : <em>__EMAIL_CONTACT__</em>
       </p>
     </section>`;
 
@@ -1538,7 +1883,7 @@ function startServerBombTimer(room) {
     if (!currentPlayer || currentPlayer.eliminated) return;
     // Garde anti-race : ignorer si une réponse récente
     if (room.game._lastAnswerTime && Date.now() - room.game._lastAnswerTime < 500) return;
-    console.log(`[Server Timer] Explosion forcée pour ${currentPlayer.name} dans ${room.code}`);
+    log.info(`[Server Timer] Explosion forcée pour ${currentPlayer.name} dans ${room.code}`);
     currentPlayer.lives--;
     if (currentPlayer.lives <= 0) {
       currentPlayer.eliminated = true;
@@ -1577,13 +1922,25 @@ function clearServerBombTimer(room) {
   }
 }
 
+// --- Rate limiting par socket pour les events critiques ---
+function createSocketThrottle(intervalMs = 150) {
+  const lastCall = {};
+  return function throttle(event) {
+    const now = Date.now();
+    if (lastCall[event] && now - lastCall[event] < intervalMs) return true; // bloqué
+    lastCall[event] = now;
+    return false; // autorisé
+  };
+}
+
 // Logique Socket.io
 io.on('connection', (socket) => {
-  console.log(`[Connexion] ${socket.id}`);
+  log.info(`[Connexion] ${socket.id}`);
+  const throttle = createSocketThrottle(150);
 
   // Créer une room
   socket.on('create-room', (data, callback) => {
-    console.log(`[create-room] data reçue:`, JSON.stringify({ visibility: data.visibility, hostName: data.hostName, difficulty: data.difficulty }));
+    log.info(`[create-room] data reçue:`, JSON.stringify({ visibility: data.visibility, hostName: data.hostName, difficulty: data.difficulty }));
 
     // Nettoyer TOUTES les rooms dont ce socket est l'hôte (évite les ghost rooms)
     for (const oldCode of Object.keys(rooms)) {
@@ -1604,7 +1961,7 @@ io.on('connection', (socket) => {
         }
         socket.leave(oldCode);
         delete rooms[oldCode]; delete qrCache[oldCode];
-        console.log(`[Cleanup] Ancienne room ${oldCode} supprimée (hôte crée une nouvelle room)`);
+        log.info(`[Cleanup] Ancienne room ${oldCode} supprimée (hôte crée une nouvelle room)`);
       }
     }
 
@@ -1653,7 +2010,7 @@ io.on('connection', (socket) => {
     socket.playerId = socket.id;
     socket.playerName = hostName;
 
-    console.log(`[Room créée] ${code} par ${hostName} (${socket.id}) — visibilité: ${room.visibility}`);
+    log.info(`[Room créée] ${code} par ${hostName} (${socket.id}) — visibilité: ${room.visibility}`);
 
     getQRCode(code).then(({ qr, url }) => {
       callback({ success: true, code, qr, url, ip: LOCAL_IP, port: PORT, player: hostPlayer, players: room.players, maxPlayers: room.maxPlayers });
@@ -1682,7 +2039,7 @@ io.on('connection', (socket) => {
     if (room._destroyTimer) {
       clearTimeout(room._destroyTimer);
       room._destroyTimer = null;
-      console.log(`[Reconnexion] Timer annulé pour ${code}`);
+      log.info(`[Reconnexion] Timer annulé pour ${code}`);
     }
 
     // Ré-attacher le socket comme hôte
@@ -1721,7 +2078,7 @@ io.on('connection', (socket) => {
       });
     });
 
-    console.log(`[Host reconnect] ${room.hostName} → Room ${code}`);
+    log.info(`[Host reconnect] ${room.hostName} → Room ${code}`);
   });
 
   // Rejoindre une room
@@ -1769,7 +2126,7 @@ io.on('connection', (socket) => {
       socket.playerId = socket.id;
       socket.playerName = name;
 
-      console.log(`[Joueur reconnecté] ${name} → Room ${code}`);
+      log.info(`[Joueur reconnecté] ${name} → Room ${code}`);
 
       io.to(code).emit('player-joined', {
         player: existing,
@@ -1809,7 +2166,7 @@ io.on('connection', (socket) => {
     socket.playerId = socket.id;
     socket.playerName = name;
 
-    console.log(`[Joueur rejoint] ${name} → Room ${code}`);
+    log.info(`[Joueur rejoint] ${name} → Room ${code}`);
 
     // Informer tous les joueurs de la room
     io.to(code).emit('player-joined', {
@@ -1879,7 +2236,7 @@ io.on('connection', (socket) => {
     delete rooms[code]; delete qrCache[code];
     socket.roomCode = null;
     socket.isHost = false;
-    console.log(`[Room fermée] ${code} (hôte a quitté)`);
+    log.info(`[Room fermée] ${code} (hôte a quitté)`);
   });
 
   // Joueur quitte le lobby
@@ -1897,7 +2254,7 @@ io.on('connection', (socket) => {
       count: room.players.length
     });
 
-    console.log(`[Joueur parti] ${socket.playerName} a quitté ${code}`);
+    log.info(`[Joueur parti] ${socket.playerName} a quitté ${code}`);
   });
 
   // Joueur prêt
@@ -1988,7 +2345,7 @@ io.on('connection', (socket) => {
       p.jokersRemaining = room.config.jokers;
     });
 
-    console.log(`[Partie lancée] Room ${room.code} — ${room.players.length} joueurs — Mode: ${room.config.mode}`);
+    log.info(`[Partie lancée] Room ${room.code} — ${room.players.length} joueurs — Mode: ${room.config.mode}`);
 
     io.to(socket.roomCode).emit('game-started', {
       players: room.players,
@@ -2002,6 +2359,7 @@ io.on('connection', (socket) => {
 
   // Soumettre une réponse
   socket.on('submit-answer', (data, callback) => {
+    if (throttle('submit-answer')) return;
     const room = rooms[socket.roomCode];
     if (!room || room.state !== 'playing') return;
     room._lastActivity = Date.now();
@@ -2092,6 +2450,7 @@ io.on('connection', (socket) => {
 
   // Bombe explose (timeout)
   socket.on('bomb-explode', () => {
+    if (throttle('bomb-explode')) return;
     const room = rooms[socket.roomCode];
     if (!room || room.state !== 'playing') return;
     clearServerBombTimer(room);
@@ -2107,7 +2466,7 @@ io.on('connection', (socket) => {
 
     currentPlayer.lives--;
 
-    console.log(`[Explosion] ${currentPlayer.name} — Vies restantes: ${currentPlayer.lives}`);
+    log.info(`[Explosion] ${currentPlayer.name} — Vies restantes: ${currentPlayer.lives}`);
 
     if (currentPlayer.lives <= 0) {
       currentPlayer.eliminated = true;
@@ -2152,6 +2511,7 @@ io.on('connection', (socket) => {
 
   // Passer la bombe (après réponse correcte, le timer se reset)
   socket.on('bomb-pass', () => {
+    if (throttle('bomb-pass')) return;
     const room = rooms[socket.roomCode];
     if (!room || room.state !== 'playing') return;
     // Only the host can trigger bomb-pass
@@ -2271,7 +2631,7 @@ io.on('connection', (socket) => {
       count: room.players.length
     });
 
-    console.log(`[Kick] ${targetPlayer.name} exclu de Room ${room.code}`);
+    log.info(`[Kick] ${targetPlayer.name} exclu de Room ${room.code}`);
   });
 
   // Mettre à jour la visibilité (hôte seulement, lobby seulement)
@@ -2288,7 +2648,7 @@ io.on('connection', (socket) => {
 
   // Déconnexion
   socket.on('disconnect', () => {
-    console.log(`[Déconnexion] ${socket.id}`);
+    log.info(`[Déconnexion] ${socket.id}`);
 
     const room = rooms[socket.roomCode];
     if (!room) return;
@@ -2331,7 +2691,7 @@ io.on('connection', (socket) => {
           // Notifier tous les clients restants
           io.to(disconnectedCode).emit('room-closed');
           delete rooms[disconnectedCode]; delete qrCache[disconnectedCode];
-          console.log(`[Room supprimée] ${disconnectedCode} (hôte absent 60s)`);
+          log.info(`[Room supprimée] ${disconnectedCode} (hôte absent 60s)`);
         }
       }, 60000); // 1 minute
     } else if (socket.isSpectator) {
@@ -2349,7 +2709,7 @@ io.on('connection', (socket) => {
             count: room.players.length
           });
 
-          console.log(`[Déconnexion lobby] ${player.name} retiré de Room ${socket.roomCode}`);
+          log.info(`[Déconnexion lobby] ${player.name} retiré de Room ${socket.roomCode}`);
         } else {
           // En jeu : marquer comme déconnecté (permet la reconnexion)
           player.connected = false;
@@ -2391,7 +2751,7 @@ io.on('connection', (socket) => {
             // Toujours déconnecté → éliminer
             p.eliminated = true;
             p.lives = 0;
-            console.log(`[Timeout] ${disconnectedPlayerName} éliminé (déconnecté >30s) dans ${disconnectedRoomCode}`);
+            log.info(`[Timeout] ${disconnectedPlayerName} éliminé (déconnecté >30s) dans ${disconnectedRoomCode}`);
             io.to(disconnectedRoomCode).emit('player-eliminated', {
               player: p,
               players: r.players,
@@ -2415,7 +2775,7 @@ io.on('connection', (socket) => {
 
     // Si c'est l'hôte → détruire la room et notifier tout le monde
     if (socket.isHost) {
-      console.log(`[Host Leave] L'hôte a quitté la room ${code} — suppression`);
+      log.info(`[Host Leave] L'hôte a quitté la room ${code} — suppression`);
       clearServerBombTimer(room);
       // D'abord retirer l'hôte de la room pour qu'il ne reçoive plus d'événements
       socket.leave(code);
@@ -2457,7 +2817,7 @@ io.on('connection', (socket) => {
     room.players = room.players.filter(p => p.id !== socket.id);
     socket.leave(code);
 
-    console.log(`[Leave] ${playerName} a quitté la partie dans la room ${code}`);
+    log.info(`[Leave] ${playerName} a quitté la partie dans la room ${code}`);
 
     // Notifier les autres
     io.to(code).emit('player-left-game', {
@@ -2504,23 +2864,23 @@ io.on('connection', (socket) => {
 
   // Rejouer — l'hôte remet la room en lobby
   socket.on('replay-game', () => {
-    console.log(`[Replay] replay-game reçu de ${socket.id}, roomCode=${socket.roomCode}, isHost=${socket.isHost}`);
+    log.info(`[Replay] replay-game reçu de ${socket.id}, roomCode=${socket.roomCode}, isHost=${socket.isHost}`);
     const code = socket.roomCode;
     const room = rooms[code];
     if (!room) {
-      console.log(`[Replay] Room ${code} n'existe pas`);
+      log.info(`[Replay] Room ${code} n'existe pas`);
       socket.emit('replay-error', { message: 'Salon introuvable' });
       return;
     }
     if (!socket.isHost) {
-      console.log(`[Replay] Socket ${socket.id} n'est pas l'hôte`);
+      log.info(`[Replay] Socket ${socket.id} n'est pas l'hôte`);
       socket.emit('replay-error', { message: "Seul l'hôte peut relancer" });
       return;
     }
 
     // Guard: only allow replay from ended state
     if (room.state !== 'ended') {
-      console.log(`[Replay] Room ${code} state=${room.state}, pas ended — ignoré`);
+      log.info(`[Replay] Room ${code} state=${room.state}, pas ended — ignoré`);
       socket.emit('replay-error', { message: 'La partie n\'est pas terminée' });
       return;
     }
@@ -2544,7 +2904,7 @@ io.on('connection', (socket) => {
       jokersRemaining: room.config.jokers || 0
     }));
 
-    console.log(`[Replay] Room ${code} remise en lobby avec ${room.players.length} joueurs`);
+    log.info(`[Replay] Room ${code} remise en lobby avec ${room.players.length} joueurs`);
 
     io.to(code).emit('replay-lobby', {
       players: room.players,
@@ -2559,7 +2919,7 @@ io.on('connection', (socket) => {
     if (!room || room.state !== 'playing') return;
     const currentPlayer = room.players[room.game.currentPlayerIndex];
     if (!currentPlayer || currentPlayer.id !== socket.id) {
-      console.log(`[Typing REJECTED] socket=${socket.id} expected=${currentPlayer?.id} name=${currentPlayer?.name}`);
+      log.info(`[Typing REJECTED] socket=${socket.id} expected=${currentPlayer?.id} name=${currentPlayer?.name}`);
       return;
     }
     socket.to(socket.roomCode).emit('player-typing', {
@@ -2570,6 +2930,7 @@ io.on('connection', (socket) => {
 
   // Utiliser un joker — renvoie un indice (nom français + catégorie)
   socket.on('use-joker', (callback) => {
+    if (throttle('use-joker')) return;
     const room = rooms[socket.roomCode];
     if (!room || room.state !== 'playing' || !room.game) {
       return callback && callback({ success: false, message: 'Partie non en cours' });
@@ -2595,7 +2956,7 @@ io.on('connection', (socket) => {
     const hint = available[Math.floor(Math.random() * available.length)];
     player.jokersRemaining--;
 
-    console.log(`[Joker] ${player.name} utilise un joker — indice: ${hint.french} (${hint.category}) — restants: ${player.jokersRemaining}`);
+    log.info(`[Joker] ${player.name} utilise un joker — indice: ${hint.french} (${hint.category}) — restants: ${player.jokersRemaining}`);
 
     callback && callback({
       success: true,
@@ -2607,6 +2968,7 @@ io.on('connection', (socket) => {
 
   // Chat / messages
   socket.on('chat-message', (data) => {
+    if (throttle('chat-message')) return;
     const room = rooms[socket.roomCode];
     if (!room) return;
 
@@ -2624,7 +2986,7 @@ io.on('connection', (socket) => {
 // ==========================================================================
 const iqNsp = io.of('/iq');
 iqNsp.on('connection', (socket) => {
-  console.log('[IQ Socket] New /iq connection:', socket.id);
+  log.info('[IQ Socket] New /iq connection:', socket.id);
 
   socket.on('iq-join', (data, callback) => {
     const code = (data.code || '').toUpperCase().trim();
@@ -2639,7 +3001,7 @@ iqNsp.on('connection', (socket) => {
     socket.iqIsHost = !!data.isHost;
     socket.join('iq-' + code);
 
-    console.log(`[IQ Socket] ${data.playerName} joined iq-${code} (host: ${data.isHost}, state: ${room.state})`);
+    log.info(`[IQ Socket] ${data.playerName} joined iq-${code} (host: ${data.isHost}, state: ${room.state})`);
     if (callback) callback({ success: true });
   });
 
@@ -2651,7 +3013,7 @@ iqNsp.on('connection', (socket) => {
   socket.on('iq-leave', () => {
     if (socket.iqRoom) {
       socket.leave('iq-' + socket.iqRoom);
-      console.log(`[IQ Socket] ${socket.iqPlayerName || socket.id} left iq-${socket.iqRoom}`);
+      log.info(`[IQ Socket] ${socket.iqPlayerName || socket.id} left iq-${socket.iqRoom}`);
       socket.iqRoom = null;
     }
   });
@@ -2662,7 +3024,7 @@ iqNsp.on('connection', (socket) => {
         iqNsp.to('iq-' + socket.iqRoom).emit('iq-message', { type: 'host-left' });
         if (iqRooms[socket.iqRoom]) {
           delete iqRooms[socket.iqRoom];
-          console.log(`[IQ Socket] Host disconnected, room ${socket.iqRoom} deleted`);
+          log.info(`[IQ Socket] Host disconnected, room ${socket.iqRoom} deleted`);
         }
       } else {
         iqNsp.to('iq-' + socket.iqRoom).emit('iq-message', {
@@ -2681,84 +3043,10 @@ iqNsp.on('connection', (socket) => {
   });
 });
 
-// --- Validation serveur des réponses ---
-
-function normalizeForValidation(str) {
-  return str
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[\u064B-\u065F\u0670]/g, '')
-    .replace(/[-\s\u2019\u2018''`\u02BC]/g, '')
-    .replace(/^(ash|adh|dhul|al|ar|as|at|az|ad|an)/, '')
-    .trim();
-}
-
-function normalizeArabicForValidation(str) {
-  return str
-    .replace(/[\u064B-\u065F\u0670]/g, '')
-    .replace(/\s+/g, '')
-    .trim();
-}
-
-function levenshteinDistance(a, b) {
-  const aLen = a.length, bLen = b.length;
-  if (aLen === 0) return bLen;
-  if (bLen === 0) return aLen;
-  const matrix = [];
-  for (let i = 0; i <= bLen; i++) matrix[i] = [i];
-  for (let j = 0; j <= aLen; j++) matrix[0][j] = j;
-  for (let i = 1; i <= bLen; i++) {
-    for (let j = 1; j <= aLen; j++) {
-      matrix[i][j] = b[i-1] === a[j-1]
-        ? matrix[i-1][j-1]
-        : Math.min(matrix[i-1][j-1]+1, matrix[i][j-1]+1, matrix[i-1][j]+1);
-    }
-  }
-  return matrix[bLen][aLen];
-}
-
+// --- Validation serveur des réponses (imported from lib/validation.js) ---
+// Wrapper: pass ASMA_UL_HUSNA automatically
 function serverValidateAnswer(input, usedNames) {
-  if (!input || input.trim().length === 0) {
-    return { valid: false, nameId: null, message: 'empty' };
-  }
-  const normalizedInput = normalizeForValidation(input);
-  const arabicInput = normalizeArabicForValidation(input);
-
-  // Phase 1 : match exact
-  for (const name of ASMA_UL_HUSNA) {
-    if (normalizeForValidation(name.transliteration) === normalizedInput ||
-        normalizeArabicForValidation(name.arabic) === arabicInput) {
-      if (usedNames.includes(name.id)) return { valid: false, nameId: name.id, message: 'already-used' };
-      return { valid: true, nameId: name.id, canonicalName: name.transliteration, message: 'correct' };
-    }
-    if (name.variants) {
-      for (const v of name.variants) {
-        if (normalizeForValidation(v) === normalizedInput || normalizeArabicForValidation(v) === arabicInput) {
-          if (usedNames.includes(name.id)) return { valid: false, nameId: name.id, message: 'already-used' };
-          return { valid: true, nameId: name.id, canonicalName: name.transliteration, message: 'correct' };
-        }
-      }
-    }
-  }
-
-  // Phase 2 : match flou (Levenshtein)
-  let bestMatch = null, bestDist = Infinity;
-  for (const name of ASMA_UL_HUSNA) {
-    const nameNorm = normalizeForValidation(name.transliteration);
-    const dist = levenshteinDistance(normalizedInput, nameNorm);
-    const maxDist = nameNorm.length > 6 ? 2 : 1;
-    if (dist <= maxDist && dist < bestDist) {
-      bestDist = dist;
-      bestMatch = name;
-    }
-  }
-  if (bestMatch) {
-    if (usedNames.includes(bestMatch.id)) return { valid: false, nameId: bestMatch.id, message: 'already-used' };
-    return { valid: true, nameId: bestMatch.id, canonicalName: bestMatch.transliteration, message: 'correct' };
-  }
-
-  return { valid: false, nameId: null, message: 'unknown' };
+  return _serverValidateAnswer(input, usedNames, ASMA_UL_HUSNA);
 }
 
 // --- Fonctions utilitaires ---
@@ -2800,7 +3088,7 @@ function endGame(room) {
     totalRounds: room.game.round
   });
 
-  console.log(`[Fin de partie] Room ${room.code} — ${room.game.usedNames.length}/99 noms cités${isTie ? ' (égalité)' : ''}`);
+  log.info(`[Fin de partie] Room ${room.code} — ${room.game.usedNames.length}/99 noms cités${isTie ? ' (égalité)' : ''}`);
 }
 
 function randomBetween(min, max) {
@@ -2864,11 +3152,11 @@ if (REPORT_EMAIL && REPORT_EMAIL_PASSWORD) {
     auth: { user: REPORT_EMAIL, pass: REPORT_EMAIL_PASSWORD }
   });
   mailTransporter.verify((err) => {
-    if (err) console.error('[Mail] Connexion Gmail échouée :', err.message);
-    else console.log('[Mail] Connexion Gmail OK —', REPORT_EMAIL);
+    if (err) log.error('[Mail] Connexion Gmail échouée :', err.message);
+    else log.info('[Mail] Connexion Gmail OK —', REPORT_EMAIL);
   });
 } else {
-  console.warn('[Mail] REPORT_EMAIL ou REPORT_EMAIL_PASSWORD manquant dans .env — les signalements seront sauvegardés localement uniquement.');
+  log.warn('[Mail] REPORT_EMAIL ou REPORT_EMAIL_PASSWORD manquant dans .env — les signalements seront sauvegardés localement uniquement.');
 }
 
 const REPORT_TYPE_LABELS = { bug: 'Bug technique', content: 'Erreur de contenu', suggestion: 'Suggestion' };
@@ -2934,19 +3222,33 @@ app.post('/api/report', async (req, res) => {
           </div>
         `
       });
-      console.log(`[Report] Email envoyé — ${safeType} — ${safePage || '(aucune page)'}`);
+      log.info(`[Report] Email envoyé — ${safeType} — ${safePage || '(aucune page)'}`);
     } catch (mailErr) {
-      console.error('[Report] Erreur email :', mailErr.message);
+      log.error('[Report] Erreur email :', mailErr.message);
     }
   }
 
-  console.log(`[Report] ${safeType} — ${safePage || '(aucune page)'} — ${safeDesc.slice(0, 60)}...`);
+  log.info(`[Report] ${safeType} — ${safePage || '(aucune page)'} — ${safeDesc.slice(0, 60)}...`);
   res.json({ success: true, id: report.id });
 });
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', rooms: Object.keys(rooms).length });
+  const mem = process.memoryUsage();
+  res.json({
+    status: 'ok',
+    uptime: Math.floor(process.uptime()),
+    rooms: Object.keys(rooms).length,
+    iqRooms: Object.keys(iqRooms).length,
+    connectedSockets: io.engine.clientsCount || 0,
+    memory: {
+      rss: Math.round(mem.rss / 1024 / 1024),
+      heapUsed: Math.round(mem.heapUsed / 1024 / 1024),
+      heapTotal: Math.round(mem.heapTotal / 1024 / 1024)
+    },
+    version: '2.0.0',
+    env: NODE_ENV
+  });
 });
 
 // --- Middleware 404 catch-all (DOIT être après toutes les routes) ---
@@ -2956,7 +3258,7 @@ app.use((req, res) => {
 
 // --- Error handler 500 ---
 app.use((err, req, res, next) => {
-  console.error('[Erreur 500]', err.stack || err.message);
+  log.error('[Erreur 500]', err.stack || err.message);
   res.status(500).sendFile(path.join(__dirname, 'public', '500.html'));
 });
 
@@ -2978,7 +3280,7 @@ function isPortInUse(port) {
 async function findFreePort(startPort) {
   for (let port = startPort; port < startPort + MAX_PORT_RETRIES; port++) {
     if (!(await isPortInUse(port))) return port;
-    console.warn(`[Port] ${port} déjà utilisé, tentative sur ${port + 1}...`);
+    log.warn(`[Port] ${port} déjà utilisé, tentative sur ${port + 1}...`);
   }
   return null;
 }
@@ -2986,47 +3288,48 @@ async function findFreePort(startPort) {
 (async () => {
   const freePort = await findFreePort(PORT);
   if (!freePort) {
-    console.error(`[Erreur] Aucun port libre entre ${PORT} et ${PORT + MAX_PORT_RETRIES - 1}.`);
-    console.error('[Erreur] Fermez les autres serveurs ou utilisez PORT=XXXX node server.js');
+    log.error(`[Erreur] Aucun port libre entre ${PORT} et ${PORT + MAX_PORT_RETRIES - 1}.`);
+    log.error('[Erreur] Fermez les autres serveurs ou utilisez PORT=XXXX node server.js');
     process.exit(1);
   }
 
   server.on('error', (err) => {
-    console.error('[Erreur serveur]', err.message);
+    log.error('[Erreur serveur]', err.message);
     process.exit(1);
   });
 
   server.listen(freePort, HOST, () => {
     const pad = (s, len) => s + ' '.repeat(Math.max(0, len - s.length));
-    console.log('');
-    console.log('  ╔══════════════════════════════════════════╗');
-    console.log('  ║         AL-ASMAA — Serveur               ║');
-    console.log('  ╠══════════════════════════════════════════╣');
-    console.log(`  ║  ${pad(`Local:    http://localhost:${freePort}`, 40)}║`);
-    console.log(`  ║  ${pad(`Réseau:   http://${LOCAL_IP}:${freePort}`, 40)}║`);
-    console.log(`  ║  ${pad(`Mode:     ${NODE_ENV}`, 40)}║`);
-    console.log('  ║                                          ║');
-    console.log('  ║  Partagez l\'URL réseau pour que les      ║');
-    console.log('  ║  autres joueurs rejoignent sur le        ║');
-    console.log('  ║  même réseau WiFi.                       ║');
-    console.log('  ╚══════════════════════════════════════════╝');
+    log.always('');
+    log.always('  ╔══════════════════════════════════════════╗');
+    log.always('  ║         AL-ASMAA — Serveur               ║');
+    log.always('  ╠══════════════════════════════════════════╣');
+    log.always(`  ║  ${pad(`Local:    http://localhost:${freePort}`, 40)}║`);
+    log.always(`  ║  ${pad(`Réseau:   http://${LOCAL_IP}:${freePort}`, 40)}║`);
+    log.always(`  ║  ${pad(`Mode:     ${NODE_ENV}`, 40)}║`);
+    log.always('  ║                                          ║');
+    log.always('  ║  Partagez l\'URL réseau pour que les      ║');
+    log.always('  ║  autres joueurs rejoignent sur le        ║');
+    log.always('  ║  même réseau WiFi.                       ║');
+    log.always('  ╚══════════════════════════════════════════╝');
     if (freePort !== PORT) {
-      console.log(`  ⚠  Le port ${PORT} était occupé — lancé sur ${freePort}`);
+      log.always(`  ⚠  Le port ${PORT} était occupé — lancé sur ${freePort}`);
     }
-    console.log('');
+    log.always('');
   });
 })();
 
 // Graceful shutdown
 function gracefulShutdown(signal) {
-  console.log(`\n[${signal}] Arrêt en cours...`);
+  log.always(`\n[${signal}] Arrêt en cours...`);
+  saveLeaderboard();
   // Notifier tous les clients
   for (const code of Object.keys(rooms)) {
     io.to(code).emit('server-shutdown', { message: 'Le serveur s\'arrête' });
   }
   io.close(() => {
     server.close(() => {
-      console.log('[Serveur] Arrêté proprement.');
+      log.always('[Serveur] Arrêté proprement.');
       process.exit(0);
     });
   });

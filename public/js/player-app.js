@@ -4,7 +4,7 @@
  */
 (() => {
   'use strict';
-  console.log('[Player] v14.0 — premium results page redesign');
+  // console.log('[Player] v14.0 — premium results page redesign');
 
   // --- État ---
   let socket = null;
@@ -745,7 +745,7 @@
 
     // Replay — retour en lobby
     socket.on('replay-lobby', (data) => {
-      console.log('[Player] replay-lobby reçu:', data.code, 'players:', data.players.length);
+      // console.log('[Player] replay-lobby reçu:', data.code, 'players:', data.players.length);
       players = data.players;
       myPlayer = players.find(p => p.id === myPlayer.id) || myPlayer;
       gameState = null;

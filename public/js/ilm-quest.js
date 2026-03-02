@@ -108,16 +108,16 @@ const IlmQuest = (() => {
       state.socket.emit('iq-leave');
     }
     state.socket = io('/iq');
-    console.log('[IQ Socket] /iq socket, connected:', state.socket.connected, 'id:', state.socket.id);
+    // console.log('[IQ Socket] /iq socket, connected:', state.socket.connected, 'id:', state.socket.id);
     // Reconnect if previously disconnected (io() caches per namespace)
     if (state.socket.disconnected) {
-      console.log('[IQ Socket] Reconnecting...');
+      // console.log('[IQ Socket] Reconnecting...');
       state.socket.connect();
     }
 
     function doJoin() {
       if (!state.socket || !state.roomCode) return;
-      console.log('[IQ Socket] doJoin, connected:', state.socket.connected, 'room:', state.roomCode);
+      // console.log('[IQ Socket] doJoin, connected:', state.socket.connected, 'room:', state.roomCode);
       state.socket.emit('iq-join', {
         code: state.roomCode,
         playerId: state.playerId,
@@ -125,14 +125,13 @@ const IlmQuest = (() => {
         isHost: state.isHost
       }, (res) => {
         if (res && res.error) console.warn('[IQ Socket] join error:', res.error);
-        else console.log('[IQ Socket] joined room OK');
       });
     }
 
     // Join on every (re)connect — ensures room membership is restored
     state.socket.off('connect');
     state.socket.on('connect', () => {
-      console.log('[IQ Socket] Connected, id:', state.socket.id);
+      // console.log('[IQ Socket] Connected, id:', state.socket.id);
       doJoin();
     });
     state.socket.off('connect_error');
@@ -148,7 +147,7 @@ const IlmQuest = (() => {
   }
 
   function broadcast(msg) {
-    console.log('[IQ Broadcast]', msg.type, state.isHost ? '(host)' : '(guest)');
+    // console.log('[IQ Broadcast]', msg.type, state.isHost ? '(host)' : '(guest)');
     // Socket.io (primary — cross-device)
     if (state.socket) state.socket.emit('iq-broadcast', msg);
     // BroadcastChannel (bonus — same-browser)
@@ -159,7 +158,7 @@ const IlmQuest = (() => {
 
   function handleMessage(msg) {
     if (!msg || !msg.type) return;
-    console.log('[IQ Received]', msg.type, state.isHost ? '(host)' : '(guest)');
+    // console.log('[IQ Received]', msg.type, state.isHost ? '(host)' : '(guest)');
 
     switch (msg.type) {
       case 'player-join':
@@ -265,26 +264,7 @@ const IlmQuest = (() => {
         }
         break;
       case 'replay-request':
-        if (state.isHost) {
-          // Host auto-accepts replay: reset and go to lobby
-          state.phase = 'lobby';
-          state.players.forEach(function(p) {
-            state.scores[p.id] = 0;
-            state.streaks[p.id] = 0;
-          });
-          state.answers = {};
-          state.winner = null;
-          broadcast({
-            type: 'back-to-lobby',
-            players: state.players,
-            scores: state.scores,
-            streaks: state.streaks
-          });
-          showIlmQuestLobby();
-          renderLobbyPlayers();
-          updateStartButton();
-          startPlayerPolling();
-        }
+        // Legacy: no longer used (players now wait for host)
         break;
       case 'join-rejected':
         if (!state.isHost && msg.targetId === state.playerId) {
@@ -301,14 +281,14 @@ const IlmQuest = (() => {
 
   // --- Gestion des joueurs ---
   function handlePlayerJoin(msg) {
-    console.log('[IQ Host] handlePlayerJoin called, phase:', state.phase, 'player:', msg.player?.name);
+    // console.log('[IQ Host] handlePlayerJoin called, phase:', state.phase, 'player:', msg.player?.name);
     // Reject mid-game joins
     if (state.phase !== 'lobby') {
       broadcast({ type: 'join-rejected', reason: 'game-in-progress', targetId: msg.player.id });
       return;
     }
     if (state.players.find(p => p.id === msg.player.id)) {
-      console.log('[IQ Host] Player already in list, re-broadcasting player-list');
+      // console.log('[IQ Host] Player already in list, re-broadcasting player-list');
       broadcast({ type: 'player-list', players: state.players, scores: state.scores, streaks: state.streaks });
       return;
     }
@@ -491,21 +471,21 @@ const IlmQuest = (() => {
 
   function pollServerPlayers() {
     if (!state.roomCode || state.phase !== 'lobby') {
-      console.log('[IQ Poll] Stopping: roomCode=' + state.roomCode + ' phase=' + state.phase);
+      // console.log('[IQ Poll] Stopping: roomCode=' + state.roomCode + ' phase=' + state.phase);
       stopPlayerPolling();
       return;
     }
     fetch('/api/iq-rooms/' + encodeURIComponent(state.roomCode) + '/players')
       .then(r => {
-        console.log('[IQ Poll] Response status:', r.status);
+        // console.log('[IQ Poll] Response status:', r.status);
         return r.json();
       })
       .then(data => {
-        console.log('[IQ Poll] Data received: state=' + data.state + ' players=' + (data.players ? data.players.length : 'none') + ' hasQuestions=' + !!data.questions);
+        // console.log('[IQ Poll] Data received: state=' + data.state + ' players=' + (data.players ? data.players.length : 'none') + ' hasQuestions=' + !!data.questions);
         if (!data.players || state.phase !== 'lobby') return;
         // Check if game started — questions are included directly in response
         if (data.state === 'playing' && !state.isHost) {
-          console.log('[IQ Poll] GAME START DETECTED! questions:', data.questions ? data.questions.length : 0);
+          // console.log('[IQ Poll] GAME START DETECTED! questions:', data.questions ? data.questions.length : 0);
           if (data.questions) {
             stopPlayerPolling();
             state.questions = data.questions;
@@ -689,26 +669,26 @@ const IlmQuest = (() => {
 
   // --- Démarrage du jeu ---
   async function startGame() {
-    console.log('[IQ startGame] called, isHost:', state.isHost, 'players:', state.players.length, 'roomCode:', state.roomCode);
+    // console.log('[IQ startGame] called, isHost:', state.isHost, 'players:', state.players.length, 'roomCode:', state.roomCode);
     if (!state.isHost || state.players.length < 2) return;
 
     stopPlayerPolling();
     const questions = filterQuestions(state.difficulty);
-    console.log('[IQ startGame] questions generated:', questions.length);
+    // console.log('[IQ startGame] questions generated:', questions.length);
     state.questions = questions;
     state.currentQuestionIndex = 0;
     state.phase = 'playing';
 
     // PATCH server state + questions — await to guarantee data is on server before guests poll
     const patchBody = JSON.stringify({ state: 'playing', questions: questions, targetScore: state.targetScore, difficulty: state.difficulty });
-    console.log('[IQ startGame] PATCH body size:', patchBody.length, 'bytes');
+    // console.log('[IQ startGame] PATCH body size:', patchBody.length, 'bytes');
     try {
       const patchRes = await fetch('/api/iq-rooms/' + encodeURIComponent(state.roomCode), {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: patchBody
       });
-      console.log('[IQ startGame] PATCH response:', patchRes.status, patchRes.statusText);
+      // console.log('[IQ startGame] PATCH response:', patchRes.status, patchRes.statusText);
       if (!patchRes.ok) {
         const errText = await patchRes.text();
         console.error('[IQ startGame] PATCH FAILED:', errText);
@@ -1522,8 +1502,9 @@ const IlmQuest = (() => {
           updateStartButton();
           startPlayerPolling();
         } else {
-          // Non-host: request replay from host
-          broadcast({ type: 'replay-request', playerId: state.playerId });
+          // Non-host: wait for host to replay
+          replayBtn.disabled = true;
+          replayBtn.textContent = "En attente de l'hôte...";
         }
       };
     }

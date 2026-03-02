@@ -14,14 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" href="/css/style.css?v=15.0">
   <link rel="stylesheet" href="/css/animations.css?v=15.0">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ6P2VEF0R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LQ6P2VEF0R');
-</script>
+<script src="/js/consent.js?v=1.0"></script>
 </head>
 <body>
 
@@ -100,14 +93,6 @@
           <feGaussianBlur stdDeviation="7" result="b"/>
           <feColorMatrix in="b" type="matrix" values="1 0 0 0 0 0 0.9 0 0 0 0 0 0.5 0 0 0 0 0 0.9 0"/>
         </filter>
-        <filter id="lanternLitGlow" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="18" result="b"/>
-          <feColorMatrix in="b" type="matrix" values="1 0.8 0.2 0 0  0 0.7 0.1 0 0  0 0.2 0.5 0 0  0 0 0 1 0" result="colored"/>
-          <feMerge>
-            <feMergeNode in="colored"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
         <filter id="metalShadow" x="-30%" y="-30%" width="160%" height="160%">
           <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#4A2C00" flood-opacity="0.35"/>
         </filter>
@@ -123,6 +108,8 @@
         <g id="crescentCut">
           <path d="M0 -11 A11 11 0 1 1 0 11 A8 8 0 1 0 0 -11Z" fill="none" stroke="url(#goldFrame)" stroke-width="1.5"/>
         </g>
+
+        <!-- Lantern body template -->
         <g id="lanternBodyTemplate">
           <path d="M0 -280 L0 -238" stroke="url(#goldFrame)" stroke-width="4" stroke-linecap="round"/>
           <path d="M0 -278 C-16 -268 -16 -248 0 -238 C16 -248 16 -268 0 -278Z" fill="none" stroke="url(#goldFrame)" stroke-width="2"/>
@@ -152,24 +139,35 @@
             <circle cx="66" cy="126" r="2.8" fill="#FFEAB7"/>
           </g>
         </g>
+
         <clipPath id="panelClip">
           <path d="M-62 -140 Q-76 -117 -76 -92 L-76 48 Q-76 79 -56 96 Q-35 113 0 122 Q35 113 56 96 Q76 79 76 48 L76 -92 Q76 -117 62 -140 Z"/>
         </clipPath>
+
+        <!-- Inner flame with multi-layer SMIL flicker — premium -->
         <g id="innerFlame">
-          <ellipse cx="0" cy="18" rx="58" ry="86" fill="url(#candleGlow)" filter="url(#softGlow)">
-            <animate attributeName="opacity" values="0.6;0.82;0.65;0.78;0.6" dur="3s" repeatCount="indefinite"/>
-          </ellipse>
-          <ellipse cx="0" cy="34" rx="34" ry="54" fill="url(#candleGlow)">
-            <animate attributeName="opacity" values="0.5;0.72;0.55;0.68;0.5" dur="2.4s" repeatCount="indefinite"/>
-          </ellipse>
-          <path d="M0 -8 C18 10 18 36 0 50 C-18 36 -18 10 0 -8Z" fill="#FFF6CE">
-            <animate attributeName="opacity" values="0.85;1;0.88;0.97;0.85" dur="1.8s" repeatCount="indefinite"/>
-          </path>
-          <path d="M0 8 C10 18 10 31 0 39 C-10 31 -10 18 0 8Z" fill="#FFB13C">
-            <animate attributeName="opacity" values="0.9;1;0.92;1;0.9" dur="1.3s" repeatCount="indefinite"/>
-          </path>
-          <rect x="-3" y="43" width="6" height="22" rx="2" fill="#6D3D00" opacity="0.9"/>
+          <g>
+            <animateTransform attributeName="transform" type="scale" values="1 1;1.06 1.1;0.97 0.95;1.05 1.08;0.98 0.97;1.03 1.06;1 1" dur="4.2s" repeatCount="indefinite"/>
+            <ellipse cx="0" cy="18" rx="58" ry="86" fill="url(#candleGlow)" filter="url(#softGlow)">
+              <animate attributeName="opacity" values="0.35;0.9;0.45;0.85;0.4;0.88;0.35" dur="3.4s" repeatCount="indefinite"/>
+              <animate attributeName="ry" values="82;96;78;94;84;98;82" dur="5.6s" repeatCount="indefinite"/>
+              <animate attributeName="rx" values="58;64;54;62;56;66;58" dur="4.8s" repeatCount="indefinite"/>
+            </ellipse>
+            <ellipse cx="0" cy="34" rx="34" ry="54" fill="url(#candleGlow)">
+              <animate attributeName="opacity" values="0.38;0.82;0.44;0.78;0.4;0.76;0.38" dur="2.8s" repeatCount="indefinite"/>
+              <animate attributeName="ry" values="54;60;50;58;54" dur="3.6s" repeatCount="indefinite"/>
+            </ellipse>
+            <path d="M0 -8 C18 10 18 36 0 50 C-18 36 -18 10 0 -8Z" fill="#FFF6CE">
+              <animate attributeName="opacity" values="0.7;1;0.75;0.95;0.72;1;0.7" dur="2s" repeatCount="indefinite"/>
+            </path>
+            <path d="M0 8 C10 18 10 31 0 39 C-10 31 -10 18 0 8Z" fill="#FFB13C">
+              <animate attributeName="opacity" values="0.82;1;0.86;1;0.88;0.95;0.82" dur="1.4s" repeatCount="indefinite"/>
+            </path>
+            <rect x="-3" y="43" width="6" height="22" rx="2" fill="#6D3D00" opacity="0.9"/>
+          </g>
         </g>
+
+        <!-- Blue Fanous -->
         <g id="fanousBlue">
           <use href="#lanternBodyTemplate"/>
           <g clip-path="url(#panelClip)">
@@ -187,6 +185,8 @@
           <path d="M-38 -124 V108 M38 -124 V108" stroke="#FFEAB8" stroke-opacity="0.55" stroke-width="1.4"/>
           <path d="M-62 -48 H62 M-58 20 H58 M-46 84 H46" stroke="#FFEAB8" stroke-opacity="0.45" stroke-width="1.2"/>
         </g>
+
+        <!-- Emerald Fanous -->
         <g id="fanousEmerald">
           <use href="#lanternBodyTemplate"/>
           <g clip-path="url(#panelClip)">
@@ -208,6 +208,8 @@
           <path d="M-52 -16 Q0 18 52 -16" stroke="#FFF2C6" stroke-opacity="0.55" stroke-width="1.5" fill="none"/>
           <path d="M-48 82 Q0 108 48 82" stroke="#FFF2C6" stroke-opacity="0.55" stroke-width="1.5" fill="none"/>
         </g>
+
+        <!-- Violet Fanous -->
         <g id="fanousViolet">
           <use href="#lanternBodyTemplate"/>
           <g clip-path="url(#panelClip)">
@@ -229,97 +231,192 @@
         </g>
       </defs>
 
-      <!-- 9 animated lantern instances -->
-      <g transform="translate(80 88) scale(0.28)">
+      <!-- ======= 9 fanous — premium pendulum with depth, bob & breathing halos ======= -->
+
+      <!-- 1: Blue — far left -->
+      <g transform="translate(80 78) scale(0.28)">
         <ellipse cx="0" cy="-20" rx="160" ry="260" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0;0.45;0.5;0.35;0.48;0.1;0.05;0;0;0.3;0.45" dur="8s" repeatCount="indefinite" begin="0.3s"/>
+          <animate attributeName="opacity" values="0.18;0.5;0.24;0.46;0.2;0.48;0.18" dur="20s" repeatCount="indefinite" begin="-2s"/>
+          <animate attributeName="rx" values="160;184;152;178;160" dur="22s" repeatCount="indefinite" begin="-2s"/>
+          <animate attributeName="ry" values="260;294;250;288;260" dur="22s" repeatCount="indefinite" begin="-2s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-2.5 0 -280;2.5 0 -280;-2.5 0 -280" dur="5.5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0.7;0.8;0.6;0.75;0.15;0.05;0;0;0.5;0.7" dur="8s" repeatCount="indefinite" begin="0.3s"/>
+          <animateTransform attributeName="transform" type="rotate" values="-3.8 0 -280;1.5 0 -280;3.2 0 -280;-0.8 0 -280;-3.8 0 -280" dur="18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.52;0.78;1" keySplines="0.45 0 0.55 1;0.35 0 0.65 1;0.45 0 0.55 1;0.35 0 0.65 1" begin="-2s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 2;0 -5;0 0" dur="14s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-2s"/>
+          <animate attributeName="opacity" values="0.55;0.88;0.6;0.84;0.57;0.82;0.55" dur="26s" repeatCount="indefinite" begin="-2s"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
-      <g transform="translate(320 72) scale(0.22)">
+
+      <!-- 2: Emerald — left -->
+      <g transform="translate(320 65) scale(0.22)">
         <ellipse cx="0" cy="-20" rx="140" ry="240" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.4;0.5;0.35;0.1;0;0;0.2;0.45;0.5;0.42" dur="9s" repeatCount="indefinite" begin="1.2s"/>
+          <animate attributeName="opacity" values="0.22;0.14;0.48;0.2;0.44;0.16;0.22" dur="24s" repeatCount="indefinite" begin="-9s"/>
+          <animate attributeName="rx" values="140;166;132;160;140" dur="26s" repeatCount="indefinite" begin="-9s"/>
+          <animate attributeName="ry" values="240;276;230;270;240" dur="26s" repeatCount="indefinite" begin="-9s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="2 0 -280;-2 0 -280;2 0 -280" dur="7s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.6;0.7;0.55;0.15;0;0;0.35;0.65;0.7;0.62" dur="9s" repeatCount="indefinite" begin="1.2s"/>
+          <animateTransform attributeName="transform" type="rotate" values="3.0 0 -280;-1.2 0 -280;-4.0 0 -280;1.0 0 -280;3.0 0 -280" dur="20s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.5;0.76;1" keySplines="0.4 0 0.6 1;0.38 0 0.62 1;0.4 0 0.6 1;0.38 0 0.62 1" begin="-9s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 3;0 -6;0 0" dur="16s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-9s"/>
+          <animate attributeName="opacity" values="0.5;0.82;0.54;0.78;0.52;0.76;0.5" dur="28s" repeatCount="indefinite" begin="-9s"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
-      <g transform="translate(560 60) scale(0.18)">
+
+      <!-- 3: Violet — center-left, far -->
+      <g transform="translate(560 52) scale(0.18)">
         <ellipse cx="0" cy="-20" rx="130" ry="220" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0;0;0.3;0.4;0.45;0.35;0.1;0;0;0;0.2;0.38" dur="10s" repeatCount="indefinite" begin="2s"/>
+          <animate attributeName="opacity" values="0.1;0.4;0.14;0.38;0.12;0.36;0.1" dur="28s" repeatCount="indefinite" begin="-15s"/>
+          <animate attributeName="rx" values="130;152;124;148;130" dur="30s" repeatCount="indefinite" begin="-15s"/>
+          <animate attributeName="ry" values="220;254;212;248;220" dur="30s" repeatCount="indefinite" begin="-15s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-1.5 0 -280;1.5 0 -280;-1.5 0 -280" dur="8s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0;0.5;0.6;0.65;0.55;0.15;0;0;0;0.35;0.55" dur="10s" repeatCount="indefinite" begin="2s"/>
+          <animateTransform attributeName="transform" type="rotate" values="-2.2 0 -280;2.4 0 -280;4.0 0 -280;-0.6 0 -280;-2.2 0 -280" dur="24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.26;0.5;0.8;1" keySplines="0.42 0 0.58 1;0.36 0 0.64 1;0.42 0 0.58 1;0.36 0 0.64 1" begin="-15s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 2;0 -3;0 0" dur="19s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-15s"/>
+          <animate attributeName="opacity" values="0.46;0.72;0.5;0.7;0.48;0.68;0.46" dur="32s" repeatCount="indefinite" begin="-15s"/>
           <use href="#fanousViolet"/>
         </g>
       </g>
-      <g transform="translate(780 83) scale(0.26)">
+
+      <!-- 4: Blue — center -->
+      <g transform="translate(780 72) scale(0.26)">
         <ellipse cx="0" cy="-20" rx="150" ry="250" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.5;0.45;0.3;0.1;0;0;0;0.25;0.48;0.52;0.5" dur="7.5s" repeatCount="indefinite" begin="0.5s"/>
+          <animate attributeName="opacity" values="0.26;0.16;0.54;0.22;0.5;0.18;0.26" dur="18s" repeatCount="indefinite" begin="-5s"/>
+          <animate attributeName="rx" values="150;176;142;170;150" dur="20s" repeatCount="indefinite" begin="-5s"/>
+          <animate attributeName="ry" values="250;286;240;280;250" dur="20s" repeatCount="indefinite" begin="-5s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="3 0 -280;-3 0 -280;3 0 -280" dur="5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.75;0.65;0.5;0.15;0;0;0;0.4;0.7;0.78;0.75" dur="7.5s" repeatCount="indefinite" begin="0.5s"/>
+          <animateTransform attributeName="transform" type="rotate" values="4.5 0 -280;-1.0 0 -280;-3.5 0 -280;1.5 0 -280;4.5 0 -280" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.52;0.8;1" keySplines="0.44 0 0.56 1;0.36 0 0.64 1;0.44 0 0.56 1;0.36 0 0.64 1" begin="-5s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 3;0 -6;0 0" dur="13s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-5s"/>
+          <animate attributeName="opacity" values="0.58;0.88;0.62;0.84;0.6;0.82;0.58" dur="22s" repeatCount="indefinite" begin="-5s"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
-      <g transform="translate(1000 94) scale(0.30)">
+
+      <!-- 5: Emerald — center, hero -->
+      <g transform="translate(1000 82) scale(0.30)">
         <ellipse cx="0" cy="-20" rx="170" ry="280" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.55;0.5;0.55;0.45;0.3;0.1;0;0;0.2;0.45;0.55" dur="8.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.28;0.6;0.24;0.56;0.26;0.58;0.28" dur="22s" repeatCount="indefinite"/>
+          <animate attributeName="rx" values="170;200;162;194;170" dur="24s" repeatCount="indefinite"/>
+          <animate attributeName="ry" values="280;320;268;314;280" dur="24s" repeatCount="indefinite"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-2.5 0 -280;2.5 0 -280;-2.5 0 -280" dur="6s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.8;0.75;0.8;0.65;0.5;0.15;0;0;0.35;0.65;0.8" dur="8.5s" repeatCount="indefinite"/>
+          <animateTransform attributeName="transform" type="rotate" values="-5.0 0 -280;2.0 0 -280;4.0 0 -280;-1.2 0 -280;-5.0 0 -280" dur="15s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.5;0.76;1" keySplines="0.4 0 0.6 1;0.35 0 0.65 1;0.4 0 0.6 1;0.35 0 0.65 1"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 4;0 -7;0 0" dur="12s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+          <animate attributeName="opacity" values="0.6;0.92;0.64;0.9;0.62;0.88;0.6" dur="20s" repeatCount="indefinite"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
-      <g transform="translate(1220 66) scale(0.20)">
+
+      <!-- 6: Violet — center-right -->
+      <g transform="translate(1220 58) scale(0.20)">
         <ellipse cx="0" cy="-20" rx="135" ry="230" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0;0.3;0.42;0.4;0.35;0.15;0;0;0;0.1;0.35;0.42" dur="11s" repeatCount="indefinite" begin="3s"/>
+          <animate attributeName="opacity" values="0.12;0.44;0.16;0.42;0.14;0.4;0.12" dur="26s" repeatCount="indefinite" begin="-12s"/>
+          <animate attributeName="rx" values="135;160;128;154;135" dur="28s" repeatCount="indefinite" begin="-12s"/>
+          <animate attributeName="ry" values="230;266;222;260;230" dur="28s" repeatCount="indefinite" begin="-12s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="2 0 -280;-2 0 -280;2 0 -280" dur="6.5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0.5;0.6;0.58;0.55;0.2;0;0;0;0.15;0.52;0.6" dur="11s" repeatCount="indefinite" begin="3s"/>
+          <animateTransform attributeName="transform" type="rotate" values="2.8 0 -280;-1.5 0 -280;-4.5 0 -280;0.8 0 -280;2.8 0 -280" dur="22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.26;0.52;0.78;1" keySplines="0.42 0 0.58 1;0.38 0 0.62 1;0.42 0 0.58 1;0.38 0 0.62 1" begin="-12s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 2;0 -4;0 0" dur="17s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-12s"/>
+          <animate attributeName="opacity" values="0.48;0.76;0.52;0.74;0.5;0.72;0.48" dur="30s" repeatCount="indefinite" begin="-12s"/>
           <use href="#fanousViolet"/>
         </g>
       </g>
-      <g transform="translate(1440 77) scale(0.24)">
+
+      <!-- 7: Blue — right -->
+      <g transform="translate(1440 68) scale(0.24)">
         <ellipse cx="0" cy="-20" rx="145" ry="245" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0;0;0.4;0.48;0.45;0.42;0.2;0;0;0;0.3;0.45" dur="9.5s" repeatCount="indefinite" begin="1.5s"/>
+          <animate attributeName="opacity" values="0.2;0.48;0.16;0.46;0.18;0.44;0.2" dur="21s" repeatCount="indefinite" begin="-3s"/>
+          <animate attributeName="rx" values="145;170;138;164;145" dur="23s" repeatCount="indefinite" begin="-3s"/>
+          <animate attributeName="ry" values="245;280;236;274;245" dur="23s" repeatCount="indefinite" begin="-3s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-1.5 0 -280;1.5 0 -280;-1.5 0 -280" dur="5.5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0;0;0.6;0.7;0.65;0.6;0.3;0;0;0;0.5;0.65" dur="9.5s" repeatCount="indefinite" begin="1.5s"/>
+          <animateTransform attributeName="transform" type="rotate" values="-3.2 0 -280;1.2 0 -280;3.8 0 -280;-1.0 0 -280;-3.2 0 -280" dur="19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.5;0.76;1" keySplines="0.45 0 0.55 1;0.35 0 0.65 1;0.45 0 0.55 1;0.35 0 0.65 1" begin="-3s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 3;0 -5;0 0" dur="15s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-3s"/>
+          <animate attributeName="opacity" values="0.54;0.84;0.58;0.8;0.56;0.78;0.54" dur="25s" repeatCount="indefinite" begin="-3s"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
-      <g transform="translate(1640 55) scale(0.16)">
+
+      <!-- 8: Emerald — far right, small -->
+      <g transform="translate(1640 48) scale(0.16)">
         <ellipse cx="0" cy="-20" rx="120" ry="210" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.3;0.35;0.28;0.1;0;0;0;0;0.15;0.28;0.32;0.3" dur="12s" repeatCount="indefinite" begin="4s"/>
+          <animate attributeName="opacity" values="0.14;0.38;0.1;0.36;0.12;0.34;0.14" dur="30s" repeatCount="indefinite" begin="-19s"/>
+          <animate attributeName="rx" values="120;142;114;138;120" dur="32s" repeatCount="indefinite" begin="-19s"/>
+          <animate attributeName="ry" values="210;244;202;238;210" dur="32s" repeatCount="indefinite" begin="-19s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="1 0 -280;-1 0 -280;1 0 -280" dur="9s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.5;0.55;0.45;0.15;0;0;0;0;0.25;0.45;0.52;0.5" dur="12s" repeatCount="indefinite" begin="4s"/>
+          <animateTransform attributeName="transform" type="rotate" values="2.2 0 -280;-0.8 0 -280;-2.8 0 -280;1.0 0 -280;2.2 0 -280" dur="26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.52;0.78;1" keySplines="0.4 0 0.6 1;0.36 0 0.64 1;0.4 0 0.6 1;0.36 0 0.64 1" begin="-19s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 1;0 -3;0 0" dur="20s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-19s"/>
+          <animate attributeName="opacity" values="0.46;0.72;0.44;0.7;0.46;0.68;0.46" dur="34s" repeatCount="indefinite" begin="-19s"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
-      <g transform="translate(1840 86) scale(0.27)">
+
+      <!-- 9: Violet — edge right -->
+      <g transform="translate(1840 75) scale(0.27)">
         <ellipse cx="0" cy="-20" rx="155" ry="255" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.48;0.42;0.1;0;0;0;0.2;0.4;0.48;0.5;0.48" dur="8s" repeatCount="indefinite" begin="1s"/>
+          <animate attributeName="opacity" values="0.24;0.1;0.5;0.18;0.46;0.14;0.24" dur="19s" repeatCount="indefinite" begin="-7s"/>
+          <animate attributeName="rx" values="155;182;148;176;155" dur="21s" repeatCount="indefinite" begin="-7s"/>
+          <animate attributeName="ry" values="255;292;246;286;255" dur="21s" repeatCount="indefinite" begin="-7s"/>
         </ellipse>
         <g>
-          <animateTransform attributeName="transform" type="rotate" values="-2.5 0 -280;2.5 0 -280;-2.5 0 -280" dur="7s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.7;0.6;0.15;0;0;0;0.35;0.6;0.7;0.72;0.7" dur="8s" repeatCount="indefinite" begin="1s"/>
+          <animateTransform attributeName="transform" type="rotate" values="-4.5 0 -280;1.8 0 -280;3.6 0 -280;-1.2 0 -280;-4.5 0 -280" dur="17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.5;0.78;1" keySplines="0.44 0 0.56 1;0.36 0 0.64 1;0.44 0 0.56 1;0.36 0 0.64 1" begin="-7s"/>
+          <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 3;0 -6;0 0" dur="14s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-7s"/>
+          <animate attributeName="opacity" values="0.56;0.86;0.6;0.84;0.58;0.82;0.56" dur="24s" repeatCount="indefinite" begin="-7s"/>
           <use href="#fanousViolet"/>
         </g>
       </g>
+
+      <!-- Falling golden light particles -->
+      <circle cx="140" cy="-20" r="1.5" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;18 550;32 1100" dur="20s" repeatCount="indefinite" begin="-2s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.55;0.3;0.1;0" keyTimes="0;0.06;0.5;0.94;1" dur="20s" repeatCount="indefinite" begin="-2s"/>
+      </circle>
+      <circle cx="380" cy="-50" r="1" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-20 550;-35 1130" dur="26s" repeatCount="indefinite" begin="-9s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.5;0.28;0.08;0" keyTimes="0;0.06;0.5;0.94;1" dur="26s" repeatCount="indefinite" begin="-9s"/>
+      </circle>
+      <circle cx="560" cy="-30" r="1.2" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;10 540;-12 1110" dur="18s" repeatCount="indefinite" begin="-4s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.5;0.25;0.08;0" keyTimes="0;0.06;0.5;0.94;1" dur="18s" repeatCount="indefinite" begin="-4s"/>
+      </circle>
+      <circle cx="720" cy="-70" r="0.8" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-15 560;-28 1140" dur="28s" repeatCount="indefinite" begin="-14s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.45;0.22;0.06;0" keyTimes="0;0.06;0.5;0.94;1" dur="28s" repeatCount="indefinite" begin="-14s"/>
+      </circle>
+      <circle cx="920" cy="-15" r="1.3" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;22 545;38 1105" dur="22s" repeatCount="indefinite" begin="-7s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.5;0.3;0.1;0" keyTimes="0;0.06;0.5;0.94;1" dur="22s" repeatCount="indefinite" begin="-7s"/>
+      </circle>
+      <circle cx="1100" cy="-45" r="1" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-12 555;8 1120" dur="30s" repeatCount="indefinite" begin="-17s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.42;0.2;0.06;0" keyTimes="0;0.06;0.5;0.94;1" dur="30s" repeatCount="indefinite" begin="-17s"/>
+      </circle>
+      <circle cx="1250" cy="-25" r="1.4" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;16 548;28 1108" dur="19s" repeatCount="indefinite" begin="-3s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.52;0.28;0.08;0" keyTimes="0;0.06;0.5;0.94;1" dur="19s" repeatCount="indefinite" begin="-3s"/>
+      </circle>
+      <circle cx="1400" cy="-60" r="0.9" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-18 558;-32 1125" dur="25s" repeatCount="indefinite" begin="-11s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.48;0.24;0.07;0" keyTimes="0;0.06;0.5;0.94;1" dur="25s" repeatCount="indefinite" begin="-11s"/>
+      </circle>
+      <circle cx="1550" cy="-35" r="1.1" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;8 542;-10 1095" dur="21s" repeatCount="indefinite" begin="-6s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.5;0.26;0.08;0" keyTimes="0;0.06;0.5;0.94;1" dur="21s" repeatCount="indefinite" begin="-6s"/>
+      </circle>
+      <circle cx="1700" cy="-55" r="1.3" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-14 552;-24 1115" dur="27s" repeatCount="indefinite" begin="-15s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.44;0.22;0.06;0" keyTimes="0;0.06;0.5;0.94;1" dur="27s" repeatCount="indefinite" begin="-15s"/>
+      </circle>
+      <circle cx="1800" cy="-20" r="0.8" fill="#FFD866" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;12 548;20 1105" dur="23s" repeatCount="indefinite" begin="-8s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.48;0.25;0.07;0" keyTimes="0;0.06;0.5;0.94;1" dur="23s" repeatCount="indefinite" begin="-8s"/>
+      </circle>
+      <circle cx="1900" cy="-40" r="1" fill="#FFEAB7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-8 555;-18 1118" dur="29s" repeatCount="indefinite" begin="-18s" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.3 0.1 0.7 0.9;0.3 0.1 0.7 0.9"/>
+        <animate attributeName="opacity" values="0;0.4;0.2;0.06;0" keyTimes="0;0.06;0.5;0.94;1" dur="29s" repeatCount="indefinite" begin="-18s"/>
+      </circle>
     </svg>
   </div>
 
