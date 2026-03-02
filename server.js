@@ -1532,7 +1532,7 @@ function startServerBombTimer(room) {
   if (!room.game || room.state !== 'playing' || room.game.paused) return;
   const grace = 3000; // 3s de marge après la durée client
   const timeout = (room.game.timerDuration * 1000) + grace;
-  room.game._serverTimer = setTimeout(() => {
+  room._serverBombTimer = setTimeout(() => {
     if (!room || room.state !== 'playing' || room.game.paused) return;
     const currentPlayer = room.players[room.game.currentPlayerIndex];
     if (!currentPlayer || currentPlayer.eliminated) return;
@@ -1571,9 +1571,9 @@ function startServerBombTimer(room) {
 }
 
 function clearServerBombTimer(room) {
-  if (room.game && room.game._serverTimer) {
-    clearTimeout(room.game._serverTimer);
-    room.game._serverTimer = null;
+  if (room._serverBombTimer) {
+    clearTimeout(room._serverBombTimer);
+    room._serverBombTimer = null;
   }
 }
 
@@ -1594,7 +1594,7 @@ io.on('connection', (socket) => {
         io.to(oldCode).emit('room-closed');
         const oldSockets = io.sockets.adapter.rooms.get(oldCode);
         if (oldSockets) {
-          for (const sid of oldSockets) {
+          for (const sid of [...oldSockets]) {
             const s = io.sockets.sockets.get(sid);
             if (s && s.id !== socket.id) {
               s.leave(oldCode);
@@ -1865,7 +1865,7 @@ io.on('connection', (socket) => {
     // Faire sortir tous les sockets de la room
     const sockets = io.sockets.adapter.rooms.get(code);
     if (sockets) {
-      for (const sid of sockets) {
+      for (const sid of [...sockets]) {
         const s = io.sockets.sockets.get(sid);
         if (s) {
           s.leave(code);
@@ -1973,8 +1973,7 @@ io.on('connection', (socket) => {
       timerConfig: timer,
       totalNames: 99,
       mode: room.config.mode,
-      paused: false,
-      _serverTimer: null
+      paused: false
     };
 
     // Lancer le timer serveur de sécurité
@@ -2427,7 +2426,7 @@ io.on('connection', (socket) => {
       // Retirer tous les sockets restants de la room
       const sockets = io.sockets.adapter.rooms.get(code);
       if (sockets) {
-        for (const sid of sockets) {
+        for (const sid of [...sockets]) {
           const s = io.sockets.sockets.get(sid);
           if (s) {
             s.leave(code);
