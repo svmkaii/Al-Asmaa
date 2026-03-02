@@ -512,6 +512,21 @@
 
   // --- Navigation ---
   function showPage(pageId, pushHistory) {
+    // Auto-cleanup: si on quitte le lobby/jeu classique, fermer la room
+    const leavingLobby = pages.hostLobby && pages.hostLobby.classList.contains('active');
+    const leavingGame = pages.hostGame && pages.hostGame.classList.contains('active');
+    const goingToRoomPage = (pageId === 'hostLobby' || pageId === 'hostGame' || pageId === 'results');
+    if ((leavingLobby || leavingGame) && !goingToRoomPage && roomCode && socket) {
+      socket.emit('leave-room');
+      roomCode = '';
+      players = [];
+      hostPlayer = null;
+      gameState = null;
+      isMyTurn = false;
+      activePlayerId = null;
+      console.log('[Nav] Auto leave-room on page change');
+    }
+
     Object.values(pages).forEach(p => {
       if (p) p.classList.remove('active');
     });
@@ -1106,14 +1121,9 @@
   let previousPlayerIds = [];
 
   function setupLobbyEvents() {
-    // Bouton retour — quitter le lobby
+    // Bouton retour — quitter le lobby (showPage auto-emits leave-room)
     document.getElementById('btnLobbyBack').addEventListener('click', () => {
-      socket.emit('leave-room');
-      roomCode = '';
-      players = [];
-      hostPlayer = null;
       previousPlayerIds = [];
-      history.pushState({}, '', '/');
       showPage('home');
     });
 
@@ -3744,10 +3754,43 @@
     const resetBtn = document.getElementById('btnResetProgress');
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
-        if (confirm('Réinitialiser toute la progression ?')) {
+        // Custom confirm dialog
+        const existing = document.getElementById('trResetDialog');
+        if (existing) existing.remove();
+        const dialog = document.createElement('div');
+        dialog.id = 'trResetDialog';
+        dialog.className = 'tr-dialog-overlay';
+        dialog.innerHTML = `
+          <div class="tr-dialog">
+            <div class="tr-dialog-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--ruby)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3 class="tr-dialog-title">Réinitialiser la progression ?</h3>
+            <p class="tr-dialog-text">Tous tes noms maîtrisés, scores et séries seront effacés. Cette action est irréversible.</p>
+            <div class="tr-dialog-actions">
+              <button class="tr-dialog-btn tr-dialog-cancel" id="trResetCancel">Annuler</button>
+              <button class="tr-dialog-btn tr-dialog-confirm" id="trResetConfirm">Réinitialiser</button>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(dialog);
+        requestAnimationFrame(() => dialog.classList.add('show'));
+
+        document.getElementById('trResetCancel').addEventListener('click', () => {
+          dialog.classList.remove('show');
+          setTimeout(() => dialog.remove(), 300);
+        });
+        dialog.addEventListener('click', (e) => {
+          if (e.target === dialog) {
+            dialog.classList.remove('show');
+            setTimeout(() => dialog.remove(), 300);
+          }
+        });
+        document.getElementById('trResetConfirm').addEventListener('click', () => {
           Training.resetProgress();
-          renderTrainingHome();
-        }
+          dialog.classList.remove('show');
+          setTimeout(() => { dialog.remove(); renderTrainingHome(); }, 300);
+        });
       });
     }
 
