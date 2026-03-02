@@ -10038,6 +10038,26 @@ input[type="search"]::placeholder {
   padding-bottom: 16px;
 }
 
+/* Subtle stagger entrance for home elements */
+.pseudo-badge,
+.home-grid,
+.support-block,
+.donate-collapse,
+.hadith-section {
+  opacity: 0;
+  animation: homeFadeIn 0.5s ease forwards;
+}
+.pseudo-badge     { animation-delay: 0.6s; }
+.home-grid        { animation-delay: 0.75s; }
+.support-block    { animation-delay: 0.9s; }
+.donate-collapse  { animation-delay: 1s; }
+.hadith-section   { animation-delay: 1.1s; }
+
+@keyframes homeFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -10054,10 +10074,10 @@ input[type="search"]::placeholder {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212, 162, 76, 0.12) 0%, rgba(212, 162, 76, 0.04) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(212, 162, 76, 0.14) 0%, rgba(212, 162, 76, 0.05) 40%, transparent 70%);
   pointer-events: none;
   animation: heroGlowPulse 4s ease-in-out infinite;
 }
@@ -10147,7 +10167,8 @@ input[type="search"]::placeholder {
   font-size: 0.7rem;
   font-weight: 500;
   color: var(--text-muted);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero-ornament {
@@ -10186,13 +10207,24 @@ input[type="search"]::placeholder {
 .home-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 7px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .home-grid .btn {
-  padding: 11px 10px;
+  padding: 12px 10px;
   font-size: 0.82rem;
+}
+
+.home-grid .btn-primary {
+  padding: 14px 10px;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+}
+
+.home-grid .btn-secondary {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .home-grid-full {
@@ -10549,7 +10581,10 @@ input[type="search"]::placeholder {
 .hadith-section {
   margin-top: 24px;
   text-align: center;
-  padding: 0 4px;
+  padding: 16px 12px;
+  border-radius: var(--radius);
+  background: rgba(212, 162, 76, 0.02);
+  border: 1px solid rgba(212, 162, 76, 0.06);
 }
 
 .hadith-quote {
@@ -11525,7 +11560,8 @@ input[type="search"]::placeholder {
   font-family: var(--font-latin);
   position: relative;
   overflow: hidden;
-  animation: fadeInUp 0.4s ease 1s both;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .pseudo-badge:hover {
@@ -12972,5 +13008,20 @@ input[type="search"]::placeholder {
   .ency-scholar-citation {
     font-size: 0.72rem;
     padding: 6px 10px;
+  }
+}
+
+/* ===========================
+   REDUCED MOTION
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+  .pseudo-badge,
+  .home-grid,
+  .support-block,
+  .donate-collapse,
+  .hadith-section {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
