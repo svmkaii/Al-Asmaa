@@ -137,9 +137,122 @@
     </div>
   </div>
 
-  <!-- ==================== PREMIUM BACKGROUND ATMOSPHERE ==================== -->
-  <div class="bg-atmosphere" aria-hidden="true"></div>
+  <!-- ==================== STARFIELD ==================== -->
   <div class="bg-stars" aria-hidden="true"></div>
+
+  <!-- ==================== DESERT NIGHT SCENE ==================== -->
+  <div class="bg-atmosphere" aria-hidden="true">
+    <svg class="desert-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax slice" fill="none">
+      <defs>
+        <linearGradient id="dg1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#110e09"/><stop offset="100%" stop-color="#090805"/>
+        </linearGradient>
+        <linearGradient id="dg2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1e1710"/><stop offset="100%" stop-color="#110e09"/>
+        </linearGradient>
+        <linearGradient id="dg3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#322418"/><stop offset="60%" stop-color="#1e1710"/><stop offset="100%" stop-color="#110e09"/>
+        </linearGradient>
+        <linearGradient id="dg4" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#473220"/><stop offset="50%" stop-color="#322418"/><stop offset="100%" stop-color="#1e1710"/>
+        </linearGradient>
+        <radialGradient id="hrz" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#d4a24c" stop-opacity="0.07"/>
+          <stop offset="60%" stop-color="#a67c2e" stop-opacity="0.03"/>
+          <stop offset="100%" stop-color="#a67c2e" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="mg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffeab7" stop-opacity="0.18"/>
+          <stop offset="35%" stop-color="#d4a24c" stop-opacity="0.07"/>
+          <stop offset="100%" stop-color="#d4a24c" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="rs" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#d4a24c" stop-opacity="0"/>
+          <stop offset="25%" stop-color="#d4a24c" stop-opacity="0.1"/>
+          <stop offset="75%" stop-color="#d4a24c" stop-opacity="0.1"/>
+          <stop offset="100%" stop-color="#d4a24c" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Horizon warmth glow -->
+      <ellipse cx="960" cy="740" rx="1400" ry="200" fill="url(#hrz)">
+        <animate attributeName="opacity" values="0.5;0.9;0.6;0.85;0.5" dur="22s" repeatCount="indefinite"/>
+      </ellipse>
+
+      <!-- Crescent moon -->
+      <g transform="translate(1380 165)">
+        <circle r="130" fill="url(#mg)">
+          <animate attributeName="r" values="130;142;130" dur="14s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M0 -24 A24 24 0 1 1 0 24 A19 19 0 1 0 0 -24Z" fill="#ffeab7" opacity="0.82">
+          <animate attributeName="opacity" values="0.75;0.95;0.8;0.92;0.75" dur="8s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- Dune 1 — far, ethereal -->
+      <path d="M-100 810 C50 782 200 792 400 775 C530 766 640 780 820 768 C960 758 1060 772 1250 762 C1380 755 1480 768 1640 758 C1760 752 1860 766 2020 758 L2020 1080 L-100 1080Z" fill="url(#dg1)" opacity="0.88">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-5 -1;0 0;4 1;0 0" dur="50s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </path>
+
+      <!-- Dune 2 — mid distance -->
+      <path d="M-100 858 C40 828 180 845 350 825 C480 808 580 830 720 812 C860 795 960 818 1120 805 C1260 792 1360 815 1520 802 C1660 792 1760 810 2020 800 L2020 1080 L-100 1080Z" fill="url(#dg2)" opacity="0.85">
+        <animateTransform attributeName="transform" type="translate" values="0 0;8 -2;0 0;-7 1;0 0" dur="40s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </path>
+      <path d="M180 832 Q480 815 780 825 Q1080 810 1380 820 Q1620 812 1820 818" stroke="url(#rs)" stroke-width="1.2" fill="none">
+        <animate attributeName="opacity" values="0.15;0.45;0.15" dur="12s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Dune 3 — front, dramatic silhouette -->
+      <path d="M-100 900 C20 872 150 885 320 868 C440 852 560 875 700 858 C840 842 940 865 1100 852 C1240 838 1340 860 1500 848 C1640 838 1740 855 2020 845 L2020 1080 L-100 1080Z" fill="url(#dg3)">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-12 -3;0 0;10 2;0 0" dur="32s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </path>
+      <path d="M80 878 Q380 862 680 872 Q980 856 1280 866 Q1520 856 1780 862" stroke="url(#rs)" stroke-width="1.5" fill="none">
+        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="16s" repeatCount="indefinite" begin="-5s"/>
+      </path>
+
+      <!-- Dune 4 — nearest, warmest tones -->
+      <path d="M-100 950 C60 932 200 942 370 928 C520 915 640 935 800 922 C960 910 1080 930 1240 918 C1400 908 1520 928 1680 916 C1820 908 1920 922 2020 916 L2020 1080 L-100 1080Z" fill="url(#dg4)">
+        <animateTransform attributeName="transform" type="translate" values="0 0;16 -4;0 0;-13 3;0 0" dur="25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </path>
+      <path d="M40 938 Q340 925 640 932 Q940 920 1240 928 Q1480 920 1780 926" stroke="#d4a24c" stroke-width="0.8" fill="none" opacity="0.1">
+        <animate attributeName="opacity" values="0.05;0.15;0.05" dur="14s" repeatCount="indefinite" begin="-7s"/>
+      </path>
+
+      <!-- Wind-blown sand particles -->
+      <circle r="0.8" fill="#d4a24c" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 862;650 850;1350 856;2020 845" dur="18s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.3;0.25;0.08;0" dur="18s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="0.6" fill="#ffeab7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 895;500 885;1150 890;2020 882" dur="22s" repeatCount="indefinite" begin="-5s"/>
+        <animate attributeName="opacity" values="0;0.25;0.2;0.06;0" dur="22s" repeatCount="indefinite" begin="-5s"/>
+      </circle>
+      <circle r="1" fill="#d4a24c" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 838;700 828;1450 834;2020 825" dur="15s" repeatCount="indefinite" begin="-8s"/>
+        <animate attributeName="opacity" values="0;0.28;0.32;0.1;0" dur="15s" repeatCount="indefinite" begin="-8s"/>
+      </circle>
+      <circle r="0.5" fill="#ffeab7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 920;580 912;1220 916;2020 908" dur="20s" repeatCount="indefinite" begin="-12s"/>
+        <animate attributeName="opacity" values="0;0.22;0.18;0.05;0" dur="20s" repeatCount="indefinite" begin="-12s"/>
+      </circle>
+      <circle r="0.7" fill="#d4a24c" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 875;800 865;1600 870;2020 862" dur="16s" repeatCount="indefinite" begin="-3s"/>
+        <animate attributeName="opacity" values="0;0.3;0.22;0.08;0" dur="16s" repeatCount="indefinite" begin="-3s"/>
+      </circle>
+      <circle r="0.9" fill="#ffeab7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 848;480 840;1000 844;2020 836" dur="24s" repeatCount="indefinite" begin="-15s"/>
+        <animate attributeName="opacity" values="0;0.24;0.18;0.06;0" dur="24s" repeatCount="indefinite" begin="-15s"/>
+      </circle>
+      <circle r="0.6" fill="#d4a24c" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 908;680 900;1380 904;2020 896" dur="19s" repeatCount="indefinite" begin="-9s"/>
+        <animate attributeName="opacity" values="0;0.26;0.2;0.07;0" dur="19s" repeatCount="indefinite" begin="-9s"/>
+      </circle>
+      <circle r="0.8" fill="#ffeab7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 882;750 874;1500 878;2020 870" dur="14s" repeatCount="indefinite" begin="-6s"/>
+        <animate attributeName="opacity" values="0;0.22;0.16;0.05;0" dur="14s" repeatCount="indefinite" begin="-6s"/>
+      </circle>
+    </svg>
+  </div>
 
   <!-- ==================== BACKGROUND LANTERNS (lanternes_ramadan) ==================== -->
   <div class="bg-lanterns" aria-hidden="true">
