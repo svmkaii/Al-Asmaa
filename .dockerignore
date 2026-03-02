@@ -1,0 +1,15 @@
+node_modules
+.env
+.env.*
+.git
+.claude
+.vscode
+.idea
+*.md
+*.png
+tests
+scripts
+docs
+religious-integrity
+dist
+*.log

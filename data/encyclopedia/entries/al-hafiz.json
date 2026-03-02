@@ -1,0 +1,275 @@
+{
+  "slug": "al-hafiz",
+  "arabic": "الْحَفِيظُ",
+  "transliteration": "Al-Hafiz",
+  "french_name": "Le Préservateur",
+  "short_meaning": "Celui qui préserve et protège toute Sa création.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 11,
+        "ayah": 57,
+        "name_in_verse": true,
+        "reference_label": "Quran 11:57",
+        "source_url": "https://quran.com/11:57",
+        "relevance_note": "\"Mon Seigneur est Al-Hafiz sur toute chose.\""
+      },
+      {
+        "surah": 34,
+        "ayah": 21,
+        "name_in_verse": true,
+        "reference_label": "Quran 34:21",
+        "source_url": "https://quran.com/34:21",
+        "relevance_note": "\"Et ton Seigneur est Al-Hafiz sur toute chose.\""
+      },
+      {
+        "surah": 42,
+        "ayah": 6,
+        "name_in_verse": true,
+        "reference_label": "Quran 42:6",
+        "source_url": "https://quran.com/42:6",
+        "relevance_note": "\"Allah est Al-Hafiz sur eux.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/623",
+      "precise_locator": "Page dediee au Nom Al-Hafiz dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Hafiz signifie le Protecteur, le Gardien qui preserve Sa creation du neant et de la destruction. Al-Ghazali distingue deux aspects : la preservation de l'existence (rien ne perit sans Sa permission) et la preservation des actes (tout est enregistre)."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom Al-Hafiz",
+      "source_url": "https://islamqa.info/ar/answers/22192",
+      "precise_locator": "Reponse savante sur le Nom Al-Hafiz",
+      "summary_fr": "Explication du Nom Al-Hafiz selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 11, Ayah 57 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 11:57 ou le Nom Al-Hafiz est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 11, Ayah 57 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 11:57 ou le Nom Al-Hafiz est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 11, Ayah 57 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 11:57 ou le Nom Al-Hafiz est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 11, Ayah 57 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 11:57 ou le Nom Al-Hafiz est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui préserve et protège toute Sa création.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Hafiz signifie le Protecteur, le Gardien qui preserve Sa creation du neant et de la destruction. Al-Ghazali distingue deux aspects : la preservation de l'existence (rien ne perit sans Sa permission) et la preservation des actes (tout est enregistre).",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-hafiz"
+        ]
+      },
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-al-hafiz"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 11:57 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-11-57"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 11:57 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-11-57"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 11:57 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-11-57"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 11:57 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-11-57"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/11:57",
+      "http_status": 200,
+      "final_url": "https://quran.com/11:57",
+      "checked_at": "2026-02-27T10:33:35.768Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/34:21",
+      "http_status": 200,
+      "final_url": "https://quran.com/34:21",
+      "checked_at": "2026-02-27T10:33:35.751Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/42:6",
+      "http_status": 200,
+      "final_url": "https://quran.com/42:6",
+      "checked_at": "2026-02-27T10:33:35.744Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:33:36.191Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:33:36.245Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/623",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/623/%C2%A0%D8%A7%D9%84%D8%AD%D9%81%D8%B8",
+      "checked_at": "2026-02-27T10:33:35.905Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/22192",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/22192",
+      "checked_at": "2026-02-27T10:33:35.735Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:36.227Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:36.238Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:36.268Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=11&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:36.229Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:27:43.858Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.598Z"
+}

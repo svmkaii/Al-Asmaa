@@ -1,0 +1,249 @@
+{
+  "slug": "ar-rahman",
+  "arabic": "الرَّحْمَنُ",
+  "transliteration": "Ar-Rahman",
+  "french_name": "Le Tout Miséricordieux",
+  "short_meaning": "Celui dont la miséricorde englobe toute la création, croyants et non-croyants.",
+  "canonical_status": {
+    "in_99_list": true,
+    "note": "Retenu dans la liste de reference du projet (a verifier par revue humaine)."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "source_id": "quran-1-1",
+        "surah": 1,
+        "ayah": 1,
+        "reference_label": "Quran 1:1",
+        "source_url": "https://quran.com/1:1"
+      },
+      {
+        "source_id": "quran-20-5",
+        "surah": 20,
+        "ayah": 5,
+        "reference_label": "Quran 20:5",
+        "source_url": "https://quran.com/20:5"
+      }
+    ],
+    "hadith": [
+      {
+        "source_id": "hadith-muslim-2752",
+        "collection": "Sahih Muslim",
+        "number": "2752",
+        "grading": "",
+        "reference_label": "Sahih Muslim 2752",
+        "source_url": "https://sunnah.com/muslim:2752"
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "source_id": "tafsir-hanafi-1-1",
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "source_title": "Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 1, Ayah 1, tafsir Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "summary_fr": "Voir l'explication de Abu al-Barakat Al-Nasafi pour 1:1."
+    },
+    {
+      "source_id": "tafsir-maliki-1-1",
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 1, Ayah 1, tafsir Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Voir l'explication de Abu Abdillah Al-Qurtubi pour 1:1."
+    },
+    {
+      "source_id": "tafsir-shafii-1-1",
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 1, Ayah 1, tafsir Maalim al-Tanzil",
+      "summary_fr": "Voir l'explication de Al-Baghawi pour 1:1."
+    },
+    {
+      "source_id": "tafsir-hanbali-1-1",
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 1, Ayah 1, tafsir Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Voir l'explication de Ibn al-Jawzi pour 1:1."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui dont la miséricorde englobe toute la création, croyants et non-croyants.",
+    "nuances": [
+      {
+        "label": "nuance de tafsir hanafi",
+        "description": "Attribution explicite au corpus Madarik al-Tanzil wa Haqaiq al-Tawil.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-hanafi-1-1"
+        ]
+      },
+      {
+        "label": "nuance de tafsir maliki",
+        "description": "Attribution explicite au corpus Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-maliki-1-1"
+        ]
+      },
+      {
+        "label": "nuance de tafsir shafii",
+        "description": "Attribution explicite au corpus Maalim al-Tanzil.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-shafii-1-1"
+        ]
+      },
+      {
+        "label": "nuance de tafsir hanbali",
+        "description": "Attribution explicite au corpus Zad al-Masir fi Ilm al-Tafsir.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-hanbali-1-1"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "claims": [
+    {
+      "id": "claim-quran-1-1",
+      "text": "Le nom est documente dans le Quran (1:1).",
+      "source_ids": [
+        "quran-1-1"
+      ]
+    },
+    {
+      "id": "claim-quran-20-5",
+      "text": "Le nom est documente dans le Quran (20:5).",
+      "source_ids": [
+        "quran-20-5"
+      ]
+    },
+    {
+      "id": "claim-hadith-muslim-2752",
+      "text": "Un hadith de reference est associe a ce nom (Sahih Muslim 2752).",
+      "source_ids": [
+        "hadith-muslim-2752"
+      ]
+    },
+    {
+      "id": "claim-tafsir-hanafi-1-1",
+      "text": "Nuance de tafsir (hanafi) documentee par Abu al-Barakat Al-Nasafi sur 1:1.",
+      "source_ids": [
+        "tafsir-hanafi-1-1"
+      ]
+    },
+    {
+      "id": "claim-tafsir-maliki-1-1",
+      "text": "Nuance de tafsir (maliki) documentee par Abu Abdillah Al-Qurtubi sur 1:1.",
+      "source_ids": [
+        "tafsir-maliki-1-1"
+      ]
+    },
+    {
+      "id": "claim-tafsir-shafii-1-1",
+      "text": "Nuance de tafsir (shafii) documentee par Al-Baghawi sur 1:1.",
+      "source_ids": [
+        "tafsir-shafii-1-1"
+      ]
+    },
+    {
+      "id": "claim-tafsir-hanbali-1-1",
+      "text": "Nuance de tafsir (hanbali) documentee par Ibn al-Jawzi sur 1:1.",
+      "source_ids": [
+        "tafsir-hanbali-1-1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "quran-1-1",
+      "url": "https://quran.com/1:1",
+      "level": 1,
+      "source_type": "quran",
+      "precise_locator": "Surah 1, Ayah 1",
+      "claim_ids": [
+        "claim-quran-1-1"
+      ]
+    },
+    {
+      "id": "quran-20-5",
+      "url": "https://quran.com/20:5",
+      "level": 1,
+      "source_type": "quran",
+      "precise_locator": "Surah 20, Ayah 5",
+      "claim_ids": [
+        "claim-quran-20-5"
+      ]
+    },
+    {
+      "id": "hadith-muslim-2752",
+      "url": "https://sunnah.com/muslim:2752",
+      "level": 1,
+      "source_type": "hadith",
+      "precise_locator": "Sahih Muslim #2752",
+      "claim_ids": [
+        "claim-hadith-muslim-2752"
+      ]
+    },
+    {
+      "id": "tafsir-hanafi-1-1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "precise_locator": "TafsirNo 17 / Surah 1 Ayah 1",
+      "claim_ids": [
+        "claim-tafsir-hanafi-1-1"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-maliki-1-1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "precise_locator": "TafsirNo 5 / Surah 1 Ayah 1",
+      "claim_ids": [
+        "claim-tafsir-maliki-1-1"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-shafii-1-1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "precise_locator": "TafsirNo 13 / Surah 1 Ayah 1",
+      "claim_ids": [
+        "claim-tafsir-shafii-1-1"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-hanbali-1-1",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=1&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "precise_locator": "TafsirNo 15 / Surah 1 Ayah 1",
+      "claim_ids": [
+        "claim-tafsir-hanbali-1-1"
+      ],
+      "explicit_madhhab_attribution": true
+    }
+  ]
+}

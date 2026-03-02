@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="96" y1="60" x2="420" y2="452" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF1B5"/>
+      <stop offset="0.18" stop-color="#F8DB86"/>
+      <stop offset="0.45" stop-color="#EFC35B"/>
+      <stop offset="0.72" stop-color="#D79B2A"/>
+      <stop offset="1" stop-color="#B87812"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="180" y1="110" x2="332" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FCE39A" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#D89B2D" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 260) rotate(90) scale(170 170)">
+      <stop stop-color="#FFD977" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFD977" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- subtle glow -->
+  <circle cx="256" cy="260" r="170" fill="url(#coreGlow)"/>
+
+  <!-- hanging top -->
+  <path d="M224 62C224 44.327 238.327 30 256 30C273.673 30 288 44.327 288 62V82H276V62C276 50.954 267.046 42 256 42C244.954 42 236 50.954 236 62V82H224V62Z" fill="url(#gold)"/>
+  <rect x="212" y="82" width="88" height="20" rx="10" fill="url(#gold)" opacity="0.95"/>
+
+  <!-- lantern crown -->
+  <path d="M188 108C188 99.163 195.163 92 204 92H308C316.837 92 324 99.163 324 108V118C324 122.418 320.418 126 316 126H196C191.582 126 188 122.418 188 118V108Z" fill="url(#gold)"/>
+
+  <!-- outer lantern body -->
+  <path d="M172 126H340
+           C340 154 366 174 366 214V298
+           C366 338 340 358 340 386H172
+           C172 358 146 338 146 298V214
+           C146 174 172 154 172 126Z"
+        fill="#0A1020" stroke="url(#gold)" stroke-width="10" />
+
+  <!-- side rails -->
+  <path d="M172 146C160 168 156 186 156 214V298C156 326 160 344 172 366" stroke="url(#gold)" stroke-opacity="0.55" stroke-width="4"/>
+  <path d="M340 146C352 168 356 186 356 214V298C356 326 352 344 340 366" stroke="url(#gold)" stroke-opacity="0.55" stroke-width="4"/>
+
+  <!-- inner frame -->
+  <rect x="194" y="150" width="124" height="212" rx="58" fill="#0C1428" stroke="url(#goldSoft)" stroke-width="6"/>
+
+  <!-- dhikr beads (18 dots around inner frame) -->
+  <g fill="url(#gold)" opacity="0.9">
+    <circle cx="256" cy="154" r="4.5"/>
+    <circle cx="291" cy="163" r="4"/>
+    <circle cx="319" cy="188" r="4"/>
+    <circle cx="333" cy="222" r="4"/>
+    <circle cx="336" cy="256" r="4"/>
+    <circle cx="333" cy="291" r="4"/>
+    <circle cx="319" cy="325" r="4"/>
+    <circle cx="291" cy="349" r="4"/>
+    <circle cx="256" cy="358" r="4.5"/>
+
+    <circle cx="221" cy="349" r="4"/>
+    <circle cx="193" cy="325" r="4"/>
+    <circle cx="179" cy="291" r="4"/>
+    <circle cx="176" cy="256" r="4"/>
+    <circle cx="179" cy="222" r="4"/>
+    <circle cx="193" cy="188" r="4"/>
+    <circle cx="221" cy="163" r="4"/>
+  </g>
+
+  <!-- central mihrab/light -->
+  <path d="M256 180
+           C288 180 310 204 310 238
+           V268
+           C310 318 286 340 256 352
+           C226 340 202 318 202 268
+           V238
+           C202 204 224 180 256 180Z"
+        fill="url(#goldSoft)" opacity="0.14" stroke="url(#gold)" stroke-opacity="0.55" stroke-width="3"/>
+
+  <!-- flame / drop -->
+  <path d="M256 315
+           C233 300 224 280 224 262
+           C224 234 248 217 256 196
+           C264 217 288 234 288 262
+           C288 280 279 300 256 315Z"
+        fill="url(#gold)" filter="url(#softGlow)"/>
+  <circle cx="256" cy="262" r="11" fill="#0A1020" stroke="#F4CF74" stroke-width="3"/>
+  <circle cx="256" cy="262" r="4.5" fill="url(#gold)"/>
+
+  <!-- bottom cap -->
+  <path d="M188 386H324V404C324 412.837 316.837 420 308 420H204C195.163 420 188 412.837 188 404V386Z" fill="url(#gold)"/>
+  <rect x="206" y="420" width="100" height="18" rx="9" fill="url(#gold)" opacity="0.95"/>
+
+  <!-- tiny 99 signature -->
+  <text x="256" y="465" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="url(#gold)" letter-spacing="2">99</text>
+</svg>

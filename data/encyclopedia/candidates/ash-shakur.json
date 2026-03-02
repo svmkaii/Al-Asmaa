@@ -1,0 +1,223 @@
+{
+  "slug": "ash-shakur",
+  "arabic": "الشَّكُورُ",
+  "transliteration": "Ash-Shakur",
+  "french_name": "Le Très Reconnaissant",
+  "short_meaning": "Celui qui récompense généreusement même les plus petits actes de bien.",
+  "canonical_status": {
+    "in_99_list": true,
+    "note": "Retenu dans la liste de reference du projet (a verifier par revue humaine)."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "source_id": "quran-35-30",
+        "surah": 35,
+        "ayah": 30,
+        "reference_label": "Quran 35:30",
+        "source_url": "https://quran.com/35:30"
+      },
+      {
+        "source_id": "quran-35-34",
+        "surah": 35,
+        "ayah": 34,
+        "reference_label": "Quran 35:34",
+        "source_url": "https://quran.com/35:34"
+      }
+    ],
+    "hadith": []
+  },
+  "scholarly_explanations": [
+    {
+      "source_id": "tafsir-hanafi-35-30",
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "source_title": "Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=35&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 35, Ayah 30, tafsir Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "summary_fr": "Voir l'explication de Abu al-Barakat Al-Nasafi pour 35:30."
+    },
+    {
+      "source_id": "tafsir-maliki-35-30",
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=35&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 35, Ayah 30, tafsir Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Voir l'explication de Abu Abdillah Al-Qurtubi pour 35:30."
+    },
+    {
+      "source_id": "tafsir-shafii-35-30",
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=35&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 35, Ayah 30, tafsir Maalim al-Tanzil",
+      "summary_fr": "Voir l'explication de Al-Baghawi pour 35:30."
+    },
+    {
+      "source_id": "tafsir-hanbali-35-30",
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=35&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 35, Ayah 30, tafsir Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Voir l'explication de Ibn al-Jawzi pour 35:30."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui récompense généreusement même les plus petits actes de bien.",
+    "nuances": [
+      {
+        "label": "nuance de tafsir hanafi",
+        "description": "Attribution explicite au corpus Madarik al-Tanzil wa Haqaiq al-Tawil.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-hanafi-35-30"
+        ]
+      },
+      {
+        "label": "nuance de tafsir maliki",
+        "description": "Attribution explicite au corpus Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-maliki-35-30"
+        ]
+      },
+      {
+        "label": "nuance de tafsir shafii",
+        "description": "Attribution explicite au corpus Maalim al-Tanzil.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-shafii-35-30"
+        ]
+      },
+      {
+        "label": "nuance de tafsir hanbali",
+        "description": "Attribution explicite au corpus Zad al-Masir fi Ilm al-Tafsir.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-hanbali-35-30"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "claims": [
+    {
+      "id": "claim-quran-35-30",
+      "text": "Le nom est documente dans le Quran (35:30).",
+      "source_ids": [
+        "quran-35-30"
+      ]
+    },
+    {
+      "id": "claim-quran-35-34",
+      "text": "Le nom est documente dans le Quran (35:34).",
+      "source_ids": [
+        "quran-35-34"
+      ]
+    },
+    {
+      "id": "claim-tafsir-hanafi-35-30",
+      "text": "Nuance de tafsir (hanafi) documentee par Abu al-Barakat Al-Nasafi sur 35:30.",
+      "source_ids": [
+        "tafsir-hanafi-35-30"
+      ]
+    },
+    {
+      "id": "claim-tafsir-maliki-35-30",
+      "text": "Nuance de tafsir (maliki) documentee par Abu Abdillah Al-Qurtubi sur 35:30.",
+      "source_ids": [
+        "tafsir-maliki-35-30"
+      ]
+    },
+    {
+      "id": "claim-tafsir-shafii-35-30",
+      "text": "Nuance de tafsir (shafii) documentee par Al-Baghawi sur 35:30.",
+      "source_ids": [
+        "tafsir-shafii-35-30"
+      ]
+    },
+    {
+      "id": "claim-tafsir-hanbali-35-30",
+      "text": "Nuance de tafsir (hanbali) documentee par Ibn al-Jawzi sur 35:30.",
+      "source_ids": [
+        "tafsir-hanbali-35-30"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "quran-35-30",
+      "url": "https://quran.com/35:30",
+      "level": 1,
+      "source_type": "quran",
+      "precise_locator": "Surah 35, Ayah 30",
+      "claim_ids": [
+        "claim-quran-35-30"
+      ]
+    },
+    {
+      "id": "quran-35-34",
+      "url": "https://quran.com/35:34",
+      "level": 1,
+      "source_type": "quran",
+      "precise_locator": "Surah 35, Ayah 34",
+      "claim_ids": [
+        "claim-quran-35-34"
+      ]
+    },
+    {
+      "id": "tafsir-hanafi-35-30",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=35&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "precise_locator": "TafsirNo 17 / Surah 35 Ayah 30",
+      "claim_ids": [
+        "claim-tafsir-hanafi-35-30"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-maliki-35-30",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=35&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "precise_locator": "TafsirNo 5 / Surah 35 Ayah 30",
+      "claim_ids": [
+        "claim-tafsir-maliki-35-30"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-shafii-35-30",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=35&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "precise_locator": "TafsirNo 13 / Surah 35 Ayah 30",
+      "claim_ids": [
+        "claim-tafsir-shafii-35-30"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-hanbali-35-30",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=35&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "precise_locator": "TafsirNo 15 / Surah 35 Ayah 30",
+      "claim_ids": [
+        "claim-tafsir-hanbali-35-30"
+      ],
+      "explicit_madhhab_attribution": true
+    }
+  ]
+}

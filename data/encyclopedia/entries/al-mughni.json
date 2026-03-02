@@ -1,0 +1,235 @@
+{
+  "slug": "al-mughni",
+  "arabic": "الْمُغْنِي",
+  "transliteration": "Al-Mughni",
+  "french_name": "Celui qui enrichit",
+  "short_meaning": "Celui qui enrichit Ses serviteurs et les rend autosuffisants.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "hadith_primary",
+    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 9,
+        "ayah": 28,
+        "name_in_verse": false,
+        "reference_label": "Quran 9:28",
+        "source_url": "https://quran.com/9:28",
+        "relevance_note": "\"Allah vous enrichira (yughnikum) de Sa grace\" - forme verbale."
+      },
+      {
+        "surah": 4,
+        "ayah": 130,
+        "name_in_verse": false,
+        "reference_label": "Quran 4:130",
+        "source_url": "https://quran.com/4:130",
+        "relevance_note": "\"Allah enrichira (yughni) chacun de Sa largesse.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom Al-Mughni figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/763",
+      "precise_locator": "Page dediee au Nom Al-Mughni dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Mughni signifie Celui qui enrichit Ses creatures et les rend autonomes. Al-Ghazali explique qu'Il enrichit les corps par la nourriture, les ames par la connaissance, et les coeurs par la foi. L'enrichissement veritable est celui de l'ame."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 9, Ayah 28 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 9:28 ou le Nom Al-Mughni est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 9, Ayah 28 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 9:28 ou le Nom Al-Mughni est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 9, Ayah 28 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 9:28 ou le Nom Al-Mughni est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 9, Ayah 28 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 9:28 ou le Nom Al-Mughni est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui enrichit Ses serviteurs et les rend autosuffisants.",
+    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Al-Mughni signifie Celui qui enrichit Ses creatures et les rend autonomes. Al-Ghazali explique qu'Il enrichit les corps par la nourriture, les ames par la connaissance, et les coeurs par la foi. L'enrichissement veritable est celui de l'ame.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-mughni"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 9:28 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-9-28"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 9:28 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-9-28"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 9:28 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-9-28"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 9:28 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-9-28"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/9:28",
+      "http_status": 200,
+      "final_url": "https://quran.com/9:28",
+      "checked_at": "2026-02-27T10:33:53.807Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/4:130",
+      "http_status": 200,
+      "final_url": "https://quran.com/4:130",
+      "checked_at": "2026-02-27T10:33:53.812Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:33:54.281Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:33:54.233Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/763",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/763/%C2%A0%D8%A7%D9%84%D8%BA%D9%86%D9%89",
+      "checked_at": "2026-02-27T10:33:54.063Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:54.300Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:54.267Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:54.347Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=9&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:54.345Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:13.008Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.612Z"
+}

@@ -1,0 +1,249 @@
+{
+  "slug": "at-tawwab",
+  "arabic": "التَّوَّابُ",
+  "transliteration": "At-Tawwab",
+  "french_name": "Celui qui accepte le repentir",
+  "short_meaning": "Celui qui accepte le repentir de Ses serviteurs et revient vers eux.",
+  "canonical_status": {
+    "in_99_list": true,
+    "note": "Retenu dans la liste de reference du projet (a verifier par revue humaine)."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "source_id": "quran-2-37",
+        "surah": 2,
+        "ayah": 37,
+        "reference_label": "Quran 2:37",
+        "source_url": "https://quran.com/2:37"
+      },
+      {
+        "source_id": "quran-110-3",
+        "surah": 110,
+        "ayah": 3,
+        "reference_label": "Quran 110:3",
+        "source_url": "https://quran.com/110:3"
+      }
+    ],
+    "hadith": [
+      {
+        "source_id": "hadith-muslim-2747",
+        "collection": "Sahih Muslim",
+        "number": "2747",
+        "grading": "",
+        "reference_label": "Sahih Muslim 2747",
+        "source_url": "https://sunnah.com/muslim:2747"
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "source_id": "tafsir-hanafi-2-37",
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "source_title": "Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 2, Ayah 37, tafsir Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "summary_fr": "Voir l'explication de Abu al-Barakat Al-Nasafi pour 2:37."
+    },
+    {
+      "source_id": "tafsir-maliki-2-37",
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 2, Ayah 37, tafsir Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Voir l'explication de Abu Abdillah Al-Qurtubi pour 2:37."
+    },
+    {
+      "source_id": "tafsir-shafii-2-37",
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 2, Ayah 37, tafsir Maalim al-Tanzil",
+      "summary_fr": "Voir l'explication de Al-Baghawi pour 2:37."
+    },
+    {
+      "source_id": "tafsir-hanbali-2-37",
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 2, Ayah 37, tafsir Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Voir l'explication de Ibn al-Jawzi pour 2:37."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui accepte le repentir de Ses serviteurs et revient vers eux.",
+    "nuances": [
+      {
+        "label": "nuance de tafsir hanafi",
+        "description": "Attribution explicite au corpus Madarik al-Tanzil wa Haqaiq al-Tawil.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-hanafi-2-37"
+        ]
+      },
+      {
+        "label": "nuance de tafsir maliki",
+        "description": "Attribution explicite au corpus Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-maliki-2-37"
+        ]
+      },
+      {
+        "label": "nuance de tafsir shafii",
+        "description": "Attribution explicite au corpus Maalim al-Tanzil.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-shafii-2-37"
+        ]
+      },
+      {
+        "label": "nuance de tafsir hanbali",
+        "description": "Attribution explicite au corpus Zad al-Masir fi Ilm al-Tafsir.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-hanbali-2-37"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "claims": [
+    {
+      "id": "claim-quran-2-37",
+      "text": "Le nom est documente dans le Quran (2:37).",
+      "source_ids": [
+        "quran-2-37"
+      ]
+    },
+    {
+      "id": "claim-quran-110-3",
+      "text": "Le nom est documente dans le Quran (110:3).",
+      "source_ids": [
+        "quran-110-3"
+      ]
+    },
+    {
+      "id": "claim-hadith-muslim-2747",
+      "text": "Un hadith de reference est associe a ce nom (Sahih Muslim 2747).",
+      "source_ids": [
+        "hadith-muslim-2747"
+      ]
+    },
+    {
+      "id": "claim-tafsir-hanafi-2-37",
+      "text": "Nuance de tafsir (hanafi) documentee par Abu al-Barakat Al-Nasafi sur 2:37.",
+      "source_ids": [
+        "tafsir-hanafi-2-37"
+      ]
+    },
+    {
+      "id": "claim-tafsir-maliki-2-37",
+      "text": "Nuance de tafsir (maliki) documentee par Abu Abdillah Al-Qurtubi sur 2:37.",
+      "source_ids": [
+        "tafsir-maliki-2-37"
+      ]
+    },
+    {
+      "id": "claim-tafsir-shafii-2-37",
+      "text": "Nuance de tafsir (shafii) documentee par Al-Baghawi sur 2:37.",
+      "source_ids": [
+        "tafsir-shafii-2-37"
+      ]
+    },
+    {
+      "id": "claim-tafsir-hanbali-2-37",
+      "text": "Nuance de tafsir (hanbali) documentee par Ibn al-Jawzi sur 2:37.",
+      "source_ids": [
+        "tafsir-hanbali-2-37"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "quran-2-37",
+      "url": "https://quran.com/2:37",
+      "level": 1,
+      "source_type": "quran",
+      "precise_locator": "Surah 2, Ayah 37",
+      "claim_ids": [
+        "claim-quran-2-37"
+      ]
+    },
+    {
+      "id": "quran-110-3",
+      "url": "https://quran.com/110:3",
+      "level": 1,
+      "source_type": "quran",
+      "precise_locator": "Surah 110, Ayah 3",
+      "claim_ids": [
+        "claim-quran-110-3"
+      ]
+    },
+    {
+      "id": "hadith-muslim-2747",
+      "url": "https://sunnah.com/muslim:2747",
+      "level": 1,
+      "source_type": "hadith",
+      "precise_locator": "Sahih Muslim #2747",
+      "claim_ids": [
+        "claim-hadith-muslim-2747"
+      ]
+    },
+    {
+      "id": "tafsir-hanafi-2-37",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "precise_locator": "TafsirNo 17 / Surah 2 Ayah 37",
+      "claim_ids": [
+        "claim-tafsir-hanafi-2-37"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-maliki-2-37",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "precise_locator": "TafsirNo 5 / Surah 2 Ayah 37",
+      "claim_ids": [
+        "claim-tafsir-maliki-2-37"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-shafii-2-37",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "precise_locator": "TafsirNo 13 / Surah 2 Ayah 37",
+      "claim_ids": [
+        "claim-tafsir-shafii-2-37"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-hanbali-2-37",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "precise_locator": "TafsirNo 15 / Surah 2 Ayah 37",
+      "claim_ids": [
+        "claim-tafsir-hanbali-2-37"
+      ],
+      "explicit_madhhab_attribution": true
+    }
+  ]
+}

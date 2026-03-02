@@ -1,0 +1,798 @@
+/* ===========================
+   Al-Asmaa — Animations
+   Concept: "Sacred Arcade" — Premium game feel with weight and polish
+   =========================== */
+
+/* ===========================
+   BOMB — The Heart of the Game
+   =========================== */
+
+.bomb-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bomb-svg {
+  width: 150px;
+  height: 150px;
+  transition: filter 0.3s ease;
+  filter:
+    drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 8px rgba(212, 162, 76, 0.1));
+}
+
+.bomb-body {
+  fill: #141830;
+  stroke: #2a2e50;
+  stroke-width: 1.5;
+}
+
+.bomb-highlight {
+  fill: rgba(255, 255, 255, 0.04);
+}
+
+.bomb-fuse-line {
+  stroke: var(--gold, #d4a24c);
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 3 2;
+}
+
+/* --- Bomb states --- */
+.bomb-container.warning .bomb-svg {
+  filter:
+    drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 16px rgba(245, 158, 11, 0.3));
+  animation: bombShakeWarning 0.4s ease-in-out infinite;
+}
+
+.bomb-container.warning .bomb-body {
+  stroke: rgba(245, 158, 11, 0.3);
+}
+
+.bomb-container.danger .bomb-svg {
+  filter:
+    drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 24px rgba(239, 68, 68, 0.4));
+  animation: bombShakeDanger 0.15s ease-in-out infinite;
+}
+
+.bomb-container.danger .bomb-body {
+  fill: #1c1520;
+  stroke: rgba(239, 68, 68, 0.4);
+}
+
+@keyframes bombShakeWarning {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-2px) rotate(-0.5deg); }
+  75% { transform: translateX(2px) rotate(0.5deg); }
+}
+
+@keyframes bombShakeDanger {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-3px) rotate(-1deg); }
+  75% { transform: translateX(3px) rotate(1deg); }
+}
+
+/* --- Fuse spark --- */
+.fuse-spark {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    #fff 0%,
+    var(--gold-bright, #ffd866) 25%,
+    var(--gold, #d4a24c) 50%,
+    rgba(212, 162, 76, 0.4) 70%,
+    transparent 100%
+  );
+  animation: sparkFlicker 0.1s infinite alternate;
+  pointer-events: none;
+  z-index: 5;
+  box-shadow:
+    0 0 12px rgba(212, 162, 76, 0.7),
+    0 0 24px rgba(212, 162, 76, 0.4),
+    0 0 40px rgba(212, 162, 76, 0.2);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes sparkFlicker {
+  0% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(0.9);
+    box-shadow:
+      0 0 10px rgba(212, 162, 76, 0.6),
+      0 0 20px rgba(212, 162, 76, 0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.3);
+    box-shadow:
+      0 0 14px rgba(212, 162, 76, 0.8),
+      0 0 28px rgba(212, 162, 76, 0.5),
+      0 0 48px rgba(212, 162, 76, 0.2);
+  }
+}
+
+.bomb-container.danger .fuse-spark {
+  background: radial-gradient(circle,
+    #fff 0%,
+    #ff8a65 25%,
+    #ef4444 50%,
+    rgba(239, 68, 68, 0.4) 70%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 12px rgba(239, 68, 68, 0.7),
+    0 0 24px rgba(239, 68, 68, 0.4),
+    0 0 48px rgba(239, 68, 68, 0.2);
+  animation: sparkDanger 0.08s infinite alternate;
+}
+
+@keyframes sparkDanger {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+/* --- Fuse progress bar --- */
+.fuse-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  margin-top: 16px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.fuse-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.1s linear, background-color 0.5s ease;
+  position: relative;
+}
+
+.fuse-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25));
+  border-radius: 0 4px 4px 0;
+}
+
+.fuse-bar-fill.safe {
+  background: linear-gradient(90deg, #059669, #2dd4a0, #5eead4);
+  box-shadow: 0 0 12px rgba(45, 212, 160, 0.4);
+}
+
+.fuse-bar-fill.warning {
+  background: linear-gradient(90deg, #d97706, #f59e0b, #fbbf24);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.fuse-bar-fill.danger {
+  background: linear-gradient(90deg, #dc2626, #ef4444, #f87171);
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.5);
+  animation: fuseBarPulse 0.4s ease-in-out infinite;
+}
+
+@keyframes fuseBarPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(239, 68, 68, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.7); }
+}
+
+/* ===========================
+   PARTICLE ANIMATIONS
+   =========================== */
+
+.particle {
+  animation: particleBurst var(--duration, 0.8s) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes particleBurst {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx, 0px), var(--ty, 0px)) scale(0);
+    opacity: 0;
+  }
+}
+
+.particle.smoke {
+  width: 20px;
+  height: 20px;
+  animation: smokeBurst var(--duration, 1s) ease-out forwards;
+}
+
+@keyframes smokeBurst {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(var(--tx, 0px), var(--ty, 0px)) scale(3);
+    opacity: 0;
+  }
+}
+
+.particle.ember {
+  animation: emberFloat var(--duration, 1.2s) ease-out forwards;
+}
+
+@keyframes emberFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(var(--tx, 0px), var(--ty, 0px)) scale(0);
+    opacity: 0;
+  }
+}
+
+/* ===========================
+   EXPLOSION OVERLAY
+   =========================== */
+
+.explosion-overlay {
+  animation: explosionPulse 0.35s ease-out forwards;
+}
+
+.explosion-overlay.active {
+  animation: explosionFlashFull 0.5s ease-out forwards;
+}
+
+@keyframes explosionFlashFull {
+  0% {
+    opacity: 0;
+    background: radial-gradient(circle at center, rgba(255, 150, 50, 0.6), rgba(255, 50, 0, 0.3), transparent 60%);
+  }
+  15% {
+    opacity: 1;
+    background: radial-gradient(circle at center, rgba(255, 200, 80, 0.7), rgba(255, 80, 0, 0.4), transparent 70%);
+  }
+  100% {
+    opacity: 0;
+    background: radial-gradient(circle at center, rgba(100, 20, 0, 0.2), transparent 50%);
+  }
+}
+
+@keyframes explosionPulse {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Silent flash (no sound mode) */
+.silent-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.05);
+  animation: silentFlash 0.4s ease-out forwards;
+}
+
+@keyframes silentFlash {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ===========================
+   VICTORY ANIMATIONS
+   =========================== */
+
+.victory-overlay {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.victory-overlay.active {
+  opacity: 1;
+}
+
+.victory-text {
+  font-family: var(--font-arabic, 'Reem Kufi', serif);
+  animation: victoryAppear 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes victoryAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+.victory-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary, #9a978f);
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.victory-star {
+  animation: starBurst var(--duration, 2s) ease-out forwards;
+}
+
+@keyframes starBurst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.5) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(calc(var(--tx, 0px) * 0.5), calc(var(--ty, 0px) * 0.5)) scale(1.2) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx, 0px), var(--ty, 0px)) scale(0) rotate(360deg);
+  }
+}
+
+/* ===========================
+   PAGE TRANSITIONS
+   =========================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Home screen stagger animation */
+.logo-container {
+  animation: fadeIn 0.8s ease 0.1s both;
+}
+
+.home-actions .btn:nth-child(1) {
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+.home-actions .btn:nth-child(2) {
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+.home-actions .btn:nth-child(3) {
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+}
+.home-actions .btn:nth-child(4) {
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+.counter-badge {
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
+}
+
+/* ===========================
+   BUTTON MICRO-INTERACTIONS
+   =========================== */
+
+/* Gold shimmer on primary buttons */
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 45%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.08) 55%,
+    transparent 70%
+  );
+  transform: translateX(-100%) rotate(45deg);
+  pointer-events: none;
+  transition: none;
+}
+
+.btn-primary:hover::after {
+  animation: buttonShimmer 0.8s ease forwards;
+}
+
+@keyframes buttonShimmer {
+  from { transform: translateX(-100%) rotate(45deg); }
+  to { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Ripple on all buttons */
+.btn-success::after,
+.btn-danger::after,
+.btn-glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.btn-success:active::after,
+.btn-danger:active::after,
+.btn-glass:active::after {
+  opacity: 1;
+  transition: none;
+}
+
+/* ===========================
+   CARD HOVER EFFECTS
+   =========================== */
+
+.menu-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item:active {
+  transform: scale(0.98);
+  transition-duration: 0.08s;
+}
+
+.encyclopedia-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.training-mode-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===========================
+   FLASHCARD FLIP — 3D
+   =========================== */
+
+.flashcard {
+  transition: transform 0.2s ease;
+}
+
+.flashcard:active {
+  transform: scale(0.98);
+}
+
+/* Flip trigger on tap */
+.flashcard-inner {
+  transform-origin: center center;
+}
+
+/* ===========================
+   LOADER MANDALA
+   =========================== */
+
+.loader-mandala circle,
+.loader-mandala polygon {
+  animation: mandalaStrokePulse 3s ease-in-out infinite;
+}
+
+.loader-mandala circle:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+.loader-mandala polygon:nth-child(3) {
+  animation-delay: -1s;
+}
+
+.loader-mandala polygon:nth-child(4) {
+  animation-delay: -1.5s;
+}
+
+.loader-mandala circle:nth-child(5) {
+  animation-delay: -2s;
+}
+
+@keyframes mandalaStrokePulse {
+  0%, 100% {
+    stroke-opacity: 0.1;
+    stroke-width: 0.5;
+  }
+  50% {
+    stroke-opacity: 0.3;
+    stroke-width: 0.8;
+  }
+}
+
+/* Title mandala on home */
+.title-mandala circle,
+.title-mandala polygon {
+  animation: titleMandalaGlow 5s ease-in-out infinite;
+}
+
+.title-mandala circle:nth-child(1) { animation-delay: 0s; }
+.title-mandala circle:nth-child(2) { animation-delay: -0.8s; }
+.title-mandala circle:nth-child(3) { animation-delay: -1.6s; }
+.title-mandala polygon:nth-child(4) { animation-delay: -2.4s; }
+.title-mandala polygon:nth-child(5) { animation-delay: -3.2s; }
+.title-mandala circle:nth-child(6) { animation-delay: -4s; }
+
+@keyframes titleMandalaGlow {
+  0%, 100% {
+    stroke-opacity: 0.06;
+  }
+  50% {
+    stroke-opacity: 0.2;
+  }
+}
+
+/* ===========================
+   TOAST ANIMATION
+   =========================== */
+
+.toast {
+  animation: none; /* Controlled by JS .show class */
+}
+
+/* ===========================
+   BADGE ANIMATIONS
+   =========================== */
+
+.badge-unlock {
+  animation: badgeAppear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes badgeAppear {
+  0% {
+    transform: scale(0.3) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.badge-icon {
+  animation: badgeIconBounce 2s ease-in-out infinite;
+}
+
+@keyframes badgeIconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* ===========================
+   COUNTER NUMBER ANIMATION
+   =========================== */
+
+.counter-number {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ===========================
+   PROGRESS BAR SHIMMER
+   =========================== */
+
+.progress-bar-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  animation: progressShimmer 2s ease-in-out infinite;
+}
+
+@keyframes progressShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ===========================
+   SCORE ENTRY STAGGER
+   =========================== */
+
+.score-entry {
+  animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.score-entry:nth-child(1) { animation-delay: 0.05s; }
+.score-entry:nth-child(2) { animation-delay: 0.1s; }
+.score-entry:nth-child(3) { animation-delay: 0.15s; }
+.score-entry:nth-child(4) { animation-delay: 0.2s; }
+.score-entry:nth-child(5) { animation-delay: 0.25s; }
+
+/* ===========================
+   ENCYCLOPEDIA CARD STAGGER
+   =========================== */
+
+.encyclopedia-card {
+  animation: scaleIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.encyclopedia-grid .encyclopedia-card:nth-child(1) { animation-delay: 0.02s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(2) { animation-delay: 0.04s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(3) { animation-delay: 0.06s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(4) { animation-delay: 0.08s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(5) { animation-delay: 0.1s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(6) { animation-delay: 0.12s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(7) { animation-delay: 0.14s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(8) { animation-delay: 0.16s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(9) { animation-delay: 0.18s; }
+.encyclopedia-grid .encyclopedia-card:nth-child(10) { animation-delay: 0.2s; }
+
+/* ===========================
+   MENU LIST STAGGER
+   =========================== */
+
+.menu-list .menu-item {
+  animation: fadeInUp 0.35s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.menu-list .menu-item:nth-child(1) { animation-delay: 0.05s; }
+.menu-list .menu-item:nth-child(2) { animation-delay: 0.1s; }
+.menu-list .menu-item:nth-child(3) { animation-delay: 0.15s; }
+.menu-list .menu-item:nth-child(4) { animation-delay: 0.2s; }
+.menu-list .menu-item:nth-child(5) { animation-delay: 0.25s; }
+.menu-list .menu-item:nth-child(6) { animation-delay: 0.3s; }
+.menu-list .menu-item:nth-child(7) { animation-delay: 0.35s; }
+.menu-list .menu-item:nth-child(8) { animation-delay: 0.4s; }
+.menu-list .menu-item:nth-child(9) { animation-delay: 0.45s; }
+.menu-list .menu-item:nth-child(10) { animation-delay: 0.5s; }
+
+/* ===========================
+   TRAINING MODE CARD STAGGER
+   =========================== */
+
+.training-modes-grid .training-mode-card:nth-child(1) { animation: scaleIn 0.3s ease 0.05s both; }
+.training-modes-grid .training-mode-card:nth-child(2) { animation: scaleIn 0.3s ease 0.1s both; }
+.training-modes-grid .training-mode-card:nth-child(3) { animation: scaleIn 0.3s ease 0.15s both; }
+.training-modes-grid .training-mode-card:nth-child(4) { animation: scaleIn 0.3s ease 0.2s both; }
+
+/* ===========================
+   PODIUM ANIMATION
+   =========================== */
+
+.podium-place.first.animate .podium-rank {
+  animation: rankGlow 2s ease-in-out 0.8s infinite;
+}
+
+@keyframes rankGlow {
+  0%, 100% {
+    text-shadow: 0 0 16px rgba(212, 162, 76, 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 24px rgba(212, 162, 76, 0.6),
+      0 0 48px rgba(212, 162, 76, 0.3);
+  }
+}
+
+/* ===========================
+   QUIZ OPTION ANIMATIONS
+   =========================== */
+
+.quiz-option.correct {
+  animation: correctBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes correctBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.quiz-option.wrong {
+  animation: wrongShake 0.4s ease;
+}
+
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+/* ===========================
+   MATCHING ANIMATIONS
+   =========================== */
+
+.matching-item.matched {
+  animation: matchSuccess 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes matchSuccess {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ===========================
+   BACKGROUND GLOW ANIMATION
+   =========================== */
+
+.bg-glow {
+  animation: bgGlowShift 15s ease-in-out infinite;
+}
+
+@keyframes bgGlowShift {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(212, 162, 76, 0.09) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 30% 80%, rgba(45, 212, 160, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse 40% 40% at 70% 60%, rgba(96, 165, 250, 0.03) 0%, transparent 50%);
+  }
+}
+
+/* ===========================
+   REDUCED MOTION
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .title-mandala,
+  .loader-mandala {
+    animation: none !important;
+  }
+
+  .fuse-spark {
+    animation: none !important;
+  }
+
+  .bomb-container.warning .bomb-svg,
+  .bomb-container.danger .bomb-svg {
+    animation: none !important;
+  }
+}

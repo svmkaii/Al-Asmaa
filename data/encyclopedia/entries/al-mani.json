@@ -1,0 +1,144 @@
+{
+  "slug": "al-mani",
+  "arabic": "الْمَانِعُ",
+  "transliteration": "Al-Mani'",
+  "french_name": "Celui qui empêche",
+  "short_meaning": "Celui qui empêche ce qui pourrait nuire à Ses serviteurs.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "hadith_primary",
+    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+  },
+  "primary_evidence": {
+    "quran": [],
+    "hadith": [
+      {
+        "collection": "Sahih Muslim",
+        "number": "713",
+        "grading": "Sahih",
+        "reference_label": "Sahih Muslim 713",
+        "source_url": "https://sunnah.com/muslim:713",
+        "relevance_note": "\"Nul ne donne ce que Tu empeches (mana'ta) et nul n'empeche ce que Tu donnes\" (invocation apres la priere)."
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom Al-Mani' figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/741",
+      "precise_locator": "Page dediee au Nom Al-Mani' dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Mani' signifie Celui qui empeche et retient selon Sa sagesse. Al-Ghazali explique que parfois Il empeche une chose en apparence bonne pour proteger Son serviteur d'un mal cache, et que Son empechement est en realite un don deguise."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom Al-Mani'",
+      "source_url": "https://islamqa.info/ar/answers/531203",
+      "precise_locator": "Reponse savante sur le Nom Al-Mani'",
+      "summary_fr": "Explication du Nom Al-Mani' selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui empêche ce qui pourrait nuire à Ses serviteurs.",
+    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Al-Mani' signifie Celui qui empeche et retient selon Sa sagesse. Al-Ghazali explique que parfois Il empeche une chose en apparence bonne pour proteger Son serviteur d'un mal cache, et que Son empechement est en realite un don deguise.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-mani"
+        ]
+      },
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-al-mani"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://sunnah.com/muslim:713",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/muslim:713",
+      "checked_at": "2026-02-27T10:33:51.066Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:33:51.013Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:33:51.015Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/741",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/741/%C2%A0%D8%A7%D9%84%D8%B9%D8%B7%D8%A7%D8%A1-%D9%88%D8%A7%D9%84%D9%85%D9%86%D8%B9",
+      "checked_at": "2026-02-27T10:33:50.793Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/531203",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/531203",
+      "checked_at": "2026-02-27T10:33:50.514Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:06.317Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.609Z"
+}

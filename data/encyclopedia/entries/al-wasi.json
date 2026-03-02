@@ -1,0 +1,290 @@
+{
+  "slug": "al-wasi",
+  "arabic": "الْوَاسِعُ",
+  "transliteration": "Al-Wasi'",
+  "french_name": "Le Vaste",
+  "short_meaning": "Celui dont la miséricorde et la science englobent toute chose.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 2,
+        "ayah": 115,
+        "name_in_verse": true,
+        "reference_label": "Quran 2:115",
+        "source_url": "https://quran.com/2:115",
+        "relevance_note": "\"Allah est Al-Wasi', Al-'Alim.\""
+      },
+      {
+        "surah": 2,
+        "ayah": 247,
+        "name_in_verse": true,
+        "reference_label": "Quran 2:247",
+        "source_url": "https://quran.com/2:247",
+        "relevance_note": "\"Allah est Al-Wasi', Al-'Alim.\""
+      },
+      {
+        "surah": 2,
+        "ayah": 268,
+        "name_in_verse": true,
+        "reference_label": "Quran 2:268",
+        "source_url": "https://quran.com/2:268",
+        "relevance_note": "\"Allah est Al-Wasi', Al-'Alim.\""
+      },
+      {
+        "surah": 5,
+        "ayah": 54,
+        "name_in_verse": true,
+        "reference_label": "Quran 5:54",
+        "source_url": "https://quran.com/5:54",
+        "relevance_note": "\"C'est la grace d'Allah qu'Il donne a qui Il veut. Allah est Al-Wasi', Al-'Alim.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/881",
+      "precise_locator": "Page dediee au Nom Al-Wasi' dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Wasi' signifie l'Immense dont la science, la misericorde et la generosite englobent toute chose. Al-Ghazali explique que Sa capacite n'est limitee par rien, que ce soit en science, en pouvoir ou en generosite."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom Al-Wasi'",
+      "source_url": "https://islamqa.info/ar/answers/11186",
+      "precise_locator": "Reponse savante sur le Nom Al-Wasi'",
+      "summary_fr": "Explication du Nom Al-Wasi' selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 115 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 2:115 ou le Nom Al-Wasi' est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 115 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 2:115 ou le Nom Al-Wasi' est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 115 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 2:115 ou le Nom Al-Wasi' est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 115 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 2:115 ou le Nom Al-Wasi' est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui dont la miséricorde et la science englobent toute chose.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Wasi' signifie l'Immense dont la science, la misericorde et la generosite englobent toute chose. Al-Ghazali explique que Sa capacite n'est limitee par rien, que ce soit en science, en pouvoir ou en generosite.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-wasi"
+        ]
+      },
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-al-wasi"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 2:115 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-2-115"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 2:115 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-2-115"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 2:115 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-2-115"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 2:115 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-2-115"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/2:115",
+      "http_status": 200,
+      "final_url": "https://quran.com/2:115",
+      "checked_at": "2026-02-27T10:34:33.123Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/2:247",
+      "http_status": 200,
+      "final_url": "https://quran.com/2:247",
+      "checked_at": "2026-02-27T10:34:33.160Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/2:268",
+      "http_status": 200,
+      "final_url": "https://quran.com/2:268",
+      "checked_at": "2026-02-27T10:34:33.102Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/5:54",
+      "http_status": 200,
+      "final_url": "https://quran.com/5:54",
+      "checked_at": "2026-02-27T10:34:33.115Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:33.527Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:33.531Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/881",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/881/%C2%A0%D8%A7%D9%84%D9%88%D8%A7%D8%B3%D8%B9-%D9%88%D8%A7%D9%84%D9%85%D9%88%D8%B3%D8%B9",
+      "checked_at": "2026-02-27T10:34:33.257Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/11186",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/11186",
+      "checked_at": "2026-02-27T10:34:33.089Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:34.187Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:34.185Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:34.202Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=115&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:34.184Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:41.639Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.631Z"
+}

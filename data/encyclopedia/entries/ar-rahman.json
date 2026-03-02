@@ -1,0 +1,280 @@
+{
+  "slug": "ar-rahman",
+  "arabic": "الرَّحْمَنُ",
+  "transliteration": "Ar-Rahman",
+  "french_name": "Le Tout Miséricordieux",
+  "short_meaning": "Celui dont la miséricorde englobe toute la création, croyants et non-croyants.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 1,
+        "ayah": 1,
+        "name_in_verse": true,
+        "reference_label": "Quran 1:1",
+        "source_url": "https://quran.com/1:1",
+        "relevance_note": "\"Au nom d'Allah, le Tout Misericordieux (Ar-Rahman), le Tres Misericordieux.\""
+      },
+      {
+        "surah": 55,
+        "ayah": 1,
+        "name_in_verse": true,
+        "reference_label": "Quran 55:1",
+        "source_url": "https://quran.com/55:1",
+        "relevance_note": "\"Ar-Rahman. Il a enseigne le Coran.\" Sourate entiere dediee a ce Nom."
+      },
+      {
+        "surah": 59,
+        "ayah": 22,
+        "name_in_verse": true,
+        "reference_label": "Quran 59:22",
+        "source_url": "https://quran.com/59:22",
+        "relevance_note": "\"C'est Lui Allah... Ar-Rahman, Ar-Rahim.\""
+      },
+      {
+        "surah": 17,
+        "ayah": 110,
+        "name_in_verse": true,
+        "reference_label": "Quran 17:110",
+        "source_url": "https://quran.com/17:110",
+        "relevance_note": "\"Invoquez Allah ou invoquez Ar-Rahman, quel que soit le nom...\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Muslim",
+        "number": "2752",
+        "grading": "Sahih",
+        "reference_label": "Sahih Muslim 2752",
+        "source_url": "https://sunnah.com/muslim:2752",
+        "relevance_note": "\"Allah a cree la misericorde en 100 parts, Il en a retenu 99 aupres de Lui.\""
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/667",
+      "precise_locator": "Page dediee au Nom Ar-Rahman dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman designe la misericorde universelle englobant toute la creation (croyants et non-croyants), tandis que Ar-Rahim est specifique aux croyants dans l'au-dela. Ce Nom est exclusif a Allah et ne peut etre attribue a aucune creature."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui dont la miséricorde englobe toute la création, croyants et non-croyants.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman designe la misericorde universelle englobant toute la creation (croyants et non-croyants), tandis que Ar-Rahim est specifique aux croyants dans l'au-dela. Ce Nom est exclusif a Allah et ne peut etre attribue a aucune creature.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-ar-rahman"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 55:1 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-55-1"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 55:1 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-55-1"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 55:1 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-55-1"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 55:1 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-55-1"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/1:1",
+      "http_status": 200,
+      "final_url": "https://quran.com/1:1",
+      "checked_at": "2026-02-27T10:34:39.762Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/55:1",
+      "http_status": 200,
+      "final_url": "https://quran.com/55:1",
+      "checked_at": "2026-02-27T10:34:39.811Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/59:22",
+      "http_status": 200,
+      "final_url": "https://quran.com/59:22",
+      "checked_at": "2026-02-27T10:34:39.806Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/17:110",
+      "http_status": 200,
+      "final_url": "https://quran.com/17:110",
+      "checked_at": "2026-02-27T10:34:39.817Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/muslim:2752",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/muslim:2752",
+      "checked_at": "2026-02-27T10:34:40.292Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:40.287Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:40.237Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/667",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/667/%C2%A0%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D8%A9",
+      "checked_at": "2026-02-27T10:34:39.957Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:40.302Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:40.311Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:40.295Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:40.367Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:46.752Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.634Z"
+}

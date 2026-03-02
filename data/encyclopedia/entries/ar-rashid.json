@@ -1,0 +1,136 @@
+{
+  "slug": "ar-rashid",
+  "arabic": "الرَّشِيدُ",
+  "transliteration": "Ar-Rashid",
+  "french_name": "Le Guide Bien-Dirigeant",
+  "short_meaning": "Celui qui dirige toute chose vers sa finalité avec sagesse parfaite.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "hadith_primary",
+    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 11,
+        "ayah": 87,
+        "name_in_verse": false,
+        "reference_label": "Quran 11:87",
+        "source_url": "https://quran.com/11:87",
+        "relevance_note": "ATTENTION : le mot 'ar-rashid' dans ce verset est prononce par les mecreants de Madyan pour se moquer de Shu'ayb. Ce N'EST PAS un attribut divin dans ce contexte."
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom Ar-Rashid figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqadia/523",
+      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Ar-Rashid)",
+      "summary_fr": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est atteste uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom Ar-Rashid",
+      "source_url": "https://islamqa.info/ar/answers/5457",
+      "precise_locator": "Reponse savante sur le Nom Ar-Rashid",
+      "summary_fr": "Explication du Nom Ar-Rashid selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui dirige toute chose vers sa finalité avec sagesse parfaite.",
+    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est atteste uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut.",
+    "nuances": [
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-ar-rashid"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/11:87",
+      "http_status": 200,
+      "final_url": "https://quran.com/11:87",
+      "checked_at": "2026-02-27T10:34:43.014Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:43.481Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:43.461Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqadia/523",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqadia/523",
+      "checked_at": "2026-02-27T10:34:43.041Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/5457",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/5457",
+      "checked_at": "2026-02-27T10:34:43.013Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:48.852Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.635Z"
+}

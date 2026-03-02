@@ -1,0 +1,226 @@
+{
+  "slug": "al-muhsi",
+  "arabic": "الْمُحْصِي",
+  "transliteration": "Al-Muhsi",
+  "french_name": "Celui qui dénombre",
+  "short_meaning": "Celui qui connaît le nombre exact de toute chose dans Sa création.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_derived",
+    "note": "Concept/racine atteste dans le Coran; Nom sous cette forme derive des hadiths."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 72,
+        "ayah": 28,
+        "name_in_verse": false,
+        "reference_label": "Quran 72:28",
+        "source_url": "https://quran.com/72:28",
+        "relevance_note": "\"Il a denombre (ahsa) toute chose en nombre.\""
+      },
+      {
+        "surah": 78,
+        "ayah": 29,
+        "name_in_verse": false,
+        "reference_label": "Quran 78:29",
+        "source_url": "https://quran.com/78:29",
+        "relevance_note": "\"Et toute chose, Nous l'avons denombree (ahsaynahu) en ecrit.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom Al-Muhsi figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqadia/523",
+      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Muhsi)",
+      "summary_fr": "Al-Muhsi signifie Celui qui denombre et connait precisement le nombre de toute chose dans la creation, sans que rien ne Lui echappe. Al-Ghazali explique que Sa connaissance englobe le nombre des gouttes de pluie, des grains de sable et des feuilles des arbres."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 72, Ayah 28 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 72:28 ou le Nom Al-Muhsi est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 72, Ayah 28 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 72:28 ou le Nom Al-Muhsi est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 72, Ayah 28 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 72:28 ou le Nom Al-Muhsi est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 72, Ayah 28 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 72:28 ou le Nom Al-Muhsi est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui connaît le nombre exact de toute chose dans Sa création.",
+    "evidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est derive des hadiths.",
+    "scholarly_summary": "Al-Muhsi signifie Celui qui denombre et connait precisement le nombre de toute chose dans la creation, sans que rien ne Lui echappe. Al-Ghazali explique que Sa connaissance englobe le nombre des gouttes de pluie, des grains de sable et des feuilles des arbres.",
+    "nuances": [
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 72:28 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-72-28"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 72:28 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-72-28"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 72:28 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-72-28"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 72:28 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-72-28"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/72:28",
+      "http_status": 200,
+      "final_url": "https://quran.com/72:28",
+      "checked_at": "2026-02-27T10:33:55.329Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/78:29",
+      "http_status": 200,
+      "final_url": "https://quran.com/78:29",
+      "checked_at": "2026-02-27T10:33:55.378Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:33:55.832Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:33:55.765Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqadia/523",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqadia/523",
+      "checked_at": "2026-02-27T10:33:55.339Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:56.052Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:56.053Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:56.074Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:56.072Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:16.393Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.613Z"
+}

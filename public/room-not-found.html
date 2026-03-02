@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Partie introuvable — Al-Asmaa</title>
+  <meta name="description" content="Cette partie n'existe pas ou est déjà terminée.">
+  <meta name="theme-color" content="#050810">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/contenu/al_asma_logo_icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-deep: #050811;
+      --bg-card: rgba(15, 19, 36, 0.85);
+      --gold: #d4a24c;
+      --gold-light: #f0cc7a;
+      --gold-glow: rgba(212, 162, 76, 0.4);
+      --text-primary: #eae6df;
+      --text-secondary: #9a978f;
+      --border-card: rgba(212, 162, 76, 0.12);
+      --font: 'Outfit', sans-serif;
+      --red: #ef4444;
+      --red-glow: rgba(239, 68, 68, 0.4);
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .bg-pattern {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 50% 40% at 50% 30%, rgba(239, 68, 68, 0.03) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 20% 80%, rgba(45, 212, 160, 0.02) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 30% at 80% 70%, rgba(96, 165, 250, 0.02) 0%, transparent 60%);
+    }
+
+    .error-page {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .error-card {
+      position: relative;
+      max-width: 420px;
+      width: 100%;
+      padding: 48px 36px 40px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 20%, rgba(239, 68, 68, 0.03) 0%, transparent 70%),
+        linear-gradient(160deg, rgba(12, 15, 30, 0.98) 0%, rgba(20, 26, 52, 0.95) 40%, rgba(15, 19, 36, 0.98) 100%);
+      border: 1px solid rgba(239, 68, 68, 0.15);
+      border-radius: 24px;
+      box-shadow:
+        0 8px 40px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(239, 68, 68, 0.05),
+        0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+      overflow: hidden;
+      animation: errFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      opacity: 0;
+    }
+
+    .error-card::before {
+      content: '';
+      position: absolute;
+      top: 12px; left: 12px;
+      width: 28px; height: 28px;
+      border-top: 1.5px solid rgba(239, 68, 68, 0.15);
+      border-left: 1.5px solid rgba(239, 68, 68, 0.15);
+      border-radius: 4px 0 0 0;
+      pointer-events: none;
+    }
+
+    .error-card::after {
+      content: '';
+      position: absolute;
+      bottom: 12px; right: 12px;
+      width: 28px; height: 28px;
+      border-bottom: 1.5px solid rgba(239, 68, 68, 0.15);
+      border-right: 1.5px solid rgba(239, 68, 68, 0.15);
+      border-radius: 0 0 4px 0;
+      pointer-events: none;
+    }
+
+    .error-shimmer {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+      background-size: 200% 100%;
+      opacity: 0.5;
+      animation: errShimmer 4s ease infinite;
+    }
+
+    .error-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px; height: 56px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: rgba(239, 68, 68, 0.1);
+      border: 2px solid rgba(239, 68, 68, 0.25);
+      color: var(--red);
+      animation: errIconPulse 2s ease-in-out infinite;
+    }
+
+    .error-icon svg { width: 26px; height: 26px; }
+
+    .error-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 10px;
+      text-shadow: 0 0 24px var(--red-glow);
+    }
+
+    .error-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 340px;
+      margin: 0 auto 28px;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-err {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 26px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-err-primary {
+      background: linear-gradient(175deg, #e8b84a 0%, #c9952e 50%, #a67c2e 100%);
+      color: #1a1000;
+      border: 1px solid rgba(255, 230, 160, 0.2);
+      box-shadow:
+        0 4px 16px rgba(212, 162, 76, 0.3),
+        inset 0 1px 0 rgba(255, 230, 160, 0.4),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+      text-shadow: 0 1px 0 rgba(255, 230, 160, 0.3);
+    }
+
+    .btn-err-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .btn-err-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(212, 162, 76, 0.45), inset 0 1px 0 rgba(255, 230, 160, 0.5);
+    }
+
+    .btn-err:active { transform: scale(0.96) translateY(1px); transition-duration: 0.08s; }
+
+    @keyframes errFadeIn {
+      from { opacity: 0; transform: translateY(16px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes errShimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    @keyframes errIconPulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); }
+      50% { transform: scale(1.05); box-shadow: 0 0 20px 4px rgba(239, 68, 68, 0.15); }
+    }
+
+    @media (max-width: 500px) {
+      .error-card { padding: 36px 24px 32px; border-radius: 20px; }
+      .error-title { font-size: 1.15rem; }
+      .error-desc { font-size: 0.82rem; }
+      .error-icon { width: 48px; height: 48px; }
+      .error-icon svg { width: 22px; height: 22px; }
+      .btn-err { padding: 10px 20px; font-size: 0.82rem; border-radius: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+  <div class="error-page">
+    <div class="error-card">
+      <div class="error-shimmer"></div>
+      <div class="error-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+        </svg>
+      </div>
+      <h1 class="error-title">Partie introuvable</h1>
+      <p class="error-desc">
+        Cette partie n'existe pas ou est d&eacute;j&agrave; termin&eacute;e.<br>
+        V&eacute;rifie le code ou cr&eacute;e une nouvelle partie.
+      </p>
+      <div class="error-actions">
+        <a href="/" class="btn-err btn-err-primary">Retour &agrave; l'accueil</a>
+      </div>
+    </div>
+  </div>
+  <script src="/js/background.js?v=15.0"></script>
+</body>
+</html>

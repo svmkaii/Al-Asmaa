@@ -1,0 +1,235 @@
+{
+  "slug": "az-zahir",
+  "arabic": "الظَّاهِرُ",
+  "transliteration": "Az-Zahir",
+  "french_name": "L'Apparent",
+  "short_meaning": "Celui dont l'existence est évidente par Ses signes dans la création.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 57,
+        "ayah": 3,
+        "name_in_verse": true,
+        "reference_label": "Quran 57:3",
+        "source_url": "https://quran.com/57:3",
+        "relevance_note": "\"C'est Lui Al-Awwal et Al-Akhir, Az-Zahir et Al-Batin.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Muslim",
+        "number": "2713",
+        "grading": "Sahih",
+        "reference_label": "Sahih Muslim 2713",
+        "source_url": "https://sunnah.com/muslim:2713",
+        "relevance_note": "\"Tu es Az-Zahir, rien n'est au-dessus de Toi.\""
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/729",
+      "precise_locator": "Page dediee au Nom Az-Zahir dans l'encyclopedie Aqeeda",
+      "summary_fr": "Az-Zahir signifie le Manifeste, Celui qui est au-dessus de toute chose. Le hadith de Muslim explique : 'rien n'est au-dessus de Toi.' Al-Ghazali note que Sa manifestation se voit dans les signes de la creation, bien que Son essence echappe aux regards."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 57:3 ou le Nom Az-Zahir est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 57:3 ou le Nom Az-Zahir est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 57:3 ou le Nom Az-Zahir est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 57:3 ou le Nom Az-Zahir est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui dont l'existence est évidente par Ses signes dans la création.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Az-Zahir signifie le Manifeste, Celui qui est au-dessus de toute chose. Le hadith de Muslim explique : 'rien n'est au-dessus de Toi.' Al-Ghazali note que Sa manifestation se voit dans les signes de la creation, bien que Son essence echappe aux regards.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-az-zahir"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 57:3 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-57-3"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 57:3 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-57-3"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 57:3 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-57-3"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 57:3 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-57-3"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/57:3",
+      "http_status": 200,
+      "final_url": "https://quran.com/57:3",
+      "checked_at": "2026-02-27T10:35:00.202Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/muslim:2713",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/muslim:2713",
+      "checked_at": "2026-02-27T10:35:00.692Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:35:00.643Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:35:00.631Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/729",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/729/%C2%A0%D8%A7%D9%84%D8%B8%D8%A7%D9%87%D8%B1%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%B8%D9%87%D9%88%D8%B1",
+      "checked_at": "2026-02-27T10:35:00.316Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:35:00.724Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:35:00.716Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:35:00.724Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:35:00.718Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:58.684Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.641Z"
+}

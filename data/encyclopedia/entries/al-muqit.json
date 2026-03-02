@@ -1,0 +1,245 @@
+{
+  "slug": "al-muqit",
+  "arabic": "الْمُقِيتُ",
+  "transliteration": "Al-Muqit",
+  "french_name": "Le Nourricier",
+  "short_meaning": "Celui qui nourrit et sustente toutes Ses créatures.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 4,
+        "ayah": 85,
+        "name_in_verse": true,
+        "reference_label": "Quran 4:85",
+        "source_url": "https://quran.com/4:85",
+        "relevance_note": "\"Allah est sur toute chose Al-Muqit (garant/nourricier).\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/845",
+      "precise_locator": "Page dediee au Nom Al-Muqit dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Muqit signifie Celui qui nourrit et sustente toute creature, ou selon une autre lecture, Celui qui est garant et temoin de toute chose. Al-Baghawi et Al-Qurtubi mentionnent les deux sens : le nourricier (muqit de qut/nourriture) et le puissant temoin."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom Al-Muqit",
+      "source_url": "https://islamqa.info/ar/answers/11220",
+      "precise_locator": "Reponse savante sur le Nom Al-Muqit",
+      "summary_fr": "Explication du Nom Al-Muqit selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 4, Ayah 85 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 4:85 ou le Nom Al-Muqit est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 4, Ayah 85 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 4:85 ou le Nom Al-Muqit est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 4, Ayah 85 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 4:85 ou le Nom Al-Muqit est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 4, Ayah 85 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 4:85 ou le Nom Al-Muqit est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui nourrit et sustente toutes Ses créatures.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Muqit signifie Celui qui nourrit et sustente toute creature, ou selon une autre lecture, Celui qui est garant et temoin de toute chose. Al-Baghawi et Al-Qurtubi mentionnent les deux sens : le nourricier (muqit de qut/nourriture) et le puissant temoin.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-muqit"
+        ]
+      },
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-al-muqit"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 4:85 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-4-85"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 4:85 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-4-85"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 4:85 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-4-85"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 4:85 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-4-85"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/4:85",
+      "http_status": 200,
+      "final_url": "https://quran.com/4:85",
+      "checked_at": "2026-02-27T10:34:04.721Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:05.189Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:05.173Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/845",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/845/%C2%A0%D8%A7%D9%84%D9%85%D9%82%D9%8A%D8%AA",
+      "checked_at": "2026-02-27T10:34:04.867Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/11220",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/11220",
+      "checked_at": "2026-02-27T10:34:04.710Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:05.324Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:05.408Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:05.338Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=4&tAyahNo=85&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:05.408Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:25.086Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.619Z"
+}

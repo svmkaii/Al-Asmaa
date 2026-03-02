@@ -1,0 +1,241 @@
+{
+  "slug": "ar-rafi",
+  "arabic": "الرَّافِعُ",
+  "transliteration": "Ar-Rafi'",
+  "french_name": "Celui qui élève",
+  "short_meaning": "Celui qui élève en rang Ses serviteurs pieux et sincères.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_derived",
+    "note": "Concept/racine atteste dans le Coran; Nom sous cette forme derive des hadiths."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 6,
+        "ayah": 83,
+        "name_in_verse": false,
+        "reference_label": "Quran 6:83",
+        "source_url": "https://quran.com/6:83",
+        "relevance_note": "\"Nous elevons (narfa'u) en degre qui Nous voulons\" - forme verbale."
+      },
+      {
+        "surah": 3,
+        "ayah": 55,
+        "name_in_verse": false,
+        "reference_label": "Quran 3:55",
+        "source_url": "https://quran.com/3:55",
+        "relevance_note": "\"Je vais... t'elever (rafi'uka) vers Moi\" - a propos de 'Isa."
+      },
+      {
+        "surah": 58,
+        "ayah": 11,
+        "name_in_verse": false,
+        "reference_label": "Quran 58:11",
+        "source_url": "https://quran.com/58:11",
+        "relevance_note": "\"Allah eleve (yarfa'i) ceux d'entre vous qui ont cru et ceux qui ont recu la science.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom Ar-Rafi' figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqadia/523",
+      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Ar-Rafi')",
+      "summary_fr": "Ar-Rafi' signifie Celui qui eleve en rang Ses serviteurs. Al-Ghazali explique qu'Il eleve les croyants par la foi et la science, et abaisse les incredules par l'ignorance et l'egarement. Cite avec Al-Khafid comme paire complementaire."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 83 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 6:83 ou le Nom Ar-Rafi' est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 83 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 6:83 ou le Nom Ar-Rafi' est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 83 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 6:83 ou le Nom Ar-Rafi' est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 83 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 6:83 ou le Nom Ar-Rafi' est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui élève en rang Ses serviteurs pieux et sincères.",
+    "evidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est derive des hadiths.",
+    "scholarly_summary": "Ar-Rafi' signifie Celui qui eleve en rang Ses serviteurs. Al-Ghazali explique qu'Il eleve les croyants par la foi et la science, et abaisse les incredules par l'ignorance et l'egarement. Cite avec Al-Khafid comme paire complementaire.",
+    "nuances": [
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 6:83 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-6-83"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 6:83 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-6-83"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 6:83 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-6-83"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 6:83 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-6-83"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/6:83",
+      "http_status": 200,
+      "final_url": "https://quran.com/6:83",
+      "checked_at": "2026-02-27T10:34:38.501Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/3:55",
+      "http_status": 200,
+      "final_url": "https://quran.com/3:55",
+      "checked_at": "2026-02-27T10:34:38.505Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/58:11",
+      "http_status": 200,
+      "final_url": "https://quran.com/58:11",
+      "checked_at": "2026-02-27T10:34:38.510Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:38.992Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:38.946Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqadia/523",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqadia/523",
+      "checked_at": "2026-02-27T10:34:38.519Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:39.052Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:38.962Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:39.016Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=83&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:38.970Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:44.758Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.633Z"
+}

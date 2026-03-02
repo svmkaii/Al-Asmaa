@@ -1,0 +1,275 @@
+{
+  "slug": "al-qadir",
+  "arabic": "الْقَادِرُ",
+  "transliteration": "Al-Qadir",
+  "french_name": "Le Capable",
+  "short_meaning": "Celui qui a le pouvoir absolu de faire ce qu'Il veut.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 6,
+        "ayah": 65,
+        "name_in_verse": true,
+        "reference_label": "Quran 6:65",
+        "source_url": "https://quran.com/6:65",
+        "relevance_note": "\"Dis : Il est Al-Qadir (Capable) de vous envoyer un chatiment.\""
+      },
+      {
+        "surah": 17,
+        "ayah": 99,
+        "name_in_verse": true,
+        "reference_label": "Quran 17:99",
+        "source_url": "https://quran.com/17:99",
+        "relevance_note": "\"N'ont-ils pas vu qu'Allah qui a cree les cieux et la terre est Al-Qadir pour creer leurs semblables ?\""
+      },
+      {
+        "surah": 46,
+        "ayah": 33,
+        "name_in_verse": true,
+        "reference_label": "Quran 46:33",
+        "source_url": "https://quran.com/46:33",
+        "relevance_note": "\"N'ont-ils pas vu qu'Allah qui a cree les cieux et la terre... est Al-Qadir pour redonner la vie aux morts ?\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/779",
+      "precise_locator": "Page dediee au Nom Al-Qadir dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali explique que Sa puissance est liee a Sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empecher d'accomplir ce qu'Il decide."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom Al-Qadir",
+      "source_url": "https://islamqa.info/ar/answers/205715",
+      "precise_locator": "Reponse savante sur le Nom Al-Qadir",
+      "summary_fr": "Explication du Nom Al-Qadir selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui a le pouvoir absolu de faire ce qu'Il veut.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali explique que Sa puissance est liee a Sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empecher d'accomplir ce qu'Il decide.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-qadir"
+        ]
+      },
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-al-qadir"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 6:65 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-6-65"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 6:65 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-6-65"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 6:65 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-6-65"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 6:65 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-6-65"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/6:65",
+      "http_status": 200,
+      "final_url": "https://quran.com/6:65",
+      "checked_at": "2026-02-27T10:34:12.595Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/17:99",
+      "http_status": 200,
+      "final_url": "https://quran.com/17:99",
+      "checked_at": "2026-02-27T10:34:12.586Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/46:33",
+      "http_status": 200,
+      "final_url": "https://quran.com/46:33",
+      "checked_at": "2026-02-27T10:34:12.660Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:13.029Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:13.028Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/779",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/779/%C2%A0%D8%A7%D9%84%D9%82%D8%AF%D8%B1%D8%A9",
+      "checked_at": "2026-02-27T10:34:12.732Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/205715",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/205715",
+      "checked_at": "2026-02-27T10:34:12.568Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:13.207Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:13.089Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:13.098Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:13.185Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:31.362Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.623Z"
+}

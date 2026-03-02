@@ -1,0 +1,18 @@
+{
+  "name": "Al-Asmaa — Le Jeu des 99 Noms d'Allah",
+  "short_name": "Al-Asmaa",
+  "description": "Jeu éducatif de type bombe qui tourne basé sur les 99 noms d'Allah (Asmaul Husna).",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#050811",
+  "background_color": "#050811",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%2306080f' width='100' height='100' rx='20'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='%23d4a24c' font-family='serif'>الأ</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

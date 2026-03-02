@@ -1,0 +1,226 @@
+{
+  "slug": "al-baith",
+  "arabic": "الْبَاعِثُ",
+  "transliteration": "Al-Ba'ith",
+  "french_name": "Celui qui ressuscite",
+  "short_meaning": "Celui qui ressuscite les morts le Jour du Jugement.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_derived",
+    "note": "Concept/racine atteste dans le Coran; Nom sous cette forme derive des hadiths."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 22,
+        "ayah": 7,
+        "name_in_verse": false,
+        "reference_label": "Quran 22:7",
+        "source_url": "https://quran.com/22:7",
+        "relevance_note": "\"L'Heure viendra... et Allah ressuscitera (yab'athu) ceux qui sont dans les tombes\" - forme verbale."
+      },
+      {
+        "surah": 16,
+        "ayah": 36,
+        "name_in_verse": false,
+        "reference_label": "Quran 16:36",
+        "source_url": "https://quran.com/16:36",
+        "relevance_note": "\"Nous avons envoye (ba'athna) dans chaque communaute un Messager.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom Al-Ba'ith figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqadia/523",
+      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Ba'ith)",
+      "summary_fr": "Al-Ba'ith signifie Celui qui ressuscite les morts et envoie les messagers. Al-Ghazali explique deux sens : Celui qui eveille les morts pour le Jugement, et Celui qui suscite les prophetes pour guider l'humanite."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 22, Ayah 7 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 22, Ayah 7 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 22, Ayah 7 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 22, Ayah 7 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui ressuscite les morts le Jour du Jugement.",
+    "evidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est derive des hadiths.",
+    "scholarly_summary": "Al-Ba'ith signifie Celui qui ressuscite les morts et envoie les messagers. Al-Ghazali explique deux sens : Celui qui eveille les morts pour le Jugement, et Celui qui suscite les prophetes pour guider l'humanite.",
+    "nuances": [
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 22:7 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-22-7"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 22:7 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-22-7"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 22:7 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-22-7"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 22:7 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-22-7"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/22:7",
+      "http_status": 200,
+      "final_url": "https://quran.com/22:7",
+      "checked_at": "2026-02-27T10:33:17.556Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/16:36",
+      "http_status": 200,
+      "final_url": "https://quran.com/16:36",
+      "checked_at": "2026-02-27T10:33:17.491Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:33:17.937Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:33:17.943Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqadia/523",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqadia/523",
+      "checked_at": "2026-02-27T10:33:17.507Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:18.295Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:18.296Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:18.446Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:18.357Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:27:27.848Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.591Z"
+}

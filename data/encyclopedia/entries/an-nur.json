@@ -1,0 +1,260 @@
+{
+  "slug": "an-nur",
+  "arabic": "النُّورُ",
+  "transliteration": "An-Nur",
+  "french_name": "La Lumière",
+  "short_meaning": "La Lumière des cieux et de la terre, qui guide vers la vérité.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 24,
+        "ayah": 35,
+        "name_in_verse": true,
+        "reference_label": "Quran 24:35",
+        "source_url": "https://quran.com/24:35",
+        "relevance_note": "\"Allah est la Lumiere (Nur) des cieux et de la terre.\" (Ayat an-Nur)"
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Muslim",
+        "number": "179",
+        "grading": "Sahih",
+        "reference_label": "Sahih Muslim 179",
+        "source_url": "https://sunnah.com/muslim:179",
+        "relevance_note": "\"Son voile est la lumiere (nur). S'Il le levait, les splendeurs de Sa Face bruleraient toute chose.\""
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/869",
+      "precise_locator": "Page dediee au Nom An-Nur dans l'encyclopedie Aqeeda",
+      "summary_fr": "An-Nur signifie la Lumiere, Celui par qui tout est eclaire et rendu visible. Al-Ghazali explique qu'Il est la Lumiere veritable par laquelle toute chose devient visible, et que toute lumiere dans l'univers n'est qu'un reflet de Sa lumiere."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom An-Nur",
+      "source_url": "https://islamqa.info/ar/answers/226255",
+      "precise_locator": "Reponse savante sur le Nom An-Nur",
+      "summary_fr": "Explication du Nom An-Nur selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 24, Ayah 35 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 24:35 ou le Nom An-Nur est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 24, Ayah 35 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 24:35 ou le Nom An-Nur est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 24, Ayah 35 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 24:35 ou le Nom An-Nur est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 24, Ayah 35 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 24:35 ou le Nom An-Nur est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "La Lumière des cieux et de la terre, qui guide vers la vérité.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "An-Nur signifie la Lumiere, Celui par qui tout est eclaire et rendu visible. Al-Ghazali explique qu'Il est la Lumiere veritable par laquelle toute chose devient visible, et que toute lumiere dans l'univers n'est qu'un reflet de Sa lumiere.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-an-nur"
+        ]
+      },
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-an-nur"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 24:35 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-24-35"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 24:35 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-24-35"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 24:35 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-24-35"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 24:35 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-24-35"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/24:35",
+      "http_status": 200,
+      "final_url": "https://quran.com/24:35",
+      "checked_at": "2026-02-27T10:34:37.734Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/muslim:179",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/muslim:179",
+      "checked_at": "2026-02-27T10:34:38.210Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:38.223Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:38.205Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/869",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/869/%C2%A0%D8%A7%D9%84%D9%86%D9%88%D8%B1%D8%8C-%D9%88%D9%86%D9%88%D8%B1-%D8%A7%D9%84%D8%B3%D9%85%D9%88%D8%A7%D8%AA-%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%B6",
+      "checked_at": "2026-02-27T10:34:37.913Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/226255",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/226255",
+      "checked_at": "2026-02-27T10:34:37.763Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:38.279Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:38.401Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:38.368Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=24&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:38.263Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:43.994Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.633Z"
+}

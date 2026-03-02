@@ -1,0 +1,281 @@
+{
+  "slug": "al-hamid",
+  "arabic": "الْحَمِيدُ",
+  "transliteration": "Al-Hamid",
+  "french_name": "Le Digne de Louange",
+  "short_meaning": "Celui qui mérite toute la louange pour Ses attributs et Ses actes.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 14,
+        "ayah": 1,
+        "name_in_verse": true,
+        "reference_label": "Quran 14:1",
+        "source_url": "https://quran.com/14:1",
+        "relevance_note": "\"Le chemin d'Allah... Al-'Aziz, Al-Hamid.\""
+      },
+      {
+        "surah": 42,
+        "ayah": 28,
+        "name_in_verse": true,
+        "reference_label": "Quran 42:28",
+        "source_url": "https://quran.com/42:28",
+        "relevance_note": "\"C'est Lui Al-Wali, Al-Hamid.\""
+      },
+      {
+        "surah": 31,
+        "ayah": 26,
+        "name_in_verse": true,
+        "reference_label": "Quran 31:26",
+        "source_url": "https://quran.com/31:26",
+        "relevance_note": "\"Allah est Al-Ghani, Al-Hamid.\""
+      },
+      {
+        "surah": 85,
+        "ayah": 8,
+        "name_in_verse": true,
+        "reference_label": "Quran 85:8",
+        "source_url": "https://quran.com/85:8",
+        "relevance_note": "\"Allah Al-'Aziz, Al-Hamid.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/633",
+      "precise_locator": "Page dediee au Nom Al-Hamid dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Hamid signifie Celui qui est digne de toute louange par Son essence, Ses attributs et Ses actes. Al-Ghazali explique qu'Il est loue meme si personne ne Le loue, car la louange Lui est due par Sa perfection meme."
+    },
+    {
+      "category": "encyclopedia",
+      "scholar_name": "IslamWeb.net",
+      "madhab": "multi",
+      "source_title": "Min Asma' Allah al-Husna: Al-Hamid",
+      "source_url": "https://www.islamweb.net/ar/article/238657",
+      "precise_locator": "Article dedie au Nom Al-Hamid",
+      "summary_fr": "Article savant detaille sur le Nom Al-Hamid avec analyse linguistique, preuves coraniques et implications pour la foi."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 14, Ayah 1 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 14:1 ou le Nom Al-Hamid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 14, Ayah 1 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 14:1 ou le Nom Al-Hamid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 14, Ayah 1 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 14:1 ou le Nom Al-Hamid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 14, Ayah 1 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 14:1 ou le Nom Al-Hamid est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui mérite toute la louange pour Ses attributs et Ses actes.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Hamid signifie Celui qui est digne de toute louange par Son essence, Ses attributs et Ses actes. Al-Ghazali explique qu'Il est loue meme si personne ne Le loue, car la louange Lui est due par Sa perfection meme.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-hamid"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 14:1 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-14-1"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 14:1 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-14-1"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 14:1 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-14-1"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 14:1 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-14-1"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/14:1",
+      "http_status": 200,
+      "final_url": "https://quran.com/14:1",
+      "checked_at": "2026-02-27T10:33:38.865Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/42:28",
+      "http_status": 200,
+      "final_url": "https://quran.com/42:28",
+      "checked_at": "2026-02-27T10:33:38.886Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/31:26",
+      "http_status": 200,
+      "final_url": "https://quran.com/31:26",
+      "checked_at": "2026-02-27T10:33:38.969Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/85:8",
+      "http_status": 200,
+      "final_url": "https://quran.com/85:8",
+      "checked_at": "2026-02-27T10:33:38.900Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:33:39.313Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:33:39.366Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/633",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/633/%C2%A0%D8%A7%D9%84%D8%AD%D9%85%D9%8A%D8%AF",
+      "checked_at": "2026-02-27T10:33:39.024Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.islamweb.net/ar/article/238657",
+      "http_status": 200,
+      "final_url": "https://www.islamweb.net/ar/article/238657",
+      "checked_at": "2026-02-27T10:33:39.271Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:39.359Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:39.358Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:39.357Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=14&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:39.359Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:27:48.875Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.600Z"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "al-asmaa",
+  "version": "2.0.0",
+  "description": "Al-Asmaa — Jeu multijoueur des 99 Noms d'Allah",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "build:candidates": "node scripts/build-candidates-from-legacy.js",
+    "cleanup:entries": "node scripts/cleanup-orphan-entries.js",
+    "report:entries": "node scripts/report-entries-status.js",
+    "generate:entry": "node scripts/generate-encyclopedia-entry.js",
+    "generate:entries": "node scripts/generate-all-encyclopedia-entries.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^4.18.2",
+    "qrcode": "^1.5.3",
+    "socket.io": "^4.7.4"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.2"
+  },
+  "keywords": [
+    "islam",
+    "99-names",
+    "allah",
+    "game",
+    "multiplayer"
+  ],
+  "license": "MIT"
+}

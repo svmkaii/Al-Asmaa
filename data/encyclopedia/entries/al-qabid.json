@@ -1,0 +1,260 @@
+{
+  "slug": "al-qabid",
+  "arabic": "الْقَابِضُ",
+  "transliteration": "Al-Qabid",
+  "french_name": "Celui qui retient",
+  "short_meaning": "Celui qui resserre la subsistance selon Sa sagesse.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "hadith_primary",
+    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 2,
+        "ayah": 245,
+        "name_in_verse": false,
+        "reference_label": "Quran 2:245",
+        "source_url": "https://quran.com/2:245",
+        "relevance_note": "\"Allah restreint (yaqbidu) et etend (yabsutu)\" - forme verbale, non le Nom."
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom Al-Qabid figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "1314",
+        "grading": "Sahih",
+        "reference_label": "Tirmidhi 1314",
+        "source_url": "https://sunnah.com/tirmidhi:1314",
+        "relevance_note": "\"Allah est Al-Qabid, Al-Basit, Al-Musa'ir (Celui qui fixe les prix).\""
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/777",
+      "precise_locator": "Page dediee au Nom Al-Qabid dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Qabid signifie Celui qui restreint la subsistance, les coeurs ou les ames selon Sa sagesse. Al-Ghazali explique qu'Il restreint parfois pour eprouver et parfois pour eduquer. Ce Nom est generalement cite avec son oppose Al-Basit."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom Al-Qabid",
+      "source_url": "https://islamqa.info/ar/answers/218084",
+      "precise_locator": "Reponse savante sur le Nom Al-Qabid",
+      "summary_fr": "Explication du Nom Al-Qabid selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 245 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 2:245 ou le Nom Al-Qabid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 245 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 2:245 ou le Nom Al-Qabid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 245 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 2:245 ou le Nom Al-Qabid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 245 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 2:245 ou le Nom Al-Qabid est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui resserre la subsistance selon Sa sagesse.",
+    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Al-Qabid signifie Celui qui restreint la subsistance, les coeurs ou les ames selon Sa sagesse. Al-Ghazali explique qu'Il restreint parfois pour eprouver et parfois pour eduquer. Ce Nom est generalement cite avec son oppose Al-Basit.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-qabid"
+        ]
+      },
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-al-qabid"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 2:245 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-2-245"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 2:245 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-2-245"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 2:245 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-2-245"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 2:245 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-2-245"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/2:245",
+      "http_status": 200,
+      "final_url": "https://quran.com/2:245",
+      "checked_at": "2026-02-27T10:34:11.893Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:12.418Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:1314",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:1314",
+      "checked_at": "2026-02-27T10:34:12.351Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:12.362Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/777",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/777/%C2%A0%D8%A7%D9%84%D9%82%D8%A8%D8%B6-%D9%88%D8%A7%D9%84%D8%B7%D9%8A",
+      "checked_at": "2026-02-27T10:34:12.043Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/218084",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/218084",
+      "checked_at": "2026-02-27T10:34:11.876Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:12.486Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:12.439Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:12.488Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:12.388Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:30.688Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.622Z"
+}

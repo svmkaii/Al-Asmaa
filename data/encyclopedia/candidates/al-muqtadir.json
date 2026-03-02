@@ -1,0 +1,223 @@
+{
+  "slug": "al-muqtadir",
+  "arabic": "الْمُقْتَدِرُ",
+  "transliteration": "Al-Muqtadir",
+  "french_name": "Le Tout-Puissant",
+  "short_meaning": "Celui dont la puissance s'exerce sur toute chose sans effort.",
+  "canonical_status": {
+    "in_99_list": true,
+    "note": "Retenu dans la liste de reference du projet (a verifier par revue humaine)."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "source_id": "quran-54-42",
+        "surah": 54,
+        "ayah": 42,
+        "reference_label": "Quran 54:42",
+        "source_url": "https://quran.com/54:42"
+      },
+      {
+        "source_id": "quran-18-45",
+        "surah": 18,
+        "ayah": 45,
+        "reference_label": "Quran 18:45",
+        "source_url": "https://quran.com/18:45"
+      }
+    ],
+    "hadith": []
+  },
+  "scholarly_explanations": [
+    {
+      "source_id": "tafsir-hanafi-54-42",
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "source_title": "Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=54&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 54, Ayah 42, tafsir Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "summary_fr": "Voir l'explication de Abu al-Barakat Al-Nasafi pour 54:42."
+    },
+    {
+      "source_id": "tafsir-maliki-54-42",
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=54&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 54, Ayah 42, tafsir Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Voir l'explication de Abu Abdillah Al-Qurtubi pour 54:42."
+    },
+    {
+      "source_id": "tafsir-shafii-54-42",
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=54&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 54, Ayah 42, tafsir Maalim al-Tanzil",
+      "summary_fr": "Voir l'explication de Al-Baghawi pour 54:42."
+    },
+    {
+      "source_id": "tafsir-hanbali-54-42",
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=54&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Surah 54, Ayah 42, tafsir Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Voir l'explication de Ibn al-Jawzi pour 54:42."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui dont la puissance s'exerce sur toute chose sans effort.",
+    "nuances": [
+      {
+        "label": "nuance de tafsir hanafi",
+        "description": "Attribution explicite au corpus Madarik al-Tanzil wa Haqaiq al-Tawil.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-hanafi-54-42"
+        ]
+      },
+      {
+        "label": "nuance de tafsir maliki",
+        "description": "Attribution explicite au corpus Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-maliki-54-42"
+        ]
+      },
+      {
+        "label": "nuance de tafsir shafii",
+        "description": "Attribution explicite au corpus Maalim al-Tanzil.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-shafii-54-42"
+        ]
+      },
+      {
+        "label": "nuance de tafsir hanbali",
+        "description": "Attribution explicite au corpus Zad al-Masir fi Ilm al-Tafsir.",
+        "source_backed": true,
+        "sources": [
+          "tafsir-hanbali-54-42"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "claims": [
+    {
+      "id": "claim-quran-54-42",
+      "text": "Le nom est documente dans le Quran (54:42).",
+      "source_ids": [
+        "quran-54-42"
+      ]
+    },
+    {
+      "id": "claim-quran-18-45",
+      "text": "Le nom est documente dans le Quran (18:45).",
+      "source_ids": [
+        "quran-18-45"
+      ]
+    },
+    {
+      "id": "claim-tafsir-hanafi-54-42",
+      "text": "Nuance de tafsir (hanafi) documentee par Abu al-Barakat Al-Nasafi sur 54:42.",
+      "source_ids": [
+        "tafsir-hanafi-54-42"
+      ]
+    },
+    {
+      "id": "claim-tafsir-maliki-54-42",
+      "text": "Nuance de tafsir (maliki) documentee par Abu Abdillah Al-Qurtubi sur 54:42.",
+      "source_ids": [
+        "tafsir-maliki-54-42"
+      ]
+    },
+    {
+      "id": "claim-tafsir-shafii-54-42",
+      "text": "Nuance de tafsir (shafii) documentee par Al-Baghawi sur 54:42.",
+      "source_ids": [
+        "tafsir-shafii-54-42"
+      ]
+    },
+    {
+      "id": "claim-tafsir-hanbali-54-42",
+      "text": "Nuance de tafsir (hanbali) documentee par Ibn al-Jawzi sur 54:42.",
+      "source_ids": [
+        "tafsir-hanbali-54-42"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "quran-54-42",
+      "url": "https://quran.com/54:42",
+      "level": 1,
+      "source_type": "quran",
+      "precise_locator": "Surah 54, Ayah 42",
+      "claim_ids": [
+        "claim-quran-54-42"
+      ]
+    },
+    {
+      "id": "quran-18-45",
+      "url": "https://quran.com/18:45",
+      "level": 1,
+      "source_type": "quran",
+      "precise_locator": "Surah 18, Ayah 45",
+      "claim_ids": [
+        "claim-quran-18-45"
+      ]
+    },
+    {
+      "id": "tafsir-hanafi-54-42",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=54&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "precise_locator": "TafsirNo 17 / Surah 54 Ayah 42",
+      "claim_ids": [
+        "claim-tafsir-hanafi-54-42"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-maliki-54-42",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=54&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "precise_locator": "TafsirNo 5 / Surah 54 Ayah 42",
+      "claim_ids": [
+        "claim-tafsir-maliki-54-42"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-shafii-54-42",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=54&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "precise_locator": "TafsirNo 13 / Surah 54 Ayah 42",
+      "claim_ids": [
+        "claim-tafsir-shafii-54-42"
+      ],
+      "explicit_madhhab_attribution": true
+    },
+    {
+      "id": "tafsir-hanbali-54-42",
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=54&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "level": 2,
+      "source_type": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "precise_locator": "TafsirNo 15 / Surah 54 Ayah 42",
+      "claim_ids": [
+        "claim-tafsir-hanbali-54-42"
+      ],
+      "explicit_madhhab_attribution": true
+    }
+  ]
+}

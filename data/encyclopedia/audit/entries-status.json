@@ -1,0 +1,807 @@
+{
+  "generated_at": "2026-02-26T16:31:29.251Z",
+  "entries": 99,
+  "link_stats": {
+    "total": 580,
+    "passed": 580,
+    "failed": 0,
+    "manual_check_required": 0
+  },
+  "editorial_stats": {
+    "needs_human_review": 99
+  },
+  "by_entry": [
+    {
+      "slug": "ad-darr",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-adl",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-afuw",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-akhir",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-ali",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-alim",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-awwal",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-azim",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-aziz",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-badi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-baith",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-baqi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-bari",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-barr",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-basir",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-basit",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-batin",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-fattah",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-ghaffar",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-ghafur",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-ghani",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-hadi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-hafiz",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-hakam",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-hakim",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-halim",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-hamid",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-haqq",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-hasib",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-hayy",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-jabbar",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-jalil",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-jami",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-kabir",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-karim",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-khabir",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-khafid",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-khaliq",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-latif",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-majid-48",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-majid-65",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-malik",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mani",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-matin",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muakhkhir",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mubdi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mudhill",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mughni",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muhaymin",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muhsi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muhyi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muid",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muizz",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mujib",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mumin",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mumit",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muntaqim",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muqaddim",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muqit",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muqsit",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-muqtadir",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-musawwir",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mutaali",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-mutakabbir",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-qabid",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-qadir",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-qahhar",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-qawi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-qayyum",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-quddus",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-wadud",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-wahhab",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-wahid",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-wajid",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-wakil",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-wali-55",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-wali-76",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-warith",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "al-wasi",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "allah",
+      "links": 9,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "an-nafi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "an-nur",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ar-rafi",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ar-rahim",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ar-rahman",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ar-raqib",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ar-rashid",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ar-rauf",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ar-razzaq",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "as-sabur",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "as-salam",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "as-samad",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "as-sami",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ash-shahid",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "ash-shakur",
+      "links": 6,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "at-tawwab",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "az-zahir",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "dhul-jalali-wal-ikram",
+      "links": 7,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    },
+    {
+      "slug": "malik-ul-mulk",
+      "links": 5,
+      "blockers": [
+        "human_review_not_approved"
+      ],
+      "editorial_status": "needs_human_review"
+    }
+  ]
+}

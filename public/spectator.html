@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Asmaa — Spectateur</title>
+  <meta name="theme-color" content="#050810">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=15.0">
+  <link rel="stylesheet" href="/css/animations.css?v=15.0">
+</head>
+<body>
+  <!-- Overlays -->
+  <div class="feedback-flash" id="feedbackFlash"></div>
+  <div class="explosion-overlay" id="explosionOverlay"></div>
+  <div class="name-display-popup hidden" id="namePopup">
+    <div class="name-display-arabic" id="namePopupArabic"></div>
+    <div class="name-display-translit" id="namePopupTranslit"></div>
+    <div class="name-display-meaning" id="namePopupMeaning"></div>
+  </div>
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==================== LOBBY ==================== -->
+  <div class="page active" id="spectatorLobby" style="max-width: 900px;">
+    <div class="text-center" style="padding: 40px 0;">
+      <div class="logo-arabic" style="font-size: 3rem;">الأسماء الحسنى</div>
+      <div class="logo-title">AL-ASMAA</div>
+      <div style="margin-top: 20px; font-size: 1.2rem; color: var(--text-secondary);">
+        En attente du lancement de la partie...
+      </div>
+      <div class="loading-spinner" style="margin: 20px auto;"></div>
+
+      <div class="config-label" style="margin-top: 30px;">
+        Joueurs (<span id="specLobbyCount">0</span>)
+      </div>
+      <div class="players-list stagger-fade-in" id="specLobbyPlayers" style="max-width: 400px; margin: 10px auto;"></div>
+    </div>
+  </div>
+
+  <!-- ==================== GAME VIEW ==================== -->
+  <div class="page page-wide" id="spectatorGame" style="max-width: 1200px; padding: 24px;">
+    <div class="spectator-layout">
+      <div class="spectator-main">
+        <div class="game-counter" style="margin-bottom: 20px; font-size: 1.1rem;">
+          <strong id="specNamesCount">0</strong> / 99 noms cités
+        </div>
+
+        <div class="active-player-display" style="margin-bottom: 10px;">
+          <div class="active-player-label" style="font-size: 1rem; letter-spacing: 0.2em;">C'est le tour de</div>
+          <div class="active-player-name" id="specActivePlayer" style="font-size: 3rem;">---</div>
+        </div>
+
+        <!-- Large bomb -->
+        <div class="bomb-container" style="padding: 20px 0;">
+          <div class="bomb-wrapper" style="width: 200px; height: 200px;" id="specBombWrapper">
+            <svg class="timer-ring" viewBox="0 0 210 210">
+              <circle class="timer-ring-bg" cx="105" cy="105" r="100"/>
+              <circle class="timer-ring-progress" id="specTimerRing" cx="105" cy="105" r="100"
+                      stroke-dasharray="628.32" stroke-dashoffset="0"/>
+            </svg>
+            <svg class="bomb-svg" id="specBombSvg" viewBox="0 0 160 180">
+              <defs>
+                <radialGradient id="bombGrad4" cx="40%" cy="35%" r="60%">
+                  <stop offset="0%" stop-color="#4a4a4a"/>
+                  <stop offset="50%" stop-color="#2a2a2a"/>
+                  <stop offset="100%" stop-color="#111"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="80" cy="170" rx="50" ry="8" fill="rgba(0,0,0,0.3)"/>
+              <circle cx="80" cy="100" r="55" fill="url(#bombGrad4)"/>
+              <rect x="70" y="42" width="20" height="14" rx="3" fill="#555"/>
+              <path d="M80 42 Q85 30 95 28 Q105 26 100 15" fill="none" stroke="#8B4513" stroke-width="3"/>
+              <g>
+                <circle cx="100" cy="14" r="6" fill="rgba(255,165,0,0.4)" class="fuse-glow"/>
+                <circle cx="100" cy="12" r="4" fill="#ffd93d" class="fuse-spark"/>
+                <circle cx="100" cy="10" r="2" fill="#fff" class="fuse-spark"/>
+              </g>
+            </svg>
+            <div class="bomb-timer-text" id="specTimerText" style="font-size: 2rem;">--</div>
+          </div>
+        </div>
+
+        <!-- Last name -->
+        <div class="card hidden" id="specLastName" style="margin-top: 20px; text-align: center; min-width: 300px;">
+          <div class="text-arabic-large" id="specLastArabic" style="font-size: 2.2rem;"></div>
+          <div class="text-translit text-center" id="specLastTranslit" style="font-size: 1.1rem; margin-top: 4px;"></div>
+          <div class="text-dim text-center" id="specLastMeaning" style="margin-top: 4px;"></div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="spectator-sidebar">
+        <div class="config-label">Joueurs</div>
+        <div id="specPlayersList"></div>
+
+        <div class="config-label" style="margin-top: 16px;">Noms cités</div>
+        <div class="names-used-list" id="specNamesUsedList" style="max-height: 300px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== RESULTS ==================== -->
+  <div class="page page-wide" id="spectatorResults" style="max-width: 900px;">
+    <div class="results-container">
+      <div class="title-display" style="font-size: 3rem; margin-bottom: 8px;">
+        ماشاء الله
+      </div>
+      <h2 style="font-size: 2rem; margin-bottom: 4px;">Fin de partie !</h2>
+      <p class="text-dim" id="specResultsSubtitle"></p>
+
+      <div class="podium-container" id="specPodiumContainer" style="height: 320px;"></div>
+
+      <div class="card" style="margin-top: 24px; text-align: left;">
+        <div class="config-label">
+          <span id="specResultsNamesCount">0</span> noms cités sur 99
+        </div>
+        <div class="names-results-grid" id="specNamesResultsGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/data/names.js"></script>
+  <script src="/js/bomb.js"></script>
+  <script src="/js/audio.js"></script>
+  <script src="/js/spectator-app.js"></script>
+</body>
+</html>

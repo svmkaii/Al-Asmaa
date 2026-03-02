@@ -1,0 +1,160 @@
+{
+  "slug": "as-sabur",
+  "arabic": "الصَّبُورُ",
+  "transliteration": "As-Sabur",
+  "french_name": "Le Patient",
+  "short_meaning": "Celui dont la patience est sans limite, qui ne précipite rien.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "hadith_primary",
+    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 2,
+        "ayah": 153,
+        "name_in_verse": false,
+        "reference_label": "Quran 2:153",
+        "source_url": "https://quran.com/2:153",
+        "relevance_note": "\"O croyants, cherchez secours dans la patience (sabr)\" - le concept de patience est mentionne pour les croyants, non comme Nom divin."
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "6099",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 6099",
+        "source_url": "https://sunnah.com/bukhari:6099",
+        "relevance_note": "\"Personne n'est plus patient (asbaru) qu'Allah : on Lui attribue un fils et malgre cela Il les nourrit et leur accorde la sante.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom As-Sabur figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/713",
+      "precise_locator": "Page dediee au Nom As-Sabur dans l'encyclopedie Aqeeda",
+      "summary_fr": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement atteste dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la misericorde."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom As-Sabur",
+      "source_url": "https://islamqa.info/ar/answers/191329",
+      "precise_locator": "Reponse savante sur le Nom As-Sabur",
+      "summary_fr": "Explication du Nom As-Sabur selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui dont la patience est sans limite, qui ne précipite rien.",
+    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement atteste dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la misericorde.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-as-sabur"
+        ]
+      },
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-as-sabur"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/2:153",
+      "http_status": 200,
+      "final_url": "https://quran.com/2:153",
+      "checked_at": "2026-02-27T10:34:47.152Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:6099",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:6099",
+      "checked_at": "2026-02-27T10:34:47.627Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:47.576Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:47.587Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/713",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/713/%C2%A0%D8%A7%D9%84%D8%B5%D8%A8%D8%B1",
+      "checked_at": "2026-02-27T10:34:47.341Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/191329",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/191329",
+      "checked_at": "2026-02-27T10:34:47.131Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:51.698Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.637Z"
+}

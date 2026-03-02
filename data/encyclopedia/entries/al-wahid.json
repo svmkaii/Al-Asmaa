@@ -1,0 +1,281 @@
+{
+  "slug": "al-wahid",
+  "arabic": "الْوَاحِدُ",
+  "transliteration": "Al-Wahid",
+  "french_name": "L'Unique",
+  "short_meaning": "L'Unique dans Son essence, Ses attributs et Ses actes, sans associé.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 2,
+        "ayah": 163,
+        "name_in_verse": true,
+        "reference_label": "Quran 2:163",
+        "source_url": "https://quran.com/2:163",
+        "relevance_note": "\"Votre Dieu est un Dieu unique (wahid). Nulle divinite autre que Lui.\""
+      },
+      {
+        "surah": 13,
+        "ayah": 16,
+        "name_in_verse": true,
+        "reference_label": "Quran 13:16",
+        "source_url": "https://quran.com/13:16",
+        "relevance_note": "\"Dis : Allah est le Createur de toute chose, Il est Al-Wahid, Al-Qahhar.\""
+      },
+      {
+        "surah": 38,
+        "ayah": 65,
+        "name_in_verse": true,
+        "reference_label": "Quran 38:65",
+        "source_url": "https://quran.com/38:65",
+        "relevance_note": "\"Il n'y a de divinite qu'Allah, Al-Wahid, Al-Qahhar.\""
+      },
+      {
+        "surah": 14,
+        "ayah": 48,
+        "name_in_verse": true,
+        "reference_label": "Quran 14:48",
+        "source_url": "https://quran.com/14:48",
+        "relevance_note": "\"Et comparaitront devant Allah, Al-Wahid, Al-Qahhar.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/877",
+      "precise_locator": "Page dediee au Nom Al-Wahid dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Wahid signifie l'Unique, Celui qui n'a aucun associe, aucun semblable et aucun egal. Al-Ghazali explique que Son unicite est absolue : dans Son essence (pas de parties), dans Ses attributs (rien de semblable) et dans Ses actes (aucun partenaire)."
+    },
+    {
+      "category": "encyclopedia",
+      "scholar_name": "IslamWeb.net",
+      "madhab": "multi",
+      "source_title": "Min Asma' Allah al-Husna: Al-Wahid",
+      "source_url": "https://www.islamweb.net/ar/article/233527",
+      "precise_locator": "Article dedie au Nom Al-Wahid",
+      "summary_fr": "Article savant detaille sur le Nom Al-Wahid avec analyse linguistique, preuves coraniques et implications pour la foi."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "L'Unique dans Son essence, Ses attributs et Ses actes, sans associé.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Wahid signifie l'Unique, Celui qui n'a aucun associe, aucun semblable et aucun egal. Al-Ghazali explique que Son unicite est absolue : dans Son essence (pas de parties), dans Ses attributs (rien de semblable) et dans Ses actes (aucun partenaire).",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-wahid"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 2:163 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-2-163"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 2:163 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-2-163"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 2:163 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-2-163"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 2:163 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-2-163"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/2:163",
+      "http_status": 200,
+      "final_url": "https://quran.com/2:163",
+      "checked_at": "2026-02-27T10:34:22.676Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/13:16",
+      "http_status": 200,
+      "final_url": "https://quran.com/13:16",
+      "checked_at": "2026-02-27T10:34:22.668Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/38:65",
+      "http_status": 200,
+      "final_url": "https://quran.com/38:65",
+      "checked_at": "2026-02-27T10:34:22.702Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/14:48",
+      "http_status": 200,
+      "final_url": "https://quran.com/14:48",
+      "checked_at": "2026-02-27T10:34:22.656Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:34:23.074Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:34:23.134Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/877",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/877/%C2%A0%D8%A7%D9%84%D9%88%D8%A7%D8%AD%D8%AF-%D9%88%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A7%D9%86%D9%8A%D8%A9",
+      "checked_at": "2026-02-27T10:34:22.812Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.islamweb.net/ar/article/233527",
+      "http_status": 200,
+      "final_url": "https://www.islamweb.net/ar/article/233527",
+      "checked_at": "2026-02-27T10:34:28.503Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:23.277Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:23.201Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:23.180Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:34:23.251Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:28:38.024Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.628Z"
+}

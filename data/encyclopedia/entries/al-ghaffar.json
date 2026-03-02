@@ -1,0 +1,266 @@
+{
+  "slug": "al-ghaffar",
+  "arabic": "الْغَفَّارُ",
+  "transliteration": "Al-Ghaffar",
+  "french_name": "Le Grand Pardonneur",
+  "short_meaning": "Celui qui pardonne sans cesse les péchés de Ses serviteurs.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 38,
+        "ayah": 66,
+        "name_in_verse": true,
+        "reference_label": "Quran 38:66",
+        "source_url": "https://quran.com/38:66",
+        "relevance_note": "\"Seigneur des cieux et de la terre... Al-Aziz, Al-Ghaffar.\""
+      },
+      {
+        "surah": 39,
+        "ayah": 5,
+        "name_in_verse": true,
+        "reference_label": "Quran 39:5",
+        "source_url": "https://quran.com/39:5",
+        "relevance_note": "\"N'est-Il pas Al-Aziz, Al-Ghaffar ?\""
+      },
+      {
+        "surah": 71,
+        "ayah": 10,
+        "name_in_verse": true,
+        "reference_label": "Quran 71:10",
+        "source_url": "https://quran.com/71:10",
+        "relevance_note": "\"Implorez le pardon de votre Seigneur, car Il est Al-Ghaffar.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/841",
+      "precise_locator": "Page dediee au Nom Al-Ghaffar dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de maniere repetee. Al-Ghazali explique qu'Allah couvre les peches et ne les devoile pas, meme s'il les connait. La difference avec Al-Ghafur est que Al-Ghaffar insiste sur la repetition du pardon."
+    },
+    {
+      "category": "encyclopedia",
+      "scholar_name": "IslamWeb.net",
+      "madhab": "multi",
+      "source_title": "Min Asma' Allah al-Husna: Al-Ghaffar",
+      "source_url": "https://www.islamweb.net/ar/article/234517",
+      "precise_locator": "Article dedie au Nom Al-Ghaffar",
+      "summary_fr": "Article savant detaille sur le Nom Al-Ghaffar avec analyse linguistique, preuves coraniques et implications pour la foi."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 39, Ayah 5 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 39, Ayah 5 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 39, Ayah 5 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 39, Ayah 5 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui pardonne sans cesse les péchés de Ses serviteurs.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de maniere repetee. Al-Ghazali explique qu'Allah couvre les peches et ne les devoile pas, meme s'il les connait. La difference avec Al-Ghafur est que Al-Ghaffar insiste sur la repetition du pardon.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-ghaffar"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 39:5 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-39-5"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 39:5 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-39-5"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 39:5 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-39-5"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 39:5 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-39-5"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/38:66",
+      "http_status": 200,
+      "final_url": "https://quran.com/38:66",
+      "checked_at": "2026-02-27T10:33:29.922Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/39:5",
+      "http_status": 200,
+      "final_url": "https://quran.com/39:5",
+      "checked_at": "2026-02-27T10:33:29.877Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/71:10",
+      "http_status": 200,
+      "final_url": "https://quran.com/71:10",
+      "checked_at": "2026-02-27T10:33:29.913Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:33:30.465Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:33:30.460Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/841",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/841/%C2%A0%D8%A7%D9%84%D9%85%D8%BA%D9%81%D8%B1%D8%A9-%D9%88%D8%A7%D9%84%D8%BA%D9%81%D8%B1%D8%A7%D9%86",
+      "checked_at": "2026-02-27T10:33:30.089Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.islamweb.net/ar/article/234517",
+      "http_status": 200,
+      "final_url": "https://www.islamweb.net/ar/article/234517",
+      "checked_at": "2026-02-27T10:33:33.647Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:30.497Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:30.459Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:30.441Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:30.431Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:27:39.749Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.596Z"
+}

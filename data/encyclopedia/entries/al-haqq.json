@@ -1,0 +1,265 @@
+{
+  "slug": "al-haqq",
+  "arabic": "الْحَقُّ",
+  "transliteration": "Al-Haqq",
+  "french_name": "La Vérité",
+  "short_meaning": "Celui qui est la Vérité absolue, dont l'existence est certaine.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 22,
+        "ayah": 6,
+        "name_in_verse": true,
+        "reference_label": "Quran 22:6",
+        "source_url": "https://quran.com/22:6",
+        "relevance_note": "\"C'est parce qu'Allah est Al-Haqq (la Verite).\""
+      },
+      {
+        "surah": 22,
+        "ayah": 62,
+        "name_in_verse": true,
+        "reference_label": "Quran 22:62",
+        "source_url": "https://quran.com/22:62",
+        "relevance_note": "\"C'est parce qu'Allah est Al-Haqq, et ce qu'ils invoquent en dehors de Lui est le faux.\""
+      },
+      {
+        "surah": 23,
+        "ayah": 116,
+        "name_in_verse": true,
+        "reference_label": "Quran 23:116",
+        "source_url": "https://quran.com/23:116",
+        "relevance_note": "\"Exalte soit Allah, le Souverain, Al-Haqq.\""
+      },
+      {
+        "surah": 24,
+        "ayah": 25,
+        "name_in_verse": true,
+        "reference_label": "Quran 24:25",
+        "source_url": "https://quran.com/24:25",
+        "relevance_note": "\"Ils sauront que c'est Allah Al-Haqq, Al-Mubin.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/627",
+      "precise_locator": "Page dediee au Nom Al-Haqq dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Haqq signifie la Verite absolue, Celui dont l'existence est la plus reelle et la plus certaine. Al-Ghazali explique que tout autre que Lui peut cesser d'exister, mais Son existence est necessaire et eternelle. Ibn al-Qayyim ajoute que Sa parole, Ses actes et Sa rencontre sont tous 'haqq'."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 22, Ayah 62 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 22:62 ou le Nom Al-Haqq est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 22, Ayah 62 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 22:62 ou le Nom Al-Haqq est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 22, Ayah 62 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 22:62 ou le Nom Al-Haqq est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 22, Ayah 62 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 22:62 ou le Nom Al-Haqq est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui est la Vérité absolue, dont l'existence est certaine.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Haqq signifie la Verite absolue, Celui dont l'existence est la plus reelle et la plus certaine. Al-Ghazali explique que tout autre que Lui peut cesser d'exister, mais Son existence est necessaire et eternelle. Ibn al-Qayyim ajoute que Sa parole, Ses actes et Sa rencontre sont tous 'haqq'.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-haqq"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 22:62 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-22-62"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 22:62 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-22-62"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 22:62 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-22-62"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 22:62 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-22-62"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/22:6",
+      "http_status": 200,
+      "final_url": "https://quran.com/22:6",
+      "checked_at": "2026-02-27T10:33:39.457Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/22:62",
+      "http_status": 200,
+      "final_url": "https://quran.com/22:62",
+      "checked_at": "2026-02-27T10:33:39.469Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/23:116",
+      "http_status": 200,
+      "final_url": "https://quran.com/23:116",
+      "checked_at": "2026-02-27T10:33:39.564Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/24:25",
+      "http_status": 200,
+      "final_url": "https://quran.com/24:25",
+      "checked_at": "2026-02-27T10:33:39.469Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:33:39.899Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:33:39.971Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/627",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/627/%C2%A0%D8%A7%D9%84%D8%AD%D9%82",
+      "checked_at": "2026-02-27T10:33:39.628Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:39.983Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:40.035Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:39.970Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=22&tAyahNo=62&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:33:39.961Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:27:50.076Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.601Z"
+}

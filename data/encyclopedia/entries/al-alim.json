@@ -1,0 +1,250 @@
+{
+  "slug": "al-alim",
+  "arabic": "الْعَلِيمُ",
+  "transliteration": "Al-'Alim",
+  "french_name": "L'Omniscient",
+  "short_meaning": "Celui dont la science englobe toute chose, visible et invisible.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 2,
+        "ayah": 29,
+        "name_in_verse": true,
+        "reference_label": "Quran 2:29",
+        "source_url": "https://quran.com/2:29",
+        "relevance_note": "\"Il est de toute chose Omniscient (Alim).\""
+      },
+      {
+        "surah": 6,
+        "ayah": 13,
+        "name_in_verse": true,
+        "reference_label": "Quran 6:13",
+        "source_url": "https://quran.com/6:13",
+        "relevance_note": "\"A Lui appartient ce qui habite la nuit et le jour. Il est As-Sami', Al-Alim.\""
+      },
+      {
+        "surah": 59,
+        "ayah": 22,
+        "name_in_verse": true,
+        "reference_label": "Quran 59:22",
+        "source_url": "https://quran.com/59:22",
+        "relevance_note": "\"C'est Lui Allah... le Connaisseur de l'invisible et du visible (Alim al-ghaybi wa ash-shahada).\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/747",
+      "precise_locator": "Page dediee au Nom Al-'Alim dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-Alim signifie l'Omniscient dont la science englobe toute chose : le passe, le present, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est eternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionne plus de 150 fois dans le Coran."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 59, Ayah 22 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 59, Ayah 22 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 59, Ayah 22 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 59, Ayah 22 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui dont la science englobe toute chose, visible et invisible.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Alim signifie l'Omniscient dont la science englobe toute chose : le passe, le present, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est eternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionne plus de 150 fois dans le Coran.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-alim"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 59:22 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-59-22"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 59:22 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-59-22"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 59:22 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-59-22"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 59:22 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-59-22"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/2:29",
+      "http_status": 200,
+      "final_url": "https://quran.com/2:29",
+      "checked_at": "2026-02-27T10:32:58.185Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/6:13",
+      "http_status": 200,
+      "final_url": "https://quran.com/6:13",
+      "checked_at": "2026-02-27T10:32:58.453Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/59:22",
+      "http_status": 200,
+      "final_url": "https://quran.com/59:22",
+      "checked_at": "2026-02-27T10:32:58.257Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:32:58.700Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:32:58.631Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/747",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/747/%C2%A0%D8%A7%D9%84%D8%B9%D9%84%D9%85",
+      "checked_at": "2026-02-27T10:32:58.380Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:58.685Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:58.674Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:58.796Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:58.721Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:27:22.497Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.588Z"
+}

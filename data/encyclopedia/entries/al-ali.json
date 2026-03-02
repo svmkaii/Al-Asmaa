@@ -1,0 +1,265 @@
+{
+  "slug": "al-ali",
+  "arabic": "الْعَلِيُّ",
+  "transliteration": "Al-'Ali",
+  "french_name": "Le Très Haut",
+  "short_meaning": "Celui qui est au-dessus de toute Sa création par Son rang et Ses attributs.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_direct",
+    "note": "Nom atteste directement dans le Coran comme attribut divin."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 2,
+        "ayah": 255,
+        "name_in_verse": true,
+        "reference_label": "Quran 2:255",
+        "source_url": "https://quran.com/2:255",
+        "relevance_note": "\"Il est Al-'Ali, Al-'Azim.\" (Ayat al-Kursi)"
+      },
+      {
+        "surah": 42,
+        "ayah": 4,
+        "name_in_verse": true,
+        "reference_label": "Quran 42:4",
+        "source_url": "https://quran.com/42:4",
+        "relevance_note": "\"Il est Al-'Ali, Al-'Azim.\""
+      },
+      {
+        "surah": 42,
+        "ayah": 51,
+        "name_in_verse": true,
+        "reference_label": "Quran 42:51",
+        "source_url": "https://quran.com/42:51",
+        "relevance_note": "\"Il est Al-'Ali, Al-Hakim.\""
+      },
+      {
+        "surah": 4,
+        "ayah": 34,
+        "name_in_verse": true,
+        "reference_label": "Quran 4:34",
+        "source_url": "https://quran.com/4:34",
+        "relevance_note": "\"Allah est Al-'Ali, Al-Kabir.\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      },
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Hadith listant les 99 noms d'Allah."
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqeeda/749",
+      "precise_locator": "Page dediee au Nom Al-'Ali dans l'encyclopedie Aqeeda",
+      "summary_fr": "Al-'Ali signifie le Tres-Haut, au-dessus de toute la creation par Son essence, Ses attributs et Son pouvoir. Al-Ghazali explique trois aspects de cette elevation : l'elevation du rang, l'elevation du pouvoir, et l'elevation de l'essence."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 255 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Ali est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 255 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Ali est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 255 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Ali est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 2, Ayah 255 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Ali est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui est au-dessus de toute Sa création par Son rang et Ses attributs.",
+    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-'Ali signifie le Tres-Haut, au-dessus de toute la creation par Son essence, Ses attributs et Son pouvoir. Al-Ghazali explique trois aspects de cette elevation : l'elevation du rang, l'elevation du pouvoir, et l'elevation de l'essence.",
+    "nuances": [
+      {
+        "label": "Encyclopedie Aqeeda (multi-madhab)",
+        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "source_backed": true,
+        "source_type": "encyclopedia",
+        "sources": [
+          "dorar-al-ali"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 2:255 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-2-255"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 2:255 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-2-255"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 2:255 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-2-255"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 2:255 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-2-255"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/2:255",
+      "http_status": 200,
+      "final_url": "https://quran.com/2:255",
+      "checked_at": "2026-02-27T10:32:57.365Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/42:4",
+      "http_status": 200,
+      "final_url": "https://quran.com/42:4",
+      "checked_at": "2026-02-27T10:32:57.362Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/42:51",
+      "http_status": 200,
+      "final_url": "https://quran.com/42:51",
+      "checked_at": "2026-02-27T10:32:57.358Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/4:34",
+      "http_status": 200,
+      "final_url": "https://quran.com/4:34",
+      "checked_at": "2026-02-27T10:32:57.372Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:32:57.805Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:32:57.805Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqeeda/749",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqeeda/749/%C2%A0%D8%A7%D9%84%D8%B9%D9%84%D9%88-%D9%88%D8%A7%D9%84%D9%81%D9%88%D9%82%D9%8A%D8%A9",
+      "checked_at": "2026-02-27T10:32:57.502Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:58.088Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:57.942Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:58.066Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:57.922Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:27:21.686Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.586Z"
+}

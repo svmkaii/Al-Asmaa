@@ -1,0 +1,251 @@
+{
+  "slug": "ad-darr",
+  "arabic": "الضَّارُّ",
+  "transliteration": "Ad-Darr",
+  "french_name": "Celui qui peut nuire",
+  "short_meaning": "Celui qui décrète l'épreuve comme test pour Ses serviteurs.",
+  "canonical_status": {
+    "in_99_list": true,
+    "evidence_type": "quran_derived",
+    "note": "Concept/racine atteste dans le Coran; Nom sous cette forme derive des hadiths."
+  },
+  "primary_evidence": {
+    "quran": [
+      {
+        "surah": 6,
+        "ayah": 17,
+        "name_in_verse": false,
+        "reference_label": "Quran 6:17",
+        "source_url": "https://quran.com/6:17",
+        "relevance_note": "\"Si Allah te touche d'un malheur (bi-durr), nul ne peut le dissiper sauf Lui\" - concept, non le Nom."
+      },
+      {
+        "surah": 48,
+        "ayah": 11,
+        "name_in_verse": false,
+        "reference_label": "Quran 48:11",
+        "source_url": "https://quran.com/48:11",
+        "relevance_note": "\"Qui peut pour vous quelque chose contre Allah, s'Il veut un mal (darr) pour vous ?\""
+      }
+    ],
+    "hadith": [
+      {
+        "collection": "Tirmidhi",
+        "number": "3507",
+        "grading": "Da'if (isnad)",
+        "reference_label": "Tirmidhi 3507",
+        "source_url": "https://sunnah.com/tirmidhi:3507",
+        "relevance_note": "Le nom Ad-Darr figure dans la liste des 99 noms."
+      },
+      {
+        "collection": "Sahih Bukhari",
+        "number": "2736",
+        "grading": "Sahih",
+        "reference_label": "Sahih Bukhari 2736",
+        "source_url": "https://sunnah.com/bukhari:2736",
+        "relevance_note": "\"Allah a 99 noms, cent moins un, quiconque les recense entrera au Paradis.\""
+      }
+    ]
+  },
+  "scholarly_explanations": [
+    {
+      "category": "encyclopedia",
+      "scholar_name": "Al-Durar al-Saniyyah (multi-madhab)",
+      "madhab": "multi",
+      "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
+      "source_url": "https://dorar.net/aqadia/523",
+      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Ad-Darr)",
+      "summary_fr": "Ad-Darr signifie Celui qui decrete l'epreuve comme test pour Ses serviteurs. Al-Ghazali note que ce Nom est toujours cite avec An-Nafi' (Celui qui profite) : le bien et le mal viennent tous deux d'Allah par Sa sagesse, et l'epreuve peut etre un bienfait deguise."
+    },
+    {
+      "category": "fatwa",
+      "scholar_name": "IslamQA.info (Ibn Uthaymeen / Comite Permanent)",
+      "madhab": "hanbali",
+      "source_title": "Explication du Nom Ad-Darr",
+      "source_url": "https://islamqa.info/ar/answers/84270",
+      "precise_locator": "Reponse savante sur le Nom Ad-Darr",
+      "summary_fr": "Explication du Nom Ad-Darr selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu al-Barakat Al-Nasafi",
+      "madhab": "hanafi",
+      "source_title": "Madarik al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 17 - Madarik al-Tanzil",
+      "summary_fr": "Tafsir de 6:17 ou le Nom Ad-Darr est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Abu Abdillah Al-Qurtubi",
+      "madhab": "maliki",
+      "source_title": "Al-Jami li-Ahkam al-Quran",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 17 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Tafsir de 6:17 ou le Nom Ad-Darr est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Al-Baghawi",
+      "madhab": "shafii",
+      "source_title": "Maalim al-Tanzil",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 17 - Maalim al-Tanzil",
+      "summary_fr": "Tafsir de 6:17 ou le Nom Ad-Darr est mentionne ou son sens est explique."
+    },
+    {
+      "category": "tafsir",
+      "scholar_name": "Ibn al-Jawzi",
+      "madhab": "hanbali",
+      "source_title": "Zad al-Masir fi Ilm al-Tafsir",
+      "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "precise_locator": "Tafsir de Sourate 6, Ayah 17 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Tafsir de 6:17 ou le Nom Ad-Darr est mentionne ou son sens est explique."
+    }
+  ],
+  "interpretation_notes": {
+    "consensus_core": "Celui qui décrète l'épreuve comme test pour Ses serviteurs.",
+    "evidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est derive des hadiths.",
+    "scholarly_summary": "Ad-Darr signifie Celui qui decrete l'epreuve comme test pour Ses serviteurs. Al-Ghazali note que ce Nom est toujours cite avec An-Nafi' (Celui qui profite) : le bien et le mal viennent tous deux d'Allah par Sa sagesse, et l'epreuve peut etre un bienfait deguise.",
+    "nuances": [
+      {
+        "label": "Explication hanbali (IslamQA)",
+        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "source_backed": true,
+        "source_type": "fatwa",
+        "sources": [
+          "islamqa-ad-darr"
+        ]
+      },
+      {
+        "label": "Tafsir hanafi (Al-Nasafi)",
+        "description": "Explication de 6:17 dans Madarik al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-nasafi-6-17"
+        ]
+      },
+      {
+        "label": "Tafsir maliki (Al-Qurtubi)",
+        "description": "Explication de 6:17 dans Al-Jami li-Ahkam al-Quran.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-qurtubi-6-17"
+        ]
+      },
+      {
+        "label": "Tafsir shafi'i (Al-Baghawi)",
+        "description": "Explication de 6:17 dans Ma'alim al-Tanzil.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-baghawi-6-17"
+        ]
+      },
+      {
+        "label": "Tafsir hanbali (Ibn al-Jawzi)",
+        "description": "Explication de 6:17 dans Zad al-Masir.",
+        "source_backed": true,
+        "source_type": "tafsir",
+        "sources": [
+          "tafsir-jawzi-6-17"
+        ]
+      }
+    ],
+    "prohibited_overclaims": [
+      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+    ]
+  },
+  "attribution_integrity": {
+    "every_claim_has_source": true,
+    "unsupported_claims_count": 0,
+    "source_conflicts_detected": false,
+    "conflict_notes": [],
+    "issues": []
+  },
+  "link_verification": [
+    {
+      "url": "https://quran.com/6:17",
+      "http_status": 200,
+      "final_url": "https://quran.com/6:17",
+      "checked_at": "2026-02-27T10:32:53.279Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://quran.com/48:11",
+      "http_status": 200,
+      "final_url": "https://quran.com/48:11",
+      "checked_at": "2026-02-27T10:32:53.276Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/tirmidhi:3507",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/tirmidhi:3507",
+      "checked_at": "2026-02-27T10:32:53.755Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://sunnah.com/bukhari:2736",
+      "http_status": 200,
+      "final_url": "https://sunnah.com/bukhari:2736",
+      "checked_at": "2026-02-27T10:32:53.754Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://dorar.net/aqadia/523",
+      "http_status": 200,
+      "final_url": "https://dorar.net/aqadia/523",
+      "checked_at": "2026-02-27T10:32:53.332Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://islamqa.info/ar/answers/84270",
+      "http_status": 200,
+      "final_url": "https://islamqa.info/ar/answers/84270",
+      "checked_at": "2026-02-27T10:32:53.290Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:54.001Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:53.985Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:54.002Z",
+      "status": "passed"
+    },
+    {
+      "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "http_status": 200,
+      "final_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
+      "checked_at": "2026-02-27T10:32:54.048Z",
+      "status": "passed"
+    }
+  ],
+  "editorial_review": {
+    "status": "needs_human_review",
+    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+  },
+  "public_display_allowed": false,
+  "generated_at": "2026-02-26T16:27:17.961Z",
+  "publication_blockers": [
+    "human_review_not_approved"
+  ],
+  "sources_corrected_at": "2026-02-27T10:32:40.581Z"
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#06080f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Al-Asmaa — Le Jeu des 99 Noms d'Allah (Asmaul Husna). Jeu éducatif de type bombe qui tourne.">
+  <title>Al-Asmaa — الأسماء</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- ==================== PAGE: HOME ==================== -->
+  <div id="page-home" class="page active">
+    <div class="container">
+      <div class="logo-container">
+        <h1 class="logo-title">الأسماء</h1>
+        <p class="logo-subtitle">Le Jeu des Noms d'Allah</p>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <button class="btn btn-primary" onclick="App.showModeSelect()">
+          <span data-t="play">Jouer</span>
+        </button>
+        <button class="btn btn-secondary" onclick="App.showTraining()">
+          <span data-t="training">S'entraîner</span>
+        </button>
+        <button class="btn btn-secondary" onclick="App.showEncyclopedia()">
+          <span data-t="encyclopedia">Encyclopédie</span>
+        </button>
+        <button class="btn btn-secondary" onclick="App.showScores()">
+          <span data-t="scores">Scores</span>
+        </button>
+      </div>
+
+      <div class="counter-badge">
+        <span class="counter-number" id="community-counter">0</span>
+        <span class="counter-label" data-t="communityCounter">noms appris par la communauté</span>
+      </div>
+
+      <button class="btn btn-secondary btn-small" onclick="App.showSettings()" style="margin-top: 12px;">
+        ⚙ <span data-t="settings">Paramètres</span>
+      </button>
+
+      <p class="respect-note" data-t="respect">
+        Ce jeu est conçu pour aider les musulmans à mémoriser et célébrer les 99 noms d'Allah avec joie et respect.
+      </p>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: MODE SELECT ==================== -->
+  <div id="page-mode-select" class="page">
+    <div class="container">
+      <div class="game-header">
+        <button class="btn btn-small btn-secondary" onclick="App.goHome()">
+          <span data-t="back">Retour</span>
+        </button>
+        <div class="game-info" data-t="mode">Mode de jeu</div>
+      </div>
+      <div id="mode-list"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: SETUP ==================== -->
+  <div id="page-setup" class="page">
+    <div class="container">
+      <div class="game-header">
+        <button class="btn btn-small btn-secondary" onclick="App.showModeSelect()">
+          <span data-t="back">Retour</span>
+        </button>
+        <div class="game-info" data-t="settings">Configuration</div>
+      </div>
+
+      <!-- Players -->
+      <div class="card">
+        <div class="card-title" data-t="players">Joueurs</div>
+        <div class="player-input-group">
+          <input type="text" id="player-name-input" data-t-placeholder="enterName" placeholder="Entrer un prénom"
+            maxlength="15" onkeypress="if(event.key==='Enter')App.addPlayer()">
+          <button class="btn btn-primary btn-small" onclick="App.addPlayer()" style="width:auto;padding:10px 16px;">+</button>
+        </div>
+        <div id="setup-players-list" class="players-list"></div>
+      </div>
+
+      <!-- Difficulty -->
+      <div class="card">
+        <div class="card-title" data-t="difficulty">Difficulté</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <button class="btn btn-small btn-secondary diff-option" data-diff="beginner" onclick="App.setDifficulty('beginner')">
+            <span data-t="beginner">Débutant</span>
+          </button>
+          <button class="btn btn-small btn-secondary diff-option selected" data-diff="intermediate" onclick="App.setDifficulty('intermediate')">
+            <span data-t="intermediate">Intermédiaire</span>
+          </button>
+          <button class="btn btn-small btn-secondary diff-option" data-diff="expert" onclick="App.setDifficulty('expert')">
+            <span data-t="expert">Expert</span>
+          </button>
+          <button class="btn btn-small btn-secondary diff-option" data-diff="ultimate" onclick="App.setDifficulty('ultimate')">
+            <span data-t="ultimate">Ultime</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Lives -->
+      <div class="card">
+        <div class="card-title" data-t="lives">Vies</div>
+        <div class="lives-selector">
+          <div class="life-option" data-lives="1" onclick="App.setLives(1)">1</div>
+          <div class="life-option" data-lives="2" onclick="App.setLives(2)">2</div>
+          <div class="life-option selected" data-lives="3" onclick="App.setLives(3)">3</div>
+        </div>
+      </div>
+
+      <!-- Start -->
+      <button class="btn btn-primary mt-16" id="btn-start-game" onclick="App.startGame()" disabled style="opacity:0.4">
+        <span data-t="start">Commencer</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: GAME ==================== -->
+  <div id="page-game" class="page">
+    <div class="container">
+      <div id="game-area"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: LEARN ==================== -->
+  <div id="page-learn" class="page">
+    <div class="container">
+      <div id="learn-area"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: SCORES ==================== -->
+  <div id="page-scores" class="page">
+    <div class="container">
+      <div id="scores-area"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: ENCYCLOPEDIA ==================== -->
+  <div id="page-encyclopedia" class="page">
+    <div class="container">
+      <div id="encyclopedia-area"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: TRAINING ==================== -->
+  <div id="page-training" class="page">
+    <div class="container">
+      <div id="training-area"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: ENCYCLOPEDIA ==================== -->
+  <div id="page-encyclopedia" class="page">
+    <div class="container">
+      <div id="encyclopedia-area"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: TRAINING ==================== -->
+  <div id="page-training" class="page">
+    <div class="container">
+      <div id="training-area"></div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE: SETTINGS ==================== -->
+  <div id="page-settings" class="page">
+    <div class="container">
+      <div id="settings-area"></div>
+    </div>
+  </div>
+
+  <!-- Scripts (order matters) -->
+  <script src="data/names.js"></script>
+  <script src="data/encyclopedia.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/bomb.js"></script>
+  <script src="js/players.js"></script>
+  <script src="js/modes.js"></script>
+  <script src="js/training.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+    });
+  </script>
+</body>
+</html>
