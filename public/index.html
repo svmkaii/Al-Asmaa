@@ -144,112 +144,177 @@
   <div class="bg-atmosphere" aria-hidden="true">
     <svg class="desert-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax slice" fill="none">
       <defs>
-        <linearGradient id="dg1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#110e09"/><stop offset="100%" stop-color="#090805"/>
+        <!-- Sky atmosphere: transparent top → warm amber horizon -->
+        <linearGradient id="skyAtm" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#050811" stop-opacity="0"/>
+          <stop offset="45%" stop-color="#0a0e1a" stop-opacity="0.15"/>
+          <stop offset="70%" stop-color="#1a150e" stop-opacity="0.35"/>
+          <stop offset="85%" stop-color="#2a1f10" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#3a2810" stop-opacity="0.7"/>
         </linearGradient>
-        <linearGradient id="dg2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#1e1710"/><stop offset="100%" stop-color="#110e09"/>
-        </linearGradient>
-        <linearGradient id="dg3" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#322418"/><stop offset="60%" stop-color="#1e1710"/><stop offset="100%" stop-color="#110e09"/>
-        </linearGradient>
-        <linearGradient id="dg4" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#473220"/><stop offset="50%" stop-color="#322418"/><stop offset="100%" stop-color="#1e1710"/>
-        </linearGradient>
-        <radialGradient id="hrz" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#d4a24c" stop-opacity="0.07"/>
-          <stop offset="60%" stop-color="#a67c2e" stop-opacity="0.03"/>
-          <stop offset="100%" stop-color="#a67c2e" stop-opacity="0"/>
-        </radialGradient>
-        <radialGradient id="mg" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#ffeab7" stop-opacity="0.18"/>
-          <stop offset="35%" stop-color="#d4a24c" stop-opacity="0.07"/>
+        <!-- Moon outer atmospheric glow -->
+        <radialGradient id="mgOut" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffeab7" stop-opacity="0.22"/>
+          <stop offset="25%" stop-color="#e8c878" stop-opacity="0.12"/>
+          <stop offset="55%" stop-color="#d4a24c" stop-opacity="0.05"/>
           <stop offset="100%" stop-color="#d4a24c" stop-opacity="0"/>
         </radialGradient>
+        <!-- Moon inner concentrated glow -->
+        <radialGradient id="mgIn" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff5e0" stop-opacity="0.35"/>
+          <stop offset="40%" stop-color="#ffeab7" stop-opacity="0.15"/>
+          <stop offset="100%" stop-color="#d4a24c" stop-opacity="0"/>
+        </radialGradient>
+        <!-- Horizon warmth glow — offset toward moon -->
+        <radialGradient id="hrz" cx="55%" cy="50%" r="55%">
+          <stop offset="0%" stop-color="#d4a24c" stop-opacity="0.09"/>
+          <stop offset="40%" stop-color="#a67c2e" stop-opacity="0.05"/>
+          <stop offset="75%" stop-color="#8a6520" stop-opacity="0.02"/>
+          <stop offset="100%" stop-color="#8a6520" stop-opacity="0"/>
+        </radialGradient>
+        <!-- Dune 1 (farthest) — directional moonlight from upper-right -->
+        <linearGradient id="ml1" x1="0" y1="0" x2="1" y2="0.15">
+          <stop offset="0%" stop-color="#0c0a07"/>
+          <stop offset="35%" stop-color="#100d08"/>
+          <stop offset="65%" stop-color="#14110b"/>
+          <stop offset="100%" stop-color="#1a150e"/>
+        </linearGradient>
+        <!-- Dune 2 — more contrast in moonlight -->
+        <linearGradient id="ml2" x1="0" y1="0.1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#0e0b07"/>
+          <stop offset="30%" stop-color="#161009"/>
+          <stop offset="55%" stop-color="#1e170e"/>
+          <stop offset="85%" stop-color="#261d12"/>
+          <stop offset="100%" stop-color="#2e2416"/>
+        </linearGradient>
+        <!-- Dune 3 — richer tones, stronger moonlight on right -->
+        <linearGradient id="ml3" x1="0" y1="0.05" x2="1" y2="0">
+          <stop offset="0%" stop-color="#110d08"/>
+          <stop offset="25%" stop-color="#1e1610"/>
+          <stop offset="50%" stop-color="#2a1f14"/>
+          <stop offset="75%" stop-color="#362818"/>
+          <stop offset="100%" stop-color="#42301c"/>
+        </linearGradient>
+        <!-- Dune 4 (nearest) — warmest, most moonlight contrast -->
+        <linearGradient id="ml4" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#16110a"/>
+          <stop offset="20%" stop-color="#241a10"/>
+          <stop offset="45%" stop-color="#342616"/>
+          <stop offset="70%" stop-color="#44321e"/>
+          <stop offset="90%" stop-color="#503c24"/>
+          <stop offset="100%" stop-color="#5a4428"/>
+        </linearGradient>
+        <!-- Ridge shimmer — moonlight catching dune crests -->
         <linearGradient id="rs" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stop-color="#d4a24c" stop-opacity="0"/>
-          <stop offset="25%" stop-color="#d4a24c" stop-opacity="0.1"/>
-          <stop offset="75%" stop-color="#d4a24c" stop-opacity="0.1"/>
+          <stop offset="15%" stop-color="#d4a24c" stop-opacity="0.04"/>
+          <stop offset="50%" stop-color="#f0cc7a" stop-opacity="0.12"/>
+          <stop offset="85%" stop-color="#ffd866" stop-opacity="0.08"/>
           <stop offset="100%" stop-color="#d4a24c" stop-opacity="0"/>
+        </linearGradient>
+        <!-- Atmospheric haze between dune layers -->
+        <linearGradient id="haze1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#18130c" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#18130c" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="haze2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1e170f" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#1e170f" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="haze3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#261e14" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#261e14" stop-opacity="0"/>
         </linearGradient>
       </defs>
 
+      <!-- Sky atmosphere overlay -->
+      <rect width="1920" height="1080" fill="url(#skyAtm)"/>
+
       <!-- Horizon warmth glow -->
-      <ellipse cx="960" cy="740" rx="1400" ry="200" fill="url(#hrz)">
-        <animate attributeName="opacity" values="0.5;0.9;0.6;0.85;0.5" dur="22s" repeatCount="indefinite"/>
+      <ellipse cx="1050" cy="740" rx="1500" ry="260" fill="url(#hrz)">
+        <animate attributeName="opacity" values="0.6;0.85;0.7;0.9;0.6" dur="28s" repeatCount="indefinite"/>
       </ellipse>
 
-      <!-- Crescent moon -->
-      <g transform="translate(1380 165)">
-        <circle r="130" fill="url(#mg)">
-          <animate attributeName="r" values="130;142;130" dur="14s" repeatCount="indefinite"/>
+      <!-- Moon — realistic multi-layered glow -->
+      <g transform="translate(1380 155)">
+        <circle r="180" fill="url(#mgOut)">
+          <animate attributeName="r" values="180;195;185;192;180" dur="18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
         </circle>
-        <path d="M0 -24 A24 24 0 1 1 0 24 A19 19 0 1 0 0 -24Z" fill="#ffeab7" opacity="0.82">
-          <animate attributeName="opacity" values="0.75;0.95;0.8;0.92;0.75" dur="8s" repeatCount="indefinite"/>
+        <circle r="65" fill="url(#mgIn)">
+          <animate attributeName="r" values="65;72;68;70;65" dur="14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+        </circle>
+        <path d="M0 -22 A22 22 0 1 1 0 22 A17.5 17.5 0 1 0 0 -22Z" fill="#ffeab7" opacity="0.88">
+          <animate attributeName="opacity" values="0.82;0.95;0.85;0.92;0.82" dur="10s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
         </path>
+        <circle r="20" cx="8" cy="0" fill="#8aa4c2" opacity="0.04"/>
       </g>
 
-      <!-- Dune 1 — far, ethereal -->
-      <path d="M-100 810 C50 782 200 792 400 775 C530 766 640 780 820 768 C960 758 1060 772 1250 762 C1380 755 1480 768 1640 758 C1760 752 1860 766 2020 758 L2020 1080 L-100 1080Z" fill="url(#dg1)" opacity="0.88">
-        <animateTransform attributeName="transform" type="translate" values="0 0;-5 -1;0 0;4 1;0 0" dur="50s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      <!-- ====== DUNE 1 — farthest, most atmospheric ====== -->
+      <path d="M-100 788 C-20 775 80 780 180 772 C280 764 360 770 480 762 C580 755 680 768 800 758 C900 750 980 760 1080 754 C1200 748 1300 758 1420 750 C1520 744 1620 755 1720 748 C1820 742 1900 752 2020 745 L2020 1080 L-100 1080Z" fill="url(#ml1)" opacity="0.75">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-3 -0.5;0 0;2.5 0.5;0 0" dur="58s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </path>
+      <!-- Atmospheric haze between layer 1-2 -->
+      <rect x="-100" y="760" width="2120" height="40" fill="url(#haze1)" opacity="0.5">
+        <animate attributeName="opacity" values="0.4;0.6;0.45;0.55;0.4" dur="32s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- ====== DUNE 2 — mid-far distance ====== -->
+      <path d="M-100 838 C10 822 100 828 220 818 C330 810 420 822 540 812 C650 804 740 816 880 806 C1000 798 1100 812 1220 802 C1340 794 1440 808 1560 798 C1660 790 1750 804 1860 796 C1940 790 1980 798 2020 794 L2020 1080 L-100 1080Z" fill="url(#ml2)" opacity="0.82">
+        <animateTransform attributeName="transform" type="translate" values="0 0;5 -1;0 0;-4 0.8;0 0" dur="46s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </path>
+      <path d="M220 820 Q420 810 620 816 Q820 806 1020 812 Q1220 802 1420 808 Q1620 798 1820 804" stroke="url(#rs)" stroke-width="1" fill="none" opacity="0.3">
+        <animate attributeName="opacity" values="0.2;0.45;0.25;0.4;0.2" dur="14s" repeatCount="indefinite"/>
+      </path>
+      <!-- Atmospheric haze between layer 2-3 -->
+      <rect x="-100" y="808" width="2120" height="35" fill="url(#haze2)" opacity="0.45">
+        <animate attributeName="opacity" values="0.35;0.55;0.4;0.5;0.35" dur="26s" repeatCount="indefinite" begin="-8s"/>
+      </rect>
+
+      <!-- ====== DUNE 3 — front-mid, dramatic ====== -->
+      <path d="M-100 888 C-10 870 80 878 180 866 C280 856 370 868 480 856 C580 846 670 860 790 848 C890 838 980 852 1100 842 C1200 832 1290 846 1400 836 C1510 828 1600 842 1720 832 C1800 826 1880 838 2020 830 L2020 1080 L-100 1080Z" fill="url(#ml3)">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-8 -2;0 0;7 1.5;0 0" dur="36s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </path>
+      <path d="M120 870 Q320 858 520 866 Q720 854 920 862 Q1120 852 1320 858 Q1520 848 1720 856" stroke="url(#rs)" stroke-width="1.3" fill="none" opacity="0.35">
+        <animate attributeName="opacity" values="0.15;0.5;0.2;0.45;0.15" dur="18s" repeatCount="indefinite" begin="-5s"/>
+      </path>
+      <!-- Atmospheric haze between layer 3-4 -->
+      <rect x="-100" y="848" width="2120" height="30" fill="url(#haze3)" opacity="0.4">
+        <animate attributeName="opacity" values="0.3;0.5;0.35;0.45;0.3" dur="22s" repeatCount="indefinite" begin="-12s"/>
+      </rect>
+
+      <!-- ====== DUNE 4 — nearest, warmest, most moonlit ====== -->
+      <path d="M-100 942 C20 928 110 934 220 924 C340 914 430 926 560 916 C670 908 760 920 880 910 C1000 902 1100 914 1220 906 C1340 898 1440 910 1560 902 C1680 895 1770 906 1880 898 C1950 893 1990 900 2020 897 L2020 1080 L-100 1080Z" fill="url(#ml4)">
+        <animateTransform attributeName="transform" type="translate" values="0 0;12 -3;0 0;-10 2;0 0" dur="28s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+      </path>
+      <path d="M60 932 Q260 920 460 928 Q660 918 860 924 Q1060 914 1260 920 Q1460 912 1660 918 Q1820 910 1960 916" stroke="url(#rs)" stroke-width="1.5" fill="none" opacity="0.4">
+        <animate attributeName="opacity" values="0.1;0.5;0.15;0.45;0.1" dur="20s" repeatCount="indefinite" begin="-7s"/>
       </path>
 
-      <!-- Dune 2 — mid distance -->
-      <path d="M-100 858 C40 828 180 845 350 825 C480 808 580 830 720 812 C860 795 960 818 1120 805 C1260 792 1360 815 1520 802 C1660 792 1760 810 2020 800 L2020 1080 L-100 1080Z" fill="url(#dg2)" opacity="0.85">
-        <animateTransform attributeName="transform" type="translate" values="0 0;8 -2;0 0;-7 1;0 0" dur="40s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-      </path>
-      <path d="M180 832 Q480 815 780 825 Q1080 810 1380 820 Q1620 812 1820 818" stroke="url(#rs)" stroke-width="1.2" fill="none">
-        <animate attributeName="opacity" values="0.15;0.45;0.15" dur="12s" repeatCount="indefinite"/>
-      </path>
+      <!-- Sand haze near ground -->
+      <rect x="-100" y="960" width="2120" height="120" fill="#2a1f12" opacity="0.15">
+        <animate attributeName="opacity" values="0.1;0.2;0.12;0.18;0.1" dur="30s" repeatCount="indefinite"/>
+      </rect>
 
-      <!-- Dune 3 — front, dramatic silhouette -->
-      <path d="M-100 900 C20 872 150 885 320 868 C440 852 560 875 700 858 C840 842 940 865 1100 852 C1240 838 1340 860 1500 848 C1640 838 1740 855 2020 845 L2020 1080 L-100 1080Z" fill="url(#dg3)">
-        <animateTransform attributeName="transform" type="translate" values="0 0;-12 -3;0 0;10 2;0 0" dur="32s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-      </path>
-      <path d="M80 878 Q380 862 680 872 Q980 856 1280 866 Q1520 856 1780 862" stroke="url(#rs)" stroke-width="1.5" fill="none">
-        <animate attributeName="opacity" values="0.1;0.4;0.1" dur="16s" repeatCount="indefinite" begin="-5s"/>
-      </path>
-
-      <!-- Dune 4 — nearest, warmest tones -->
-      <path d="M-100 950 C60 932 200 942 370 928 C520 915 640 935 800 922 C960 910 1080 930 1240 918 C1400 908 1520 928 1680 916 C1820 908 1920 922 2020 916 L2020 1080 L-100 1080Z" fill="url(#dg4)">
-        <animateTransform attributeName="transform" type="translate" values="0 0;16 -4;0 0;-13 3;0 0" dur="25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-      </path>
-      <path d="M40 938 Q340 925 640 932 Q940 920 1240 928 Q1480 920 1780 926" stroke="#d4a24c" stroke-width="0.8" fill="none" opacity="0.1">
-        <animate attributeName="opacity" values="0.05;0.15;0.05" dur="14s" repeatCount="indefinite" begin="-7s"/>
-      </path>
-
-      <!-- Wind-blown sand particles -->
-      <circle r="0.8" fill="#d4a24c" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 862;650 850;1350 856;2020 845" dur="18s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.3;0.25;0.08;0" dur="18s" repeatCount="indefinite"/>
-      </circle>
-      <circle r="0.6" fill="#ffeab7" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 895;500 885;1150 890;2020 882" dur="22s" repeatCount="indefinite" begin="-5s"/>
-        <animate attributeName="opacity" values="0;0.25;0.2;0.06;0" dur="22s" repeatCount="indefinite" begin="-5s"/>
-      </circle>
-      <circle r="1" fill="#d4a24c" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 838;700 828;1450 834;2020 825" dur="15s" repeatCount="indefinite" begin="-8s"/>
-        <animate attributeName="opacity" values="0;0.28;0.32;0.1;0" dur="15s" repeatCount="indefinite" begin="-8s"/>
+      <!-- Wind-blown sand particles — gentle realistic drift -->
+      <circle r="0.7" fill="#d4a24c" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 862;450 856;950 852;1500 848;2020 845" dur="28s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.15;0.25;0.12;0" dur="28s" repeatCount="indefinite"/>
       </circle>
       <circle r="0.5" fill="#ffeab7" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 920;580 912;1220 916;2020 908" dur="20s" repeatCount="indefinite" begin="-12s"/>
-        <animate attributeName="opacity" values="0;0.22;0.18;0.05;0" dur="20s" repeatCount="indefinite" begin="-12s"/>
+        <animateTransform attributeName="transform" type="translate" values="-50 905;380 900;820 896;1300 892;2020 888" dur="34s" repeatCount="indefinite" begin="-8s"/>
+        <animate attributeName="opacity" values="0;0.12;0.2;0.08;0" dur="34s" repeatCount="indefinite" begin="-8s"/>
       </circle>
-      <circle r="0.7" fill="#d4a24c" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 875;800 865;1600 870;2020 862" dur="16s" repeatCount="indefinite" begin="-3s"/>
-        <animate attributeName="opacity" values="0;0.3;0.22;0.08;0" dur="16s" repeatCount="indefinite" begin="-3s"/>
+      <circle r="0.9" fill="#d4a24c" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 835;600 828;1200 824;1800 820;2020 818" dur="22s" repeatCount="indefinite" begin="-14s"/>
+        <animate attributeName="opacity" values="0;0.18;0.28;0.1;0" dur="22s" repeatCount="indefinite" begin="-14s"/>
       </circle>
-      <circle r="0.9" fill="#ffeab7" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 848;480 840;1000 844;2020 836" dur="24s" repeatCount="indefinite" begin="-15s"/>
-        <animate attributeName="opacity" values="0;0.24;0.18;0.06;0" dur="24s" repeatCount="indefinite" begin="-15s"/>
+      <circle r="0.4" fill="#e8c878" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 928;500 922;1050 918;1600 914;2020 910" dur="30s" repeatCount="indefinite" begin="-18s"/>
+        <animate attributeName="opacity" values="0;0.1;0.16;0.06;0" dur="30s" repeatCount="indefinite" begin="-18s"/>
       </circle>
-      <circle r="0.6" fill="#d4a24c" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 908;680 900;1380 904;2020 896" dur="19s" repeatCount="indefinite" begin="-9s"/>
-        <animate attributeName="opacity" values="0;0.26;0.2;0.07;0" dur="19s" repeatCount="indefinite" begin="-9s"/>
-      </circle>
-      <circle r="0.8" fill="#ffeab7" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 882;750 874;1500 878;2020 870" dur="14s" repeatCount="indefinite" begin="-6s"/>
-        <animate attributeName="opacity" values="0;0.22;0.16;0.05;0" dur="14s" repeatCount="indefinite" begin="-6s"/>
+      <circle r="0.6" fill="#ffeab7" opacity="0">
+        <animateTransform attributeName="transform" type="translate" values="-50 878;550 872;1100 868;1650 864;2020 860" dur="26s" repeatCount="indefinite" begin="-4s"/>
+        <animate attributeName="opacity" values="0;0.14;0.22;0.08;0" dur="26s" repeatCount="indefinite" begin="-4s"/>
       </circle>
     </svg>
   </div>
