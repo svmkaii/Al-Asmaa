@@ -1743,17 +1743,20 @@ io.on('connection', (socket) => {
       return callback({ success: false, message: 'Tu es déjà dans cette room' });
     }
 
-    // Reconnexion : chercher un joueur existant avec le même nom (connecté ou non)
+    // Reconnexion : chercher un joueur déconnecté avec le même nom
     const existing = room.players.find(p => p.name === name && !p.isHost);
     if (existing) {
-      // Force-déconnecter l'ancien socket s'il est encore actif
-      if (existing.id !== socket.id) {
-        const oldSocket = io.sockets.sockets.get(existing.id);
-        if (oldSocket) {
-          oldSocket.leave(code);
-          oldSocket.roomCode = null;
-          oldSocket.playerId = null;
-        }
+      // Si le joueur est encore connecté → refuser (pseudo déjà pris)
+      const oldSocket = io.sockets.sockets.get(existing.id);
+      if (existing.connected && oldSocket && oldSocket.connected) {
+        return callback({ success: false, message: 'Ce pseudo est déjà utilisé dans cette partie' });
+      }
+
+      // Joueur déconnecté → autoriser la reconnexion
+      if (existing.id !== socket.id && oldSocket) {
+        oldSocket.leave(code);
+        oldSocket.roomCode = null;
+        oldSocket.playerId = null;
       }
 
       // Réattacher le nouveau socket au joueur existant
