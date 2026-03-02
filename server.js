@@ -1584,6 +1584,30 @@ io.on('connection', (socket) => {
   // Créer une room
   socket.on('create-room', (data, callback) => {
     console.log(`[create-room] data reçue:`, JSON.stringify({ visibility: data.visibility, hostName: data.hostName, difficulty: data.difficulty }));
+
+    // Nettoyer TOUTES les rooms dont ce socket est l'hôte (évite les ghost rooms)
+    for (const oldCode of Object.keys(rooms)) {
+      const oldRoom = rooms[oldCode];
+      if (oldRoom.host === socket.id) {
+        clearServerBombTimer(oldRoom);
+        if (oldRoom._destroyTimer) clearTimeout(oldRoom._destroyTimer);
+        io.to(oldCode).emit('room-closed');
+        const oldSockets = io.sockets.adapter.rooms.get(oldCode);
+        if (oldSockets) {
+          for (const sid of oldSockets) {
+            const s = io.sockets.sockets.get(sid);
+            if (s && s.id !== socket.id) {
+              s.leave(oldCode);
+              s.roomCode = null;
+            }
+          }
+        }
+        socket.leave(oldCode);
+        delete rooms[oldCode]; delete qrCache[oldCode];
+        console.log(`[Cleanup] Ancienne room ${oldCode} supprimée (hôte crée une nouvelle room)`);
+      }
+    }
+
     const code = generateRoomCode();
     const hostName = sanitizeHtml((data.hostName || 'Hôte').substring(0, 20));
     const room = {
