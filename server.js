@@ -133,16 +133,24 @@ app.use(express.json({ limit: '500kb' }));
 const rooms = {};
 const iqRooms = {};
 
-// Cleanup IQ rooms inactive >2h
+// Cleanup IQ rooms: lobby inactive >15min, other states >2h
 setInterval(() => {
   const now = Date.now();
   for (const code of Object.keys(iqRooms)) {
-    if (now - iqRooms[code].updatedAt > 2 * 60 * 60 * 1000) {
+    const room = iqRooms[code];
+    const age = now - (room.updatedAt || room.createdAt || 0);
+    // Lobby inactif depuis >15min
+    if (room.state === 'lobby' && age > 15 * 60 * 1000) {
+      delete iqRooms[code];
+      console.log(`[IQ Cleanup] Room ${code} supprimée (lobby inactif >15min)`);
+    }
+    // Autres états inactifs >2h
+    else if (age > 2 * 60 * 60 * 1000) {
       delete iqRooms[code];
       console.log(`[IQ Cleanup] Room ${code} supprimée (inactive >2h)`);
     }
   }
-}, 30 * 60 * 1000);
+}, 5 * 60 * 1000); // Toutes les 5 minutes
 
 // Cleanup classic rooms: lobby >1h sans activité, finished/playing >2h
 setInterval(() => {
@@ -302,26 +310,39 @@ app.get('/api/check-room/:code', (req, res) => {
 // Route API pour lister les rooms publiques
 app.get('/api/public-rooms', (req, res) => {
   const allRooms = Object.values(rooms);
-  console.log(`[Parcourir] ${allRooms.length} room(s) totale(s) — ${allRooms.map(r => `${r.code}:${r.visibility}:${r.state}`).join(', ')}`);
   const publicRooms = allRooms
-    .filter(r => r.visibility === 'public' && r.state === 'lobby')
+    .filter(r => {
+      if (r.visibility !== 'public' || r.state !== 'lobby') return false;
+      // Exclure les rooms dont l'hôte est déconnecté (ghost rooms)
+      const hostSocket = io.sockets.sockets.get(r.host);
+      if (!hostSocket || !hostSocket.connected) return false;
+      // Exclure les rooms marquées pour destruction
+      if (r._destroyTimer) return false;
+      return true;
+    })
     .map(r => ({
       code: r.code,
       hostName: r.hostName,
-      playerCount: r.players.length,
+      playerCount: r.players.filter(p => p.connected !== false).length,
       maxPlayers: r.maxPlayers,
       isFull: r.players.length >= r.maxPlayers,
       difficulty: r.config.difficulty,
       gameType: 'classic'
     }));
 
-  // Add public IQ rooms
+  // Add public IQ rooms — only if recently active (< 10 min)
+  const now = Date.now();
   const iqPublic = Object.values(iqRooms)
-    .filter(r => r.visibility === 'public' && r.state === 'lobby')
+    .filter(r => {
+      if (r.visibility !== 'public' || r.state !== 'lobby') return false;
+      // Exclure les rooms inactives depuis plus de 10 minutes
+      if (now - (r.updatedAt || r.createdAt || 0) > 10 * 60 * 1000) return false;
+      return true;
+    })
     .map(r => ({
       code: r.code,
       hostName: r.hostName,
-      playerCount: r.playerCount,
+      playerCount: r.playerCount || r.players.length,
       maxPlayers: r.maxPlayers || 8,
       isFull: (r.playerCount || r.players.length) >= (r.maxPlayers || 8),
       difficulty: r.difficulty,
