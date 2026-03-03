@@ -175,19 +175,6 @@ body {
   position: relative;
 }
 
-/* --- Desert night atmosphere --- */
-.bg-atmosphere {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.desert-svg {
-  width: 100%;
-  height: 100%;
-}
 
 /* --- Noise texture overlay --- */
 body::before {
@@ -240,121 +227,6 @@ body::after {
     radial-gradient(ellipse 35% 30% at 50% 50%, rgba(212, 162, 76, 0.02) 0%, transparent 50%);
 }
 
-/* --- Starfield --- */
-.bg-stars {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.bg-stars::before {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  top: 0;
-  left: 0;
-  box-shadow:
-    42px 67px rgba(255,255,255,0.5),
-    189px 134px rgba(255,255,255,0.35),
-    312px 45px rgba(255,255,255,0.55),
-    467px 189px rgba(255,255,255,0.3),
-    534px 78px rgba(255,255,255,0.45),
-    623px 234px rgba(255,255,255,0.35),
-    756px 156px rgba(255,255,255,0.5),
-    834px 312px rgba(255,255,255,0.25),
-    912px 67px rgba(255,255,255,0.4),
-    1023px 189px rgba(255,255,255,0.45),
-    1145px 45px rgba(255,255,255,0.35),
-    1234px 256px rgba(255,255,255,0.5),
-    1356px 134px rgba(255,255,255,0.3),
-    1467px 312px rgba(255,255,255,0.45),
-    1534px 78px rgba(255,255,255,0.35),
-    1645px 234px rgba(255,255,255,0.55),
-    1756px 167px rgba(255,255,255,0.3),
-    1834px 289px rgba(255,255,255,0.45),
-    78px 378px rgba(255,255,255,0.35),
-    234px 445px rgba(255,255,255,0.5),
-    367px 523px rgba(255,255,255,0.3),
-    489px 412px rgba(255,255,255,0.45),
-    612px 567px rgba(255,255,255,0.35),
-    734px 445px rgba(255,255,255,0.5),
-    856px 534px rgba(255,255,255,0.25),
-    978px 612px rgba(255,255,255,0.4),
-    1089px 489px rgba(255,255,255,0.45),
-    1212px 567px rgba(255,255,255,0.35),
-    1334px 445px rgba(255,255,255,0.5),
-    1456px 534px rgba(255,255,255,0.3),
-    1567px 612px rgba(255,255,255,0.45),
-    1689px 478px rgba(255,255,255,0.35),
-    1823px 556px rgba(255,255,255,0.5),
-    123px 656px rgba(255,255,255,0.3),
-    256px 734px rgba(255,255,255,0.45),
-    389px 812px rgba(255,255,255,0.35),
-    512px 689px rgba(255,255,255,0.5),
-    645px 767px rgba(255,255,255,0.3),
-    778px 845px rgba(255,255,255,0.45),
-    901px 723px rgba(255,255,255,0.35),
-    1034px 801px rgba(255,255,255,0.5),
-    1167px 878px rgba(255,255,255,0.3),
-    1289px 756px rgba(255,255,255,0.45),
-    1412px 834px rgba(255,255,255,0.35),
-    1534px 912px rgba(255,255,255,0.5),
-    1667px 789px rgba(255,255,255,0.3),
-    1800px 867px rgba(255,255,255,0.45),
-    56px 923px rgba(255,255,255,0.4),
-    345px 978px rgba(255,255,255,0.3),
-    678px 956px rgba(255,255,255,0.45),
-    1012px 934px rgba(255,255,255,0.35),
-    1345px 967px rgba(255,255,255,0.4),
-    1678px 945px rgba(255,255,255,0.3),
-    1890px 978px rgba(255,255,255,0.45);
-  animation: starsTwinkle1 8s ease-in-out infinite alternate;
-}
-
-.bg-stars::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  box-shadow:
-    145px 89px 1px rgba(255,255,255,0.65),
-    478px 234px 1px rgba(255,248,216,0.7),
-    712px 67px 1px rgba(255,255,255,0.55),
-    956px 312px 1px rgba(255,248,216,0.7),
-    1189px 134px 1px rgba(255,255,255,0.6),
-    1423px 267px 1px rgba(255,248,216,0.65),
-    1667px 89px 1px rgba(255,255,255,0.55),
-    1878px 345px 1px rgba(255,248,216,0.7),
-    334px 512px 1px rgba(255,255,255,0.65),
-    567px 678px 1px rgba(255,248,216,0.6),
-    812px 534px 1px rgba(255,255,255,0.65),
-    1045px 712px 1px rgba(255,248,216,0.55),
-    1278px 589px 1px rgba(255,255,255,0.6),
-    1512px 734px 1px rgba(255,248,216,0.65),
-    1745px 612px 1px rgba(255,255,255,0.55),
-    234px 845px 1px rgba(255,248,216,0.6),
-    890px 890px 1px rgba(255,255,255,0.65),
-    1456px 867px 1px rgba(255,248,216,0.55);
-  animation: starsTwinkle2 6s ease-in-out infinite alternate;
-}
-
-@keyframes starsTwinkle1 {
-  0% { opacity: 0.35; }
-  50% { opacity: 0.65; }
-  100% { opacity: 0.45; }
-}
-
-@keyframes starsTwinkle2 {
-  0% { opacity: 0.45; }
-  50% { opacity: 0.85; }
-  100% { opacity: 0.55; }
-}
 
 /* ===========================
    LOADING SCREEN
@@ -10574,7 +10446,7 @@ input[type="search"]::placeholder {
   justify-content: center;
   position: relative;
   z-index: 1;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
 }
 .home-cta__text {
   position: relative;
@@ -10631,8 +10503,17 @@ input[type="search"]::placeholder {
     0 2px 8px rgba(212, 162, 76, 0.3),
     inset 0 1px 0 rgba(255,255,255,0.25);
 }
-.home-cta--primary:hover .home-cta__icon {
-  transform: scale(1.15);
+/* Play icon: pulse forward on hover */
+.cta-icon-play {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+.home-cta--primary:hover .cta-icon-play {
+  animation: playPulse 0.7s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 8px rgba(212, 162, 76, 0.6));
+}
+@keyframes playPulse {
+  0%   { transform: translateX(0) scale(1); }
+  100% { transform: translateX(4px) scale(1.2); }
 }
 .home-cta--primary:active {
   transform: translateY(0) scale(0.97);
@@ -10657,14 +10538,54 @@ input[type="search"]::placeholder {
   background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 50%);
   pointer-events: none;
 }
-.home-cta--glass:hover {
-  border-color: rgba(212, 162, 76, 0.35);
-  background: linear-gradient(135deg, rgba(22, 28, 52, 0.9), rgba(35, 42, 70, 0.8));
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25), 0 0 20px rgba(212, 162, 76, 0.08);
+.home-cta__shine--glass {
+  animation: ctaShine 5s 2s ease-in-out infinite;
 }
-.home-cta--glass:hover .home-cta__icon {
-  transform: scale(1.15);
+.home-cta--glass:hover {
+  border-color: rgba(212, 162, 76, 0.4);
+  background: linear-gradient(135deg, rgba(22, 28, 52, 0.92), rgba(35, 42, 70, 0.85));
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.3),
+    0 0 24px rgba(212, 162, 76, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+}
+/* Join icon: door + arrow as separate HTML spans */
+.cta-icon-join {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.cta-join-door,
+.cta-join-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cta-join-door {
+  transition: filter 0.3s ease;
+}
+.cta-join-arrow {
+  transition: transform 0.3s ease;
+}
+/* Hover: arrow slides toward door and back */
+.home-cta--glass:hover .cta-join-arrow {
+  animation: arrowEnterDoor 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes arrowEnterDoor {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(5px); }
+  60%  { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+.home-cta--glass:hover .cta-join-door {
+  filter: drop-shadow(0 0 5px rgba(212, 162, 76, 0.6));
+}
+.home-cta--glass:hover .cta-icon-join {
+  filter: drop-shadow(0 0 4px rgba(212, 162, 76, 0.3));
 }
 .home-cta--glass:active {
   transform: translateY(0) scale(0.97);

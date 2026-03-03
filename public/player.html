@@ -39,188 +39,6 @@
     </div>
   </div>
 
-  <!-- ==================== STARFIELD ==================== -->
-  <div class="bg-stars" aria-hidden="true"></div>
-
-  <!-- ==================== DESERT NIGHT SCENE ==================== -->
-  <div class="bg-atmosphere" aria-hidden="true">
-    <svg class="desert-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax slice" fill="none">
-      <defs>
-        <!-- Sky atmosphere: transparent top → warm amber horizon -->
-        <linearGradient id="skyAtm" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#050811" stop-opacity="0"/>
-          <stop offset="45%" stop-color="#0a0e1a" stop-opacity="0.15"/>
-          <stop offset="70%" stop-color="#1a150e" stop-opacity="0.35"/>
-          <stop offset="85%" stop-color="#2a1f10" stop-opacity="0.55"/>
-          <stop offset="100%" stop-color="#3a2810" stop-opacity="0.7"/>
-        </linearGradient>
-        <!-- Moon outer atmospheric glow -->
-        <radialGradient id="mgOut" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#ffeab7" stop-opacity="0.22"/>
-          <stop offset="25%" stop-color="#e8c878" stop-opacity="0.12"/>
-          <stop offset="55%" stop-color="#d4a24c" stop-opacity="0.05"/>
-          <stop offset="100%" stop-color="#d4a24c" stop-opacity="0"/>
-        </radialGradient>
-        <!-- Moon inner concentrated glow -->
-        <radialGradient id="mgIn" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#fff5e0" stop-opacity="0.35"/>
-          <stop offset="40%" stop-color="#ffeab7" stop-opacity="0.15"/>
-          <stop offset="100%" stop-color="#d4a24c" stop-opacity="0"/>
-        </radialGradient>
-        <!-- Horizon warmth glow — offset toward moon -->
-        <radialGradient id="hrz" cx="55%" cy="50%" r="55%">
-          <stop offset="0%" stop-color="#d4a24c" stop-opacity="0.09"/>
-          <stop offset="40%" stop-color="#a67c2e" stop-opacity="0.05"/>
-          <stop offset="75%" stop-color="#8a6520" stop-opacity="0.02"/>
-          <stop offset="100%" stop-color="#8a6520" stop-opacity="0"/>
-        </radialGradient>
-        <!-- Dune 1 (farthest) — directional moonlight from upper-right -->
-        <linearGradient id="ml1" x1="0" y1="0" x2="1" y2="0.15">
-          <stop offset="0%" stop-color="#0c0a07"/>
-          <stop offset="35%" stop-color="#100d08"/>
-          <stop offset="65%" stop-color="#14110b"/>
-          <stop offset="100%" stop-color="#1a150e"/>
-        </linearGradient>
-        <!-- Dune 2 — more contrast in moonlight -->
-        <linearGradient id="ml2" x1="0" y1="0.1" x2="1" y2="0">
-          <stop offset="0%" stop-color="#0e0b07"/>
-          <stop offset="30%" stop-color="#161009"/>
-          <stop offset="55%" stop-color="#1e170e"/>
-          <stop offset="85%" stop-color="#261d12"/>
-          <stop offset="100%" stop-color="#2e2416"/>
-        </linearGradient>
-        <!-- Dune 3 — richer tones, stronger moonlight on right -->
-        <linearGradient id="ml3" x1="0" y1="0.05" x2="1" y2="0">
-          <stop offset="0%" stop-color="#110d08"/>
-          <stop offset="25%" stop-color="#1e1610"/>
-          <stop offset="50%" stop-color="#2a1f14"/>
-          <stop offset="75%" stop-color="#362818"/>
-          <stop offset="100%" stop-color="#42301c"/>
-        </linearGradient>
-        <!-- Dune 4 (nearest) — warmest, most moonlight contrast -->
-        <linearGradient id="ml4" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#16110a"/>
-          <stop offset="20%" stop-color="#241a10"/>
-          <stop offset="45%" stop-color="#342616"/>
-          <stop offset="70%" stop-color="#44321e"/>
-          <stop offset="90%" stop-color="#503c24"/>
-          <stop offset="100%" stop-color="#5a4428"/>
-        </linearGradient>
-        <!-- Ridge shimmer — moonlight catching dune crests -->
-        <linearGradient id="rs" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#d4a24c" stop-opacity="0"/>
-          <stop offset="15%" stop-color="#d4a24c" stop-opacity="0.04"/>
-          <stop offset="50%" stop-color="#f0cc7a" stop-opacity="0.12"/>
-          <stop offset="85%" stop-color="#ffd866" stop-opacity="0.08"/>
-          <stop offset="100%" stop-color="#d4a24c" stop-opacity="0"/>
-        </linearGradient>
-        <!-- Atmospheric haze between dune layers -->
-        <linearGradient id="haze1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#18130c" stop-opacity="0.3"/>
-          <stop offset="100%" stop-color="#18130c" stop-opacity="0"/>
-        </linearGradient>
-        <linearGradient id="haze2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#1e170f" stop-opacity="0.25"/>
-          <stop offset="100%" stop-color="#1e170f" stop-opacity="0"/>
-        </linearGradient>
-        <linearGradient id="haze3" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#261e14" stop-opacity="0.2"/>
-          <stop offset="100%" stop-color="#261e14" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-
-      <!-- Sky atmosphere overlay -->
-      <rect width="1920" height="1080" fill="url(#skyAtm)"/>
-
-      <!-- Horizon warmth glow -->
-      <ellipse cx="1050" cy="740" rx="1500" ry="260" fill="url(#hrz)">
-        <animate attributeName="opacity" values="0.6;0.85;0.7;0.9;0.6" dur="28s" repeatCount="indefinite"/>
-      </ellipse>
-
-      <!-- Moon — realistic multi-layered glow -->
-      <g transform="translate(1380 155)">
-        <circle r="180" fill="url(#mgOut)">
-          <animate attributeName="r" values="180;195;185;192;180" dur="18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        </circle>
-        <circle r="65" fill="url(#mgIn)">
-          <animate attributeName="r" values="65;72;68;70;65" dur="14s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        </circle>
-        <path d="M0 -22 A22 22 0 1 1 0 22 A17.5 17.5 0 1 0 0 -22Z" fill="#ffeab7" opacity="0.88">
-          <animate attributeName="opacity" values="0.82;0.95;0.85;0.92;0.82" dur="10s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-        </path>
-        <circle r="20" cx="8" cy="0" fill="#8aa4c2" opacity="0.04"/>
-      </g>
-
-      <!-- ====== DUNE 1 — farthest, most atmospheric ====== -->
-      <path d="M-100 788 C-20 775 80 780 180 772 C280 764 360 770 480 762 C580 755 680 768 800 758 C900 750 980 760 1080 754 C1200 748 1300 758 1420 750 C1520 744 1620 755 1720 748 C1820 742 1900 752 2020 745 L2020 1080 L-100 1080Z" fill="url(#ml1)" opacity="0.75">
-        <animateTransform attributeName="transform" type="translate" values="0 0;-3 -0.5;0 0;2.5 0.5;0 0" dur="58s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-      </path>
-      <!-- Atmospheric haze between layer 1-2 -->
-      <rect x="-100" y="760" width="2120" height="40" fill="url(#haze1)" opacity="0.5">
-        <animate attributeName="opacity" values="0.4;0.6;0.45;0.55;0.4" dur="32s" repeatCount="indefinite"/>
-      </rect>
-
-      <!-- ====== DUNE 2 — mid-far distance ====== -->
-      <path d="M-100 838 C10 822 100 828 220 818 C330 810 420 822 540 812 C650 804 740 816 880 806 C1000 798 1100 812 1220 802 C1340 794 1440 808 1560 798 C1660 790 1750 804 1860 796 C1940 790 1980 798 2020 794 L2020 1080 L-100 1080Z" fill="url(#ml2)" opacity="0.82">
-        <animateTransform attributeName="transform" type="translate" values="0 0;5 -1;0 0;-4 0.8;0 0" dur="46s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-      </path>
-      <path d="M220 820 Q420 810 620 816 Q820 806 1020 812 Q1220 802 1420 808 Q1620 798 1820 804" stroke="url(#rs)" stroke-width="1" fill="none" opacity="0.3">
-        <animate attributeName="opacity" values="0.2;0.45;0.25;0.4;0.2" dur="14s" repeatCount="indefinite"/>
-      </path>
-      <!-- Atmospheric haze between layer 2-3 -->
-      <rect x="-100" y="808" width="2120" height="35" fill="url(#haze2)" opacity="0.45">
-        <animate attributeName="opacity" values="0.35;0.55;0.4;0.5;0.35" dur="26s" repeatCount="indefinite" begin="-8s"/>
-      </rect>
-
-      <!-- ====== DUNE 3 — front-mid, dramatic ====== -->
-      <path d="M-100 888 C-10 870 80 878 180 866 C280 856 370 868 480 856 C580 846 670 860 790 848 C890 838 980 852 1100 842 C1200 832 1290 846 1400 836 C1510 828 1600 842 1720 832 C1800 826 1880 838 2020 830 L2020 1080 L-100 1080Z" fill="url(#ml3)">
-        <animateTransform attributeName="transform" type="translate" values="0 0;-8 -2;0 0;7 1.5;0 0" dur="36s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-      </path>
-      <path d="M120 870 Q320 858 520 866 Q720 854 920 862 Q1120 852 1320 858 Q1520 848 1720 856" stroke="url(#rs)" stroke-width="1.3" fill="none" opacity="0.35">
-        <animate attributeName="opacity" values="0.15;0.5;0.2;0.45;0.15" dur="18s" repeatCount="indefinite" begin="-5s"/>
-      </path>
-      <!-- Atmospheric haze between layer 3-4 -->
-      <rect x="-100" y="848" width="2120" height="30" fill="url(#haze3)" opacity="0.4">
-        <animate attributeName="opacity" values="0.3;0.5;0.35;0.45;0.3" dur="22s" repeatCount="indefinite" begin="-12s"/>
-      </rect>
-
-      <!-- ====== DUNE 4 — nearest, warmest, most moonlit ====== -->
-      <path d="M-100 942 C20 928 110 934 220 924 C340 914 430 926 560 916 C670 908 760 920 880 910 C1000 902 1100 914 1220 906 C1340 898 1440 910 1560 902 C1680 895 1770 906 1880 898 C1950 893 1990 900 2020 897 L2020 1080 L-100 1080Z" fill="url(#ml4)">
-        <animateTransform attributeName="transform" type="translate" values="0 0;12 -3;0 0;-10 2;0 0" dur="28s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-      </path>
-      <path d="M60 932 Q260 920 460 928 Q660 918 860 924 Q1060 914 1260 920 Q1460 912 1660 918 Q1820 910 1960 916" stroke="url(#rs)" stroke-width="1.5" fill="none" opacity="0.4">
-        <animate attributeName="opacity" values="0.1;0.5;0.15;0.45;0.1" dur="20s" repeatCount="indefinite" begin="-7s"/>
-      </path>
-
-      <!-- Sand haze near ground -->
-      <rect x="-100" y="960" width="2120" height="120" fill="#2a1f12" opacity="0.15">
-        <animate attributeName="opacity" values="0.1;0.2;0.12;0.18;0.1" dur="30s" repeatCount="indefinite"/>
-      </rect>
-
-      <!-- Wind-blown sand particles — gentle realistic drift -->
-      <circle r="0.7" fill="#d4a24c" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 862;450 856;950 852;1500 848;2020 845" dur="28s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;0.15;0.25;0.12;0" dur="28s" repeatCount="indefinite"/>
-      </circle>
-      <circle r="0.5" fill="#ffeab7" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 905;380 900;820 896;1300 892;2020 888" dur="34s" repeatCount="indefinite" begin="-8s"/>
-        <animate attributeName="opacity" values="0;0.12;0.2;0.08;0" dur="34s" repeatCount="indefinite" begin="-8s"/>
-      </circle>
-      <circle r="0.9" fill="#d4a24c" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 835;600 828;1200 824;1800 820;2020 818" dur="22s" repeatCount="indefinite" begin="-14s"/>
-        <animate attributeName="opacity" values="0;0.18;0.28;0.1;0" dur="22s" repeatCount="indefinite" begin="-14s"/>
-      </circle>
-      <circle r="0.4" fill="#e8c878" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 928;500 922;1050 918;1600 914;2020 910" dur="30s" repeatCount="indefinite" begin="-18s"/>
-        <animate attributeName="opacity" values="0;0.1;0.16;0.06;0" dur="30s" repeatCount="indefinite" begin="-18s"/>
-      </circle>
-      <circle r="0.6" fill="#ffeab7" opacity="0">
-        <animateTransform attributeName="transform" type="translate" values="-50 878;550 872;1100 868;1650 864;2020 860" dur="26s" repeatCount="indefinite" begin="-4s"/>
-        <animate attributeName="opacity" values="0;0.14;0.22;0.08;0" dur="26s" repeatCount="indefinite" begin="-4s"/>
-      </circle>
-    </svg>
-  </div>
-
   <!-- ==================== BACKGROUND LANTERNS ==================== -->
   <div class="bg-lanterns" aria-hidden="true">
     <svg class="bg-lanterns-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMin slice" fill="none">
@@ -415,14 +233,14 @@
       <!-- 1: Blue — far left -->
       <g transform="translate(80 78) scale(0.28)">
         <ellipse cx="0" cy="-20" rx="160" ry="260" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.18;0.5;0.24;0.46;0.2;0.48;0.18" dur="20s" repeatCount="indefinite" begin="-2s"/>
+          <animate attributeName="opacity" values="0.5;0.45;0.02;0;0.02;0.42;0.5" dur="16s" repeatCount="indefinite" begin="-2s" calcMode="spline" keyTimes="0;0.38;0.43;0.55;0.60;0.65;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="160;184;152;178;160" dur="22s" repeatCount="indefinite" begin="-2s"/>
           <animate attributeName="ry" values="260;294;250;288;260" dur="22s" repeatCount="indefinite" begin="-2s"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="-3.8 0 -280;1.5 0 -280;3.2 0 -280;-0.8 0 -280;-3.8 0 -280" dur="18s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.52;0.78;1" keySplines="0.45 0 0.55 1;0.35 0 0.65 1;0.45 0 0.55 1;0.35 0 0.65 1" begin="-2s"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 2;0 -5;0 0" dur="14s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-2s"/>
-          <animate attributeName="opacity" values="0.55;0.88;0.6;0.84;0.57;0.82;0.55" dur="26s" repeatCount="indefinite" begin="-2s"/>
+          <animate attributeName="opacity" values="0.95;0.9;0.25;0.18;0.25;0.88;0.95" dur="16s" repeatCount="indefinite" begin="-2s" calcMode="spline" keyTimes="0;0.38;0.43;0.55;0.60;0.65;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
@@ -430,14 +248,14 @@
       <!-- 2: Emerald — left -->
       <g transform="translate(320 65) scale(0.22)">
         <ellipse cx="0" cy="-20" rx="140" ry="240" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.22;0.14;0.48;0.2;0.44;0.16;0.22" dur="24s" repeatCount="indefinite" begin="-9s"/>
+          <animate attributeName="opacity" values="0.45;0.4;0.02;0;0.02;0.38;0.45" dur="22s" repeatCount="indefinite" begin="-9s" calcMode="spline" keyTimes="0;0.25;0.30;0.44;0.49;0.54;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="140;166;132;160;140" dur="26s" repeatCount="indefinite" begin="-9s"/>
           <animate attributeName="ry" values="240;276;230;270;240" dur="26s" repeatCount="indefinite" begin="-9s"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="3.0 0 -280;-1.2 0 -280;-4.0 0 -280;1.0 0 -280;3.0 0 -280" dur="20s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.5;0.76;1" keySplines="0.4 0 0.6 1;0.38 0 0.62 1;0.4 0 0.6 1;0.38 0 0.62 1" begin="-9s"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 3;0 -6;0 0" dur="16s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-9s"/>
-          <animate attributeName="opacity" values="0.5;0.82;0.54;0.78;0.52;0.76;0.5" dur="28s" repeatCount="indefinite" begin="-9s"/>
+          <animate attributeName="opacity" values="0.9;0.85;0.2;0.14;0.2;0.82;0.9" dur="22s" repeatCount="indefinite" begin="-9s" calcMode="spline" keyTimes="0;0.25;0.30;0.44;0.49;0.54;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
@@ -445,14 +263,14 @@
       <!-- 3: Violet — center-left, far -->
       <g transform="translate(560 52) scale(0.18)">
         <ellipse cx="0" cy="-20" rx="130" ry="220" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.1;0.4;0.14;0.38;0.12;0.36;0.1" dur="28s" repeatCount="indefinite" begin="-15s"/>
+          <animate attributeName="opacity" values="0.38;0.34;0.02;0;0.02;0.30;0.38" dur="28s" repeatCount="indefinite" begin="-15s" calcMode="spline" keyTimes="0;0.42;0.47;0.58;0.63;0.68;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="130;152;124;148;130" dur="30s" repeatCount="indefinite" begin="-15s"/>
           <animate attributeName="ry" values="220;254;212;248;220" dur="30s" repeatCount="indefinite" begin="-15s"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="-2.2 0 -280;2.4 0 -280;4.0 0 -280;-0.6 0 -280;-2.2 0 -280" dur="24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.26;0.5;0.8;1" keySplines="0.42 0 0.58 1;0.36 0 0.64 1;0.42 0 0.58 1;0.36 0 0.64 1" begin="-15s"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 2;0 -3;0 0" dur="19s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-15s"/>
-          <animate attributeName="opacity" values="0.46;0.72;0.5;0.7;0.48;0.68;0.46" dur="32s" repeatCount="indefinite" begin="-15s"/>
+          <animate attributeName="opacity" values="0.82;0.78;0.22;0.15;0.22;0.75;0.82" dur="28s" repeatCount="indefinite" begin="-15s" calcMode="spline" keyTimes="0;0.42;0.47;0.58;0.63;0.68;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousViolet"/>
         </g>
       </g>
@@ -460,14 +278,14 @@
       <!-- 4: Blue — center -->
       <g transform="translate(780 72) scale(0.26)">
         <ellipse cx="0" cy="-20" rx="150" ry="250" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.26;0.16;0.54;0.22;0.5;0.18;0.26" dur="18s" repeatCount="indefinite" begin="-5s"/>
+          <animate attributeName="opacity" values="0.52;0.48;0.02;0;0.02;0.44;0.52" dur="19s" repeatCount="indefinite" begin="-5s" calcMode="spline" keyTimes="0;0.32;0.37;0.50;0.55;0.60;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="150;176;142;170;150" dur="20s" repeatCount="indefinite" begin="-5s"/>
           <animate attributeName="ry" values="250;286;240;280;250" dur="20s" repeatCount="indefinite" begin="-5s"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="4.5 0 -280;-1.0 0 -280;-3.5 0 -280;1.5 0 -280;4.5 0 -280" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.52;0.8;1" keySplines="0.44 0 0.56 1;0.36 0 0.64 1;0.44 0 0.56 1;0.36 0 0.64 1" begin="-5s"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 3;0 -6;0 0" dur="13s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-5s"/>
-          <animate attributeName="opacity" values="0.58;0.88;0.62;0.84;0.6;0.82;0.58" dur="22s" repeatCount="indefinite" begin="-5s"/>
+          <animate attributeName="opacity" values="0.92;0.88;0.28;0.2;0.28;0.85;0.92" dur="19s" repeatCount="indefinite" begin="-5s" calcMode="spline" keyTimes="0;0.32;0.37;0.50;0.55;0.60;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
@@ -475,14 +293,14 @@
       <!-- 5: Emerald — center, hero -->
       <g transform="translate(1000 82) scale(0.30)">
         <ellipse cx="0" cy="-20" rx="170" ry="280" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.28;0.6;0.24;0.56;0.26;0.58;0.28" dur="22s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0.55;0.02;0;0.02;0.52;0.6" dur="15s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.35;0.40;0.52;0.57;0.62;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="170;200;162;194;170" dur="24s" repeatCount="indefinite"/>
           <animate attributeName="ry" values="280;320;268;314;280" dur="24s" repeatCount="indefinite"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="-5.0 0 -280;2.0 0 -280;4.0 0 -280;-1.2 0 -280;-5.0 0 -280" dur="15s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.5;0.76;1" keySplines="0.4 0 0.6 1;0.35 0 0.65 1;0.4 0 0.6 1;0.35 0 0.65 1"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 4;0 -7;0 0" dur="12s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
-          <animate attributeName="opacity" values="0.6;0.92;0.64;0.9;0.62;0.88;0.6" dur="20s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0.95;0.3;0.22;0.3;0.92;1" dur="15s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.35;0.40;0.52;0.57;0.62;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
@@ -490,14 +308,14 @@
       <!-- 6: Violet — center-right -->
       <g transform="translate(1220 58) scale(0.20)">
         <ellipse cx="0" cy="-20" rx="135" ry="230" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.12;0.44;0.16;0.42;0.14;0.4;0.12" dur="26s" repeatCount="indefinite" begin="-12s"/>
+          <animate attributeName="opacity" values="0.42;0.38;0.02;0;0.02;0.35;0.42" dur="24s" repeatCount="indefinite" begin="-12s" calcMode="spline" keyTimes="0;0.40;0.45;0.56;0.61;0.66;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="135;160;128;154;135" dur="28s" repeatCount="indefinite" begin="-12s"/>
           <animate attributeName="ry" values="230;266;222;260;230" dur="28s" repeatCount="indefinite" begin="-12s"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="2.8 0 -280;-1.5 0 -280;-4.5 0 -280;0.8 0 -280;2.8 0 -280" dur="22s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.26;0.52;0.78;1" keySplines="0.42 0 0.58 1;0.38 0 0.62 1;0.42 0 0.58 1;0.38 0 0.62 1" begin="-12s"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 2;0 -4;0 0" dur="17s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-12s"/>
-          <animate attributeName="opacity" values="0.48;0.76;0.52;0.74;0.5;0.72;0.48" dur="30s" repeatCount="indefinite" begin="-12s"/>
+          <animate attributeName="opacity" values="0.85;0.8;0.2;0.14;0.2;0.78;0.85" dur="24s" repeatCount="indefinite" begin="-12s" calcMode="spline" keyTimes="0;0.40;0.45;0.56;0.61;0.66;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousViolet"/>
         </g>
       </g>
@@ -505,14 +323,14 @@
       <!-- 7: Blue — right -->
       <g transform="translate(1440 68) scale(0.24)">
         <ellipse cx="0" cy="-20" rx="145" ry="245" fill="url(#blueHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.2;0.48;0.16;0.46;0.18;0.44;0.2" dur="21s" repeatCount="indefinite" begin="-3s"/>
+          <animate attributeName="opacity" values="0.48;0.44;0.02;0;0.02;0.40;0.48" dur="17s" repeatCount="indefinite" begin="-3s" calcMode="spline" keyTimes="0;0.36;0.41;0.53;0.58;0.63;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="145;170;138;164;145" dur="23s" repeatCount="indefinite" begin="-3s"/>
           <animate attributeName="ry" values="245;280;236;274;245" dur="23s" repeatCount="indefinite" begin="-3s"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="-3.2 0 -280;1.2 0 -280;3.8 0 -280;-1.0 0 -280;-3.2 0 -280" dur="19s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.5;0.76;1" keySplines="0.45 0 0.55 1;0.35 0 0.65 1;0.45 0 0.55 1;0.35 0 0.65 1" begin="-3s"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 3;0 -5;0 0" dur="15s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-3s"/>
-          <animate attributeName="opacity" values="0.54;0.84;0.58;0.8;0.56;0.78;0.54" dur="25s" repeatCount="indefinite" begin="-3s"/>
+          <animate attributeName="opacity" values="0.9;0.86;0.26;0.18;0.26;0.84;0.9" dur="17s" repeatCount="indefinite" begin="-3s" calcMode="spline" keyTimes="0;0.36;0.41;0.53;0.58;0.63;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousBlue"/>
         </g>
       </g>
@@ -520,14 +338,14 @@
       <!-- 8: Emerald — far right, small -->
       <g transform="translate(1640 48) scale(0.16)">
         <ellipse cx="0" cy="-20" rx="120" ry="210" fill="url(#emeraldHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.14;0.38;0.1;0.36;0.12;0.34;0.14" dur="30s" repeatCount="indefinite" begin="-19s"/>
+          <animate attributeName="opacity" values="0.35;0.30;0.02;0;0.02;0.28;0.35" dur="30s" repeatCount="indefinite" begin="-19s" calcMode="spline" keyTimes="0;0.45;0.50;0.60;0.65;0.70;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="120;142;114;138;120" dur="32s" repeatCount="indefinite" begin="-19s"/>
           <animate attributeName="ry" values="210;244;202;238;210" dur="32s" repeatCount="indefinite" begin="-19s"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="2.2 0 -280;-0.8 0 -280;-2.8 0 -280;1.0 0 -280;2.2 0 -280" dur="26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3;0.52;0.78;1" keySplines="0.4 0 0.6 1;0.36 0 0.64 1;0.4 0 0.6 1;0.36 0 0.64 1" begin="-19s"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 1;0 -3;0 0" dur="20s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-19s"/>
-          <animate attributeName="opacity" values="0.46;0.72;0.44;0.7;0.46;0.68;0.46" dur="34s" repeatCount="indefinite" begin="-19s"/>
+          <animate attributeName="opacity" values="0.78;0.74;0.18;0.12;0.18;0.72;0.78" dur="30s" repeatCount="indefinite" begin="-19s" calcMode="spline" keyTimes="0;0.45;0.50;0.60;0.65;0.70;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousEmerald"/>
         </g>
       </g>
@@ -535,14 +353,14 @@
       <!-- 9: Violet — edge right -->
       <g transform="translate(1840 75) scale(0.27)">
         <ellipse cx="0" cy="-20" rx="155" ry="255" fill="url(#violetHalo)" class="lantern-halo">
-          <animate attributeName="opacity" values="0.24;0.1;0.5;0.18;0.46;0.14;0.24" dur="19s" repeatCount="indefinite" begin="-7s"/>
+          <animate attributeName="opacity" values="0.52;0.48;0.02;0;0.02;0.44;0.52" dur="14s" repeatCount="indefinite" begin="-7s" calcMode="spline" keyTimes="0;0.34;0.39;0.50;0.55;0.60;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <animate attributeName="rx" values="155;182;148;176;155" dur="21s" repeatCount="indefinite" begin="-7s"/>
           <animate attributeName="ry" values="255;292;246;286;255" dur="21s" repeatCount="indefinite" begin="-7s"/>
         </ellipse>
         <g>
           <animateTransform attributeName="transform" type="rotate" values="-4.5 0 -280;1.8 0 -280;3.6 0 -280;-1.2 0 -280;-4.5 0 -280" dur="17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.28;0.5;0.78;1" keySplines="0.44 0 0.56 1;0.36 0 0.64 1;0.44 0 0.56 1;0.36 0 0.64 1" begin="-7s"/>
           <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 3;0 -6;0 0" dur="14s" repeatCount="indefinite" additive="sum" calcMode="spline" keyTimes="0;0.25;0.5;0.75;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" begin="-7s"/>
-          <animate attributeName="opacity" values="0.56;0.86;0.6;0.84;0.58;0.82;0.56" dur="24s" repeatCount="indefinite" begin="-7s"/>
+          <animate attributeName="opacity" values="0.92;0.88;0.24;0.16;0.24;0.86;0.92" dur="14s" repeatCount="indefinite" begin="-7s" calcMode="spline" keyTimes="0;0.34;0.39;0.50;0.55;0.60;1" keySplines="0.4 0 0.6 1;0.7 0 0.3 1;0.4 0 0.6 1;0.3 0 0.7 1;0.7 0 0.3 1;0.4 0 0.6 1"/>
           <use href="#fanousViolet"/>
         </g>
       </g>

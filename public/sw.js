@@ -2,7 +2,7 @@
  * Al-Asmaa — Service Worker v5.0
  * Network-first: always fetch fresh files, fallback to cache offline
  */
-const CACHE_NAME = 'al-asmaa-v23.3';
+const CACHE_NAME = 'al-asmaa-v23.5';
 const STATIC_ASSETS = [
   '/',
   '/player.html',

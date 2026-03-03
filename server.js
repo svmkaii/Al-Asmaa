@@ -699,16 +699,35 @@ function seoPageHead(title, description, canonicalPath, extraMeta = '') {
     .legal-cross-sub { font-size: 0.68rem; color: var(--text-muted); }
     .legal-cross .is-current { opacity: 0.35; pointer-events: none; border-style: dashed; }
 
-    /* Back button */
-    .legal-back { display: inline-flex; align-items: center; gap: 0.5rem;
-      margin-top: 1.5rem; padding: 0.75rem 1.75rem;
-      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
-      color: var(--bg-deep); font-weight: 600; font-size: 0.88rem;
+    /* Back button — premium */
+    @keyframes legalShimmer {
+      0%        { left: -120%; }
+      25%       { left: 150%;  }
+      26%, 100% { left: -120%; }
+    }
+    .legal-back {
+      display: inline-flex; align-items: center; gap: 0.65rem;
+      margin-top: 2rem; padding: 1.05rem 2.5rem;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 45%, var(--gold-deep) 100%);
+      color: #fff; font-weight: 700; font-size: 0.92rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
       border-radius: var(--radius-pill); text-decoration: none;
-      box-shadow: var(--shadow-gold); transition: all var(--transition); }
-    .legal-back:hover { transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(212,162,76,0.35); filter: brightness(1.1); }
-    .legal-back svg { width: 16px; height: 16px; }
+      border: 1px solid rgba(240,204,122,0.5);
+      box-shadow: 0 4px 24px rgba(212,162,76,0.3), 0 1px 0 rgba(255,255,255,0.18) inset;
+      transition: transform var(--transition-spring), box-shadow var(--transition), filter var(--transition); }
+    .legal-back::before {
+      content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: skewX(-18deg); pointer-events: none;
+      animation: legalShimmer 5s linear infinite; }
+    .legal-back:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 14px 44px rgba(212,162,76,0.55), 0 4px 16px rgba(212,162,76,0.28), 0 1px 0 rgba(255,255,255,0.22) inset;
+      filter: brightness(1.1); }
+    .legal-back:active { transform: translateY(-1px) scale(0.985); transition-duration: 0.1s; }
+    .legal-back svg { width: 18px; height: 18px; transition: transform var(--transition-spring); }
+    .legal-back:hover svg { transform: translateX(-5px); }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -1065,14 +1084,14 @@ app.get('/mentions-legales', (req, res) => {
         <h2>Éditeur du site</h2>
       </div>
       <p>
-        <strong>Al-Asmaa</strong> est un projet éducatif personnel, gratuit et sans but lucratif,
-        créé et développé par <strong>__NOM_COMPLET__</strong> (ci-après &laquo;&nbsp;le développeur&nbsp;&raquo;).
+        <strong>Al-Asmaa</strong> est un projet éducatif personnel, gratuit et sans but lucratif
+        (ci-après &laquo;&nbsp;le développeur&nbsp;&raquo;).
+        Ce site n'est rattaché à aucune activité professionnelle ou commerciale.
       </p>
       <ul class="legal-ul">
         <li>Nom du projet : Al-Asmaa</li>
-        <li>Adresse : __ADRESSE__</li>
-        <li>Contact : __EMAIL_CONTACT__</li>
-        <li>Directeur de la publication : __NOM_COMPLET__</li>
+        <li>Nature : site personnel non commercial</li>
+        <li>Contact : <a href="mailto:al.asmaa.pro@gmail.com">al.asmaa.pro@gmail.com</a></li>
       </ul>
     </section>
 
@@ -1083,9 +1102,10 @@ app.get('/mentions-legales', (req, res) => {
       </div>
       <p>Le site est hébergé par :</p>
       <ul class="legal-ul">
-        <li>Render Services, Inc.</li>
-        <li>525 Brannan Street, Suite 300, San Francisco, CA 94107, États-Unis</li>
-        <li>Site : <a href="https://render.com" target="_blank" rel="noopener">render.com</a></li>
+        <li>DYJIX SAS</li>
+        <li>149 Avenue du Maine, 75014 Paris, France</li>
+        <li>Téléphone : +33 1 89 16 28 08</li>
+        <li>Site : <a href="https://dyjix.eu" target="_blank" rel="noopener">dyjix.eu</a></li>
       </ul>
     </section>
 
@@ -1223,7 +1243,7 @@ app.get('/politique-de-confidentialite', (req, res) => {
       </div>
       <p>
         <strong>Al-Asmaa</strong> est une application web éducative gratuite, sans publicité et
-        sans but lucratif, développée par __NOM_COMPLET__ dans le but d'aider les musulmans
+        sans but lucratif, dans le but d'aider les musulmans
         à apprendre et mémoriser les 99 Noms d'Allah.
       </p>
       <p>
@@ -1231,7 +1251,7 @@ app.get('/politique-de-confidentialite', (req, res) => {
         la vie privée des utilisateurs et à ne collecter que les données strictement nécessaires
         au fonctionnement du site.
       </p>
-      <p>Contact : <em>__EMAIL_CONTACT__</em></p>
+      <p>Contact : <em><a href="mailto:al.asmaa.pro@gmail.com">al.asmaa.pro@gmail.com</a></em></p>
     </section>
 
     <!-- 2. Données collectées -->
@@ -1569,7 +1589,7 @@ app.get('/politique-de-confidentialite', (req, res) => {
       </ul>
       <p>
         Pour toute question, demande d'exercice de vos droits, ou réclamation :
-        <em>__EMAIL_CONTACT__</em>
+        <em><a href="mailto:al.asmaa.pro@gmail.com">al.asmaa.pro@gmail.com</a></em>
       </p>
       <p>
         Vous disposez également du droit d'introduire une réclamation auprès de la
@@ -1814,7 +1834,7 @@ app.get('/conditions-utilisation', (req, res) => {
         <h2>Contact</h2>
       </div>
       <p>
-        Pour toute question relative aux présentes conditions : <em>__EMAIL_CONTACT__</em>
+        Pour toute question relative aux présentes conditions : <em><a href="mailto:al.asmaa.pro@gmail.com">al.asmaa.pro@gmail.com</a></em>
       </p>
     </section>`;
 
