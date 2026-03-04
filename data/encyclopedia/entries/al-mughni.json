@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-mughni",
   "arabic": "الْمُغْنِي",
   "transliteration": "Al-Mughni",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
-    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+    "note": "Nom attesté principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
   },
   "primary_evidence": {
     "quran": [
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/763",
-      "precise_locator": "Page dediee au Nom Al-Mughni dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Mughni signifie Celui qui enrichit Ses creatures et les rend autonomes. Al-Ghazali explique qu'Il enrichit les corps par la nourriture, les ames par la connaissance, et les coeurs par la foi. L'enrichissement veritable est celui de l'ame."
+      "precise_locator": "Page dédiée au Nom Al-Mughni dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Mughni signifie Celui qui enrichit Ses créatures et les rend autonomes. Al-Ghazali explique qu'Il enrichit les corps par la nourriture, les ames par la connaissance, et les coeurs par la foi. L'enrichissement véritable est celui de l'ame."
     },
     {
       "category": "tafsir",
@@ -96,12 +96,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui enrichit Ses serviteurs et comble leurs besoins.",
-    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "Al-Mughni signifie Celui qui enrichit Ses creatures et les rend autonomes. Al-Ghazali explique qu'Il enrichit les corps par la nourriture, les ames par la connaissance, et les coeurs par la foi. L'enrichissement veritable est celui de l'ame.",
+    "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Al-Mughni signifie Celui qui enrichit Ses créatures et les rend autonomes. Al-Ghazali explique qu'Il enrichit les corps par la nourriture, les ames par la connaissance, et les coeurs par la foi. L'enrichissement véritable est celui de l'ame.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -146,8 +146,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

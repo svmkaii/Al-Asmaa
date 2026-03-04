@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "ar-rauf",
   "arabic": "الرَّؤُوفُ",
   "transliteration": "Ar-Ra'uf",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -70,8 +70,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/657",
-      "precise_locator": "Page dediee au Nom Ar-Ra'uf dans l'encyclopedie Aqeeda",
-      "summary_fr": "Ar-Ra'uf signifie le Tres-Compatissant, dont la compassion va au-dela de la misericorde ordinaire. Al-Qurtubi explique que Ar-Ra'uf est plus intense que Ar-Rahim dans l'aspect d'attendrissement et de douceur. C'est la misericorde teintee de tendresse."
+      "precise_locator": "Page dédiée au Nom Ar-Ra'uf dans l'encyclopédie Aqeeda",
+      "summary_fr": "Ar-Ra'uf signifie le Tres-Compatissant, dont la compassion va au-dela de la miséricorde ordinaire. Al-Qurtubi explique que Ar-Ra'uf est plus intense que Ar-Rahim dans l'aspect d'attendrissement et de douceur. C'est la miséricorde teintee de tendresse."
     },
     {
       "category": "tafsir",
@@ -112,12 +112,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la compassion envers Ses serviteurs est immense.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Ar-Ra'uf signifie le Tres-Compatissant, dont la compassion va au-dela de la misericorde ordinaire. Al-Qurtubi explique que Ar-Ra'uf est plus intense que Ar-Rahim dans l'aspect d'attendrissement et de douceur. C'est la misericorde teintee de tendresse.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Ar-Ra'uf signifie le Tres-Compatissant, dont la compassion va au-dela de la miséricorde ordinaire. Al-Qurtubi explique que Ar-Ra'uf est plus intense que Ar-Rahim dans l'aspect d'attendrissement et de douceur. C'est la miséricorde teintee de tendresse.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -162,8 +162,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

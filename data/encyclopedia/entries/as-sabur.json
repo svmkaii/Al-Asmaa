@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "as-sabur",
   "arabic": "الصَّبُورُ",
   "transliteration": "As-Sabur",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
-    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+    "note": "Nom attesté principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
   },
   "primary_evidence": {
     "quran": [
@@ -27,7 +27,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Bukhari 6099",
         "source_url": "https://sunnah.com/bukhari:6099",
-        "relevance_note": "\"Personne n'est plus patient (asbaru) qu'Allah : on Lui attribue un fils et malgre cela Il les nourrit et leur accorde la sante.\""
+        "relevance_note": "\"Personne n'est plus patient (asbaru) qu'Allah : on Lui attribue un fils et malgre cela Il les nourrit et leur accordé la sante.\""
       },
       {
         "collection": "Tirmidhi",
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/713",
-      "precise_locator": "Page dediee au Nom As-Sabur dans l'encyclopedie Aqeeda",
-      "summary_fr": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement atteste dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la misericorde."
+      "precise_locator": "Page dédiée au Nom As-Sabur dans l'encyclopédie Aqeeda",
+      "summary_fr": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la miséricorde."
     },
     {
       "category": "fatwa",
@@ -63,18 +63,18 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom As-Sabur",
       "source_url": "https://islamqa.info/ar/answers/191329",
-      "precise_locator": "Reponse savante sur le Nom As-Sabur",
-      "summary_fr": "Explication du Nom As-Sabur selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+      "precise_locator": "Réponse savante sur le Nom As-Sabur",
+      "summary_fr": "Explication du Nom As-Sabur selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la patience est sans limite et qui ne précipite pas la punition.",
-    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement atteste dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la misericorde.",
+    "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la miséricorde.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -83,7 +83,7 @@
       },
       {
         "label": "Explication hanbali (IslamQA)",
-        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "description": "Explication détaillée selon la méthodologie d'Ibn Uthaymeen et du Comite Permanent.",
         "source_backed": true,
         "source_type": "fatwa",
         "sources": [
@@ -92,8 +92,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "ar-rahman",
   "arabic": "الرَّحْمَنُ",
   "transliteration": "Ar-Rahman",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -17,7 +17,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 1:1",
         "source_url": "https://quran.com/1:1",
-        "relevance_note": "\"Au nom d'Allah, le Tout Misericordieux (Ar-Rahman), le Tres Misericordieux.\""
+        "relevance_note": "\"Au nom d'Allah, le Tout miséricordieux (Ar-Rahman), le Tres miséricordieux.\""
       },
       {
         "surah": 55,
@@ -25,7 +25,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 55:1",
         "source_url": "https://quran.com/55:1",
-        "relevance_note": "\"Ar-Rahman. Il a enseigne le Coran.\" Sourate entiere dediee a ce Nom."
+        "relevance_note": "\"Ar-Rahman. Il a enseigne le Coran.\" Sourate entière dédiée a ce Nom."
       },
       {
         "surah": 59,
@@ -51,7 +51,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Muslim 2752",
         "source_url": "https://sunnah.com/muslim:2752",
-        "relevance_note": "\"Allah a cree la misericorde en 100 parts, Il en a retenu 99 aupres de Lui.\""
+        "relevance_note": "\"Allah a créé la miséricorde en 100 parts, Il en a retenu 99 aupres de Lui.\""
       },
       {
         "collection": "Sahih Bukhari",
@@ -78,8 +78,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/667",
-      "precise_locator": "Page dediee au Nom Ar-Rahman dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman designe la misericorde universelle englobant toute la creation (croyants et non-croyants), tandis que Ar-Rahim est specifique aux croyants dans l'au-dela. Ce Nom est exclusif a Allah et ne peut etre attribue a aucune creature."
+      "precise_locator": "Page dédiée au Nom Ar-Rahman dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-dela. Ce Nom est exclusif a Allah et ne peut être attribue a aucune créature."
     },
     {
       "category": "tafsir",
@@ -120,12 +120,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la miséricorde s'étend à toute la création, croyants comme non-croyants.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman designe la misericorde universelle englobant toute la creation (croyants et non-croyants), tandis que Ar-Rahim est specifique aux croyants dans l'au-dela. Ce Nom est exclusif a Allah et ne peut etre attribue a aucune creature.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-dela. Ce Nom est exclusif a Allah et ne peut être attribue a aucune créature.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -170,8 +170,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

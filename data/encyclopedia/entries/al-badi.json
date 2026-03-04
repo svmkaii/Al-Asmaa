@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-badi",
   "arabic": "الْبَدِيعُ",
   "transliteration": "Al-Badi'",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/571",
-      "precise_locator": "Page dediee au Nom Al-Badi' dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Badi' signifie le Createur originel qui a produit les cieux et la terre sans modele prealable. Al-Ghazali explique que ce Nom implique une originalite absolue : Il invente de maniere inedite, sans copier ni imiter."
+      "precise_locator": "Page dédiée au Nom Al-Badi' dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Badi' signifie le Createur originel qui a produit les cieux et la terre sans modele prealable. Al-Ghazali explique que ce Nom implique une originalite absolue : Il invente de manière inedite, sans copier ni imiter."
     },
     {
       "category": "tafsir",
@@ -96,12 +96,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui a créé les cieux et la terre de manière inédite, sans modèle.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Badi' signifie le Createur originel qui a produit les cieux et la terre sans modele prealable. Al-Ghazali explique que ce Nom implique une originalite absolue : Il invente de maniere inedite, sans copier ni imiter.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Badi' signifie le Createur originel qui a produit les cieux et la terre sans modele prealable. Al-Ghazali explique que ce Nom implique une originalite absolue : Il invente de manière inedite, sans copier ni imiter.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -146,8 +146,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

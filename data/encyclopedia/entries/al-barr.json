@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-barr",
   "arabic": "الْبَرُّ",
   "transliteration": "Al-Barr",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -46,8 +46,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/573",
-      "precise_locator": "Page dediee au Nom Al-Barr dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Barr signifie le Bienfaisant, Celui dont la bonte et la bienfaisance s'etendent a toute la creation. Al-Ghazali explique qu'Il est Celui qui fait le bien (ihsan) a Ses creatures de maniere continue et dont la generosite ne tarit jamais."
+      "precise_locator": "Page dédiée au Nom Al-Barr dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Barr signifie le Bienfaisant, Celui dont la bonte et la bienfaisance s'etendent a toute la création. Al-Ghazali explique qu'Il est Celui qui fait le bien (ihsan) a Ses créatures de manière continue et dont la generosite ne tarit jamais."
     },
     {
       "category": "encyclopedia",
@@ -55,8 +55,8 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Barr",
       "source_url": "https://www.islamweb.net/ar/article/175231",
-      "precise_locator": "Article dedie au Nom Al-Barr",
-      "summary_fr": "Article savant detaille sur le Nom Al-Barr avec analyse linguistique, preuves coraniques et implications pour la foi."
+      "precise_locator": "Article dédié au Nom Al-Barr",
+      "summary_fr": "Article savant détaillé sur le Nom Al-Barr avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
       "category": "tafsir",
@@ -97,12 +97,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la bonté et la bienveillance touchent toute Sa création.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Barr signifie le Bienfaisant, Celui dont la bonte et la bienfaisance s'etendent a toute la creation. Al-Ghazali explique qu'Il est Celui qui fait le bien (ihsan) a Ses creatures de maniere continue et dont la generosite ne tarit jamais.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Barr signifie le Bienfaisant, Celui dont la bonte et la bienfaisance s'etendent a toute la création. Al-Ghazali explique qu'Il est Celui qui fait le bien (ihsan) a Ses créatures de manière continue et dont la generosite ne tarit jamais.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -147,8 +147,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

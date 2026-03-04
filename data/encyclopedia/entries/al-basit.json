@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-basit",
   "arabic": "الْبَاسِطُ",
   "transliteration": "Al-Basit",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
-    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+    "note": "Nom attesté principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
   },
   "primary_evidence": {
     "quran": [
@@ -62,8 +62,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/577",
-      "precise_locator": "Page dediee au Nom Al-Basit dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Basit signifie Celui qui etend et deploie la subsistance, la joie et la misericorde. Al-Ghazali explique qu'Il deploie les ames par la joie et la subsistance par la generosite. Associe a Al-Qabid, ces deux Noms montrent qu'Allah gere l'abondance et la restriction."
+      "precise_locator": "Page dédiée au Nom Al-Basit dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Basit signifie Celui qui etend et deploie la subsistance, la joie et la miséricorde. Al-Ghazali explique qu'Il deploie les ames par la joie et la subsistance par la generosite. Associe a Al-Qabid, ces deux Noms montrent qu'Allah gere l'abondance et la restriction."
     },
     {
       "category": "tafsir",
@@ -104,12 +104,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui élargit la subsistance et répand Ses bienfaits avec générosité.",
-    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "Al-Basit signifie Celui qui etend et deploie la subsistance, la joie et la misericorde. Al-Ghazali explique qu'Il deploie les ames par la joie et la subsistance par la generosite. Associe a Al-Qabid, ces deux Noms montrent qu'Allah gere l'abondance et la restriction.",
+    "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Al-Basit signifie Celui qui etend et deploie la subsistance, la joie et la miséricorde. Al-Ghazali explique qu'Il deploie les ames par la joie et la subsistance par la generosite. Associe a Al-Qabid, ces deux Noms montrent qu'Allah gere l'abondance et la restriction.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -154,8 +154,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

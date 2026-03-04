@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-mujib",
   "arabic": "الْمُجِيبُ",
   "transliteration": "Al-Mujib",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -46,8 +46,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/519",
-      "precise_locator": "Page dediee au Nom Al-Mujib dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Mujib signifie Celui qui repond aux invocations et exauce les prieres de Ses serviteurs. Al-Ghazali explique qu'Il repond a la necessite de chaque creature, que ce soit par la parole (invocation) ou par l'etat (besoin)."
+      "precise_locator": "Page dédiée au Nom Al-Mujib dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Mujib signifie Celui qui repond aux invocations et exauce les prières de Ses serviteurs. Al-Ghazali explique qu'Il repond a la nécessité de chaque créature, que ce soit par la parole (invocation) ou par l'état (besoin)."
     },
     {
       "category": "tafsir",
@@ -88,12 +88,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui répond aux invocations de Ses serviteurs.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Mujib signifie Celui qui repond aux invocations et exauce les prieres de Ses serviteurs. Al-Ghazali explique qu'Il repond a la necessite de chaque creature, que ce soit par la parole (invocation) ou par l'etat (besoin).",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Mujib signifie Celui qui repond aux invocations et exauce les prières de Ses serviteurs. Al-Ghazali explique qu'Il repond a la nécessité de chaque créature, que ce soit par la parole (invocation) ou par l'état (besoin).",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -138,8 +138,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-wali-55",
   "arabic": "الْوَلِيُّ",
   "transliteration": "Al-Wali",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -70,7 +70,7 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/893",
-      "precise_locator": "Page dediee au Nom Al-Wali dans l'encyclopedie Aqeeda",
+      "precise_locator": "Page dédiée au Nom Al-Wali dans l'encyclopédie Aqeeda",
       "summary_fr": "Al-Wali signifie le Protecteur, l'Allie de Ses serviteurs croyants. Al-Ghazali explique qu'Il prend en charge les affaires de Ses serviteurs, les guide, les soutient et les defend. La wilaya (protection divine) est le fruit de la foi et de l'obeissance."
     },
     {
@@ -112,12 +112,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "L'allié et le protecteur de Ses serviteurs croyants.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
     "scholarly_summary": "Al-Wali signifie le Protecteur, l'Allie de Ses serviteurs croyants. Al-Ghazali explique qu'Il prend en charge les affaires de Ses serviteurs, les guide, les soutient et les defend. La wilaya (protection divine) est le fruit de la foi et de l'obeissance.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -162,8 +162,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

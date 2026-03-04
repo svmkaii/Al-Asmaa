@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-ghani",
   "arabic": "الْغَنِيُّ",
   "transliteration": "Al-Ghani",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -70,8 +70,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/763",
-      "precise_locator": "Page dediee au Nom Al-Ghani dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Ghani signifie le Riche par essence, Celui qui n'a besoin de rien ni de personne, tandis que toute la creation a besoin de Lui. Al-Ghazali explique que la vraie richesse est l'absence totale de besoin, et seul Allah possede cette qualite de maniere absolue."
+      "precise_locator": "Page dédiée au Nom Al-Ghani dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Ghani signifie le Riche par essence, Celui qui n'a besoin de rien ni de personne, tandis que toute la création a besoin de Lui. Al-Ghazali explique que la vraie richesse est l'absence totale de besoin, et seul Allah possède cette qualite de manière absolue."
     },
     {
       "category": "encyclopedia",
@@ -79,8 +79,8 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Ghani",
       "source_url": "https://www.islamweb.net/ar/article/175451",
-      "precise_locator": "Article dedie au Nom Al-Ghani",
-      "summary_fr": "Article savant detaille sur le Nom Al-Ghani avec analyse linguistique, preuves coraniques et implications pour la foi."
+      "precise_locator": "Article dédié au Nom Al-Ghani",
+      "summary_fr": "Article savant détaillé sur le Nom Al-Ghani avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
       "category": "tafsir",
@@ -121,12 +121,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui n'a besoin de rien ni de personne, totalement indépendant.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Ghani signifie le Riche par essence, Celui qui n'a besoin de rien ni de personne, tandis que toute la creation a besoin de Lui. Al-Ghazali explique que la vraie richesse est l'absence totale de besoin, et seul Allah possede cette qualite de maniere absolue.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Ghani signifie le Riche par essence, Celui qui n'a besoin de rien ni de personne, tandis que toute la création a besoin de Lui. Al-Ghazali explique que la vraie richesse est l'absence totale de besoin, et seul Allah possède cette qualite de manière absolue.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -171,8 +171,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

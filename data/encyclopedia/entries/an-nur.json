@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "an-nur",
   "arabic": "النُّورُ",
   "transliteration": "An-Nur",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -17,7 +17,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 24:35",
         "source_url": "https://quran.com/24:35",
-        "relevance_note": "\"Allah est la Lumiere (Nur) des cieux et de la terre.\" (Ayat an-Nur)"
+        "relevance_note": "\"Allah est la lumière (Nur) des cieux et de la terre.\" (Ayat an-Nur)"
       }
     ],
     "hadith": [
@@ -27,7 +27,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Muslim 179",
         "source_url": "https://sunnah.com/muslim:179",
-        "relevance_note": "\"Son voile est la lumiere (nur). S'Il le levait, les splendeurs de Sa Face bruleraient toute chose.\""
+        "relevance_note": "\"Son voile est la lumière (nur). S'Il le levait, les splendeurs de Sa Face bruleraient toute chose.\""
       },
       {
         "collection": "Sahih Bukhari",
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/869",
-      "precise_locator": "Page dediee au Nom An-Nur dans l'encyclopedie Aqeeda",
-      "summary_fr": "An-Nur signifie la Lumiere, Celui par qui tout est eclaire et rendu visible. Al-Ghazali explique qu'Il est la Lumiere veritable par laquelle toute chose devient visible, et que toute lumiere dans l'univers n'est qu'un reflet de Sa lumiere."
+      "precise_locator": "Page dédiée au Nom An-Nur dans l'encyclopédie Aqeeda",
+      "summary_fr": "An-Nur signifie la lumière, Celui par qui tout est eclaire et rendu visible. Al-Ghazali explique qu'Il est la lumière véritable par laquelle toute chose devient visible, et que toute lumière dans l'univers n'est qu'un reflet de Sa lumière."
     },
     {
       "category": "fatwa",
@@ -63,8 +63,8 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom An-Nur",
       "source_url": "https://islamqa.info/ar/answers/226255",
-      "precise_locator": "Reponse savante sur le Nom An-Nur",
-      "summary_fr": "Explication du Nom An-Nur selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+      "precise_locator": "Réponse savante sur le Nom An-Nur",
+      "summary_fr": "Explication du Nom An-Nur selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     },
     {
       "category": "tafsir",
@@ -105,12 +105,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "La Lumière des cieux et de la terre, qui guide vers la vérité.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "An-Nur signifie la Lumiere, Celui par qui tout est eclaire et rendu visible. Al-Ghazali explique qu'Il est la Lumiere veritable par laquelle toute chose devient visible, et que toute lumiere dans l'univers n'est qu'un reflet de Sa lumiere.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "An-Nur signifie la lumière, Celui par qui tout est eclaire et rendu visible. Al-Ghazali explique qu'Il est la lumière véritable par laquelle toute chose devient visible, et que toute lumière dans l'univers n'est qu'un reflet de Sa lumière.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -119,7 +119,7 @@
       },
       {
         "label": "Explication hanbali (IslamQA)",
-        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "description": "Explication détaillée selon la méthodologie d'Ibn Uthaymeen et du Comite Permanent.",
         "source_backed": true,
         "source_type": "fatwa",
         "sources": [
@@ -164,8 +164,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

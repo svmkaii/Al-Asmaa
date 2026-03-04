@@ -1,13 +1,13 @@
-{
+﻿{
   "slug": "as-salam",
   "arabic": "السَّلامُ",
   "transliteration": "As-Salam",
   "french_name": "La Paix",
-  "short_meaning": "La source de toute paix, exempt de tout défaut et qui accorde la sécurité.",
+  "short_meaning": "La source de toute paix, exempt de tout défaut et qui accordé la sécurité.",
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -27,7 +27,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Muslim 592",
         "source_url": "https://sunnah.com/muslim:592",
-        "relevance_note": "\"O Allah, Tu es As-Salam, et de Toi vient la paix (salam).\" (invocation apres la priere)"
+        "relevance_note": "\"O Allah, Tu es As-Salam, et de Toi vient la paix (salam).\" (invocation apres la prière)"
       },
       {
         "collection": "Sahih Bukhari",
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/697",
-      "precise_locator": "Page dediee au Nom As-Salam dans l'encyclopedie Aqeeda",
-      "summary_fr": "As-Salam signifie Celui qui est exempt de tout defaut, la Source de la paix et de la securite. Al-Khattabi explique qu'Il est Celui qui a preserve Sa creation de Son injustice. Al-Ghazali ajoute qu'Il est Celui de qui provient toute paix dans l'univers."
+      "precise_locator": "Page dédiée au Nom As-Salam dans l'encyclopédie Aqeeda",
+      "summary_fr": "As-Salam signifie Celui qui est exempt de tout defaut, la Source de la paix et de la securite. Al-Khattabi explique qu'Il est Celui qui a preserve Sa création de Son injustice. Al-Ghazali ajoute qu'Il est Celui de qui provient toute paix dans l'univers."
     },
     {
       "category": "encyclopedia",
@@ -63,8 +63,8 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: As-Salam",
       "source_url": "https://www.islamweb.net/ar/article/180813",
-      "precise_locator": "Article dedie au Nom As-Salam",
-      "summary_fr": "Article savant detaille sur le Nom As-Salam avec analyse linguistique, preuves coraniques et implications pour la foi."
+      "precise_locator": "Article dédié au Nom As-Salam",
+      "summary_fr": "Article savant détaillé sur le Nom As-Salam avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
       "category": "tafsir",
@@ -104,13 +104,13 @@
     }
   ],
   "interpretation_notes": {
-    "consensus_core": "La source de toute paix, exempt de tout défaut et qui accorde la sécurité.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "As-Salam signifie Celui qui est exempt de tout defaut, la Source de la paix et de la securite. Al-Khattabi explique qu'Il est Celui qui a preserve Sa creation de Son injustice. Al-Ghazali ajoute qu'Il est Celui de qui provient toute paix dans l'univers.",
+    "consensus_core": "La source de toute paix, exempt de tout défaut et qui accordé la sécurité.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "As-Salam signifie Celui qui est exempt de tout defaut, la Source de la paix et de la securite. Al-Khattabi explique qu'Il est Celui qui a preserve Sa création de Son injustice. Al-Ghazali ajoute qu'Il est Celui de qui provient toute paix dans l'univers.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -155,8 +155,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-khafid",
   "arabic": "الْخَافِضُ",
   "transliteration": "Al-Khafid",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
-    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+    "note": "Nom attesté principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
   },
   "primary_evidence": {
     "quran": [
@@ -47,17 +47,17 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
       "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Khafid)",
-      "summary_fr": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est atteste dans les listes de hadiths. Al-Ghazali explique qu'Il abaisse les incredules et les arrogants par Son decret."
+      "summary_fr": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est attesté dans les listes de hadiths. Al-Ghazali explique qu'Il abaisse les incredules et les arrogants par Son decret."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui abaisse les orgueilleux et les injustes.",
-    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est atteste dans les listes de hadiths. Al-Ghazali explique qu'Il abaisse les incredules et les arrogants par Son decret.",
+    "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est attesté dans les listes de hadiths. Al-Ghazali explique qu'Il abaisse les incredules et les arrogants par Son decret.",
     "nuances": [],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

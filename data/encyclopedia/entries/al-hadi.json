@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-hadi",
   "arabic": "الْهَادِي",
   "transliteration": "Al-Hadi",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/871",
-      "precise_locator": "Page dediee au Nom Al-Hadi dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Hadi signifie le Guide, Celui qui montre le chemin de la verite et y conduit Ses serviteurs. Al-Ghazali distingue la guidee generale (montrer le chemin a tous) et la guidee specifique (accorder le succes aux croyants pour suivre le chemin)."
+      "precise_locator": "Page dédiée au Nom Al-Hadi dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Hadi signifie le Guide, Celui qui montre le chemin de la vérité et y conduit Ses serviteurs. Al-Ghazali distingue la guidee generale (montrer le chemin a tous) et la guidee spécifique (accordér le succes aux croyants pour suivre le chemin)."
     },
     {
       "category": "tafsir",
@@ -96,12 +96,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui guide Ses serviteurs vers le droit chemin.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Hadi signifie le Guide, Celui qui montre le chemin de la verite et y conduit Ses serviteurs. Al-Ghazali distingue la guidee generale (montrer le chemin a tous) et la guidee specifique (accorder le succes aux croyants pour suivre le chemin).",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Hadi signifie le Guide, Celui qui montre le chemin de la vérité et y conduit Ses serviteurs. Al-Ghazali distingue la guidee generale (montrer le chemin a tous) et la guidee spécifique (accordér le succes aux croyants pour suivre le chemin).",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -146,8 +146,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-ghaffar",
   "arabic": "الْغَفَّارُ",
   "transliteration": "Al-Ghaffar",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -62,8 +62,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/841",
-      "precise_locator": "Page dediee au Nom Al-Ghaffar dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de maniere repetee. Al-Ghazali explique qu'Allah couvre les peches et ne les devoile pas, meme s'il les connait. La difference avec Al-Ghafur est que Al-Ghaffar insiste sur la repetition du pardon."
+      "precise_locator": "Page dédiée au Nom Al-Ghaffar dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de manière répètee. Al-Ghazali explique qu'Allah couvre les peches et ne les devoile pas, meme s'il les connait. La diffèrence avec Al-Ghafur est que Al-Ghaffar insiste sur la repetition du pardon."
     },
     {
       "category": "encyclopedia",
@@ -71,8 +71,8 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Ghaffar",
       "source_url": "https://www.islamweb.net/ar/article/234517",
-      "precise_locator": "Article dedie au Nom Al-Ghaffar",
-      "summary_fr": "Article savant detaille sur le Nom Al-Ghaffar avec analyse linguistique, preuves coraniques et implications pour la foi."
+      "precise_locator": "Article dédié au Nom Al-Ghaffar",
+      "summary_fr": "Article savant détaillé sur le Nom Al-Ghaffar avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
       "category": "tafsir",
@@ -113,12 +113,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui pardonne sans cesse et de manière répétée les péchés de Ses serviteurs.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de maniere repetee. Al-Ghazali explique qu'Allah couvre les peches et ne les devoile pas, meme s'il les connait. La difference avec Al-Ghafur est que Al-Ghaffar insiste sur la repetition du pardon.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de manière répètee. Al-Ghazali explique qu'Allah couvre les peches et ne les devoile pas, meme s'il les connait. La diffèrence avec Al-Ghafur est que Al-Ghaffar insiste sur la repetition du pardon.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -163,8 +163,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

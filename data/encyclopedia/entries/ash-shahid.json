@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "ash-shahid",
   "arabic": "الشَّهِيدُ",
   "transliteration": "Ash-Shahid",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -17,7 +17,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 4:166",
         "source_url": "https://quran.com/4:166",
-        "relevance_note": "\"Allah est Temoin (Shahid) de ce qu'Il t'a revele.\""
+        "relevance_note": "\"Allah est Temoin (Shahid) de ce qu'Il t'a révélé.\""
       },
       {
         "surah": 5,
@@ -70,8 +70,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/711",
-      "precise_locator": "Page dediee au Nom Ash-Shahid dans l'encyclopedie Aqeeda",
-      "summary_fr": "Ash-Shahid signifie le Temoin de toute chose, Celui a qui rien n'echappe. Al-Ghazali explique la difference avec Al-Alim : Ash-Shahid implique une connaissance de ce qui est present et manifeste, tandis que Al-Alim englobe aussi le cache."
+      "precise_locator": "Page dédiée au Nom Ash-Shahid dans l'encyclopédie Aqeeda",
+      "summary_fr": "Ash-Shahid signifie le Temoin de toute chose, Celui a qui rien n'echappe. Al-Ghazali explique la diffèrence avec Al-Alim : Ash-Shahid implique une connaissance de ce qui est present et manifeste, tandis que Al-Alim englobe aussi le cache."
     },
     {
       "category": "tafsir",
@@ -112,12 +112,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui est témoin de toute chose, rien ne Lui échappe.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Ash-Shahid signifie le Temoin de toute chose, Celui a qui rien n'echappe. Al-Ghazali explique la difference avec Al-Alim : Ash-Shahid implique une connaissance de ce qui est present et manifeste, tandis que Al-Alim englobe aussi le cache.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Ash-Shahid signifie le Temoin de toute chose, Celui a qui rien n'echappe. Al-Ghazali explique la diffèrence avec Al-Alim : Ash-Shahid implique une connaissance de ce qui est present et manifeste, tandis que Al-Alim englobe aussi le cache.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -162,8 +162,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-alim",
   "arabic": "الْعَلِيمُ",
   "transliteration": "Al-'Alim",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -62,8 +62,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/747",
-      "precise_locator": "Page dediee au Nom Al-'Alim dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Alim signifie l'Omniscient dont la science englobe toute chose : le passe, le present, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est eternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionne plus de 150 fois dans le Coran."
+      "precise_locator": "Page dédiée au Nom Al-'Alim dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Alim signifie l'Omniscient dont la science englobe toute chose : le passe, le present, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est éternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionne plus de 150 fois dans le Coran."
     },
     {
       "category": "tafsir",
@@ -104,12 +104,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont le savoir englobe toute chose, visible et invisible.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Alim signifie l'Omniscient dont la science englobe toute chose : le passe, le present, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est eternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionne plus de 150 fois dans le Coran.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Alim signifie l'Omniscient dont la science englobe toute chose : le passe, le present, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est éternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionne plus de 150 fois dans le Coran.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -154,8 +154,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-muqsit",
   "arabic": "الْمُقْسِطُ",
   "transliteration": "Al-Muqsit",
@@ -6,8 +6,8 @@
   "short_meaning": "Celui qui agit avec une équité parfaite envers toute Sa création.",
   "canonical_status": {
     "in_99_list": true,
-    "evidence_type": "quran_derived",
-    "note": "Concept/racine atteste dans le Coran; Nom sous cette forme derive des hadiths."
+    "evidence_type": "quran_dérivéd",
+    "note": "Concept/racine attesté dans le Coran; Nom sous cette forme dérivé des hadiths."
   },
   "primary_evidence": {
     "quran": [
@@ -35,7 +35,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Muslim 2588",
         "source_url": "https://sunnah.com/muslim:2588",
-        "relevance_note": "\"Les equitables (al-muqsitun) seront sur des chaires de lumiere aupres d'Allah.\""
+        "relevance_note": "\"Les equitables (al-muqsitun) seront sur des chaires de lumière aupres d'Allah.\""
       },
       {
         "collection": "Tirmidhi",
@@ -62,7 +62,7 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/735",
-      "precise_locator": "Page dediee au Nom Al-Muqsit dans l'encyclopedie Aqeeda",
+      "precise_locator": "Page dédiée au Nom Al-Muqsit dans l'encyclopédie Aqeeda",
       "summary_fr": "Al-Muqsit signifie le Tres-Equitable, Celui qui juge avec une justice parfaite. Al-Ghazali explique que ce Nom est lie au Jour du Jugement ou aucune injustice ne sera commise, meme du poids d'un atome."
     },
     {
@@ -71,8 +71,8 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Al-Muqsit",
       "source_url": "https://islamqa.info/ar/answers/330932",
-      "precise_locator": "Reponse savante sur le Nom Al-Muqsit",
-      "summary_fr": "Explication du Nom Al-Muqsit selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+      "precise_locator": "Réponse savante sur le Nom Al-Muqsit",
+      "summary_fr": "Explication du Nom Al-Muqsit selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     },
     {
       "category": "tafsir",
@@ -113,12 +113,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui agit avec une équité parfaite envers toute Sa création.",
-    "evidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est derive des hadiths.",
+    "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est dérivé des hadiths.",
     "scholarly_summary": "Al-Muqsit signifie le Tres-Equitable, Celui qui juge avec une justice parfaite. Al-Ghazali explique que ce Nom est lie au Jour du Jugement ou aucune injustice ne sera commise, meme du poids d'un atome.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -127,7 +127,7 @@
       },
       {
         "label": "Explication hanbali (IslamQA)",
-        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "description": "Explication détaillée selon la méthodologie d'Ibn Uthaymeen et du Comite Permanent.",
         "source_backed": true,
         "source_type": "fatwa",
         "sources": [
@@ -172,8 +172,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

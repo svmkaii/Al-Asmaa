@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-muakhkhir",
   "arabic": "الْمُؤَخِّرُ",
   "transliteration": "Al-Mu'akhkhir",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
-    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+    "note": "Nom attesté principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
   },
   "primary_evidence": {
     "quran": [],
@@ -45,18 +45,18 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/597",
-      "precise_locator": "Page dediee au Nom Al-Mu'akhkhir dans l'encyclopedie Aqeeda",
+      "precise_locator": "Page dédiée au Nom Al-Mu'akhkhir dans l'encyclopédie Aqeeda",
       "summary_fr": "Al-Mu'akhkhir signifie Celui qui retarde ce qu'Il veut par Sa sagesse. Al-Ghazali explique qu'Il retarde les incredules et les desobeissants, et que chaque chose a un terme fixe qu'elle ne peut ni devancer ni retarder."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui retarde ce qu'Il veut selon Sa sagesse parfaite.",
-    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
     "scholarly_summary": "Al-Mu'akhkhir signifie Celui qui retarde ce qu'Il veut par Sa sagesse. Al-Ghazali explique qu'Il retarde les incredules et les desobeissants, et que chaque chose a un terme fixe qu'elle ne peut ni devancer ni retarder.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -65,8 +65,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

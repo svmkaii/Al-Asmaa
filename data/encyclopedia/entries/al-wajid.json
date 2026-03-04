@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-wajid",
   "arabic": "الْوَاجِدُ",
   "transliteration": "Al-Wajid",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
-    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+    "note": "Nom attesté principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
   },
   "primary_evidence": {
     "quran": [],
@@ -38,17 +38,17 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
       "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Wajid)",
-      "summary_fr": "Al-Wajid signifie Celui qui possede tout et ne manque de rien (de wujud/abondance), ou Celui qui trouve tout ce qu'Il veut sans difficulte. Al-Ghazali explique qu'aucun besoin ne Lui echappe et qu'Il n'est jamais dans le manque."
+      "summary_fr": "Al-Wajid signifie Celui qui possède tout et ne manque de rien (de wujud/abondance), ou Celui qui trouve tout ce qu'Il veut sans difficulte. Al-Ghazali explique qu'aucun besoin ne Lui echappe et qu'Il n'est jamais dans le manque."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui possède tout et qui trouve tout ce qu'Il veut.",
-    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "Al-Wajid signifie Celui qui possede tout et ne manque de rien (de wujud/abondance), ou Celui qui trouve tout ce qu'Il veut sans difficulte. Al-Ghazali explique qu'aucun besoin ne Lui echappe et qu'Il n'est jamais dans le manque.",
+    "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Al-Wajid signifie Celui qui possède tout et ne manque de rien (de wujud/abondance), ou Celui qui trouve tout ce qu'Il veut sans difficulte. Al-Ghazali explique qu'aucun besoin ne Lui echappe et qu'Il n'est jamais dans le manque.",
     "nuances": [],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

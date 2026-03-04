@@ -2581,6 +2581,7 @@
     document.getElementById('encyBackToGrid').addEventListener('click', () => {
       document.getElementById('encyDetail').classList.add('hidden');
       document.getElementById('encyGridView').classList.remove('hidden');
+      hidePaginationBadge();
       history.pushState({ page: 'encyclopedia' }, '', '/encyclopedie');
     });
 
@@ -2602,6 +2603,7 @@
         e.preventDefault();
         detailEl.classList.add('hidden');
         document.getElementById('encyGridView').classList.remove('hidden');
+        hidePaginationBadge();
         history.pushState({ page: 'encyclopedia' }, '', '/encyclopedie');
       }
     });
@@ -2639,6 +2641,7 @@
     document.getElementById('encySearchClear').classList.add('hidden');
     document.getElementById('encyDetail').classList.add('hidden');
     document.getElementById('encyGridView').classList.remove('hidden');
+    hidePaginationBadge();
     renderEncyclopediaCategoryChips();
     renderEncyclopediaGrid();
     updateEncyHeaderCount();
@@ -3554,16 +3557,52 @@
 
   function setupDetailSwipe(container, filtered) {
     let touchStartX = 0;
-    let touchEndX = 0;
+    let touchCurrentX = 0;
+    let isSwiping = false;
     const minSwipeDistance = 60;
+    const maxSwipeTranslate = 80;
+
+    // Show pagination badge
+    showPaginationBadge(filtered.length);
+
+    // Show swipe hints on first view
+    showSwipeHints();
 
     container.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;
+      touchCurrentX = touchStartX;
+      isSwiping = true;
+      container.classList.add('swiping');
+    }, { passive: true });
+
+    container.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      touchCurrentX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchCurrentX;
+      
+      // Limit the visual feedback
+      const clampedDiff = Math.max(-maxSwipeTranslate, Math.min(maxSwipeTranslate, diff * 0.4));
+      
+      // Check if we can swipe in this direction
+      const canSwipeLeft = encyDetailIndex < filtered.length - 1;
+      const canSwipeRight = encyDetailIndex > 0;
+      
+      if ((diff > 0 && canSwipeLeft) || (diff < 0 && canSwipeRight)) {
+        container.style.transform = `translateX(${-clampedDiff}px)`;
+        container.style.opacity = 1 - Math.abs(clampedDiff) / 200;
+      }
     }, { passive: true });
 
     container.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      const diff = touchStartX - touchEndX;
+      if (!isSwiping) return;
+      isSwiping = false;
+      container.classList.remove('swiping');
+      
+      const diff = touchStartX - touchCurrentX;
+      
+      // Reset visual transform
+      container.style.transform = '';
+      container.style.opacity = '';
 
       if (Math.abs(diff) > minSwipeDistance) {
         if (diff > 0 && encyDetailIndex < filtered.length - 1) {
@@ -3573,6 +3612,76 @@
         }
       }
     }, { passive: true });
+
+    container.addEventListener('touchcancel', () => {
+      isSwiping = false;
+      container.classList.remove('swiping');
+      container.style.transform = '';
+      container.style.opacity = '';
+    }, { passive: true });
+  }
+
+  // Show pagination badge at bottom of screen
+  function showPaginationBadge(total) {
+    let pagination = document.getElementById('encyPagination');
+    
+    if (!pagination) {
+      pagination = document.createElement('div');
+      pagination.id = 'encyPagination';
+      pagination.className = 'ency-pagination';
+      pagination.innerHTML = `
+        <span class="ency-pagination-current">${encyDetailIndex + 1}</span>
+        <span class="ency-pagination-sep">/</span>
+        <span class="ency-pagination-total">${total}</span>
+      `;
+      document.getElementById('pageEncyclopedia').appendChild(pagination);
+    } else {
+      pagination.querySelector('.ency-pagination-current').textContent = encyDetailIndex + 1;
+      pagination.querySelector('.ency-pagination-total').textContent = total;
+    }
+    
+    // Show when in detail view
+    const detailEl = document.getElementById('encyDetail');
+    if (detailEl && !detailEl.classList.contains('hidden')) {
+      pagination.classList.add('visible');
+    }
+  }
+
+  // Show swipe hint arrows on first load
+  function showSwipeHints() {
+    if (localStorage.getItem('ency-swipe-hint-shown')) return;
+    
+    let hints = document.getElementById('encySwipeHints');
+    if (!hints) {
+      hints = document.createElement('div');
+      hints.id = 'encySwipeHints';
+      hints.className = 'ency-swipe-hints';
+      hints.innerHTML = `
+        <div class="ency-swipe-hint left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </div>
+        <div class="ency-swipe-hint right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </div>
+      `;
+      document.getElementById('pageEncyclopedia').appendChild(hints);
+    }
+    
+    // Hide after 5 seconds and remember
+    setTimeout(() => {
+      if (hints) hints.remove();
+      localStorage.setItem('ency-swipe-hint-shown', '1');
+    }, 5000);
+  }
+
+  // Hide pagination when leaving detail view
+  function hidePaginationBadge() {
+    const pagination = document.getElementById('encyPagination');
+    if (pagination) pagination.classList.remove('visible');
   }
 
   function setupEncyScrollReveal(container) {

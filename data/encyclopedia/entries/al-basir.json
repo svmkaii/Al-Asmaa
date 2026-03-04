@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-basir",
   "arabic": "الْبَصِيرُ",
   "transliteration": "Al-Basir",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -33,7 +33,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 40:20",
         "source_url": "https://quran.com/40:20",
-        "relevance_note": "\"Allah juge en verite... Il est As-Sami', Al-Basir.\""
+        "relevance_note": "\"Allah juge en vérité... Il est As-Sami', Al-Basir.\""
       }
     ],
     "hadith": [
@@ -62,8 +62,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/581",
-      "precise_locator": "Page dediee au Nom Al-Basir dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Basir signifie Celui qui voit tout, les choses visibles et invisibles, les atomes les plus infimes comme les astres les plus lointains. Al-Ghazali explique que Sa vue est sans organe, eternelle et englobante. Souvent associe a As-Sami' dans le Coran."
+      "precise_locator": "Page dédiée au Nom Al-Basir dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Basir signifie Celui qui voit tout, les choses visibles et invisibles, les atomes les plus infimes comme les astres les plus lointains. Al-Ghazali explique que Sa vue est sans organe, éternelle et englobante. Souvent associe a As-Sami' dans le Coran."
     },
     {
       "category": "tafsir",
@@ -104,12 +104,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui voit toute chose, rien n'échappe à Son regard.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Basir signifie Celui qui voit tout, les choses visibles et invisibles, les atomes les plus infimes comme les astres les plus lointains. Al-Ghazali explique que Sa vue est sans organe, eternelle et englobante. Souvent associe a As-Sami' dans le Coran.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Basir signifie Celui qui voit tout, les choses visibles et invisibles, les atomes les plus infimes comme les astres les plus lointains. Al-Ghazali explique que Sa vue est sans organe, éternelle et englobante. Souvent associe a As-Sami' dans le Coran.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -154,8 +154,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

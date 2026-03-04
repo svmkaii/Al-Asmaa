@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-hayy",
   "arabic": "الْحَيُّ",
   "transliteration": "Al-Hayy",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -59,7 +59,7 @@
         "grading": "Hasan",
         "reference_label": "Tirmidhi 3524",
         "source_url": "https://sunnah.com/tirmidhi:3524",
-        "relevance_note": "\"Ya Hayyu ya Qayyum, par Ta misericorde j'implore le secours.\""
+        "relevance_note": "\"Ya Hayyu ya Qayyum, par Ta miséricorde j'implore le secours.\""
       },
       {
         "collection": "Sahih Bukhari",
@@ -86,8 +86,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/641",
-      "precise_locator": "Page dediee au Nom Al-Hayy dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Hayy signifie le Vivant eternel dont la vie est parfaite, sans debut ni fin. Al-Ghazali explique que c'est un des deux Noms pivots (avec Al-Qayyum) sur lesquels reposent tous les autres attributs : la science, la puissance, la volonte presupposent la vie."
+      "precise_locator": "Page dédiée au Nom Al-Hayy dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Hayy signifie le Vivant éternel dont la vie est parfaite, sans debut ni fin. Al-Ghazali explique que c'est un des deux Noms pivots (avec Al-Qayyum) sur lesquels reposent tous les autres attributs : la science, la puissance, la volonte presupposent la vie."
     },
     {
       "category": "tafsir",
@@ -128,12 +128,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Le Vivant éternel qui ne meurt jamais et dont la vie est parfaite.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Hayy signifie le Vivant eternel dont la vie est parfaite, sans debut ni fin. Al-Ghazali explique que c'est un des deux Noms pivots (avec Al-Qayyum) sur lesquels reposent tous les autres attributs : la science, la puissance, la volonte presupposent la vie.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Hayy signifie le Vivant éternel dont la vie est parfaite, sans debut ni fin. Al-Ghazali explique que c'est un des deux Noms pivots (avec Al-Qayyum) sur lesquels reposent tous les autres attributs : la science, la puissance, la volonte presupposent la vie.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -178,8 +178,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

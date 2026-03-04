@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-qabid",
   "arabic": "الْقَابِضُ",
   "transliteration": "Al-Qabid",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
-    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+    "note": "Nom attesté principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
   },
   "primary_evidence": {
     "quran": [
@@ -54,7 +54,7 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/777",
-      "precise_locator": "Page dediee au Nom Al-Qabid dans l'encyclopedie Aqeeda",
+      "precise_locator": "Page dédiée au Nom Al-Qabid dans l'encyclopédie Aqeeda",
       "summary_fr": "Al-Qabid signifie Celui qui restreint la subsistance, les coeurs ou les ames selon Sa sagesse. Al-Ghazali explique qu'Il restreint parfois pour eprouver et parfois pour eduquer. Ce Nom est generalement cite avec son oppose Al-Basit."
     },
     {
@@ -63,8 +63,8 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Al-Qabid",
       "source_url": "https://islamqa.info/ar/answers/218084",
-      "precise_locator": "Reponse savante sur le Nom Al-Qabid",
-      "summary_fr": "Explication du Nom Al-Qabid selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+      "precise_locator": "Réponse savante sur le Nom Al-Qabid",
+      "summary_fr": "Explication du Nom Al-Qabid selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     },
     {
       "category": "tafsir",
@@ -105,12 +105,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui resserre la subsistance selon Sa sagesse.",
-    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
     "scholarly_summary": "Al-Qabid signifie Celui qui restreint la subsistance, les coeurs ou les ames selon Sa sagesse. Al-Ghazali explique qu'Il restreint parfois pour eprouver et parfois pour eduquer. Ce Nom est generalement cite avec son oppose Al-Basit.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -119,7 +119,7 @@
       },
       {
         "label": "Explication hanbali (IslamQA)",
-        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "description": "Explication détaillée selon la méthodologie d'Ibn Uthaymeen et du Comite Permanent.",
         "source_backed": true,
         "source_type": "fatwa",
         "sources": [
@@ -164,8 +164,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

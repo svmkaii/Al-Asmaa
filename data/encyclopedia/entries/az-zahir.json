@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "az-zahir",
   "arabic": "الظَّاهِرُ",
   "transliteration": "Az-Zahir",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/729",
-      "precise_locator": "Page dediee au Nom Az-Zahir dans l'encyclopedie Aqeeda",
-      "summary_fr": "Az-Zahir signifie le Manifeste, Celui qui est au-dessus de toute chose. Le hadith de Muslim explique : 'rien n'est au-dessus de Toi.' Al-Ghazali note que Sa manifestation se voit dans les signes de la creation, bien que Son essence echappe aux regards."
+      "precise_locator": "Page dédiée au Nom Az-Zahir dans l'encyclopédie Aqeeda",
+      "summary_fr": "Az-Zahir signifie le Manifeste, Celui qui est au-dessus de toute chose. Le hadith de Muslim explique : 'rien n'est au-dessus de Toi.' Al-Ghazali note que Sa manifestation se voit dans les signes de la création, bien que Son essence echappe aux regards."
     },
     {
       "category": "tafsir",
@@ -96,12 +96,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont l'existence est évidente par Ses signes dans la création.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Az-Zahir signifie le Manifeste, Celui qui est au-dessus de toute chose. Le hadith de Muslim explique : 'rien n'est au-dessus de Toi.' Al-Ghazali note que Sa manifestation se voit dans les signes de la creation, bien que Son essence echappe aux regards.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Az-Zahir signifie le Manifeste, Celui qui est au-dessus de toute chose. Le hadith de Muslim explique : 'rien n'est au-dessus de Toi.' Al-Ghazali note que Sa manifestation se voit dans les signes de la création, bien que Son essence echappe aux regards.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -146,8 +146,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

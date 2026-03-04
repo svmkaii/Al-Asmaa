@@ -1,13 +1,13 @@
-{
+﻿{
   "slug": "al-muizz",
   "arabic": "الْمُعِزُّ",
   "transliteration": "Al-Mu'izz",
   "french_name": "Celui qui honore",
-  "short_meaning": "Celui qui accorde l'honneur et la dignité à qui Il veut.",
+  "short_meaning": "Celui qui accordé l'honneur et la dignité à qui Il veut.",
   "canonical_status": {
     "in_99_list": true,
-    "evidence_type": "quran_derived",
-    "note": "Concept/racine atteste dans le Coran; Nom sous cette forme derive des hadiths."
+    "evidence_type": "quran_dérivéd",
+    "note": "Concept/racine attesté dans le Coran; Nom sous cette forme dérivé des hadiths."
   },
   "primary_evidence": {
     "quran": [
@@ -46,8 +46,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/1307",
-      "precise_locator": "Page dediee au Nom Al-Mu'izz dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Mu'izz signifie Celui qui accorde l'honneur et la puissance a qui Il veut. Al-Ghazali explique que la vraie 'izza (honneur) vient de la foi et de l'obeissance a Allah. Ce Nom est derive du verset 3:26 ou il apparait sous forme verbale."
+      "precise_locator": "Page dédiée au Nom Al-Mu'izz dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Mu'izz signifie Celui qui accordé l'honneur et la puissance a qui Il veut. Al-Ghazali explique que la vraie 'izza (honneur) vient de la foi et de l'obeissance a Allah. Ce Nom est dérivé du verset 3:26 ou il apparait sous forme verbale."
     },
     {
       "category": "tafsir",
@@ -87,13 +87,13 @@
     }
   ],
   "interpretation_notes": {
-    "consensus_core": "Celui qui accorde l'honneur et la dignité à qui Il veut.",
-    "evidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est derive des hadiths.",
-    "scholarly_summary": "Al-Mu'izz signifie Celui qui accorde l'honneur et la puissance a qui Il veut. Al-Ghazali explique que la vraie 'izza (honneur) vient de la foi et de l'obeissance a Allah. Ce Nom est derive du verset 3:26 ou il apparait sous forme verbale.",
+    "consensus_core": "Celui qui accordé l'honneur et la dignité à qui Il veut.",
+    "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est dérivé des hadiths.",
+    "scholarly_summary": "Al-Mu'izz signifie Celui qui accordé l'honneur et la puissance a qui Il veut. Al-Ghazali explique que la vraie 'izza (honneur) vient de la foi et de l'obeissance a Allah. Ce Nom est dérivé du verset 3:26 ou il apparait sous forme verbale.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -138,8 +138,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

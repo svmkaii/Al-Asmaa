@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-jabbar",
   "arabic": "الْجَبَّارُ",
   "transliteration": "Al-Jabbar",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -46,8 +46,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/603",
-      "precise_locator": "Page dediee au Nom Al-Jabbar dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Jabbar a trois sens selon les savants : Celui qui repare (yajburu) les coeurs brises, Celui dont la volonte s'impose a toute chose (irrésistible), et le Tres-Haut inaccessible. Al-Khattabi privilegie le sens de Celui qui contraint toute la creation a Sa volonte."
+      "precise_locator": "Page dédiée au Nom Al-Jabbar dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Jabbar a trois sens selon les savants : Celui qui repare (yajburu) les coeurs brises, Celui dont la volonte s'impose a toute chose (irrésistible), et le Tres-Haut inaccessible. Al-Khattabi privilegie le sens de Celui qui contraint toute la création a Sa volonte."
     },
     {
       "category": "encyclopedia",
@@ -55,8 +55,8 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Jabbar",
       "source_url": "https://www.islamweb.net/ar/article/229009",
-      "precise_locator": "Article dedie au Nom Al-Jabbar",
-      "summary_fr": "Article savant detaille sur le Nom Al-Jabbar avec analyse linguistique, preuves coraniques et implications pour la foi."
+      "precise_locator": "Article dédié au Nom Al-Jabbar",
+      "summary_fr": "Article savant détaillé sur le Nom Al-Jabbar avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
       "category": "fatwa",
@@ -64,8 +64,8 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Al-Jabbar",
       "source_url": "https://islamqa.info/ar/answers/130718",
-      "precise_locator": "Reponse savante sur le Nom Al-Jabbar",
-      "summary_fr": "Explication du Nom Al-Jabbar selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+      "precise_locator": "Réponse savante sur le Nom Al-Jabbar",
+      "summary_fr": "Explication du Nom Al-Jabbar selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     },
     {
       "category": "tafsir",
@@ -106,12 +106,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la volonté s'impose à toute chose et qui répare les cœurs brisés.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Jabbar a trois sens selon les savants : Celui qui repare (yajburu) les coeurs brises, Celui dont la volonte s'impose a toute chose (irrésistible), et le Tres-Haut inaccessible. Al-Khattabi privilegie le sens de Celui qui contraint toute la creation a Sa volonte.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Jabbar a trois sens selon les savants : Celui qui repare (yajburu) les coeurs brises, Celui dont la volonte s'impose a toute chose (irrésistible), et le Tres-Haut inaccessible. Al-Khattabi privilegie le sens de Celui qui contraint toute la création a Sa volonte.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -120,7 +120,7 @@
       },
       {
         "label": "Explication hanbali (IslamQA)",
-        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "description": "Explication détaillée selon la méthodologie d'Ibn Uthaymeen et du Comite Permanent.",
         "source_backed": true,
         "source_type": "fatwa",
         "sources": [
@@ -165,8 +165,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

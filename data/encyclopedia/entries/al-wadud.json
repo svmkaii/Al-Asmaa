@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-wadud",
   "arabic": "الْوَدُودُ",
   "transliteration": "Al-Wadud",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/887",
-      "precise_locator": "Page dediee au Nom Al-Wadud dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Wadud signifie le Tres-Aimant, Celui qui aime Ses serviteurs pieux et qui est aime d'eux. Al-Ghazali explique qu'Il veut le bien pour toute la creation et manifeste Son amour par Ses bienfaits. Ibn al-Qayyim distingue l'amour divin actif (Il traite Ses serviteurs avec bonte) de l'amour qu'Il inspire."
+      "precise_locator": "Page dédiée au Nom Al-Wadud dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Wadud signifie le Tres-Aimant, Celui qui aime Ses serviteurs pieux et qui est aime d'eux. Al-Ghazali explique qu'Il veut le bien pour toute la création et manifeste Son amour par Ses bienfaits. Ibn al-Qayyim distingue l'amour divin actif (Il traite Ses serviteurs avec bonte) de l'amour qu'Il inspire."
     },
     {
       "category": "encyclopedia",
@@ -63,8 +63,8 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Wadud",
       "source_url": "https://www.islamweb.net/ar/article/236884",
-      "precise_locator": "Article dedie au Nom Al-Wadud",
-      "summary_fr": "Article savant detaille sur le Nom Al-Wadud avec analyse linguistique, preuves coraniques et implications pour la foi."
+      "precise_locator": "Article dédié au Nom Al-Wadud",
+      "summary_fr": "Article savant détaillé sur le Nom Al-Wadud avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
       "category": "tafsir",
@@ -105,12 +105,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui aime Ses serviteurs pieux et qui est aimé par eux.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Wadud signifie le Tres-Aimant, Celui qui aime Ses serviteurs pieux et qui est aime d'eux. Al-Ghazali explique qu'Il veut le bien pour toute la creation et manifeste Son amour par Ses bienfaits. Ibn al-Qayyim distingue l'amour divin actif (Il traite Ses serviteurs avec bonte) de l'amour qu'Il inspire.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Wadud signifie le Tres-Aimant, Celui qui aime Ses serviteurs pieux et qui est aime d'eux. Al-Ghazali explique qu'Il veut le bien pour toute la création et manifeste Son amour par Ses bienfaits. Ibn al-Qayyim distingue l'amour divin actif (Il traite Ses serviteurs avec bonte) de l'amour qu'Il inspire.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -155,8 +155,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "allah",
   "arabic": "اللَّهُ",
   "transliteration": "Allah",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -70,8 +70,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/551",
-      "precise_locator": "Page dediee au Nom Allah dans l'encyclopedie Aqeeda",
-      "summary_fr": "Ism al-Jalala, le Nom supreme qui englobe tous les autres attributs de perfection. Al-Ghazali explique qu'il designe l'Etre dont l'existence est necessaire, digne de toute adoration. Ibn al-Qayyim precise qu'il est le seul Nom dont tous les autres sont des attributs."
+      "precise_locator": "Page dédiée au Nom Allah dans l'encyclopédie Aqeeda",
+      "summary_fr": "Ism al-Jalala, le Nom supreme qui englobe tous les autres attributs de perfection. Al-Ghazali explique qu'il désigne l'être dont l'existence est nécessaire, digne de toute adoration. Ibn al-Qayyim precise qu'il est le seul Nom dont tous les autres sont des attributs."
     },
     {
       "category": "encyclopedia",
@@ -79,8 +79,8 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Allah",
       "source_url": "https://www.islamweb.net/ar/article/175061",
-      "precise_locator": "Article dedie au Nom Allah",
-      "summary_fr": "Article savant detaille sur le Nom Allah avec analyse linguistique, preuves coraniques et implications pour la foi."
+      "precise_locator": "Article dédié au Nom Allah",
+      "summary_fr": "Article savant détaillé sur le Nom Allah avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
       "category": "tafsir",
@@ -121,12 +121,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Le nom suprême d'Allah qui rassemble tous Ses attributs de perfection.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Ism al-Jalala, le Nom supreme qui englobe tous les autres attributs de perfection. Al-Ghazali explique qu'il designe l'Etre dont l'existence est necessaire, digne de toute adoration. Ibn al-Qayyim precise qu'il est le seul Nom dont tous les autres sont des attributs.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Ism al-Jalala, le Nom supreme qui englobe tous les autres attributs de perfection. Al-Ghazali explique qu'il désigne l'être dont l'existence est nécessaire, digne de toute adoration. Ibn al-Qayyim precise qu'il est le seul Nom dont tous les autres sont des attributs.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -171,8 +171,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

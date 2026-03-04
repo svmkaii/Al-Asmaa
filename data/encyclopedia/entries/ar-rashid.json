@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "ar-rashid",
   "arabic": "الرَّشِيدُ",
   "transliteration": "Ar-Rashid",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
-    "note": "Nom atteste principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
+    "note": "Nom attesté principalement dans la tradition du hadith (Tirmidhi 3507, etc.)."
   },
   "primary_evidence": {
     "quran": [
@@ -47,7 +47,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
       "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Ar-Rashid)",
-      "summary_fr": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est atteste uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut."
+      "summary_fr": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est attesté uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut."
     },
     {
       "category": "fatwa",
@@ -55,18 +55,18 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Ar-Rashid",
       "source_url": "https://islamqa.info/ar/answers/5457",
-      "precise_locator": "Reponse savante sur le Nom Ar-Rashid",
-      "summary_fr": "Explication du Nom Ar-Rashid selon la methodologie des Ahl al-Sunnah (perspective hanbali)."
+      "precise_locator": "Réponse savante sur le Nom Ar-Rashid",
+      "summary_fr": "Explication du Nom Ar-Rashid selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui dirige toute chose vers sa finalité avec sagesse parfaite.",
-    "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est atteste uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut.",
+    "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
+    "scholarly_summary": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est attesté uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut.",
     "nuances": [
       {
         "label": "Explication hanbali (IslamQA)",
-        "description": "Explication detaillee selon la methodologie d'Ibn Uthaymeen et du Comite Permanent.",
+        "description": "Explication détaillée selon la méthodologie d'Ibn Uthaymeen et du Comite Permanent.",
         "source_backed": true,
         "source_type": "fatwa",
         "sources": [
@@ -75,8 +75,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-haqq",
   "arabic": "الْحَقُّ",
   "transliteration": "Al-Haqq",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -17,7 +17,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 22:6",
         "source_url": "https://quran.com/22:6",
-        "relevance_note": "\"C'est parce qu'Allah est Al-Haqq (la Verite).\""
+        "relevance_note": "\"C'est parce qu'Allah est Al-Haqq (la vérité).\""
       },
       {
         "surah": 22,
@@ -70,8 +70,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/627",
-      "precise_locator": "Page dediee au Nom Al-Haqq dans l'encyclopedie Aqeeda",
-      "summary_fr": "Al-Haqq signifie la Verite absolue, Celui dont l'existence est la plus reelle et la plus certaine. Al-Ghazali explique que tout autre que Lui peut cesser d'exister, mais Son existence est necessaire et eternelle. Ibn al-Qayyim ajoute que Sa parole, Ses actes et Sa rencontre sont tous 'haqq'."
+      "precise_locator": "Page dédiée au Nom Al-Haqq dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Haqq signifie la vérité absolue, Celui dont l'existence est la plus reelle et la plus certaine. Al-Ghazali explique que tout autre que Lui peut cesser d'exister, mais Son existence est nécessaire et éternelle. Ibn al-Qayyim ajoute que Sa parole, Ses actes et Sa rencontre sont tous 'haqq'."
     },
     {
       "category": "tafsir",
@@ -112,12 +112,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui est la Vérité absolue et dont l'existence est certaine.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Haqq signifie la Verite absolue, Celui dont l'existence est la plus reelle et la plus certaine. Al-Ghazali explique que tout autre que Lui peut cesser d'exister, mais Son existence est necessaire et eternelle. Ibn al-Qayyim ajoute que Sa parole, Ses actes et Sa rencontre sont tous 'haqq'.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Haqq signifie la vérité absolue, Celui dont l'existence est la plus reelle et la plus certaine. Al-Ghazali explique que tout autre que Lui peut cesser d'exister, mais Son existence est nécessaire et éternelle. Ibn al-Qayyim ajoute que Sa parole, Ses actes et Sa rencontre sont tous 'haqq'.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -162,8 +162,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

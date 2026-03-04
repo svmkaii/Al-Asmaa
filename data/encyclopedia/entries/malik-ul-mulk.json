@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "malik-ul-mulk",
   "arabic": "مَالِكُ الْمُلْكِ",
   "transliteration": "Malik-ul-Mulk",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -17,7 +17,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 3:26",
         "source_url": "https://quran.com/3:26",
-        "relevance_note": "\"Dis : O Allah, Maitre de la royaute (Malik al-Mulk), Tu donnes la royaute a qui Tu veux...\""
+        "relevance_note": "\"Dis : O Allah, Maitre de la royauté (Malik al-Mulk), Tu donnes la royauté a qui Tu veux...\""
       }
     ],
     "hadith": [
@@ -46,8 +46,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/849",
-      "precise_locator": "Page dediee au Nom Malik-ul-Mulk dans l'encyclopedie Aqeeda",
-      "summary_fr": "Malik al-Mulk signifie le Possesseur de la royaute absolue, Celui a qui appartient toute souverainete. Al-Ghazali explique qu'Il distribue la royaute comme Il veut et la retire a qui Il veut, et que toute royaute terrestre n'est qu'un pret temporaire."
+      "precise_locator": "Page dédiée au Nom Malik-ul-Mulk dans l'encyclopédie Aqeeda",
+      "summary_fr": "Malik al-Mulk signifie le Possesseur de la royauté absolue, Celui a qui appartient toute souverainete. Al-Ghazali explique qu'Il distribue la royauté comme Il veut et la retire a qui Il veut, et que toute royauté terrestre n'est qu'un pret temporaire."
     },
     {
       "category": "tafsir",
@@ -88,12 +88,12 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Le Possesseur absolu de toute royauté et de tout pouvoir.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Malik al-Mulk signifie le Possesseur de la royaute absolue, Celui a qui appartient toute souverainete. Al-Ghazali explique qu'Il distribue la royaute comme Il veut et la retire a qui Il veut, et que toute royaute terrestre n'est qu'un pret temporaire.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Malik al-Mulk signifie le Possesseur de la royauté absolue, Celui a qui appartient toute souverainete. Al-Ghazali explique qu'Il distribue la royauté comme Il veut et la retire a qui Il veut, et que toute royauté terrestre n'est qu'un pret temporaire.",
     "nuances": [
       {
-        "label": "Encyclopedie Aqeeda (multi-madhab)",
-        "description": "Page dediee dans l'encyclopedie Dorar.net avec preuves du Coran et de la Sunnah.",
+        "label": "encyclopédie Aqeeda (multi-madhab)",
+        "description": "Page dédiée dans l'encyclopédie Dorar.net avec preuves du Coran et de la Sunnah.",
         "source_backed": true,
         "source_type": "encyclopedia",
         "sources": [
@@ -138,8 +138,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {

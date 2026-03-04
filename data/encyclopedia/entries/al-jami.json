@@ -1,4 +1,4 @@
-{
+﻿{
   "slug": "al-jami",
   "arabic": "الْجَامِعُ",
   "transliteration": "Al-Jami'",
@@ -7,7 +7,7 @@
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
-    "note": "Nom atteste directement dans le Coran comme attribut divin."
+    "note": "Nom attesté directement dans le Coran comme attribut divin."
   },
   "primary_evidence": {
     "quran": [
@@ -55,7 +55,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
       "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Jami')",
-      "summary_fr": "Al-Jami' signifie le Rassembleur, Celui qui rassemblera toutes les creatures pour le Jugement Dernier. Al-Ghazali ajoute un sens plus large : Celui qui reunit les contraires dans Sa creation (la nuit et le jour, le chaud et le froid), harmonisant l'ensemble."
+      "summary_fr": "Al-Jami' signifie le Rassembleur, Celui qui rassemblera toutes les créatures pour le Jugement Dernier. Al-Ghazali ajoute un sens plus large : Celui qui reunit les contraires dans Sa création (la nuit et le jour, le chaud et le froid), harmonisant l'ensemble."
     },
     {
       "category": "tafsir",
@@ -96,8 +96,8 @@
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui rassemblera toute la création le Jour du Jugement.",
-    "evidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Jami' signifie le Rassembleur, Celui qui rassemblera toutes les creatures pour le Jugement Dernier. Al-Ghazali ajoute un sens plus large : Celui qui reunit les contraires dans Sa creation (la nuit et le jour, le chaud et le froid), harmonisant l'ensemble.",
+    "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
+    "scholarly_summary": "Al-Jami' signifie le Rassembleur, Celui qui rassemblera toutes les créatures pour le Jugement Dernier. Al-Ghazali ajoute un sens plus large : Celui qui reunit les contraires dans Sa création (la nuit et le jour, le chaud et le froid), harmonisant l'ensemble.",
     "nuances": [
       {
         "label": "Tafsir hanafi (Al-Nasafi)",
@@ -137,8 +137,8 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
-      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire vérifiable."
     ]
   },
   "attribution_integrity": {
