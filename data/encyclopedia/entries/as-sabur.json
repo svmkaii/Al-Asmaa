@@ -3,7 +3,7 @@
   "arabic": "الصَّبُورُ",
   "transliteration": "As-Sabur",
   "french_name": "Le Patient",
-  "short_meaning": "Celui dont la patience est sans limite, qui ne précipite rien.",
+  "short_meaning": "Celui dont la patience est sans limite et qui ne précipite pas la punition.",
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "hadith_primary",
@@ -68,7 +68,7 @@
     }
   ],
   "interpretation_notes": {
-    "consensus_core": "Celui dont la patience est sans limite, qui ne précipite rien.",
+    "consensus_core": "Celui dont la patience est sans limite et qui ne précipite pas la punition.",
     "evidence_type_note": "Ce Nom est atteste dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
     "scholarly_summary": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement atteste dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la misericorde.",
     "nuances": [
