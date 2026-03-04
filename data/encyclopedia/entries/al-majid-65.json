@@ -47,7 +47,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/827",
       "precise_locator": "Page dédiée au Nom Al-Majid dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Majid dans ce contexte est lu avec kasra (Majid) comme attribut du Trone ou de son Possesseur. Al-Qurtubi mentionne les deux lectures (Majid/Majid) et les deux sens qui en decoulent."
+      "summary_fr": "Al-Majid dans ce contexte est lu avec kasra (Majid) comme attribut du Trone ou de son Possesseur. Al-Qurtubi mentionné les deux lectures (Majid/Majid) et les deux sens qui en decoulent."
     },
     {
       "category": "encyclopedia",
@@ -74,7 +74,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=85&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 85, Ayah 15 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -83,7 +83,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=85&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 85, Ayah 15 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -92,7 +92,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=85&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 85, Ayah 15 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -101,13 +101,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=85&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 85, Ayah 15 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la noblesse et la gloire sont immenses et absolues.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Majid dans ce contexte est lu avec kasra (Majid) comme attribut du Trone ou de son Possesseur. Al-Qurtubi mentionne les deux lectures (Majid/Majid) et les deux sens qui en decoulent.",
+    "scholarly_summary": "Al-Majid dans ce contexte est lu avec kasra (Majid) comme attribut du Trone ou de son Possesseur. Al-Qurtubi mentionné les deux lectures (Majid/Majid) et les deux sens qui en decoulent.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -248,9 +248,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "majd", "definition": "Terme arabe signifiant 'gloire', 'noblesse'. Racine du nom Al-Majid."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:04.560Z",
@@ -259,3 +260,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.608Z"
 }
+
+

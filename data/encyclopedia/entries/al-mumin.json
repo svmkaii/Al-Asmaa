@@ -47,7 +47,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/819",
       "precise_locator": "Page dédiée au Nom Al-Mu'min dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Mu'min désigne Celui qui accordé la securite, qui confirme la veracite de Ses messagers par les miracles. Al-Ghazali explique deux sens : Celui qui donne la securite (aman) a Ses serviteurs, et Celui qui Se confirme Lui-meme dans Son unicite (tasdiq)."
+      "summary_fr": "Al-Mu'min désigne Celui qui accordé la securite, qui confirme la veracite de Ses messagers par les miracles. Al-Ghazali explique deux sens : Celui qui donne la securite (aman) à Ses serviteurs, et Celui qui Se confirme Lui-même dans Son unicite (tasdiq)."
     },
     {
       "category": "encyclopedia",
@@ -65,7 +65,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mu'min est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mu'min est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -74,7 +74,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mu'min est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mu'min est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -83,7 +83,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mu'min est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mu'min est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -92,13 +92,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mu'min est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mu'min est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui accordé la sécurité à Ses serviteurs et confirme leur foi.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Mu'min désigne Celui qui accordé la securite, qui confirme la veracite de Ses messagers par les miracles. Al-Ghazali explique deux sens : Celui qui donne la securite (aman) a Ses serviteurs, et Celui qui Se confirme Lui-meme dans Son unicite (tasdiq).",
+    "scholarly_summary": "Al-Mu'min désigne Celui qui accordé la securite, qui confirme la veracite de Ses messagers par les miracles. Al-Ghazali explique deux sens : Celui qui donne la securite (aman) à Ses serviteurs, et Celui qui Se confirme Lui-même dans Son unicite (tasdiq).",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -223,9 +223,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "iman", "definition": "Terme arabe signifiant 'foi', 'sécurité'. Racine du nom Al-Mu'min."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:21.726Z",
@@ -234,3 +235,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.616Z"
 }
+

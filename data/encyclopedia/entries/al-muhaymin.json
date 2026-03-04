@@ -47,7 +47,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/875",
       "precise_locator": "Page dédiée au Nom Al-Muhaymin dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Muhaymin signifie le Vigilant supreme, le Protecteur, le Temoin de toute chose. Al-Khattabi explique qu'il dérivé de haymana (veiller sur), désignant Celui qui observe et preserve toute chose. Al-Qurtubi ajoute qu'il signifie le Gardien fidele."
+      "summary_fr": "Al-Muhaymin signifie le Vigilant suprême, le Protecteur, le Temoin de toute chose. Al-Khattabi explique qu'il dérivé de haymana (veiller sur), désignant Celui qui observe et préservé toute chose. Al-Qurtubi ajoute qu'il signifie le Gardien fidele."
     },
     {
       "category": "encyclopedia",
@@ -65,7 +65,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Muhaymin est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Muhaymin est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -74,7 +74,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Muhaymin est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Muhaymin est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -83,7 +83,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Muhaymin est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Muhaymin est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -92,13 +92,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Muhaymin est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Muhaymin est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui veille sur toute chose et protège Sa création avec vigilance.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Muhaymin signifie le Vigilant supreme, le Protecteur, le Temoin de toute chose. Al-Khattabi explique qu'il dérivé de haymana (veiller sur), désignant Celui qui observe et preserve toute chose. Al-Qurtubi ajoute qu'il signifie le Gardien fidele.",
+    "scholarly_summary": "Al-Muhaymin signifie le Vigilant suprême, le Protecteur, le Temoin de toute chose. Al-Khattabi explique qu'il dérivé de haymana (veiller sur), désignant Celui qui observe et préservé toute chose. Al-Qurtubi ajoute qu'il signifie le Gardien fidele.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -223,9 +223,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "haymana", "definition": "Terme arabe signifiant 'domination protectrice'. Racine du nom Al-Muhaymin."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:14.680Z",
@@ -234,3 +235,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.612Z"
 }
+

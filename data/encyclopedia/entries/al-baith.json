@@ -25,7 +25,7 @@
         "name_in_verse": false,
         "reference_label": "Quran 16:36",
         "source_url": "https://quran.com/16:36",
-        "relevance_note": "\"Nous avons envoye (ba'athna) dans chaque communaute un Messager.\""
+        "relevance_note": "\"Nous avons envoyé (ba'athna) dans chaque communauté un Messager.\""
       }
     ],
     "hadith": [
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Ba'ith)",
-      "summary_fr": "Al-Ba'ith signifie Celui qui ressuscite les morts et envoie les messagers. Al-Ghazali explique deux sens : Celui qui eveille les morts pour le Jugement, et Celui qui suscite les prophetes pour guider l'humanite."
+      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Al-Ba'ith)",
+      "summary_fr": "Al-Ba'ith signifie Celui qui ressuscite les morts et envoie les messagers. Al-Ghazali explique deux sens : Celui qui éveille les morts pour le Jugement, et Celui qui suscite les prophètes pour guider l'humanité."
     },
     {
       "category": "tafsir",
@@ -64,7 +64,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 22, Ayah 7 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -73,7 +73,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 22, Ayah 7 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -82,7 +82,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 22, Ayah 7 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -91,13 +91,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=22&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 22, Ayah 7 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 22:7 ou le Nom Al-Ba'ith est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui ressuscitera les morts le Jour du Jugement.",
     "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est dérivé des hadiths.",
-    "scholarly_summary": "Al-Ba'ith signifie Celui qui ressuscite les morts et envoie les messagers. Al-Ghazali explique deux sens : Celui qui eveille les morts pour le Jugement, et Celui qui suscite les prophetes pour guider l'humanite.",
+    "scholarly_summary": "Al-Ba'ith signifie Celui qui ressuscite les morts et envoie les messagers. Al-Ghazali explique deux sens : Celui qui éveille les morts pour le Jugement, et Celui qui suscite les prophètes pour guider l'humanité.",
     "nuances": [
       {
         "label": "Tafsir hanafi (Al-Nasafi)",
@@ -213,9 +213,13 @@
       "status": "passed"
     }
   ],
+  "glossary": [
+    { "term": "ba'th", "definition": "Terme arabe signifiant 'résurrection', 'envoi'. Racine du nom Al-Ba'ith." },
+    { "term": "Yawm al-Qiyama", "definition": "Le Jour de la Résurrection, le Jour du Jugement Dernier." }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:27.848Z",

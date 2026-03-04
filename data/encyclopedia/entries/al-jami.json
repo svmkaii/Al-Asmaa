@@ -54,7 +54,7 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Jami')",
+      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Al-Jami')",
       "summary_fr": "Al-Jami' signifie le Rassembleur, Celui qui rassemblera toutes les créatures pour le Jugement Dernier. Al-Ghazali ajoute un sens plus large : Celui qui reunit les contraires dans Sa création (la nuit et le jour, le chaud et le froid), harmonisant l'ensemble."
     },
     {
@@ -64,7 +64,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=3&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 3, Ayah 9 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 3:9 ou le Nom Al-Jami' est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 3:9 ou le Nom Al-Jami' est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -73,7 +73,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=3&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 3, Ayah 9 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 3:9 ou le Nom Al-Jami' est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 3:9 ou le Nom Al-Jami' est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -82,7 +82,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=3&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 3, Ayah 9 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 3:9 ou le Nom Al-Jami' est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 3:9 ou le Nom Al-Jami' est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -91,7 +91,7 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=3&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 3, Ayah 9 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 3:9 ou le Nom Al-Jami' est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 3:9 ou le Nom Al-Jami' est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
@@ -213,9 +213,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "jam'", "definition": "Terme arabe signifiant 'rassemblement'. Racine du nom Al-Jami'."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:55.209Z",
@@ -224,3 +225,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.604Z"
 }
+
+

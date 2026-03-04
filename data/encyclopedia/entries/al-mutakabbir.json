@@ -55,7 +55,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/795",
       "precise_locator": "Page dédiée au Nom Al-Mutakabbir dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Mutakabbir signifie Celui a qui appartient exclusivement la grandeur supreme. Al-Ghazali explique que la kibriya (grandeur) n'est legitime que pour Allah. Quand un humain se montre orgueilleux, c'est blame ; pour Allah, c'est un attribut de perfection car Lui seul merite cette grandeur absolue."
+      "summary_fr": "Al-Mutakabbir signifie Celui à qui appartient exclusivement la grandeur suprême. Al-Ghazali explique que la kibriya (grandeur) n'est legitime que pour Allah. Quand un humain se montre orgueilleux, c'est blame ; pour Allah, c'est un attribut de perfection car Lui seul merite cette grandeur absolue."
     },
     {
       "category": "tafsir",
@@ -64,7 +64,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mutakabbir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mutakabbir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -73,7 +73,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mutakabbir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mutakabbir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -82,7 +82,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mutakabbir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mutakabbir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -91,13 +91,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mutakabbir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Mutakabbir est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui à qui appartient toute grandeur, élevé au-dessus de toute la création.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Mutakabbir signifie Celui a qui appartient exclusivement la grandeur supreme. Al-Ghazali explique que la kibriya (grandeur) n'est legitime que pour Allah. Quand un humain se montre orgueilleux, c'est blame ; pour Allah, c'est un attribut de perfection car Lui seul merite cette grandeur absolue.",
+    "scholarly_summary": "Al-Mutakabbir signifie Celui à qui appartient exclusivement la grandeur suprême. Al-Ghazali explique que la kibriya (grandeur) n'est legitime que pour Allah. Quand un humain se montre orgueilleux, c'est blame ; pour Allah, c'est un attribut de perfection car Lui seul merite cette grandeur absolue.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -222,9 +222,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "kibriya'", "definition": "Terme arabe signifiant 'grandeur', 'orgueil suprême'. Racine du nom Al-Mutakabbir."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:29.648Z",
@@ -233,3 +234,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.622Z"
 }
+

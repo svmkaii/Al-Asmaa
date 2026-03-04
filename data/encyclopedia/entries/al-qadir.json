@@ -63,7 +63,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/779",
       "precise_locator": "Page dédiée au Nom Al-Qadir dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali explique que Sa puissance est liee a Sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empecher d'accomplir ce qu'Il decide."
+      "summary_fr": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali explique que Sa puissance est liee à sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empéchér d'accomplir ce qu'Il decide."
     },
     {
       "category": "fatwa",
@@ -81,7 +81,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -90,7 +90,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -99,7 +99,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -108,13 +108,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui a le pouvoir absolu de faire tout ce qu'Il veut.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali explique que Sa puissance est liee a Sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empecher d'accomplir ce qu'Il decide.",
+    "scholarly_summary": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali explique que Sa puissance est liee à sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empéchér d'accomplir ce qu'Il decide.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -262,9 +262,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "qudra", "definition": "Terme arabe signifiant 'puissance', 'capacité'. Racine du nom Al-Qadir."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:31.362Z",
@@ -273,3 +274,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.623Z"
 }
+

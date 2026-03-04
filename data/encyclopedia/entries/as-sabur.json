@@ -17,7 +17,7 @@
         "name_in_verse": false,
         "reference_label": "Quran 2:153",
         "source_url": "https://quran.com/2:153",
-        "relevance_note": "\"O croyants, cherchez secours dans la patience (sabr)\" - le concept de patience est mentionne pour les croyants, non comme Nom divin."
+        "relevance_note": "\"O croyants, cherchez secours dans la patience (sabr)\" - le concept de patience est mentionné pour les croyants, non comme Nom divin."
       }
     ],
     "hadith": [
@@ -55,7 +55,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/713",
       "precise_locator": "Page dédiée au Nom As-Sabur dans l'encyclopédie Aqeeda",
-      "summary_fr": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la miséricorde."
+      "summary_fr": "As-Sabur signifie le Très-Patient, Celui qui ne se hate pas de punir les péchéurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais à la sagesse et à la miséricorde."
     },
     {
       "category": "fatwa",
@@ -70,7 +70,7 @@
   "interpretation_notes": {
     "consensus_core": "Celui dont la patience est sans limite et qui ne précipite pas la punition.",
     "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "As-Sabur signifie le Tres-Patient, Celui qui ne se hate pas de punir les pecheurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais a la sagesse et a la miséricorde.",
+    "scholarly_summary": "As-Sabur signifie le Très-Patient, Celui qui ne se hate pas de punir les péchéurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais à la sagesse et à la miséricorde.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -147,9 +147,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "sabr", "definition": "Terme arabe signifiant 'patience', 'endurance'. Racine du nom As-Sabur."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:51.698Z",
@@ -158,3 +159,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.637Z"
 }
+

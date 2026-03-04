@@ -18,7 +18,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Bukhari 1120",
         "source_url": "https://sunnah.com/bukhari:1120",
-        "relevance_note": "\"Tu es Al-Muqaddim et Al-Mu'akhkhir\" - dans l'invocation nocturne du Prophete."
+        "relevance_note": "\"Tu es Al-Muqaddim et Al-Mu'akhkhir\" - dans l'invocation nocturne du Prophète."
       },
       {
         "collection": "Tirmidhi",
@@ -106,9 +106,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "ta'khir", "definition": "Terme arabe signifiant 'retardement'. Racine du nom Al-Mu'akhkhir."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:08.388Z",
@@ -117,3 +118,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.610Z"
 }
+
+

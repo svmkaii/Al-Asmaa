@@ -46,7 +46,7 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Ar-Rashid)",
+      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Ar-Rashid)",
       "summary_fr": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est attesté uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut."
     },
     {
@@ -123,9 +123,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "rushd", "definition": "Terme arabe signifiant 'droiture', 'bonne direction'. Racine du nom Ar-Rashid."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:48.852Z",
@@ -134,3 +135,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.635Z"
 }
+
+

@@ -63,7 +63,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/841",
       "precise_locator": "Page dédiée au Nom Al-Ghaffar dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de manière répètee. Al-Ghazali explique qu'Allah couvre les peches et ne les devoile pas, meme s'il les connait. La diffèrence avec Al-Ghafur est que Al-Ghaffar insiste sur la repetition du pardon."
+      "summary_fr": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de manière répétée. Al-Ghazali explique qu'Allah couvre les péchés et ne les dévoile pas, même s'Il les connaît. La différence avec Al-Ghafur est que Al-Ghaffar insiste sur la répétition du pardon."
     },
     {
       "category": "encyclopedia",
@@ -81,7 +81,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 39, Ayah 5 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -90,7 +90,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 39, Ayah 5 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -99,7 +99,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 39, Ayah 5 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -108,13 +108,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=39&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 39, Ayah 5 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 39:5 ou le Nom Al-Ghaffar est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui pardonne sans cesse et de manière répétée les péchés de Ses serviteurs.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de manière répètee. Al-Ghazali explique qu'Allah couvre les peches et ne les devoile pas, meme s'il les connait. La diffèrence avec Al-Ghafur est que Al-Ghaffar insiste sur la repetition du pardon.",
+    "scholarly_summary": "Al-Ghaffar (forme intensive de Ghafir) signifie Celui qui pardonne abondamment et de manière répétée. Al-Ghazali explique qu'Allah couvre les péchés et ne les dévoile pas, même s'Il les connaît. La différence avec Al-Ghafur est que Al-Ghaffar insiste sur la répétition du pardon.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -253,9 +253,14 @@
       "status": "passed"
     }
   ],
+  "glossary": [
+    { "term": "ghafr", "definition": "Terme arabe signifiant 'pardon', 'couverture des péchés'. Racine du nom Al-Ghaffar." },
+    { "term": "istighfar", "definition": "Action de demander pardon à Allah, dérivée de la même racine." },
+    { "term": "Al-Ghafur", "definition": "L'un des 99 noms d'Allah signifiant 'Le Pardonneur', similaire à Al-Ghaffar avec une nuance différente." }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:39.749Z",

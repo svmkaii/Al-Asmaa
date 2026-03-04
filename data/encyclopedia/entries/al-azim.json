@@ -63,7 +63,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/743",
       "precise_locator": "Page dédiée au Nom Al-'Azim dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-'Azim signifie le Tres-Grand, dont la grandeur depasse toute comprehension. Al-Ghazali explique que personne ne peut saisir la realite de Sa grandeur, ni les sens ni l'intellect. Seul Lui Se connait véritablement."
+      "summary_fr": "Al-'Azim signifie le Très-Grand, dont la grandeur dépasse toute compréhension. Al-Ghazali explique que personne ne peut saisir la réalité de Sa grandeur, ni les sens ni l'intellect. Seul Lui Se connaît véritablement."
     },
     {
       "category": "encyclopedia",
@@ -81,7 +81,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 2, Ayah 255 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Azim est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Azim est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -90,7 +90,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 2, Ayah 255 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Azim est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Azim est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -99,7 +99,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 2, Ayah 255 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Azim est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Azim est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -108,13 +108,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=255&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 2, Ayah 255 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Azim est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 2:255 ou le Nom Al-'Azim est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la grandeur dépasse toute compréhension humaine.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-'Azim signifie le Tres-Grand, dont la grandeur depasse toute comprehension. Al-Ghazali explique que personne ne peut saisir la realite de Sa grandeur, ni les sens ni l'intellect. Seul Lui Se connait véritablement.",
+    "scholarly_summary": "Al-'Azim signifie le Très-Grand, dont la grandeur dépasse toute compréhension. Al-Ghazali explique que personne ne peut saisir la réalité de Sa grandeur, ni les sens ni l'intellect. Seul Lui Se connaît véritablement.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -253,9 +253,13 @@
       "status": "passed"
     }
   ],
+  "glossary": [
+    { "term": "'azama", "definition": "Terme arabe signifiant 'grandeur', 'magnificence'. Racine du nom Al-'Azim." },
+    { "term": "Ayat al-Kursi", "definition": "Le Verset du Trône (Coran 2:255), l'un des versets les plus importants du Coran." }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:24.205Z",
@@ -264,3 +268,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.589Z"
 }
+

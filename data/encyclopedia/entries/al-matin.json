@@ -47,7 +47,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/825",
       "precise_locator": "Page dédiée au Nom Al-Matin dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Matin signifie le Tres-Ferme, Celui dont la force est inepuisable et ne souffre d'aucune fatigue. Al-Ghazali explique que ce Nom renforce Al-Qawi : non seulement Il est fort, mais Sa force est immuable et ne connait ni changement ni affaiblissement."
+      "summary_fr": "Al-Matin signifie le Très-Ferme, Celui dont la force est inepuisable et ne souffre d'aucune fatigue. Al-Ghazali explique que ce Nom renforce Al-Qawi : non seulement Il est fort, mais Sa force est immuable et ne connaît ni changement ni affaiblissement."
     },
     {
       "category": "fatwa",
@@ -65,7 +65,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=51&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 51, Ayah 58 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 51:58 ou le Nom Al-Matin est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 51:58 ou le Nom Al-Matin est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -74,7 +74,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=51&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 51, Ayah 58 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 51:58 ou le Nom Al-Matin est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 51:58 ou le Nom Al-Matin est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -83,7 +83,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=51&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 51, Ayah 58 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 51:58 ou le Nom Al-Matin est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 51:58 ou le Nom Al-Matin est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -92,13 +92,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=51&tAyahNo=58&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 51, Ayah 58 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 51:58 ou le Nom Al-Matin est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 51:58 ou le Nom Al-Matin est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la puissance est inébranlable et constante.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Matin signifie le Tres-Ferme, Celui dont la force est inepuisable et ne souffre d'aucune fatigue. Al-Ghazali explique que ce Nom renforce Al-Qawi : non seulement Il est fort, mais Sa force est immuable et ne connait ni changement ni affaiblissement.",
+    "scholarly_summary": "Al-Matin signifie le Très-Ferme, Celui dont la force est inepuisable et ne souffre d'aucune fatigue. Al-Ghazali explique que ce Nom renforce Al-Qawi : non seulement Il est fort, mais Sa force est immuable et ne connaît ni changement ni affaiblissement.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -232,9 +232,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "matana", "definition": "Terme arabe signifiant 'solidité', 'fermeté'. Racine du nom Al-Matin."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:07.197Z",
@@ -243,3 +244,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.609Z"
 }
+
+

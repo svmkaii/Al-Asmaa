@@ -55,7 +55,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/513",
       "precise_locator": "Page dédiée au Nom Al-Akhir dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Akhir signifie le Dernier, Celui qui subsiste apres la disparition de toute chose. Comme l'explique le hadith de Muslim, rien ne subsistera apres Lui. Ibn Taymiyyah explique que Sa posteriorite n'est pas temporelle mais essentielle."
+      "summary_fr": "Al-Akhir signifie le Dernier, Celui qui subsiste après la disparition de toute chose. Comme l'explique le hadith de Muslim, rien ne subsistera après Lui. Ibn Taymiyyah explique que Sa postériorité n'est pas temporelle mais essentielle."
     },
     {
       "category": "tafsir",
@@ -64,7 +64,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Akhir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Akhir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -73,7 +73,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Akhir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Akhir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -82,7 +82,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Akhir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Akhir est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -91,13 +91,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Akhir est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Akhir est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Le Dernier, après qui rien ne sera. Éternel sans fin.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Akhir signifie le Dernier, Celui qui subsiste apres la disparition de toute chose. Comme l'explique le hadith de Muslim, rien ne subsistera apres Lui. Ibn Taymiyyah explique que Sa posteriorite n'est pas temporelle mais essentielle.",
+    "scholarly_summary": "Al-Akhir signifie le Dernier, Celui qui subsiste après la disparition de toute chose. Comme l'explique le hadith de Muslim, rien ne subsistera après Lui. Ibn Taymiyyah explique que Sa postériorité n'est pas temporelle mais essentielle.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -222,9 +222,14 @@
       "status": "passed"
     }
   ],
+  "glossary": [
+    { "term": "Al-Awwal", "definition": "L'un des 99 noms d'Allah signifiant 'Le Premier', souvent cité en paire avec Al-Akhir." },
+    { "term": "Az-Zahir", "definition": "L'un des 99 noms d'Allah signifiant 'L'Apparent', mentionné dans le même verset (57:3)." },
+    { "term": "Al-Batin", "definition": "L'un des 99 noms d'Allah signifiant 'Le Caché', mentionné dans le même verset (57:3)." }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:20.477Z",
@@ -233,3 +238,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.586Z"
 }
+

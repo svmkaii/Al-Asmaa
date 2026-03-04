@@ -79,7 +79,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/667",
       "precise_locator": "Page dédiée au Nom Ar-Rahman dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-dela. Ce Nom est exclusif a Allah et ne peut être attribue a aucune créature."
+      "summary_fr": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-dela. Ce Nom est exclusif à Allah et ne peut être attribue a aucune créature."
     },
     {
       "category": "tafsir",
@@ -88,7 +88,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -97,7 +97,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -106,7 +106,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -115,13 +115,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la miséricorde s'étend à toute la création, croyants comme non-croyants.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-dela. Ce Nom est exclusif a Allah et ne peut être attribue a aucune créature.",
+    "scholarly_summary": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-dela. Ce Nom est exclusif à Allah et ne peut être attribue a aucune créature.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -267,9 +267,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "rahma", "definition": "Terme arabe signifiant 'miséricorde'. Racine du nom Ar-Rahman."},{"term": "Ar-Rahim", "definition": "L'un des 99 noms d'Allah, souvent cité avec Ar-Rahman."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:46.752Z",
@@ -278,3 +279,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.634Z"
 }
+

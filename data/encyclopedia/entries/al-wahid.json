@@ -89,7 +89,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -98,7 +98,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -107,7 +107,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -116,7 +116,7 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 2:163 ou le Nom Al-Wahid est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
@@ -268,9 +268,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "wahda", "definition": "Terme arabe signifiant 'unicité'. Racine du nom Al-Wahid."},{"term": "tawhid", "definition": "L'unicité d'Allah, fondement de la foi islamique."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:38.024Z",
@@ -279,3 +280,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.628Z"
 }
+

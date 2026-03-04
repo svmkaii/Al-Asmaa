@@ -27,7 +27,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Muslim 2713",
         "source_url": "https://sunnah.com/muslim:2713",
-        "relevance_note": "\"Tu es Al-Awwal, rien n'est avant Toi ; Tu es Al-Akhir, rien n'est apres Toi.\""
+        "relevance_note": "\"Tu es Al-Awwal, rien n'est avant Toi ; Tu es Al-Akhir, rien n'est après Toi.\""
       },
       {
         "collection": "Sahih Bukhari",
@@ -55,7 +55,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/561",
       "precise_locator": "Page dédiée au Nom Al-Awwal dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Awwal signifie le Premier, Celui qui existe avant toute chose sans commencement. Le Prophete a explique ce Nom dans le hadith de Muslim : 'Tu es Al-Awwal, rien n'est avant Toi.' Ibn al-Qayyim explique que Son anteriorite est absolue et éternelle."
+      "summary_fr": "Al-Awwal signifie le Premier, Celui qui existe avant toute chose sans commencement. Le Prophète ﷺ a expliqué ce Nom dans le hadith de Muslim : 'Tu es Al-Awwal, rien n'est avant Toi.' Ibn al-Qayyim explique que Son antériorité est absolue et éternelle."
     },
     {
       "category": "tafsir",
@@ -64,7 +64,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Awwal est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Awwal est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -73,7 +73,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Awwal est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Awwal est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -82,7 +82,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Awwal est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Awwal est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -91,13 +91,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=57&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 57, Ayah 3 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Awwal est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 57:3 ou le Nom Al-Awwal est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Le Premier, avant qui rien n'existait. Éternel sans commencement.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Awwal signifie le Premier, Celui qui existe avant toute chose sans commencement. Le Prophete a explique ce Nom dans le hadith de Muslim : 'Tu es Al-Awwal, rien n'est avant Toi.' Ibn al-Qayyim explique que Son anteriorite est absolue et éternelle.",
+    "scholarly_summary": "Al-Awwal signifie le Premier, Celui qui existe avant toute chose sans commencement. Le Prophète ﷺ a expliqué ce Nom dans le hadith de Muslim : 'Tu es Al-Awwal, rien n'est avant Toi.' Ibn al-Qayyim explique que Son antériorité est absolue et éternelle.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -222,9 +222,13 @@
       "status": "passed"
     }
   ],
+  "glossary": [
+    { "term": "Al-Akhir", "definition": "L'un des 99 noms d'Allah signifiant 'Le Dernier', souvent cité en paire avec Al-Awwal." },
+    { "term": "awwaliyya", "definition": "Terme arabe désignant la primordialité, l'antériorité absolue." }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:23.458Z",
@@ -233,3 +237,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.588Z"
 }
+

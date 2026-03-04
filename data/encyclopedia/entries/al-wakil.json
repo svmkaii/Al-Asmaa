@@ -25,7 +25,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 33:3",
         "source_url": "https://quran.com/33:3",
-        "relevance_note": "\"Fais confiance a Allah. Allah suffit comme Wakil.\""
+        "relevance_note": "\"Fais confiance à Allah. Allah suffit comme Wakil.\""
       },
       {
         "surah": 73,
@@ -63,7 +63,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/891",
       "precise_locator": "Page dédiée au Nom Al-Wakil dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Wakil signifie Celui a qui on peut confier toutes ses affaires, le Garant supreme. Al-Ghazali explique que le tawakkul (confiance en Allah) est la consequence directe de la connaissance de ce Nom : celui qui sait qu'Allah est Al-Wakil s'en remet entièrement a Lui."
+      "summary_fr": "Al-Wakil signifie Celui à qui on peut confier toutes ses affaires, le Garant suprême. Al-Ghazali explique que le tawakkul (confiance en Allah) est la consequence directe de la connaissance de ce Nom : celui qui sait qu'Allah est Al-Wakil s'en remet entièrement à Lui."
     },
     {
       "category": "encyclopedia",
@@ -81,7 +81,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=3&tAyahNo=173&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 3, Ayah 173 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 3:173 ou le Nom Al-Wakil est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 3:173 ou le Nom Al-Wakil est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -90,7 +90,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=3&tAyahNo=173&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 3, Ayah 173 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 3:173 ou le Nom Al-Wakil est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 3:173 ou le Nom Al-Wakil est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -99,7 +99,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=3&tAyahNo=173&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 3, Ayah 173 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 3:173 ou le Nom Al-Wakil est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 3:173 ou le Nom Al-Wakil est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -108,13 +108,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=3&tAyahNo=173&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 3, Ayah 173 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 3:173 ou le Nom Al-Wakil est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 3:173 ou le Nom Al-Wakil est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui à qui on confie ses affaires et qui gère tout avec perfection.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Wakil signifie Celui a qui on peut confier toutes ses affaires, le Garant supreme. Al-Ghazali explique que le tawakkul (confiance en Allah) est la consequence directe de la connaissance de ce Nom : celui qui sait qu'Allah est Al-Wakil s'en remet entièrement a Lui.",
+    "scholarly_summary": "Al-Wakil signifie Celui à qui on peut confier toutes ses affaires, le Garant suprême. Al-Ghazali explique que le tawakkul (confiance en Allah) est la consequence directe de la connaissance de ce Nom : celui qui sait qu'Allah est Al-Wakil s'en remet entièrement à Lui.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -253,9 +253,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "tawakkul", "definition": "Terme arabe signifiant 'confiance en Allah'. Dérivé de la même racine que Al-Wakil."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:39.260Z",
@@ -264,3 +265,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.629Z"
 }
+
+

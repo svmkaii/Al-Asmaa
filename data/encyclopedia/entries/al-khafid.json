@@ -46,7 +46,7 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Khafid)",
+      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Al-Khafid)",
       "summary_fr": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est attesté dans les listes de hadiths. Al-Ghazali explique qu'Il abaisse les incredules et les arrogants par Son decret."
     }
   ],
@@ -97,9 +97,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "khafd", "definition": "Terme arabe signifiant 'abaissement'. Racine du nom Al-Khafid."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:59.306Z",
@@ -108,3 +109,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.605Z"
 }
+
+

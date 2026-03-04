@@ -41,7 +41,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 40:16",
         "source_url": "https://quran.com/40:16",
-        "relevance_note": "\"A qui appartient la royauté aujourd'hui ? A Allah, Al-Wahid, Al-Qahhar.\""
+        "relevance_note": "\"A qui appartient la royauté aujourd'hui ? à Allah, Al-Wahid, Al-Qahhar.\""
       }
     ],
     "hadith": [
@@ -71,7 +71,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/785",
       "precise_locator": "Page dédiée au Nom Al-Qahhar dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Qahhar signifie Celui dont la domination est irresistible et qui soumet toute chose a Sa volonte. Al-Ghazali explique que tout ce qui existe est soumis a Son pouvoir et ne peut Lui resister. Ce Nom est souvent associe a Al-Wahid dans le Coran."
+      "summary_fr": "Al-Qahhar signifie Celui dont la domination est irresistible et qui soumet toute chose à sa volonte. Al-Ghazali explique que tout ce qui existe est soumis a Son pouvoir et ne peut Lui resister. Ce Nom est souvent associe a Al-Wahid dans le Coran."
     },
     {
       "category": "encyclopedia",
@@ -89,7 +89,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=39&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 39, Ayah 4 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 39:4 ou le Nom Al-Qahhar est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 39:4 ou le Nom Al-Qahhar est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -98,7 +98,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=39&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 39, Ayah 4 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 39:4 ou le Nom Al-Qahhar est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 39:4 ou le Nom Al-Qahhar est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -107,7 +107,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=39&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 39, Ayah 4 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 39:4 ou le Nom Al-Qahhar est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 39:4 ou le Nom Al-Qahhar est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -116,13 +116,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=39&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 39, Ayah 4 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 39:4 ou le Nom Al-Qahhar est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 39:4 ou le Nom Al-Qahhar est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui domine toute Sa création par Sa puissance absolue.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Qahhar signifie Celui dont la domination est irresistible et qui soumet toute chose a Sa volonte. Al-Ghazali explique que tout ce qui existe est soumis a Son pouvoir et ne peut Lui resister. Ce Nom est souvent associe a Al-Wahid dans le Coran.",
+    "scholarly_summary": "Al-Qahhar signifie Celui dont la domination est irresistible et qui soumet toute chose à sa volonte. Al-Ghazali explique que tout ce qui existe est soumis a Son pouvoir et ne peut Lui resister. Ce Nom est souvent associe a Al-Wahid dans le Coran.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -268,9 +268,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "qahr", "definition": "Terme arabe signifiant 'domination', 'subjugation'. Racine du nom Al-Qahhar."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:32.435Z",
@@ -279,3 +280,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.624Z"
 }
+
+

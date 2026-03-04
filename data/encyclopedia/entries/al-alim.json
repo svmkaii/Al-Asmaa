@@ -63,7 +63,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/747",
       "precise_locator": "Page dédiée au Nom Al-'Alim dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Alim signifie l'Omniscient dont la science englobe toute chose : le passe, le present, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est éternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionne plus de 150 fois dans le Coran."
+      "summary_fr": "Al-'Alim signifie l'Omniscient dont la science englobe toute chose : le passé, le présent, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est éternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionné plus de 150 fois dans le Coran."
     },
     {
       "category": "tafsir",
@@ -72,7 +72,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 22 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -81,7 +81,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 22 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -90,7 +90,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 22 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -99,13 +99,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 59, Ayah 22 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 59:22 ou le Nom Al-'Alim est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont le savoir englobe toute chose, visible et invisible.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Alim signifie l'Omniscient dont la science englobe toute chose : le passe, le present, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est éternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionne plus de 150 fois dans le Coran.",
+    "scholarly_summary": "Al-'Alim signifie l'Omniscient dont la science englobe toute chose : le passé, le présent, le futur, le visible et l'invisible. Al-Ghazali explique que Sa science est éternelle, ne s'acquiert pas et ne change pas. Ce Nom est mentionné plus de 150 fois dans le Coran.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -237,9 +237,14 @@
       "status": "passed"
     }
   ],
+  "glossary": [
+    { "term": "'ilm", "definition": "Terme arabe signifiant 'science', 'connaissance'. Racine du nom Al-'Alim." },
+    { "term": "al-ghayb", "definition": "L'invisible, ce qui est caché à la perception humaine." },
+    { "term": "ash-shahada", "definition": "Le visible, le monde perceptible par les sens." }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:22.497Z",

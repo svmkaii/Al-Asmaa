@@ -27,7 +27,7 @@
         "grading": "Sahih",
         "reference_label": "Abu Dawud 4955",
         "source_url": "https://sunnah.com/abudawud:4955",
-        "relevance_note": "\"Allah est Al-Hakam, et a Lui appartient le jugement.\""
+        "relevance_note": "\"Allah est Al-Hakam, et à Lui appartient le jugement.\""
       },
       {
         "collection": "Sahih Bukhari",
@@ -55,7 +55,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/611",
       "precise_locator": "Page dédiée au Nom Al-Hakam dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Hakam signifie le Juge supreme dont le jugement est sans appel. Al-Ghazali explique que le vrai jugement n'appartient qu'a Allah car Lui seul connait la vérité absolue de chaque situation. Le Prophete a interdit de se nommer 'Al-Hakam' car ce titre est reserve a Allah."
+      "summary_fr": "Al-Hakam signifie le Juge suprême dont le jugement est sans appel. Al-Ghazali explique que le vrai jugement n'appartient qu'a Allah car Lui seul connaît la vérité absolue de chaque situation. Le Prophète a interdit de se nommer 'Al-Hakam' car ce titre est réservé à Allah."
     },
     {
       "category": "tafsir",
@@ -64,7 +64,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=114&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 6, Ayah 114 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 6:114 ou le Nom Al-Hakam est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 6:114 ou le Nom Al-Hakam est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -73,7 +73,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=114&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 6, Ayah 114 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 6:114 ou le Nom Al-Hakam est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 6:114 ou le Nom Al-Hakam est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -82,7 +82,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=114&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 6, Ayah 114 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 6:114 ou le Nom Al-Hakam est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 6:114 ou le Nom Al-Hakam est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -91,13 +91,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=114&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 6, Ayah 114 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 6:114 ou le Nom Al-Hakam est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 6:114 ou le Nom Al-Hakam est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Le Juge suprême dont les décisions sont sans appel et parfaitement justes.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Hakam signifie le Juge supreme dont le jugement est sans appel. Al-Ghazali explique que le vrai jugement n'appartient qu'a Allah car Lui seul connait la vérité absolue de chaque situation. Le Prophete a interdit de se nommer 'Al-Hakam' car ce titre est reserve a Allah.",
+    "scholarly_summary": "Al-Hakam signifie le Juge suprême dont le jugement est sans appel. Al-Ghazali explique que le vrai jugement n'appartient qu'a Allah car Lui seul connaît la vérité absolue de chaque situation. Le Prophète a interdit de se nommer 'Al-Hakam' car ce titre est réservé à Allah.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -222,9 +222,13 @@
       "status": "passed"
     }
   ],
+  "glossary": [
+    { "term": "hukm", "definition": "Terme arabe signifiant 'jugement', 'décision', 'règle'. Racine du nom Al-Hakam." },
+    { "term": "Al-Hakim", "definition": "L'un des 99 noms d'Allah signifiant 'Le Sage', partageant la même racine que Al-Hakam." }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:27:45.115Z",

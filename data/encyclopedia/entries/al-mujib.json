@@ -47,7 +47,7 @@
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/519",
       "precise_locator": "Page dédiée au Nom Al-Mujib dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Mujib signifie Celui qui repond aux invocations et exauce les prières de Ses serviteurs. Al-Ghazali explique qu'Il repond a la nécessité de chaque créature, que ce soit par la parole (invocation) ou par l'état (besoin)."
+      "summary_fr": "Al-Mujib signifie Celui qui repond aux invocations et exauce les prières de Ses serviteurs. Al-Ghazali explique qu'Il repond à la nécessité de chaque créature, que ce soit par la parole (invocation) ou par l'état (besoin)."
     },
     {
       "category": "tafsir",
@@ -56,7 +56,7 @@
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=11&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 11, Ayah 61 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 11:61 ou le Nom Al-Mujib est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 11:61 ou le Nom Al-Mujib est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -65,7 +65,7 @@
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=11&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 11, Ayah 61 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 11:61 ou le Nom Al-Mujib est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 11:61 ou le Nom Al-Mujib est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -74,7 +74,7 @@
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=11&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 11, Ayah 61 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 11:61 ou le Nom Al-Mujib est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 11:61 ou le Nom Al-Mujib est mentionné ou son sens est explique."
     },
     {
       "category": "tafsir",
@@ -83,13 +83,13 @@
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=11&tAyahNo=61&tDisplay=yes&UserProfile=0&LanguageId=1",
       "precise_locator": "Tafsir de Sourate 11, Ayah 61 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 11:61 ou le Nom Al-Mujib est mentionne ou son sens est explique."
+      "summary_fr": "Tafsir de 11:61 ou le Nom Al-Mujib est mentionné ou son sens est explique."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui répond aux invocations de Ses serviteurs.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Mujib signifie Celui qui repond aux invocations et exauce les prières de Ses serviteurs. Al-Ghazali explique qu'Il repond a la nécessité de chaque créature, que ce soit par la parole (invocation) ou par l'état (besoin).",
+    "scholarly_summary": "Al-Mujib signifie Celui qui repond aux invocations et exauce les prières de Ses serviteurs. Al-Ghazali explique qu'Il repond à la nécessité de chaque créature, que ce soit par la parole (invocation) ou par l'état (besoin).",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -207,9 +207,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "ijaba", "definition": "Terme arabe signifiant 'réponse', 'exaucement'. Racine du nom Al-Mujib."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:20.595Z",
@@ -218,3 +219,5 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.616Z"
 }
+
+

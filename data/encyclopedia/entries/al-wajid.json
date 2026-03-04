@@ -37,7 +37,7 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section generale Asma Allah al-Husna (pas de page individuelle pour Al-Wajid)",
+      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Al-Wajid)",
       "summary_fr": "Al-Wajid signifie Celui qui possède tout et ne manque de rien (de wujud/abondance), ou Celui qui trouve tout ce qu'Il veut sans difficulte. Al-Ghazali explique qu'aucun besoin ne Lui echappe et qu'Il n'est jamais dans le manque."
     }
   ],
@@ -81,9 +81,10 @@
       "status": "passed"
     }
   ],
+  "glossary": [{"term": "wujud", "definition": "Terme arabe signifiant 'existence', 'possession'. Racine du nom Al-Wajid."}],
   "editorial_review": {
     "status": "needs_human_review",
-    "notes": "Sources corrigees avec liens directs par Nom - validation humaine religieuse obligatoire"
+    "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
   },
   "public_display_allowed": false,
   "generated_at": "2026-02-26T16:28:38.606Z",
@@ -92,3 +93,4 @@
   ],
   "sources_corrected_at": "2026-02-27T10:32:40.628Z"
 }
+
