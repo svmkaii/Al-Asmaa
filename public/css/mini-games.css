@@ -346,7 +346,7 @@
    ====================================================================== */
 
 .mg-game-back {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .mg-game-header {
@@ -627,6 +627,19 @@
 .mg-btn-ghost:active {
   transform: scale(0.96);
   transition-duration: 0.08s;
+}
+
+/* Red quit variant for "Retour" button */
+.mg-btn-quit {
+  border-color: rgba(220, 60, 60, 0.2);
+  color: #e05555;
+  background: rgba(220, 60, 60, 0.06);
+}
+
+.mg-btn-quit:hover {
+  border-color: rgba(220, 60, 60, 0.4);
+  background: rgba(220, 60, 60, 0.12);
+  color: #ff6b6b;
 }
 
 /* --- Difficulty selector --- */
@@ -1341,4 +1354,100 @@
   .mg-memory-grid { gap: 4px; }
   .mg-memory-card-front.arabic { font-size: 0.88rem; }
   .mg-memory-card-front.french { font-size: 0.6rem; }
+}
+
+/* ======================================================================
+   TOP CONTROLS — Back + Sound toggle
+   ====================================================================== */
+
+.mg-top-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Red quit button for mini-games */
+.mg-quit-btn {
+  border-color: rgba(220, 60, 60, 0.25);
+  background: rgba(220, 60, 60, 0.08);
+  color: #e05555;
+}
+
+.mg-quit-btn:hover {
+  border-color: rgba(220, 60, 60, 0.5);
+  background: rgba(220, 60, 60, 0.15);
+  color: #ff6b6b;
+  box-shadow: 0 0 16px rgba(220, 60, 60, 0.15);
+}
+
+/* Sound toggle button */
+.mg-sound-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--gold);
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.mg-sound-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(212, 162, 76, 0.25);
+}
+
+.mg-sound-toggle:active {
+  transform: scale(0.92);
+  transition: transform 0.1s ease;
+}
+
+/* Icon layers */
+.mg-sound-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mg-sound-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Sound ON icon — visible by default */
+.mg-sound-on {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Sound OFF icon — hidden by default */
+.mg-sound-off {
+  opacity: 0;
+  transform: scale(0.3) rotate(-90deg);
+}
+
+/* MUTED state — swap icons */
+.mg-sound-toggle.muted {
+  color: var(--text-secondary);
+  border-color: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.mg-sound-toggle.muted .mg-sound-on {
+  opacity: 0;
+  transform: scale(0.3) rotate(90deg);
+}
+
+.mg-sound-toggle.muted .mg-sound-off {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
 }

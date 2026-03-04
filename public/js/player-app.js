@@ -404,12 +404,20 @@
     }
     popup.innerHTML = `
       <div class="joker-hint-content">
-        <div class="joker-hint-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
+        <div class="joker-hint-badge">Indice</div>
+        <div class="joker-hint-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
         <div class="joker-hint-french">${escapeHtml(french)}</div>
+        <div class="joker-hint-divider"></div>
         <div class="joker-hint-category">${escapeHtml(catLabel)}</div>
       </div>`;
+    popup.classList.remove('hiding');
     popup.classList.add('visible');
-    setTimeout(() => popup.classList.remove('visible'), 4000);
+    setTimeout(() => {
+      popup.classList.add('hiding');
+      setTimeout(() => {
+        popup.classList.remove('visible', 'hiding');
+      }, 350);
+    }, 3600);
   }
 
   let submitLocked = false;
@@ -444,17 +452,54 @@
   }
 
   // --- RÉSULTATS ---
+  let replayCheckInterval = null;
+
+  function clearReplayCheck() {
+    if (replayCheckInterval) {
+      clearInterval(replayCheckInterval);
+      replayCheckInterval = null;
+    }
+  }
+
+  function showHostLeftDialog() {
+    clearReplayCheck();
+    const dlg = document.getElementById('dlgHostLeft');
+    if (dlg) {
+      dlg.classList.add('visible');
+      const okBtn = document.getElementById('dlgHostLeftOk');
+      if (okBtn) {
+        const newOk = okBtn.cloneNode(true);
+        okBtn.parentNode.replaceChild(newOk, okBtn);
+        newOk.addEventListener('click', () => { window.location.href = '/'; });
+      }
+    } else {
+      window.location.href = '/';
+    }
+  }
+
   function setupResultsEvents() {
     document.getElementById('btnPlayerBackHome').addEventListener('click', () => {
+      clearReplayCheck();
       window.location.href = '/';
     });
 
     const replayBtn = document.getElementById('btnPlayerReplay');
     if (replayBtn) {
       replayBtn.addEventListener('click', () => {
-        // Attendre que l'hôte relance — afficher un état d'attente
         replayBtn.disabled = true;
         replayBtn.textContent = 'En attente de l\'hôte...';
+
+        // Vérifier activement si la room existe encore
+        const checkRoom = () => {
+          socket.emit('check-replay', (response) => {
+            if (!response || !response.alive) {
+              showHostLeftDialog();
+            }
+          });
+        };
+        checkRoom();
+        clearReplayCheck();
+        replayCheckInterval = setInterval(checkRoom, 3000);
       });
     }
   }
@@ -602,7 +647,7 @@
       } else if (data.result === 'already-used') {
         Bomb.showFeedback('already-used');
         Bomb.showToast('Déjà cité !', 'warning');
-        showArenaError();
+        showArenaLock();
 
       } else if (data.result === 'invalid') {
         Bomb.showFeedback('invalid');
@@ -665,6 +710,7 @@
 
     // L'hôte a quitté — popup premium + retour à l'accueil
     socket.on('host-left-game', () => {
+      clearReplayCheck();
       Bomb.stop();
       Bomb.resetDisplay();
       gameState = null;
@@ -745,7 +791,7 @@
 
     // Replay — retour en lobby
     socket.on('replay-lobby', (data) => {
-      // console.log('[Player] replay-lobby reçu:', data.code, 'players:', data.players.length);
+      clearReplayCheck();
       players = data.players;
       myPlayer = players.find(p => p.id === myPlayer.id) || myPlayer;
       gameState = null;
@@ -778,6 +824,25 @@
 
     socket.on('host-disconnected', (data) => {
       Bomb.stop();
+
+      // Si on est sur la page résultats, rediriger immédiatement (pas de reconnexion utile)
+      const resultsPage = document.getElementById('pageResults');
+      if (resultsPage && resultsPage.classList.contains('active')) {
+        const dlg = document.getElementById('dlgHostLeft');
+        if (dlg) {
+          dlg.classList.add('visible');
+          const okBtn = document.getElementById('dlgHostLeftOk');
+          if (okBtn) {
+            const newOk = okBtn.cloneNode(true);
+            okBtn.parentNode.replaceChild(newOk, okBtn);
+            newOk.addEventListener('click', () => { window.location.href = '/'; });
+          }
+        } else {
+          window.location.href = '/';
+        }
+        return;
+      }
+
       const seconds = (data && data.timeout) || 60;
       let remaining = seconds;
       Bomb.showToast(`L'hôte s'est déconnecté — fermeture dans ${remaining}s`, 'warning');
@@ -805,6 +870,7 @@
 
     // Room fermée — redirection accueil
     socket.on('room-closed', () => {
+      clearReplayCheck();
       if (hostCountdown) {
         clearInterval(hostCountdown);
         hostCountdown = null;
@@ -1148,6 +1214,17 @@
     }
   }
 
+  function showArenaLock() {
+    const container = document.getElementById('playerArena');
+    if (!container) return;
+    const lock = container.querySelector('.arena-lock-overlay');
+    if (!lock) return;
+    lock.classList.remove('animate');
+    void lock.offsetWidth;
+    lock.classList.add('animate');
+    setTimeout(() => lock.classList.remove('animate'), 1500);
+  }
+
   function showArenaError() {
     const container = document.getElementById('playerArena');
     if (!container) return;
@@ -1335,10 +1412,20 @@
         </svg>
       </div>`;
 
+    // Lock overlay (inside circle) — already-used names
+    const lockOverlayHtml = `
+      <div class="arena-lock-overlay">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>`;
+
     container.innerHTML = `
       <div class="arena-circle" style="width:${size}px;height:${size}px;">
         ${bombHtml}
         ${errorCrossHtml}
+        ${lockOverlayHtml}
         ${playersHtml}
       </div>`;
   }

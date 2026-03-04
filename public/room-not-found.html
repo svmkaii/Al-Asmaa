@@ -10,7 +10,7 @@
   <link rel="icon" type="image/svg+xml" href="/contenu/al_asma_logo_icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -24,6 +24,7 @@
       --text-secondary: #9a978f;
       --border-card: rgba(212, 162, 76, 0.12);
       --font: 'Outfit', sans-serif;
+      --font-display: 'Syne', 'Outfit', sans-serif;
       --red: #ef4444;
       --red-glow: rgba(239, 68, 68, 0.4);
     }
@@ -123,6 +124,7 @@
     .error-icon svg { width: 26px; height: 26px; }
 
     .error-title {
+      font-family: var(--font-display);
       font-size: 1.35rem;
       font-weight: 700;
       color: var(--red);
@@ -152,7 +154,7 @@
       padding: 12px 26px;
       border-radius: 16px;
       text-decoration: none;
-      font-family: var(--font);
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.88rem;
       cursor: pointer;
@@ -233,6 +235,7 @@
       </div>
     </div>
   </div>
-  <script src="/js/background.js?v=15.0"></script>
+  <script src="/js/background.js?v=18.0"></script>
+
 </body>
 </html>

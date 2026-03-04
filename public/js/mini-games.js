@@ -37,9 +37,12 @@ const MiniGames = (() => {
   }
 
   const audioCtx = typeof AudioContext !== 'undefined' ? new AudioContext() : null;
+  let mgSoundEnabled = true;
+
+  const SOUND_BTN_HTML = '<span class="mg-sound-icon mg-sound-on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></span><span class="mg-sound-icon mg-sound-off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></span>';
 
   function playSound(type) {
-    if (!audioCtx) return;
+    if (!audioCtx || !mgSoundEnabled) return;
     if (audioCtx.state === 'suspended') audioCtx.resume();
     const osc = audioCtx.createOscillator();
     const gain = audioCtx.createGain();
@@ -162,7 +165,7 @@ const MiniGames = (() => {
         <div class="mg-topbar-ornament-tl"></div>
         <div class="mg-topbar-ornament-br"></div>
         <div class="mg-topbar">
-          <button class="btn-back" id="btnMiniGamesBack">
+          <button class="btn-back mg-quit-btn" id="btnMiniGamesBack">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
           <div class="mg-topbar-center">
@@ -229,7 +232,16 @@ const MiniGames = (() => {
     hubEl().classList.add('hidden');
     const active = activeEl();
     active.classList.remove('hidden');
-    active.innerHTML = '<button class="btn-back mg-game-back" id="btnMiniGamesBack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>' + html;
+    active.innerHTML = '<div class="mg-top-controls"><button class="btn-back mg-game-back mg-quit-btn" id="btnMiniGamesBack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button><button class="mg-sound-toggle' + (mgSoundEnabled ? '' : ' muted') + '" id="mgSoundToggle" title="Activer/Désactiver les sons">' + SOUND_BTN_HTML + '</button></div>' + html;
+    // Attach sound toggle handler directly
+    const soundBtn = document.getElementById('mgSoundToggle');
+    if (soundBtn) {
+      soundBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mgSoundEnabled = !mgSoundEnabled;
+        soundBtn.classList.toggle('muted', !mgSoundEnabled);
+      });
+    }
   }
 
   function buildEndHTML(opts) {
@@ -244,7 +256,7 @@ const MiniGames = (() => {
           <div class="mg-end-best">${opts.bestText}</div>
           <div class="mg-end-actions">
             <button class="mg-btn-primary" id="${opts.replayId}">Rejouer</button>
-            <button class="mg-btn-ghost" id="${opts.backId}">Retour</button>
+            <button class="mg-btn-ghost mg-btn-quit" id="${opts.backId}">Retour</button>
           </div>
         </div>
       </div>`;
@@ -988,6 +1000,11 @@ const MiniGames = (() => {
   return {
     renderHub,
     backToHub,
+    toggleSound() {
+      mgSoundEnabled = !mgSoundEnabled;
+      const btn = document.getElementById('mgSoundToggle');
+      if (btn) btn.classList.toggle('muted', !mgSoundEnabled);
+    },
     init() { names = typeof ASMA_UL_HUSNA !== 'undefined' ? ASMA_UL_HUSNA : []; }
   };
 })();

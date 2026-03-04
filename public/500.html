@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="/contenu/al_asma_logo_icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -25,6 +25,7 @@
       --text-secondary: #9a978f;
       --border-card: rgba(212, 162, 76, 0.12);
       --font: 'Outfit', sans-serif;
+      --font-display: 'Syne', 'Outfit', sans-serif;
     }
 
     body {
@@ -111,6 +112,7 @@
 
     /* Error code */
     .error-code {
+      font-family: var(--font-display);
       font-size: 5.5rem;
       font-weight: 800;
       line-height: 1;
@@ -139,6 +141,7 @@
     .error-icon svg { width: 24px; height: 24px; }
 
     .error-title {
+      font-family: var(--font-display);
       font-size: 1.35rem;
       font-weight: 700;
       color: var(--text-primary);
@@ -168,7 +171,7 @@
       padding: 12px 26px;
       border-radius: 16px;
       text-decoration: none;
-      font-family: var(--font);
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 0.88rem;
       cursor: pointer;
@@ -247,6 +250,7 @@
 </head>
 <body>
   <div class="bg-pattern"></div>
+  <script src="/js/background.js?v=18.0"></script>
   <div class="error-page">
     <div class="error-card">
       <div class="error-shimmer"></div>

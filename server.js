@@ -487,7 +487,7 @@ app.patch('/api/iq-rooms/:code', (req, res) => {
   for (const key of allowed) {
     if (req.body[key] !== undefined) {
       room[key] = req.body[key];
-      updated.push(key + (key === 'questions' ? '(' + req.body[key].length + ')' : '=' + req.body[key]));
+      updated.push(key + (key === 'questions' && req.body[key] ? '(' + req.body[key].length + ')' : '=' + req.body[key]));
     }
   }
   room.updatedAt = Date.now();
@@ -574,189 +574,263 @@ function seoPageHead(title, description, canonicalPath, extraMeta = '') {
   <meta name="twitter:image:alt" content="Al-Asmaa">
   ${extraMeta}
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
-  <link rel="stylesheet" href="/css/style.css?v=15.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=21.0">
   <link rel="stylesheet" href="/css/animations.css?v=15.0">
   <style>
-    .seo-page { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; min-height: 100vh; }
-    .seo-page h1 { color: var(--gold); font-size: 2rem; margin-bottom: 1rem; }
-    .seo-page h2 { color: var(--gold-light); font-size: 1.4rem; margin: 2rem 0 0.8rem; }
-    .seo-page p, .seo-page li { color: var(--text-secondary); line-height: 1.7; }
+    .seo-page { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; min-height: 100vh;
+      font-family: 'Outfit', sans-serif; }
+    .seo-page h1 { color: var(--gold); font-family: 'Syne', 'Outfit', sans-serif; font-size: 2rem; margin-bottom: 1rem; }
+    .seo-page h2 { color: var(--gold-light); font-family: 'Syne', 'Outfit', sans-serif; font-size: 1.4rem; margin: 2rem 0 0.8rem; }
+    .seo-page p, .seo-page li { color: var(--text-secondary); font-family: 'Outfit', sans-serif; line-height: 1.7; }
     .seo-page a { color: var(--gold); text-decoration: underline; }
     .seo-page .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
     .seo-page .breadcrumb a { color: var(--gold); text-decoration: none; }
     .seo-page .back-home { display: inline-block; margin-top: 2rem; padding: 0.7rem 1.5rem;
-      background: var(--gold); color: var(--bg-deep); border-radius: 8px; text-decoration: none; font-weight: 600; }
+      background: var(--gold); color: var(--bg-deep); border-radius: 8px; text-decoration: none; font-family: 'Syne', 'Outfit', sans-serif; font-weight: 700; }
     .name-card-seo { background: var(--bg-glass); border: 1px solid var(--border-subtle);
       border-radius: 12px; padding: 1.5rem; margin: 1rem 0; }
     .name-card-seo .arabic { font-size: 2.5rem; text-align: center; color: var(--gold);
-      font-family: 'Amiri', serif; direction: rtl; margin-bottom: 0.5rem; }
-    .name-card-seo .translit { text-align: center; font-size: 1.3rem; color: var(--text-primary); }
-    .name-card-seo .meaning { text-align: center; font-size: 1rem; color: var(--gold-light); margin-top: 0.3rem; }
+      font-family: 'Reem Kufi', serif; direction: rtl; margin-bottom: 0.5rem; }
+    .name-card-seo .translit { text-align: center; font-family: 'Syne', 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--text-primary); }
+    .name-card-seo .meaning { text-align: center; font-family: 'Outfit', sans-serif; font-size: 1rem; color: var(--gold-light); margin-top: 0.3rem; }
     .names-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-    .names-table th { background: var(--bg-glass); color: var(--gold); padding: 0.8rem; text-align: left;
+    .names-table th { background: var(--bg-glass); color: var(--gold); font-family: 'Syne', 'Outfit', sans-serif; padding: 0.8rem; text-align: left;
       border-bottom: 2px solid var(--gold); }
     .names-table td { padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--border-subtle); }
-    .names-table td:nth-child(2) { font-family: 'Amiri', serif; font-size: 1.3rem; direction: rtl; text-align: right; color: var(--gold); }
+    .names-table td:nth-child(2) { font-family: 'Reem Kufi', serif; font-size: 1.3rem; direction: rtl; text-align: right; color: var(--gold); }
     .names-table tr:hover { background: rgba(212,162,76,0.05); }
     .names-table a { color: var(--text-primary); text-decoration: none; }
     .names-table a:hover { color: var(--gold); }
 
-    /* ========== Legal Pages Premium ========== */
+    /* ========== Legal Pages — Ultra Premium ========== */
     .seo-page:has(.legal-hero) { max-width: 1060px; }
-    .legal-hero { position: relative; text-align: center; padding: 3.5rem 2rem 2.5rem; margin: -2rem -1.5rem 0;
-      background: linear-gradient(180deg, rgba(212,162,76,0.07) 0%, transparent 100%);
-      border-bottom: 1px solid var(--border-card); overflow: hidden; }
+
+    /* Page background — subtle static gradient instead of canvas orbs */
+    body:has(.legal-hero) { background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212,162,76,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 20% 80%, rgba(100,80,200,0.03) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 60%, rgba(60,140,200,0.02) 0%, transparent 60%),
+      var(--bg-deep); }
+
+    /* Hero — immersive layered gradient */
+    .legal-hero { position: relative; text-align: center; padding: 5rem 2rem 3.5rem; margin: -2rem -1.5rem 0;
+      background: linear-gradient(180deg, rgba(212,162,76,0.08) 0%, rgba(212,162,76,0.03) 30%, rgba(12,16,32,0.5) 70%, transparent 100%);
+      border-bottom: none; overflow: hidden; }
     .legal-hero::before { content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(212,162,76,0.12) 0%, transparent 70%); pointer-events: none; }
-    .legal-star { display: block; margin: 0 auto 1.25rem; width: 48px; height: 48px;
+      background: radial-gradient(ellipse 80% 70% at 50% -10%, rgba(212,162,76,0.12) 0%, transparent 70%);
+      pointer-events: none; }
+    .legal-hero::after { content: ''; position: absolute; bottom: 0; left: 5%; right: 5%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,162,76,0.35), transparent); }
+
+    .legal-star { display: block; margin: 0 auto 1.8rem; width: 48px; height: 48px;
+      opacity: 0.7; filter: drop-shadow(0 0 14px rgba(212,162,76,0.4));
       animation: legalStarGlow 4s ease-in-out infinite; }
     @keyframes legalStarGlow {
-      0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 6px rgba(212,162,76,0.15)); }
-      50% { opacity: 0.85; filter: drop-shadow(0 0 16px rgba(212,162,76,0.45)); } }
-    .legal-hero h1 { font-family: var(--font-display); font-size: 2.6rem; font-weight: 700; margin: 0 0 0.75rem;
-      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-deep) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.25; }
-    .legal-hero-date { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem;
-      color: var(--text-muted); padding: 0.3rem 0.85rem; background: var(--bg-glass);
-      border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); backdrop-filter: blur(8px); }
-    .legal-breadcrumb { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; position: relative; z-index: 1; }
+      0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 10px rgba(212,162,76,0.25)); transform: scale(1) rotate(0deg); }
+      50% { opacity: 0.9; filter: drop-shadow(0 0 24px rgba(212,162,76,0.6)); transform: scale(1.08) rotate(8deg); } }
+
+    .legal-hero h1 { font-family: 'Syne', 'Outfit', sans-serif; font-size: 2.6rem; font-weight: 800; margin: 0 0 1rem;
+      background: linear-gradient(135deg, #FFE7A3 0%, #F6C864 20%, #D89E2C 45%, #F4D27E 70%, #FFE7A3 100%);
+      background-size: 250% 250%; animation: legalTitleShimmer 5s ease infinite;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.2;
+      letter-spacing: -0.02em; text-shadow: none; }
+    @keyframes legalTitleShimmer { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+    .legal-hero-date { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Outfit', sans-serif; font-size: 0.76rem;
+      color: var(--text-muted); padding: 0.4rem 1rem; background: rgba(15,19,36,0.7);
+      border: 1px solid rgba(212,162,76,0.12); border-radius: var(--radius-pill);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+
+    .legal-breadcrumb { font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; position: relative; z-index: 1; }
     .legal-breadcrumb a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
     .legal-breadcrumb a:hover { color: var(--gold-light); }
 
-    /* TOC */
-    .legal-toc { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius);
-      padding: 1.5rem 2rem; margin: 2rem 0 2.5rem; box-shadow: var(--shadow-card); }
-    .legal-toc-title { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em;
-      color: var(--gold); margin: 0 0 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    /* TOC — frosted glass card */
+    .legal-toc { background: linear-gradient(160deg, rgba(15,19,36,0.92), rgba(20,25,48,0.78));
+      border: 1px solid rgba(212,162,76,0.15); border-radius: 16px;
+      padding: 1.75rem 2rem; margin: 2.5rem 0 3rem;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.03) inset;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      position: relative; overflow: hidden; }
+    .legal-toc::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,162,76,0.25), transparent); }
+    .legal-toc::after { content: ''; position: absolute; inset: 0; border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 50%); pointer-events: none; }
+    .legal-toc-title { font-family: 'Syne', 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em;
+      color: var(--gold); margin: 0 0 0.85rem; display: flex; align-items: center; gap: 0.5rem; }
     .legal-toc-title svg { width: 14px; height: 14px; stroke: var(--gold); }
     .legal-toc-grid { list-style: none; padding: 0; margin: 0;
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.35rem; }
-    .legal-toc-grid a { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.6rem;
-      font-size: 0.8rem; color: var(--text-secondary); text-decoration: none;
-      border-radius: var(--radius-sm); transition: all 0.2s ease; }
-    .legal-toc-grid a:hover { color: var(--gold-light); background: rgba(212,162,76,0.06); transform: translateX(3px); }
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.4rem; }
+    .legal-toc-grid a { display: flex; align-items: center; gap: 0.55rem; padding: 0.5rem 0.7rem;
+      font-family: 'Outfit', sans-serif; font-size: 0.82rem; color: var(--text-secondary); text-decoration: none;
+      border-radius: 10px; transition: all 0.25s ease; }
+    .legal-toc-grid a:hover { color: var(--gold-light); background: rgba(212,162,76,0.08); transform: translateX(4px); }
     .legal-toc-n { display: inline-flex; align-items: center; justify-content: center;
-      min-width: 20px; height: 20px; font-size: 0.65rem; font-weight: 700;
-      color: var(--gold); background: rgba(212,162,76,0.1); border-radius: 5px; flex-shrink: 0; }
+      min-width: 22px; height: 22px; font-family: 'Syne', sans-serif; font-size: 0.65rem; font-weight: 700;
+      color: var(--gold); background: rgba(212,162,76,0.12); border-radius: 6px; flex-shrink: 0; }
 
-    /* Sections */
-    .legal-section { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius);
-      padding: 2rem 2.5rem; margin-bottom: 1.25rem; box-shadow: var(--shadow-card);
-      opacity: 0; transform: translateY(20px);
-      transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+    /* Sections — premium glass cards with reveal */
+    .legal-section { background: linear-gradient(165deg, rgba(15,19,36,0.90), rgba(22,28,52,0.75));
+      border: 1px solid rgba(212,162,76,0.08); border-radius: 16px;
+      padding: 2.25rem 2.5rem; margin-bottom: 1rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25), 0 8px 32px rgba(0,0,0,0.15);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1),
+                  border-color 0.3s ease, box-shadow 0.3s ease;
+      position: relative; overflow: hidden; }
+    .legal-section::before { content: ''; position: absolute; top: 0; left: 8%; right: 8%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,162,76,0.18), transparent); pointer-events: none; }
+    .legal-section::after { content: ''; position: absolute; inset: 0; border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.015) 0%, transparent 40%); pointer-events: none; }
     .legal-section.is-visible { opacity: 1; transform: none; }
-    .legal-section-head { display: flex; align-items: center; gap: 0.75rem;
-      margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle); }
-    .legal-section-n { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px;
-      font-size: 0.8rem; font-weight: 700; color: var(--bg-deep);
-      background: linear-gradient(135deg, var(--gold-light), var(--gold)); border-radius: 8px;
-      flex-shrink: 0; box-shadow: 0 2px 8px rgba(212,162,76,0.25); }
-    .legal-section h2 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600;
+    .legal-section:hover { border-color: rgba(212,162,76,0.18);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.25), 0 12px 40px rgba(0,0,0,0.18), 0 0 30px rgba(212,162,76,0.04); }
+
+    .legal-section-head { display: flex; align-items: center; gap: 0.85rem;
+      margin-bottom: 1.1rem; padding-bottom: 0.85rem; border-bottom: 1px solid rgba(212,162,76,0.08); }
+    .legal-section-n { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px;
+      font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--bg-deep);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-deep)); border-radius: 10px;
+      flex-shrink: 0; box-shadow: 0 2px 10px rgba(212,162,76,0.3), inset 0 1px 0 rgba(255,255,255,0.2); }
+    .legal-section h2 { font-family: 'Syne', 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700;
       color: var(--text-primary); margin: 0; line-height: 1.3; }
-    .legal-section p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8; margin: 0.6rem 0 0; }
+    .legal-section p { color: var(--text-secondary); font-family: 'Outfit', sans-serif; font-size: 0.92rem; line-height: 1.85; margin: 0.65rem 0 0; }
     .legal-section p:first-of-type { margin-top: 0; }
     .legal-section strong { color: var(--text-primary); font-weight: 600; }
-    .legal-section em { color: var(--text-muted); }
-    .legal-section a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; transition: color 0.2s; }
-    .legal-section a:hover { color: var(--gold-light); }
-    .legal-section code { font-size: 0.8rem; padding: 0.12rem 0.4rem; background: rgba(212,162,76,0.08);
-      border: 1px solid var(--border-subtle); border-radius: 4px; color: var(--gold-light); }
+    .legal-section em { color: var(--text-muted); font-style: italic; }
+    .legal-section a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px;
+      text-decoration-color: rgba(212,162,76,0.3); transition: all 0.2s; }
+    .legal-section a:hover { color: var(--gold-light); text-decoration-color: var(--gold-light); }
+    .legal-section code { font-size: 0.8rem; padding: 0.15rem 0.45rem; background: rgba(212,162,76,0.08);
+      border: 1px solid rgba(212,162,76,0.12); border-radius: 6px; color: var(--gold-light); }
 
     /* Lists */
-    .legal-ul { list-style: none; padding: 0; margin: 0.6rem 0 0; }
-    .legal-ul li { position: relative; padding: 0.45rem 0 0.45rem 1.4rem;
-      color: var(--text-secondary); font-size: 0.86rem; line-height: 1.7; }
-    .legal-ul li::before { content: ''; position: absolute; left: 0.1rem; top: 0.95rem;
-      width: 5px; height: 5px; background: var(--gold); border-radius: 50%; opacity: 0.5; }
+    .legal-ul { list-style: none; padding: 0; margin: 0.65rem 0 0; }
+    .legal-ul li { position: relative; padding: 0.5rem 0 0.5rem 1.5rem;
+      color: var(--text-secondary); font-family: 'Outfit', sans-serif; font-size: 0.88rem; line-height: 1.75; }
+    .legal-ul li::before { content: ''; position: absolute; left: 0.15rem; top: 1rem;
+      width: 6px; height: 6px; background: linear-gradient(135deg, var(--gold-light), var(--gold)); border-radius: 50%;
+      box-shadow: 0 0 6px rgba(212,162,76,0.3); }
     .legal-ul li strong { color: var(--text-primary); }
 
     /* Shield list (privacy positive) */
-    .legal-shield li { padding-left: 1.75rem; }
-    .legal-shield li::before { content: '\\2713'; width: 18px; height: 18px;
-      background: rgba(45,212,160,0.1); color: var(--emerald); border-radius: 50%;
+    .legal-shield li { padding-left: 1.85rem; }
+    .legal-shield li::before { content: '\\2713'; width: 20px; height: 20px;
+      background: rgba(45,212,160,0.12); color: var(--emerald); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 0.6rem; font-weight: 700; top: 0.55rem; left: 0; }
+      font-size: 0.62rem; font-weight: 700; top: 0.55rem; left: 0;
+      box-shadow: 0 0 8px rgba(45,212,160,0.15); }
 
     /* Highlight box */
-    .legal-highlight { background: rgba(212,162,76,0.05); border-left: 3px solid var(--gold);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1rem 1.25rem; margin: 0.75rem 0 0; }
-    .legal-highlight p { margin: 0; font-size: 0.85rem; }
+    .legal-highlight { background: linear-gradient(135deg, rgba(212,162,76,0.05), rgba(212,162,76,0.02));
+      border-left: 3px solid var(--gold);
+      border-radius: 0 12px 12px 0; padding: 1.1rem 1.4rem; margin: 0.85rem 0 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+    .legal-highlight p { margin: 0; font-size: 0.87rem; }
 
-    /* Cross navigation */
-    .legal-cross { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
-      margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); }
-    .legal-cross a { display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
-      padding: 1.2rem 0.75rem; background: var(--bg-card); border: 1px solid var(--border-subtle);
-      border-radius: var(--radius); text-decoration: none; transition: all var(--transition); text-align: center; }
-    .legal-cross a:hover { border-color: var(--border-active); background: var(--bg-card-hover);
-      transform: translateY(-3px); box-shadow: var(--shadow-gold); }
-    .legal-cross-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
-      background: rgba(212,162,76,0.08); border-radius: 10px; padding: 7px; }
+    /* Cross navigation — premium cards */
+    .legal-cross { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+      margin-top: 3rem; padding-top: 2.5rem; border-top: 1px solid rgba(212,162,76,0.1); }
+    .legal-cross a { display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+      padding: 1.5rem 1rem; background: linear-gradient(165deg, rgba(15,19,36,0.92), rgba(22,28,52,0.80));
+      border: 1px solid rgba(212,162,76,0.10); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px; text-decoration: none; transition: all 0.35s cubic-bezier(0.22,1,0.36,1); text-align: center;
+      position: relative; overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+    .legal-cross a::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,162,76,0.2), transparent);
+      opacity: 0; transition: opacity 0.35s; }
+    .legal-cross a:hover::before { opacity: 1; }
+    .legal-cross a:hover { border-color: rgba(212,162,76,0.30); background: linear-gradient(165deg, rgba(22,28,52,0.97), rgba(35,42,70,0.88));
+      transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.35), 0 0 24px rgba(212,162,76,0.08); }
+    .legal-cross-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(212,162,76,0.12), rgba(212,162,76,0.06));
+      border: 1px solid rgba(212,162,76,0.15); border-radius: 12px; padding: 8px;
+      transition: all 0.35s ease;
+      box-shadow: 0 2px 8px rgba(212,162,76,0.08); }
+    .legal-cross a:hover .legal-cross-icon { background: linear-gradient(135deg, rgba(212,162,76,0.20), rgba(212,162,76,0.10));
+      border-color: rgba(212,162,76,0.3);
+      box-shadow: 0 0 16px rgba(212,162,76,0.2); }
     .legal-cross-icon svg { width: 100%; height: 100%; stroke: var(--gold); fill: none;
       stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-    .legal-cross-label { font-size: 0.78rem; font-weight: 600; color: var(--text-primary); }
-    .legal-cross-sub { font-size: 0.68rem; color: var(--text-muted); }
-    .legal-cross .is-current { opacity: 0.35; pointer-events: none; border-style: dashed; }
+    .legal-cross-label { font-family: 'Syne', 'Outfit', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--text-primary); }
+    .legal-cross-sub { font-family: 'Outfit', sans-serif; font-size: 0.7rem; color: var(--text-muted); }
+    .legal-cross .is-current { opacity: 0.3; pointer-events: none; border-style: dashed; }
 
-    /* Back button — premium */
+    /* Back button — gold surface with glow + shimmer */
     @keyframes legalShimmer {
-      0%        { left: -120%; }
-      25%       { left: 150%;  }
-      26%, 100% { left: -120%; }
+      0%        { left: -130%; }
+      35%       { left: 160%;  }
+      36%, 100% { left: -130%; }
+    }
+    @keyframes legalBackPulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(212,162,76,0.08), 0 4px 28px rgba(0,0,0,0.35); }
+      50% { box-shadow: 0 0 32px rgba(212,162,76,0.18), 0 4px 28px rgba(0,0,0,0.35); }
     }
     .legal-back {
-      display: inline-flex; align-items: center; gap: 0.65rem;
-      margin-top: 2rem; padding: 1.05rem 2.5rem;
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      margin-top: 2.5rem; padding: 1.15rem 3rem;
       position: relative; overflow: hidden;
-      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 45%, var(--gold-deep) 100%);
-      color: #fff; font-weight: 700; font-size: 0.92rem;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      border-radius: var(--radius-pill); text-decoration: none;
-      border: 1px solid rgba(240,204,122,0.5);
-      box-shadow: 0 4px 24px rgba(212,162,76,0.3), 0 1px 0 rgba(255,255,255,0.18) inset;
-      transition: transform var(--transition-spring), box-shadow var(--transition), filter var(--transition); }
+      background: linear-gradient(165deg, #c49535, #dab04e 35%, #f0cc6a 55%, #dab04e 75%, #b08930);
+      color: #0d0800 !important; font-family: 'Syne', 'Outfit', sans-serif; font-weight: 800; font-size: 0.94rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      border-radius: var(--radius-pill);
+      text-decoration: none !important;
+      border: 1.5px solid rgba(255,230,140,0.30);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+      box-shadow:
+        0 1px 2px rgba(0,0,0,0.4),
+        0 4px 16px rgba(180,140,50,0.25),
+        0 10px 40px rgba(180,140,50,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.35),
+        inset 0 -2px 0 rgba(0,0,0,0.08);
+      animation: legalBackPulse 3s ease-in-out infinite;
+      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), filter 0.35s ease, border-color 0.35s ease; }
     .legal-back::before {
-      content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transform: skewX(-18deg); pointer-events: none;
-      animation: legalShimmer 5s linear infinite; }
+      content: ''; position: absolute; top: 0; left: -130%; width: 65%; height: 100%;
+      background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.08) 25%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.08) 75%, transparent 100%);
+      pointer-events: none;
+      animation: legalShimmer 4s ease-in-out infinite; }
     .legal-back:hover {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 14px 44px rgba(212,162,76,0.55), 0 4px 16px rgba(212,162,76,0.28), 0 1px 0 rgba(255,255,255,0.22) inset;
-      filter: brightness(1.1); }
-    .legal-back:active { transform: translateY(-1px) scale(0.985); transition-duration: 0.1s; }
-    .legal-back svg { width: 18px; height: 18px; transition: transform var(--transition-spring); }
-    .legal-back:hover svg { transform: translateX(-5px); }
+      transform: translateY(-4px) scale(1.04);
+      filter: brightness(1.1) drop-shadow(0 8px 24px rgba(212,162,76,0.30));
+      border-color: rgba(255,230,140,0.50); }
+    .legal-back:active { transform: translateY(-1px) scale(0.97); filter: brightness(0.92); transition-duration: 0.08s; }
+    .legal-back svg { width: 20px; height: 20px; stroke: #0d0800; stroke-width: 2.8; transition: transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+    .legal-back:hover svg { transform: translateX(-6px); }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .legal-hero { padding: 2rem 1rem 1.5rem; margin: -2rem -1.5rem 0; }
-      .legal-hero h1 { font-size: 1.7rem; }
-      .legal-toc { padding: 1rem 1.15rem; }
+      .legal-hero { padding: 3rem 1rem 2.5rem; margin: -2rem -1.5rem 0; }
+      .legal-hero h1 { font-size: 1.8rem; }
+      .legal-toc { padding: 1.15rem 1.25rem; }
       .legal-toc-grid { grid-template-columns: 1fr; }
-      .legal-section { padding: 1.25rem; margin-bottom: 0.75rem; }
-      .legal-section h2 { font-size: 1rem; }
+      .legal-section { padding: 1.4rem 1.25rem; margin-bottom: 0.75rem; }
+      .legal-section h2 { font-size: 1.05rem; }
       .legal-section p { font-size: 0.86rem; }
-      .legal-section-n { width: 26px; height: 26px; font-size: 0.72rem; }
-      .legal-cross { grid-template-columns: 1fr; }
+      .legal-section-n { width: 28px; height: 28px; font-size: 0.72rem; border-radius: 8px; }
+      .legal-cross { grid-template-columns: 1fr; gap: 0.75rem; }
     }
     @media (prefers-reduced-motion: reduce) {
       .legal-section { opacity: 1; transform: none; transition: none; }
       .legal-star { animation: none; opacity: 0.6; }
+      .legal-back::before { animation: none; }
+      .legal-back { animation: none; }
     }
   </style>
   <script src="/js/consent.js?v=1.0"></script>
 </head>
 <body>
-  <div class="bg-pattern"></div>
   <div class="seo-page">`;
 }
 
 function seoPageFoot(jsonLd = '') {
   return `
     <a href="/" class="back-home">Retour au jeu</a>
-    <footer style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border-subtle);font-size:0.75rem;color:var(--text-muted);line-height:1.8;">
+    <footer style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border-subtle);font-family:'Outfit',sans-serif;font-size:0.75rem;color:var(--text-muted);line-height:1.8;">
       <nav aria-label="Liens légaux" style="display:flex;gap:1.2rem;flex-wrap:wrap;">
         <a href="/mentions-legales" style="color:var(--text-muted);text-decoration:none;">Mentions légales</a>
         <a href="/politique-de-confidentialite" style="color:var(--text-muted);text-decoration:none;">Confidentialité</a>
@@ -808,7 +882,7 @@ function legalPageFoot(currentPath) {
       </a>
     </div>
 
-    <footer style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border-subtle);text-align:center;font-size:0.72rem;color:var(--text-muted);line-height:1.8;">
+    <footer style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border-subtle);text-align:center;font-family:'Outfit',sans-serif;font-size:0.72rem;color:var(--text-muted);line-height:1.8;">
       <nav aria-label="Liens l\u00e9gaux" style="display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;margin-bottom:0.5rem;">
         <a href="/mentions-legales" style="color:var(--text-muted);text-decoration:none;">Mentions l\u00e9gales</a>
         <a href="/politique-de-confidentialite" style="color:var(--text-muted);text-decoration:none;">Confidentialit\u00e9</a>
@@ -848,7 +922,6 @@ function legalPageFoot(currentPath) {
     });
   });
   </script>
-  <script src="/js/background.js?v=15.0"></script>
 </body>
 </html>`;
 }
@@ -2730,7 +2803,7 @@ io.on('connection', (socket) => {
           });
 
           log.info(`[Déconnexion lobby] ${player.name} retiré de Room ${socket.roomCode}`);
-        } else {
+        } else if (room.state === 'playing') {
           // En jeu : marquer comme déconnecté (permet la reconnexion)
           player.connected = false;
 
@@ -2880,6 +2953,13 @@ io.on('connection', (socket) => {
         startServerBombTimer(room);
       }
     }
+  });
+
+  // Vérifier si la room existe encore (utilisé par les joueurs en attente de replay)
+  socket.on('check-replay', (callback) => {
+    if (typeof callback !== 'function') return;
+    const room = rooms[socket.roomCode];
+    callback({ alive: !!room });
   });
 
   // Rejouer — l'hôte remet la room en lobby

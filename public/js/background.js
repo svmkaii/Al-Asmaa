@@ -1,29 +1,25 @@
 /**
- * Al-Asmaa — Background Particle System v4.0
- * Canvas-based particles with connection lines, parallax, 3 colors (cyan/gold/violet).
- * Progressively enhanced — falls back to CSS stars if canvas unsupported.
+ * Al-Asmaa — Background Atmosphere v7.0
+ * Premium flowing color-shifting lueurs — no dots, no particles.
+ * Large soft glows that drift, morph and shift hues over time.
  */
-class BackgroundParticles {
-  constructor(containerId = 'particleCanvas') {
+class BackgroundAtmosphere {
+  constructor(containerId = 'atmosphereCanvas') {
     this.canvas = null;
     this.ctx = null;
-    this.particles = [];
-    this.mouseX = 0.5;
-    this.mouseY = 0.5;
+    this.orbs = [];
     this.rafId = null;
     this.width = 0;
     this.height = 0;
     this.dpr = Math.min(window.devicePixelRatio || 1, 2);
     this.containerId = containerId;
     this.isReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    this.connectionDistance = 120;
     this.time = 0;
   }
 
   init() {
     if (this.isReduced) return;
 
-    // Create canvas
     this.canvas = document.createElement('canvas');
     this.canvas.id = this.containerId;
     this.canvas.style.cssText = `
@@ -31,7 +27,7 @@ class BackgroundParticles {
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.8;
+      opacity: 1;
     `;
 
     const bgPattern = document.querySelector('.bg-pattern');
@@ -43,7 +39,7 @@ class BackgroundParticles {
 
     this.ctx = this.canvas.getContext('2d');
     this.resize();
-    this.createParticles();
+    this.createOrbs();
     this.bindEvents();
     this.animate();
   }
@@ -55,73 +51,76 @@ class BackgroundParticles {
     this.canvas.height = this.height * this.dpr;
     this.canvas.style.width = this.width + 'px';
     this.canvas.style.height = this.height + 'px';
-    // setTransform au lieu de scale() pour éviter l'accumulation
     this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
   }
 
-  createParticles() {
-    const count = Math.min(80, Math.floor((this.width * this.height) / 14000));
-    this.particles = [];
+  // HSL color that shifts over time
+  hslToRgb(h, s, l) {
+    h /= 360; s /= 100; l /= 100;
+    let r, g, b;
+    if (s === 0) { r = g = b = l; }
+    else {
+      const hue2rgb = (p, q, t) => {
+        if (t < 0) t += 1;
+        if (t > 1) t -= 1;
+        if (t < 1/6) return p + (q - p) * 6 * t;
+        if (t < 1/2) return q;
+        if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+        return p;
+      };
+      const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      const p = 2 * l - q;
+      r = hue2rgb(p, q, h + 1/3);
+      g = hue2rgb(p, q, h);
+      b = hue2rgb(p, q, h - 1/3);
+    }
+    return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
+  }
 
-    // 5 color palettes for richer depth
-    const colors = [
-      'rgba(0, 200, 255,',    // cyan
-      'rgba(212, 162, 76,',   // gold
-      'rgba(160, 120, 255,',  // violet
-      'rgba(45, 212, 160,',   // emerald
-      'rgba(255, 200, 100,',  // warm gold
-    ];
+  createOrbs() {
+    this.orbs = [];
+
+    const hueAnchors = [38, 160, 270, 25, 210, 320];
+    const count = Math.max(5, Math.min(8, Math.floor(this.width / 240)));
+    const baseSize = Math.min(this.width, this.height);
 
     for (let i = 0; i < count; i++) {
-      const colorIdx = i % 5;
-      const isLarge = Math.random() < 0.15;
-      this.particles.push({
+      this.orbs.push({
         x: Math.random() * this.width,
         y: Math.random() * this.height,
-        size: isLarge ? (3 + Math.random() * 2.5) : (1 + Math.random() * 2.5),
-        speedX: (Math.random() - 0.5) * 0.25,
-        speedY: (Math.random() - 0.5) * 0.18 - 0.04, // slight upward drift
-        opacity: 0.08 + Math.random() * 0.35,
-        opacityDir: Math.random() > 0.5 ? 1 : -1,
-        parallaxFactor: 0.2 + Math.random() * 0.8,
-        color: colors[colorIdx],
-        colorIdx: colorIdx,
+        radius: baseSize * (0.3 + Math.random() * 0.4),
+        baseHue: hueAnchors[i % hueAnchors.length],
+        hueSpeed: 0.3 + Math.random() * 0.5,       // ~20-30s per full color cycle
+        hueRange: 50 + Math.random() * 60,
+        saturation: 60 + Math.random() * 25,
+        lightness: 45 + Math.random() * 15,
+        opacity: 0.03 + Math.random() * 0.03,
+        speedX: (Math.random() - 0.5) * 0.8,        // visible drift
+        speedY: (Math.random() - 0.5) * 0.6,
+        driftAmpX: 0.3 + Math.random() * 0.4,       // sine wander amplitude
+        driftAmpY: 0.25 + Math.random() * 0.35,
+        driftFreqX: 0.002 + Math.random() * 0.002,
+        driftFreqY: 0.0015 + Math.random() * 0.002,
         phase: Math.random() * Math.PI * 2,
-        pulseSpeed: 0.001 + Math.random() * 0.004,
-        px: 0,
-        py: 0
+        breathSpeed: 0.002 + Math.random() * 0.003,
+        breathAmp: 0.3 + Math.random() * 0.35,
+        radiusPhase: Math.random() * Math.PI * 2,
+        radiusSpeed: 0.001 + Math.random() * 0.002,
+        radiusAmp: 0.12 + Math.random() * 0.1,
       });
     }
   }
 
   bindEvents() {
-    // Mouse parallax
-    window.addEventListener('mousemove', (e) => {
-      this.mouseX = e.clientX / this.width;
-      this.mouseY = e.clientY / this.height;
-    }, { passive: true });
-
-    // Gyroscope parallax (mobile)
-    if (window.DeviceOrientationEvent) {
-      window.addEventListener('deviceorientation', (e) => {
-        if (e.gamma !== null) {
-          this.mouseX = 0.5 + (e.gamma / 90) * 0.5;
-          this.mouseY = 0.5 + (e.beta / 180) * 0.5;
-        }
-      }, { passive: true });
-    }
-
-    // Resize
     let resizeTimeout;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
         this.resize();
-        this.createParticles();
+        this.createOrbs();
       }, 200);
     }, { passive: true });
 
-    // Visibility — pause when hidden
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
         this.stop();
@@ -133,13 +132,11 @@ class BackgroundParticles {
 
   animate() {
     if (this.rafId) return;
-
     const loop = () => {
       this.update();
       this.draw();
       this.rafId = requestAnimationFrame(loop);
     };
-
     this.rafId = requestAnimationFrame(loop);
   }
 
@@ -151,100 +148,51 @@ class BackgroundParticles {
   }
 
   update() {
-    const parallaxX = (this.mouseX - 0.5) * 25;
-    const parallaxY = (this.mouseY - 0.5) * 25;
     this.time += 1;
+    for (const o of this.orbs) {
+      // Drift — base speed + sine wander
+      o.x += o.speedX + Math.sin(this.time * o.driftFreqX + o.phase) * o.driftAmpX;
+      o.y += o.speedY + Math.cos(this.time * o.driftFreqY + o.phase) * o.driftAmpY;
 
-    for (const p of this.particles) {
-      // Natural drift with gentle sine wave
-      p.x += p.speedX + Math.sin(this.time * 0.003 + p.phase) * 0.08;
-      p.y += p.speedY + Math.cos(this.time * 0.002 + p.phase) * 0.06;
+      // Breathing opacity
+      o.phase += o.breathSpeed;
+      o.currentOpacity = o.opacity * (1 + Math.sin(o.phase) * o.breathAmp);
 
-      // Parallax offset (applied in draw)
-      p.px = parallaxX * p.parallaxFactor;
-      p.py = parallaxY * p.parallaxFactor;
+      // Radius morphing
+      o.radiusPhase += o.radiusSpeed;
+      o.currentRadius = o.radius * (1 + Math.sin(o.radiusPhase) * o.radiusAmp);
 
-      // Smooth sine-based opacity breathing
-      p.phase += p.pulseSpeed || 0.002;
-      p.opacity = 0.08 + (Math.sin(p.phase) * 0.5 + 0.5) * 0.4;
+      // Hue shift — visible color cycling
+      o.currentHue = o.baseHue + Math.sin(this.time * 0.005 * o.hueSpeed + o.phase) * o.hueRange;
 
-      // Wrap around
-      if (p.x < -20) p.x = this.width + 20;
-      if (p.x > this.width + 20) p.x = -20;
-      if (p.y < -20) p.y = this.height + 20;
-      if (p.y > this.height + 20) p.y = -20;
+      // Wrap
+      const margin = o.currentRadius * 0.6;
+      if (o.x < -margin) o.x = this.width + margin * 0.5;
+      if (o.x > this.width + margin) o.x = -margin * 0.5;
+      if (o.y < -margin) o.y = this.height + margin * 0.5;
+      if (o.y > this.height + margin) o.y = -margin * 0.5;
     }
   }
 
   draw() {
     this.ctx.clearRect(0, 0, this.width, this.height);
 
-    const particles = this.particles;
+    for (const o of this.orbs) {
+      const alpha = o.currentOpacity || o.opacity;
+      const rad = o.currentRadius || o.radius;
+      const hue = o.currentHue || o.baseHue;
+      const { r, g, b } = this.hslToRgb(((hue % 360) + 360) % 360, o.saturation, o.lightness);
 
-    // Draw connection lines between close particles
-    for (let i = 0; i < particles.length; i++) {
-      const a = particles[i];
-      const ax = a.x + a.px;
-      const ay = a.y + a.py;
+      const grad = this.ctx.createRadialGradient(o.x, o.y, 0, o.x, o.y, rad);
+      grad.addColorStop(0,   `rgba(${r},${g},${b},${(alpha * 2).toFixed(4)})`);
+      grad.addColorStop(0.3, `rgba(${r},${g},${b},${(alpha * 1.1).toFixed(4)})`);
+      grad.addColorStop(0.6, `rgba(${r},${g},${b},${(alpha * 0.35).toFixed(4)})`);
+      grad.addColorStop(1,   `rgba(${r},${g},${b},0)`);
 
-      for (let j = i + 1; j < particles.length; j++) {
-        const b = particles[j];
-        const bx = b.x + b.px;
-        const by = b.y + b.py;
-
-        const dx = ax - bx;
-        const dy = ay - by;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < this.connectionDistance) {
-          const alpha = (1 - dist / this.connectionDistance) * 0.12 * Math.min(a.opacity, b.opacity);
-          this.ctx.beginPath();
-          this.ctx.moveTo(ax, ay);
-          this.ctx.lineTo(bx, by);
-          this.ctx.strokeStyle = `${a.color}${alpha})`;
-          this.ctx.lineWidth = 0.4;
-          this.ctx.stroke();
-        }
-      }
-    }
-
-    // Draw particles with layered glow
-    for (const p of particles) {
-      const x = p.x + p.px;
-      const y = p.y + p.py;
-
-      // Outer soft glow (larger particles only)
-      if (p.size > 2) {
-        const grad = this.ctx.createRadialGradient(x, y, 0, x, y, p.size * 5);
-        grad.addColorStop(0, `${p.color}${p.opacity * 0.15})`);
-        grad.addColorStop(1, `${p.color}0)`);
-        this.ctx.beginPath();
-        this.ctx.arc(x, y, p.size * 5, 0, Math.PI * 2);
-        this.ctx.fillStyle = grad;
-        this.ctx.fill();
-      }
-
-      // Inner halo
-      if (p.size > 1.5) {
-        this.ctx.beginPath();
-        this.ctx.arc(x, y, p.size * 2.5, 0, Math.PI * 2);
-        this.ctx.fillStyle = `${p.color}${p.opacity * 0.1})`;
-        this.ctx.fill();
-      }
-
-      // Core particle
       this.ctx.beginPath();
-      this.ctx.arc(x, y, p.size, 0, Math.PI * 2);
-      this.ctx.fillStyle = `${p.color}${p.opacity})`;
+      this.ctx.arc(o.x, o.y, rad, 0, Math.PI * 2);
+      this.ctx.fillStyle = grad;
       this.ctx.fill();
-
-      // Bright center dot for larger particles
-      if (p.size > 2.5) {
-        this.ctx.beginPath();
-        this.ctx.arc(x, y, p.size * 0.4, 0, Math.PI * 2);
-        this.ctx.fillStyle = `rgba(255,255,255,${p.opacity * 0.4})`;
-        this.ctx.fill();
-      }
     }
   }
 
@@ -286,7 +234,7 @@ function initRipple() {
 
 // Auto-init when DOM ready
 document.addEventListener('DOMContentLoaded', () => {
-  const bg = new BackgroundParticles();
+  const bg = new BackgroundAtmosphere();
   bg.init();
   initRipple();
 });

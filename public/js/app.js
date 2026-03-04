@@ -515,16 +515,27 @@
     // Auto-cleanup: si on quitte le lobby/jeu classique, fermer la room
     const leavingLobby = pages.hostLobby && pages.hostLobby.classList.contains('active');
     const leavingGame = pages.hostGame && pages.hostGame.classList.contains('active');
+    const leavingResults = pages.results && pages.results.classList.contains('active');
     const goingToRoomPage = (pageId === 'hostLobby' || pageId === 'hostGame' || pageId === 'results');
-    if ((leavingLobby || leavingGame) && !goingToRoomPage && roomCode && socket) {
-      socket.emit('leave-room');
+    if ((leavingLobby || leavingGame || leavingResults) && !goingToRoomPage && roomCode && socket) {
+      socket.emit(leavingResults ? 'leave-game' : 'leave-room');
       roomCode = '';
       players = [];
       hostPlayer = null;
       gameState = null;
       isMyTurn = false;
       activePlayerId = null;
-      // console.log('[Nav] Auto leave-room on page change');
+    }
+
+    // Auto-cleanup: si on quitte une page Ilm Quest, notifier les joueurs
+    const leavingIqLobby = pages.ilmQuestLobby && pages.ilmQuestLobby.classList.contains('active');
+    const leavingIqGame = pages.ilmQuestGame && pages.ilmQuestGame.classList.contains('active');
+    const goingToIqPage = (pageId === 'ilmQuestLobby' || pageId === 'ilmQuestGame');
+    if ((leavingIqLobby || leavingIqGame) && !goingToIqPage && typeof IlmQuest !== 'undefined') {
+      const iqState = IlmQuest.getState();
+      if (iqState.isHost && iqState.roomCode) {
+        IlmQuest.executeQuit();
+      }
     }
 
     Object.values(pages).forEach(p => {
@@ -1439,12 +1450,20 @@
     }
     popup.innerHTML = `
       <div class="joker-hint-content">
-        <div class="joker-hint-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
+        <div class="joker-hint-badge">Indice</div>
+        <div class="joker-hint-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold-bright)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
         <div class="joker-hint-french">${escapeHtml(french)}</div>
+        <div class="joker-hint-divider"></div>
         <div class="joker-hint-category">${escapeHtml(catLabel)}</div>
       </div>`;
+    popup.classList.remove('hiding');
     popup.classList.add('visible');
-    setTimeout(() => popup.classList.remove('visible'), 4000);
+    setTimeout(() => {
+      popup.classList.add('hiding');
+      setTimeout(() => {
+        popup.classList.remove('visible', 'hiding');
+      }, 350);
+    }, 3600);
   }
 
   // --- PAGE RÉSULTATS ---
@@ -1478,6 +1497,16 @@
     });
 
     document.getElementById('btnBackHome').addEventListener('click', () => {
+      // Notifier les joueurs que l'hôte quitte depuis les résultats
+      if (socket && roomCode) {
+        socket.emit('leave-game');
+        roomCode = '';
+        players = [];
+        hostPlayer = null;
+        gameState = null;
+        isMyTurn = false;
+        activePlayerId = null;
+      }
       history.replaceState({}, '', '/');
       showPage('home');
     });

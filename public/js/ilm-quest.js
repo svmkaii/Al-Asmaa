@@ -43,6 +43,7 @@ const IlmQuest = (() => {
     { max: 30, points: 300 }
   ];
   const STREAK_BONUS = 100;
+  const POSITION_MULTIPLIERS = [1.0, 0.80, 0.65, 0.55, 0.50];
   const ROOM_CODE_LENGTH = 6;
   const AUTO_NEXT_DELAY = 5000;
 
@@ -248,6 +249,7 @@ const IlmQuest = (() => {
         }
         break;
       case 'back-to-lobby':
+        if (state._replayCheckTimer) { clearInterval(state._replayCheckTimer); state._replayCheckTimer = null; }
         if (!state.isHost) {
           state.players = msg.players;
           state.scores = msg.scores || {};
@@ -860,15 +862,32 @@ const IlmQuest = (() => {
 
     const correctIndex = state.currentQuestion.correct;
 
-    // Calculate scores
-    state.players.forEach(p => {
+    // Collect correct answers sorted by speed (fastest first)
+    const correctAnswers = state.players
+      .filter(p => {
+        const a = state.answers[p.id];
+        return a && a.answerIndex === correctIndex;
+      })
+      .sort((a, b) => state.answers[a.id].time - state.answers[b.id].time);
+
+    // Calculate scores with positional multiplier
+    const isMulti = state.players.length > 1;
+    correctAnswers.forEach((p, posIndex) => {
       const answer = state.answers[p.id];
-      if (answer && answer.answerIndex === correctIndex) {
-        const pts = calculatePoints(answer.time);
-        const streakBonus = state.streaks[p.id] * STREAK_BONUS;
-        state.scores[p.id] = (state.scores[p.id] || 0) + pts + streakBonus;
-        state.streaks[p.id] = (state.streaks[p.id] || 0) + 1;
-      } else {
+      const basePts = calculatePoints(answer.time);
+      const multiplier = isMulti
+        ? (POSITION_MULTIPLIERS[posIndex] || POSITION_MULTIPLIERS[POSITION_MULTIPLIERS.length - 1])
+        : 1.0;
+      const pts = Math.round(basePts * multiplier);
+      const streakBonus = (state.streaks[p.id] || 0) * STREAK_BONUS;
+      state.scores[p.id] = (state.scores[p.id] || 0) + pts + streakBonus;
+      state.streaks[p.id] = (state.streaks[p.id] || 0) + 1;
+    });
+
+    // Reset streak for wrong/no answers
+    state.players.forEach(p => {
+      const a = state.answers[p.id];
+      if (!a || a.answerIndex !== correctIndex) {
         state.streaks[p.id] = 0;
       }
     });
@@ -1094,11 +1113,7 @@ const IlmQuest = (() => {
     const backBtn = document.getElementById('iqLobbyBack');
     if (backBtn) {
       backBtn.onclick = () => {
-        leaveGame();
-        history.pushState({}, '', '/');
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        const home = document.getElementById('pageHome');
-        if (home) home.classList.add('active');
+        executeQuit();
       };
     }
   }
@@ -1374,7 +1389,14 @@ const IlmQuest = (() => {
     clearTimeout(state.autoNextTimeout);
 
     renderResults();
-    launchConfetti();
+
+    // Confetti only for winner or tie
+    var sorted = [...state.players].sort((a, b) => (state.scores[b.id] || 0) - (state.scores[a.id] || 0));
+    var isTie = sorted.length >= 2 && (state.scores[sorted[0].id] || 0) === (state.scores[sorted[1].id] || 0);
+    var myRank = sorted.findIndex(p => p.id === state.playerId);
+    if (isTie || myRank === 0) {
+      launchConfetti();
+    }
   }
 
   function renderResults() {
@@ -1387,8 +1409,15 @@ const IlmQuest = (() => {
       trophy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>',
       crown: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg>',
       medal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"/><path d="M11 12 5.12 2.2"/><path d="m13 12 5.88-9.8"/><path d="M8 7h8"/><circle cx="12" cy="17" r="5"/><path d="M12 18v-2h-.5"/></svg>',
-      handshake: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h1"/><path d="M13 17a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-1"/><path d="M8 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v1H8V7Z"/><path d="M12 11v2"/></svg>'
+      handshake: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h1"/><path d="M13 17a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-1"/><path d="M8 7a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v1H8V7Z"/><path d="M12 11v2"/></svg>',
+      shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>'
     };
+
+    // Determine my rank (0-based index in sorted array)
+    var myRank = -1;
+    for (var ri = 0; ri < sorted.length; ri++) {
+      if (sorted[ri].id === state.playerId) { myRank = ri; break; }
+    }
 
     // --- Banner ---
     var banner = document.getElementById('iqResultsBanner');
@@ -1408,14 +1437,35 @@ const IlmQuest = (() => {
         if (iconEl) iconEl.innerHTML = ICONS.handshake;
         if (titleEl) titleEl.textContent = '\u00c9GALIT\u00c9';
         if (subEl) subEl.textContent = 'Scores identiques \u2014 pas de vainqueur !';
-      } else {
+        spawnIqBannerParticles(particles, 'tie');
+      } else if (myRank === 0) {
         banner.classList.add('victory');
         if (glow) glow.classList.add('victory');
         if (iconEl) iconEl.innerHTML = ICONS.trophy;
         if (titleEl) titleEl.textContent = 'VICTOIRE';
-        if (subEl) subEl.textContent = sorted[0] ? sorted[0].name + ' remporte la partie !' : '';
+        if (subEl) subEl.textContent = 'Tu as remport\u00e9 la partie !';
+        spawnIqBannerParticles(particles, 'gold');
+      } else if (myRank === 1) {
+        banner.classList.add('place-2');
+        if (glow) glow.classList.add('silver');
+        if (iconEl) iconEl.innerHTML = ICONS.medal;
+        if (titleEl) titleEl.textContent = '2\u00c8ME PLACE';
+        if (subEl) subEl.textContent = 'Si proche de la victoire...';
+        spawnIqBannerParticles(particles, 'silver');
+      } else if (myRank === 2) {
+        banner.classList.add('place-3');
+        if (glow) glow.classList.add('bronze');
+        if (iconEl) iconEl.innerHTML = ICONS.medal;
+        if (titleEl) titleEl.textContent = '3\u00c8ME PLACE';
+        if (subEl) subEl.textContent = 'Sur le podium !';
+        spawnIqBannerParticles(particles, 'bronze');
+      } else {
+        banner.classList.add('defeat');
+        if (iconEl) iconEl.innerHTML = ICONS.shield;
+        if (titleEl) titleEl.textContent = 'D\u00c9FAITE';
+        if (subEl) subEl.textContent = myRank >= 0 ? (myRank + 1) + '\u00e8me place' : 'Fin de partie';
+        spawnIqBannerParticles(particles, 'defeat');
       }
-      spawnIqBannerParticles(particles, isTie ? 'tie' : 'gold');
     }
 
     // --- Bg Orbs ---
@@ -1491,6 +1541,14 @@ const IlmQuest = (() => {
           });
           state.answers = {};
           state.winner = null;
+
+          // Remettre la room serveur en lobby (sinon le polling des joueurs détecte 'playing' et relance le jeu)
+          fetch('/api/iq-rooms/' + encodeURIComponent(state.roomCode), {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ state: 'lobby', questions: null })
+          }).catch(function() {});
+
           broadcast({
             type: 'back-to-lobby',
             players: state.players,
@@ -1502,9 +1560,24 @@ const IlmQuest = (() => {
           updateStartButton();
           startPlayerPolling();
         } else {
-          // Non-host: wait for host to replay
+          // Non-host: wait for host to replay + poll to detect host leaving
           replayBtn.disabled = true;
           replayBtn.textContent = "En attente de l'hôte...";
+
+          if (state._replayCheckTimer) clearInterval(state._replayCheckTimer);
+          var checkRoom = function() {
+            if (!state.roomCode) { clearInterval(state._replayCheckTimer); return; }
+            fetch('/api/iq-rooms/' + encodeURIComponent(state.roomCode) + '/players')
+              .then(function(r) {
+                if (r.status === 404) {
+                  clearInterval(state._replayCheckTimer);
+                  handleHostLeft();
+                }
+              })
+              .catch(function() {});
+          };
+          checkRoom();
+          state._replayCheckTimer = setInterval(checkRoom, 3000);
         }
       };
     }
@@ -1513,11 +1586,7 @@ const IlmQuest = (() => {
     var backBtn = document.getElementById('iqResultsBack');
     if (backBtn) {
       backBtn.onclick = function() {
-        leaveGame();
-        history.pushState({}, '', '/');
-        document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-        var home = document.getElementById('pageHome');
-        if (home) home.classList.add('active');
+        executeQuit();
       };
     }
   }
@@ -1528,7 +1597,10 @@ const IlmQuest = (() => {
     container.innerHTML = '';
     var palettes = {
       gold: ['#ffd866', '#d4a24c', '#f0cc7a', '#fff6c2', '#a67c2e'],
-      tie: ['#a78bfa', '#818cf8', '#c4b5fd', '#7c3aed', '#ddd6fe']
+      tie: ['#a78bfa', '#818cf8', '#c4b5fd', '#7c3aed', '#ddd6fe'],
+      silver: ['#c0c0c0', '#d1d5db', '#9ca3af', '#e5e7eb', '#a8a8a8'],
+      bronze: ['#cd7f32', '#b87333', '#e8a862', '#a0522d', '#d4915e'],
+      defeat: ['#6b7280', '#9ca3af', '#4b5563', '#d1d5db', '#374151']
     };
     var colors = palettes[color] || palettes.gold;
     for (var i = 0; i < 40; i++) {
@@ -1743,6 +1815,7 @@ const IlmQuest = (() => {
   }
 
   function handleHostLeft() {
+    if (state._replayCheckTimer) { clearInterval(state._replayCheckTimer); state._replayCheckTimer = null; }
     stopGamePolling();
     stopPlayerPolling();
     clearInterval(state.timerInterval);
@@ -1903,6 +1976,7 @@ const IlmQuest = (() => {
     submitAnswer,
     leaveGame,
     quitGame,
+    executeQuit,
     showCreatePage,
     showIlmQuestLobby,
     updateCreatePseudoPreview: updateIqPseudoPreview,
