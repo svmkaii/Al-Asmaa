@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-jalil",
   "arabic": "الْجَلِيلُ",
   "transliteration": "Al-Jalil",
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/605",
-      "precise_locator": "Page dédiée au Nom Al-Jalil dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Jalil signifie le Majestueux, possesseur de toute grandeur et majeste. Al-Ghazali explique que la jalala (majeste) combine la perfection des attributs et la transcendance absolue. Le concept apparait dans le Coran sous la forme 'dhul-jalal' (55:27)."
+      "précise_locator": "Page dédiée au Nom Al-Jalil dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Jalil signifie le Majestueux, possesseur de toute grandeur et majeste. Al-Ghazali expliqué que la jalala (majeste) combine la perfection des attributs et la transcendance absolue. Le concept apparait dans le Coran sous la forme 'dhul-jalal' (55:27)."
     },
     {
       "category": "tafsir",
@@ -63,8 +63,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=55&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 55, Ayah 27 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 55:27 ou le Nom Al-Jalil est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 55, Ayah 27 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Majestueux."
     },
     {
       "category": "tafsir",
@@ -72,8 +72,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=55&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 55, Ayah 27 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 55:27 ou le Nom Al-Jalil est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 55, Ayah 27 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Majestueux."
     },
     {
       "category": "tafsir",
@@ -81,8 +81,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=55&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 55, Ayah 27 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 55:27 ou le Nom Al-Jalil est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 55, Ayah 27 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Majestueux."
     },
     {
       "category": "tafsir",
@@ -90,14 +90,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=55&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 55, Ayah 27 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 55:27 ou le Nom Al-Jalil est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 55, Ayah 27 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Majestueux."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui possède la majesté et la splendeur suprêmes.",
-    "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est dérivé des hadiths.",
-    "scholarly_summary": "Al-Jalil signifie le Majestueux, possesseur de toute grandeur et majeste. Al-Ghazali explique que la jalala (majeste) combine la perfection des attributs et la transcendance absolue. Le concept apparait dans le Coran sous la forme 'dhul-jalal' (55:27).",
+    "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme précise est dérivé des hadiths.",
+    "scholarly_summary": "Al-Jalil signifie le Majestueux, possesseur de toute grandeur et majeste. Al-Ghazali expliqué que la jalala (majeste) combine la perfection des attributs et la transcendance absolue. Le concept apparait dans le Coran sous la forme 'dhul-jalal' (55:27).",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -222,7 +222,40 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "jalal", "definition": "Terme arabe signifiant 'majesté', 'gloire'. Racine du nom Al-Jalil."}],
+  "glossary": [
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "jalal",
+      "definition": "Terme arabe signifiant 'majesté', 'gloire'. Racine du nom Al-Jalil."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -232,7 +265,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.603Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.603Z",
+  "content_fixed_at": "2026-03-04T16:31:33.297Z"
 }
-
-

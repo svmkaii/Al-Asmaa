@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-muhsi",
   "arabic": "الْمُحْصِي",
   "transliteration": "Al-Muhsi",
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Al-Muhsi)",
-      "summary_fr": "Al-Muhsi signifie Celui qui denombre et connaît precisement le nombre de toute chose dans la création, sans que rien ne Lui echappe. Al-Ghazali explique que Sa connaissance englobe le nombre des gouttes de pluie, des grains de sable et des feuilles des arbres."
+      "précise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Al-Muhsi)",
+      "summary_fr": "Al-Muhsi signifie Celui qui denombre et connaît précisement le nombre de toute chose dans la création, sans que rien ne Lui echappe. Al-Ghazali expliqué que Sa connaissance englobe le nombre des gouttes de pluie, des grains de sable et des feuilles des arbres."
     },
     {
       "category": "tafsir",
@@ -63,8 +63,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 72, Ayah 28 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 72:28 ou le Nom Al-Muhsi est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 72, Ayah 28 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Celui qui dénombre."
     },
     {
       "category": "tafsir",
@@ -72,8 +72,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 72, Ayah 28 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 72:28 ou le Nom Al-Muhsi est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 72, Ayah 28 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Celui qui dénombre."
     },
     {
       "category": "tafsir",
@@ -81,8 +81,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 72, Ayah 28 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 72:28 ou le Nom Al-Muhsi est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 72, Ayah 28 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Celui qui dénombre."
     },
     {
       "category": "tafsir",
@@ -90,14 +90,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 72, Ayah 28 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 72:28 ou le Nom Al-Muhsi est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 72, Ayah 28 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Celui qui dénombre."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui connaît le nombre exact de toute chose dans Sa création.",
-    "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est dérivé des hadiths.",
-    "scholarly_summary": "Al-Muhsi signifie Celui qui denombre et connaît precisement le nombre de toute chose dans la création, sans que rien ne Lui echappe. Al-Ghazali explique que Sa connaissance englobe le nombre des gouttes de pluie, des grains de sable et des feuilles des arbres.",
+    "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme précise est dérivé des hadiths.",
+    "scholarly_summary": "Al-Muhsi signifie Celui qui denombre et connaît précisement le nombre de toute chose dans la création, sans que rien ne Lui echappe. Al-Ghazali expliqué que Sa connaissance englobe le nombre des gouttes de pluie, des grains de sable et des feuilles des arbres.",
     "nuances": [
       {
         "label": "Tafsir hanafi (Al-Nasafi)",
@@ -213,7 +213,40 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "ihsa'", "definition": "Terme arabe signifiant 'dénombrement'. Racine du nom Al-Muhsi."}],
+  "glossary": [
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "ihsa'",
+      "definition": "Terme arabe signifiant 'dénombrement'. Racine du nom Al-Muhsi."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -223,7 +256,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.613Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.613Z",
+  "content_fixed_at": "2026-03-04T16:31:33.502Z"
 }
-
-

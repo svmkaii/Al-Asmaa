@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "as-sabur",
   "arabic": "الصَّبُورُ",
   "transliteration": "As-Sabur",
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/713",
-      "precise_locator": "Page dédiée au Nom As-Sabur dans l'encyclopédie Aqeeda",
-      "summary_fr": "As-Sabur signifie le Très-Patient, Celui qui ne se hate pas de punir les péchéurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais à la sagesse et à la miséricorde."
+      "précise_locator": "Page dédiée au Nom As-Sabur dans l'encyclopédie Aqeeda",
+      "summary_fr": "As-Sabur signifie le Très-Patient, Celui qui ne se hate pas de punir les péchéurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali expliqué que Sa patience n'est pas due à l'impuissance mais à la sagesse et à la miséricorde."
     },
     {
       "category": "fatwa",
@@ -63,14 +63,14 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom As-Sabur",
       "source_url": "https://islamqa.info/ar/answers/191329",
-      "precise_locator": "Réponse savante sur le Nom As-Sabur",
+      "précise_locator": "Réponse savante sur le Nom As-Sabur",
       "summary_fr": "Explication du Nom As-Sabur selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la patience est sans limite et qui ne précipite pas la punition.",
     "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "As-Sabur signifie le Très-Patient, Celui qui ne se hate pas de punir les péchéurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali explique que Sa patience n'est pas due a l'impuissance mais à la sagesse et à la miséricorde.",
+    "scholarly_summary": "As-Sabur signifie le Très-Patient, Celui qui ne se hate pas de punir les péchéurs. Ce Nom n'est PAS dans le Coran comme attribut divin direct mais est solidement attesté dans Sahih Bukhari. Al-Ghazali expliqué que Sa patience n'est pas due à l'impuissance mais à la sagesse et à la miséricorde.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -147,7 +147,44 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "sabr", "definition": "Terme arabe signifiant 'patience', 'endurance'. Racine du nom As-Sabur."}],
+  "glossary": [
+    {
+      "term": "Ahl al-Sunnah",
+      "definition": "Les gens de la Sunnah, désignant les musulmans sunnites qui suivent la voie prophétique et le consensus des compagnons."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "fatwa",
+      "definition": "Avis juridique rendu par un savant musulman qualifié."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "sabr",
+      "definition": "Terme arabe signifiant 'patience', 'endurance'. Racine du nom As-Sabur."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -157,6 +194,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.637Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.637Z",
+  "content_fixed_at": "2026-03-04T16:31:33.945Z"
 }
-

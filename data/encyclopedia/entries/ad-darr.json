@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "ad-darr",
   "arabic": "الضَّارُّ",
   "transliteration": "Ad-Darr",
@@ -54,7 +54,7 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Ad-Darr)",
+      "précise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Ad-Darr)",
       "summary_fr": "Ad-Darr signifie Celui qui décrète l'épreuve comme test pour Ses serviteurs. Al-Ghazali note que ce Nom est toujours cité avec An-Nafi' (Celui qui profite) : le bien et le mal viennent tous deux d'Allah par Sa sagesse, et l'épreuve peut être un bienfait déguisé."
     },
     {
@@ -63,7 +63,7 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Ad-Darr",
       "source_url": "https://islamqa.info/ar/answers/84270",
-      "precise_locator": "Réponse savante sur le Nom Ad-Darr",
+      "précise_locator": "Réponse savante sur le Nom Ad-Darr",
       "summary_fr": "Explication du Nom Ad-Darr selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     },
     {
@@ -72,8 +72,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 6, Ayah 17 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 6:17 ou le Nom Ad-Darr est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 6, Ayah 17 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Celui qui peut nuire."
     },
     {
       "category": "tafsir",
@@ -81,8 +81,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 6, Ayah 17 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 6:17 ou le Nom Ad-Darr est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 6, Ayah 17 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Celui qui peut nuire."
     },
     {
       "category": "tafsir",
@@ -90,8 +90,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 6, Ayah 17 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 6:17 ou le Nom Ad-Darr est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 6, Ayah 17 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Celui qui peut nuire."
     },
     {
       "category": "tafsir",
@@ -99,13 +99,13 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 6, Ayah 17 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 6:17 ou le Nom Ad-Darr est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 6, Ayah 17 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Celui qui peut nuire."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui décrète l'épreuve par Sa sagesse comme test pour Ses serviteurs.",
-    "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme precise est dérivé des hadiths.",
+    "évidence_type_note": "La racine/concept de ce Nom est dans le Coran mais le Nom sous cette forme précise est dérivé des hadiths.",
     "scholarly_summary": "Ad-Darr signifie Celui qui décrète l'épreuve comme test pour Ses serviteurs. Al-Ghazali note que ce Nom est toujours cité avec An-Nafi' (Celui qui profite) : le bien et le mal viennent tous deux d'Allah par Sa sagesse, et l'épreuve peut être un bienfait déguisé.",
     "nuances": [
       {
@@ -239,9 +239,50 @@
     }
   ],
   "glossary": [
-    { "term": "An-Nafi'", "definition": "L'un des 99 noms d'Allah signifiant 'Celui qui accorde le bienfait', souvent cité en paire avec Ad-Darr." },
-    { "term": "durr", "definition": "Terme arabe signifiant 'mal', 'préjudice' ou 'épreuve', racine du nom Ad-Darr." },
-    { "term": "Ahl al-Sunnah", "definition": "Les gens de la Sunnah, désignant les musulmans qui suivent la voie prophétique." }
+    {
+      "term": "Ahl al-Sunnah",
+      "definition": "Les gens de la Sunnah, désignant les musulmans qui suivent la voie prophétique."
+    },
+    {
+      "term": "An-Nafi'",
+      "definition": "L'un des 99 noms d'Allah signifiant 'Celui qui accorde le bienfait', souvent cité en paire avec Ad-Darr."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "durr",
+      "definition": "Terme arabe signifiant 'mal', 'préjudice' ou 'épreuve', racine du nom Ad-Darr."
+    },
+    {
+      "term": "fatwa",
+      "definition": "Avis juridique rendu par un savant musulman qualifié."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
   ],
   "editorial_review": {
     "status": "needs_human_review",
@@ -252,5 +293,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.581Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.581Z",
+  "content_fixed_at": "2026-03-04T16:31:32.913Z"
 }

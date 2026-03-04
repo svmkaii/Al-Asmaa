@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-qabid",
   "arabic": "الْقَابِضُ",
   "transliteration": "Al-Qabid",
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/777",
-      "precise_locator": "Page dédiée au Nom Al-Qabid dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Qabid signifie Celui qui restreint la subsistance, les coeurs ou les ames selon Sa sagesse. Al-Ghazali explique qu'Il restreint parfois pour eprouver et parfois pour eduquer. Ce Nom est généralement cite avec son oppose Al-Basit."
+      "précise_locator": "Page dédiée au Nom Al-Qabid dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Qabid signifie Celui qui restreint la subsistance, les coeurs où les ames selon Sa sagesse. Al-Ghazali expliqué qu'Il restreint parfois pour eprouver et parfois pour eduquer. Ce Nom est généralement cité avec son oppose Al-Basit."
     },
     {
       "category": "fatwa",
@@ -63,7 +63,7 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Al-Qabid",
       "source_url": "https://islamqa.info/ar/answers/218084",
-      "precise_locator": "Réponse savante sur le Nom Al-Qabid",
+      "précise_locator": "Réponse savante sur le Nom Al-Qabid",
       "summary_fr": "Explication du Nom Al-Qabid selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     },
     {
@@ -72,8 +72,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 2, Ayah 245 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 2:245 ou le Nom Al-Qabid est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 2, Ayah 245 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Celui qui retient."
     },
     {
       "category": "tafsir",
@@ -81,8 +81,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 2, Ayah 245 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 2:245 ou le Nom Al-Qabid est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 2, Ayah 245 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Celui qui retient."
     },
     {
       "category": "tafsir",
@@ -90,8 +90,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 2, Ayah 245 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 2:245 ou le Nom Al-Qabid est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 2, Ayah 245 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Celui qui retient."
     },
     {
       "category": "tafsir",
@@ -99,14 +99,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=245&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 2, Ayah 245 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 2:245 ou le Nom Al-Qabid est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 2, Ayah 245 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Celui qui retient."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui resserre la subsistance selon Sa sagesse.",
     "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "Al-Qabid signifie Celui qui restreint la subsistance, les coeurs ou les ames selon Sa sagesse. Al-Ghazali explique qu'Il restreint parfois pour eprouver et parfois pour eduquer. Ce Nom est généralement cite avec son oppose Al-Basit.",
+    "scholarly_summary": "Al-Qabid signifie Celui qui restreint la subsistance, les coeurs où les ames selon Sa sagesse. Al-Ghazali expliqué qu'Il restreint parfois pour eprouver et parfois pour eduquer. Ce Nom est généralement cité avec son oppose Al-Basit.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -247,7 +247,48 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "qabd", "definition": "Terme arabe signifiant 'restriction', 'contraction'. Racine du nom Al-Qabid."}],
+  "glossary": [
+    {
+      "term": "Ahl al-Sunnah",
+      "definition": "Les gens de la Sunnah, désignant les musulmans sunnites qui suivent la voie prophétique et le consensus des compagnons."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "fatwa",
+      "definition": "Avis juridique rendu par un savant musulman qualifié."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "qabd",
+      "definition": "Terme arabe signifiant 'restriction', 'contraction'. Racine du nom Al-Qabid."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -257,7 +298,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.622Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.622Z",
+  "content_fixed_at": "2026-03-04T16:31:33.667Z"
 }
-
-

@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-bari",
   "arabic": "الْبَارِئُ",
   "transliteration": "Al-Bari'",
@@ -40,7 +40,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/567",
-      "precise_locator": "Page dédiée au Nom Al-Bari' dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Bari' signifie Celui qui fait exister les créatures à partir du néant, sans modèle préalable. Al-Ghazali explique que ce Nom désigne l'acte de production de l'existence, distinct de la planification (khalq) et du façonnage (taswir)."
+      "précise_locator": "Page dédiée au Nom Al-Bari' dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Bari' signifie Celui qui fait exister les créatures à partir du néant, sans modèle préalable. Al-Ghazali expliqué que ce Nom désigne l'acte de production de l'existence, distinct de la planification (khalq) et du façonnage (taswir)."
     },
     {
       "category": "encyclopedia",
@@ -63,7 +63,7 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Bari'",
       "source_url": "https://www.islamweb.net/ar/article/180933",
-      "precise_locator": "Article dédié au Nom Al-Bari'",
+      "précise_locator": "Article dédié au Nom Al-Bari'",
       "summary_fr": "Article savant détaillé sur le Nom Al-Bari' avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
@@ -72,8 +72,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 24 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 59:24 ou le Nom Al-Bari' est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 24 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Producteur."
     },
     {
       "category": "tafsir",
@@ -81,8 +81,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 24 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 59:24 ou le Nom Al-Bari' est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 24 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Producteur."
     },
     {
       "category": "tafsir",
@@ -90,8 +90,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 24 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 59:24 ou le Nom Al-Bari' est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 24 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Producteur."
     },
     {
       "category": "tafsir",
@@ -99,14 +99,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 24 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 59:24 ou le Nom Al-Bari' est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 24 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Producteur."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui fait exister les créatures à partir du néant, sans modèle préalable.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Bari' signifie Celui qui fait exister les créatures à partir du néant, sans modèle préalable. Al-Ghazali explique que ce Nom désigne l'acte de production de l'existence, distinct de la planification (khalq) et du façonnage (taswir).",
+    "scholarly_summary": "Al-Bari' signifie Celui qui fait exister les créatures à partir du néant, sans modèle préalable. Al-Ghazali expliqué que ce Nom désigne l'acte de production de l'existence, distinct de la planification (khalq) et du façonnage (taswir).",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -239,11 +239,54 @@
     }
   ],
   "glossary": [
-    { "term": "bar'", "definition": "Terme arabe signifiant 'création à partir du néant'. Racine du nom Al-Bari'." },
-    { "term": "khalq", "definition": "Terme arabe signifiant 'création', 'planification de la création'." },
-    { "term": "taswir", "definition": "Terme arabe signifiant 'façonnage', 'donner une forme'." },
-    { "term": "Al-Khaliq", "definition": "L'un des 99 noms d'Allah signifiant 'Le Créateur', souvent cité avec Al-Bari'." },
-    { "term": "Al-Musawwir", "definition": "L'un des 99 noms d'Allah signifiant 'Le Façonneur', complétant Al-Khaliq et Al-Bari'." }
+    {
+      "term": "Al-Khaliq",
+      "definition": "L'un des 99 noms d'Allah signifiant 'Le Créateur', souvent cité avec Al-Bari'."
+    },
+    {
+      "term": "Al-Musawwir",
+      "definition": "L'un des 99 noms d'Allah signifiant 'Le Façonneur', complétant Al-Khaliq et Al-Bari'."
+    },
+    {
+      "term": "bar'",
+      "definition": "Terme arabe signifiant 'création à partir du néant'. Racine du nom Al-Bari'."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "khalq",
+      "definition": "Terme arabe signifiant 'création', 'planification de la création'."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    },
+    {
+      "term": "taswir",
+      "definition": "Terme arabe signifiant 'façonnage', 'donner une forme'."
+    }
   ],
   "editorial_review": {
     "status": "needs_human_review",
@@ -254,5 +297,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.592Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.592Z",
+  "content_fixed_at": "2026-03-04T16:31:33.063Z"
 }

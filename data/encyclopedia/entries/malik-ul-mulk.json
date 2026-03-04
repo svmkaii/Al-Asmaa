@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "malik-ul-mulk",
   "arabic": "مَالِكُ الْمُلْكِ",
   "transliteration": "Malik-ul-Mulk",
@@ -32,7 +32,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -46,8 +46,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/849",
-      "precise_locator": "Page dédiée au Nom Malik-ul-Mulk dans l'encyclopédie Aqeeda",
-      "summary_fr": "Malik al-Mulk signifie le Possesseur de la royauté absolue, Celui à qui appartient toute souverainete. Al-Ghazali explique qu'Il distribue la royauté comme Il veut et la retire à qui Il veut, et que toute royauté terrestre n'est qu'un pret temporaire."
+      "précise_locator": "Page dédiée au Nom Malik-ul-Mulk dans l'encyclopédie Aqeeda",
+      "summary_fr": "Malik al-Mulk signifie le Possesseur de la royauté absolue, Celui à qui appartient toute souverainete. Al-Ghazali expliqué qu'Il distribue la royauté comme Il veut et la retire à qui Il veut, et que toute royauté terrestre n'est qu'un pret temporaire."
     },
     {
       "category": "tafsir",
@@ -55,8 +55,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=3&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 3, Ayah 26 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 3:26 ou le Nom Malik-ul-Mulk est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 3, Ayah 26 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Possesseur du Royaume."
     },
     {
       "category": "tafsir",
@@ -64,8 +64,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=3&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 3, Ayah 26 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 3:26 ou le Nom Malik-ul-Mulk est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 3, Ayah 26 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Possesseur du Royaume."
     },
     {
       "category": "tafsir",
@@ -73,8 +73,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=3&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 3, Ayah 26 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 3:26 ou le Nom Malik-ul-Mulk est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 3, Ayah 26 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Possesseur du Royaume."
     },
     {
       "category": "tafsir",
@@ -82,14 +82,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=3&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 3, Ayah 26 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 3:26 ou le Nom Malik-ul-Mulk est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 3, Ayah 26 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Possesseur du Royaume."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Le Possesseur absolu de toute royauté et de tout pouvoir.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Malik al-Mulk signifie le Possesseur de la royauté absolue, Celui à qui appartient toute souverainete. Al-Ghazali explique qu'Il distribue la royauté comme Il veut et la retire à qui Il veut, et que toute royauté terrestre n'est qu'un pret temporaire.",
+    "scholarly_summary": "Malik al-Mulk signifie le Possesseur de la royauté absolue, Celui à qui appartient toute souverainete. Al-Ghazali expliqué qu'Il distribue la royauté comme Il veut et la retire à qui Il veut, et que toute royauté terrestre n'est qu'un pret temporaire.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -207,7 +207,44 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "mulk", "definition": "Terme arabe signifiant 'royaume', 'souveraineté'."},{"term": "malik", "definition": "Terme arabe signifiant 'roi', 'souverain'."}],
+  "glossary": [
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "malik",
+      "definition": "Terme arabe signifiant 'roi', 'souverain'."
+    },
+    {
+      "term": "mulk",
+      "definition": "Terme arabe signifiant 'royaume', 'souveraineté'."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -217,7 +254,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.642Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.642Z",
+  "content_fixed_at": "2026-03-04T16:31:34.049Z"
 }
-
-

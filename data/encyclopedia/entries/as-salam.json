@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "as-salam",
   "arabic": "السَّلامُ",
   "transliteration": "As-Salam",
@@ -27,7 +27,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Muslim 592",
         "source_url": "https://sunnah.com/muslim:592",
-        "relevance_note": "\"O Allah, Tu es As-Salam, et de Toi vient la paix (salam).\" (invocation apres la prière)"
+        "relevance_note": "\"O Allah, Tu es As-Salam, et de Toi vient la paix (salam).\" (invocation après la prière)"
       },
       {
         "collection": "Sahih Bukhari",
@@ -40,7 +40,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/697",
-      "precise_locator": "Page dédiée au Nom As-Salam dans l'encyclopédie Aqeeda",
-      "summary_fr": "As-Salam signifie Celui qui est exempt de tout defaut, la Source de la paix et de la securite. Al-Khattabi explique qu'Il est Celui qui a préservé Sa création de Son injustice. Al-Ghazali ajoute qu'Il est Celui de qui provient toute paix dans l'univers."
+      "précise_locator": "Page dédiée au Nom As-Salam dans l'encyclopédie Aqeeda",
+      "summary_fr": "As-Salam signifie Celui qui est exempt de tout defaut, la Source de la paix et de la sécurité. Al-Khattabi expliqué qu'Il est Celui qui a préservé Sa création de Son injustice. Al-Ghazali ajoute qu'Il est Celui de qui provient toute paix dans l'univers."
     },
     {
       "category": "encyclopedia",
@@ -63,7 +63,7 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: As-Salam",
       "source_url": "https://www.islamweb.net/ar/article/180813",
-      "precise_locator": "Article dédié au Nom As-Salam",
+      "précise_locator": "Article dédié au Nom As-Salam",
       "summary_fr": "Article savant détaillé sur le Nom As-Salam avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
@@ -72,8 +72,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom As-Salam est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 23 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom La Paix."
     },
     {
       "category": "tafsir",
@@ -81,8 +81,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 59:23 ou le Nom As-Salam est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 23 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom La Paix."
     },
     {
       "category": "tafsir",
@@ -90,8 +90,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom As-Salam est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 23 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom La Paix."
     },
     {
       "category": "tafsir",
@@ -99,14 +99,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 59:23 ou le Nom As-Salam est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 23 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom La Paix."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "La source de toute paix, exempt de tout défaut et qui accordé la sécurité.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "As-Salam signifie Celui qui est exempt de tout defaut, la Source de la paix et de la securite. Al-Khattabi explique qu'Il est Celui qui a préservé Sa création de Son injustice. Al-Ghazali ajoute qu'Il est Celui de qui provient toute paix dans l'univers.",
+    "scholarly_summary": "As-Salam signifie Celui qui est exempt de tout defaut, la Source de la paix et de la sécurité. Al-Khattabi expliqué qu'Il est Celui qui a préservé Sa création de Son injustice. Al-Ghazali ajoute qu'Il est Celui de qui provient toute paix dans l'univers.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -238,7 +238,44 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "salam", "definition": "Terme arabe signifiant 'paix', 'salut'. Racine du nom As-Salam."}],
+  "glossary": [
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "muslim",
+      "definition": "Musulman, celui qui se soumet à Allah."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "salam",
+      "definition": "Terme arabe signifiant 'paix', 'salut'. Racine du nom As-Salam."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -248,6 +285,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.637Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.637Z",
+  "content_fixed_at": "2026-03-04T16:31:33.957Z"
 }
-

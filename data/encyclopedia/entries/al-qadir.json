@@ -1,9 +1,9 @@
-﻿{
+{
   "slug": "al-qadir",
   "arabic": "الْقَادِرُ",
   "transliteration": "Al-Qadir",
   "french_name": "Le Capable",
-  "short_meaning": "Celui qui a le pouvoir absolu de faire tout ce qu'Il veut.",
+  "short_meaning": "Celui qui à le pouvoir absolu de faire tout ce qu'Il veut.",
   "canonical_status": {
     "in_99_list": true,
     "evidence_type": "quran_direct",
@@ -48,7 +48,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -62,8 +62,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/779",
-      "precise_locator": "Page dédiée au Nom Al-Qadir dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali explique que Sa puissance est liee à sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empéchér d'accomplir ce qu'Il decide."
+      "précise_locator": "Page dédiée au Nom Al-Qadir dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali expliqué que Sa puissance est liee à sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empéchér d'accomplir ce qu'Il decide."
     },
     {
       "category": "fatwa",
@@ -71,7 +71,7 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Al-Qadir",
       "source_url": "https://islamqa.info/ar/answers/205715",
-      "precise_locator": "Réponse savante sur le Nom Al-Qadir",
+      "précise_locator": "Réponse savante sur le Nom Al-Qadir",
       "summary_fr": "Explication du Nom Al-Qadir selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     },
     {
@@ -80,8 +80,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 6, Ayah 65 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Capable."
     },
     {
       "category": "tafsir",
@@ -89,8 +89,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 6, Ayah 65 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Capable."
     },
     {
       "category": "tafsir",
@@ -98,8 +98,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 6, Ayah 65 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Capable."
     },
     {
       "category": "tafsir",
@@ -107,14 +107,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=6&tAyahNo=65&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 6, Ayah 65 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 6:65 ou le Nom Al-Qadir est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 6, Ayah 65 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Capable."
     }
   ],
   "interpretation_notes": {
-    "consensus_core": "Celui qui a le pouvoir absolu de faire tout ce qu'Il veut.",
+    "consensus_core": "Celui qui à le pouvoir absolu de faire tout ce qu'Il veut.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali explique que Sa puissance est liee à sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empéchér d'accomplir ce qu'Il decide.",
+    "scholarly_summary": "Al-Qadir signifie le Tout-Puissant qui peut faire tout ce qu'Il veut. Al-Ghazali expliqué que Sa puissance est liee à sa volonte : tout ce qu'Il veut se realise, et rien ne peut L'empéchér d'accomplir ce qu'Il decide.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -262,7 +262,48 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "qudra", "definition": "Terme arabe signifiant 'puissance', 'capacité'. Racine du nom Al-Qadir."}],
+  "glossary": [
+    {
+      "term": "Ahl al-Sunnah",
+      "definition": "Les gens de la Sunnah, désignant les musulmans sunnites qui suivent la voie prophétique et le consensus des compagnons."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "fatwa",
+      "definition": "Avis juridique rendu par un savant musulman qualifié."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "qudra",
+      "definition": "Terme arabe signifiant 'puissance', 'capacité'. Racine du nom Al-Qadir."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -272,6 +313,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.623Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.623Z",
+  "content_fixed_at": "2026-03-04T16:31:33.679Z"
 }
-

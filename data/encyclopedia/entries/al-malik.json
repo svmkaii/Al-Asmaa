@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-malik",
   "arabic": "الْمَلِكُ",
   "transliteration": "Al-Malik",
@@ -48,7 +48,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -62,8 +62,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/849",
-      "precise_locator": "Page dédiée au Nom Al-Malik dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Malik est le Souverain absolu de toute chose. Al-Ghazali explique que la royauté véritable n'appartient qu'a Allah car Il est le seul a ne dépendre de rien et dont tout depend. Ibn al-Qayyim distingue Al-Malik (le Roi), Al-Maalik (le Possesseur) et Malik al-Mulk (le détenteur de la royauté)."
+      "précise_locator": "Page dédiée au Nom Al-Malik dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Malik est le Souverain absolu de toute chose. Al-Ghazali expliqué que la royauté véritable n'appartient qu'a Allah car Il est le seul a ne dépendre de rien et dont tout depend. Ibn al-Qayyim distingue Al-Malik (le Roi), Al-Maalik (le Possesseur) et Malik al-Mulk (le détenteur de la royauté)."
     },
     {
       "category": "encyclopedia",
@@ -71,7 +71,7 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Malik",
       "source_url": "https://www.islamweb.net/ar/article/235801",
-      "precise_locator": "Article dédié au Nom Al-Malik",
+      "précise_locator": "Article dédié au Nom Al-Malik",
       "summary_fr": "Article savant détaillé sur le Nom Al-Malik avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
@@ -80,8 +80,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Malik est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 23 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Souverain."
     },
     {
       "category": "tafsir",
@@ -89,8 +89,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Malik est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 23 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Souverain."
     },
     {
       "category": "tafsir",
@@ -98,8 +98,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Malik est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 23 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Souverain."
     },
     {
       "category": "tafsir",
@@ -107,14 +107,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 23 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 59:23 ou le Nom Al-Malik est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 23 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Souverain."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Le Roi absolu qui possède et gouverne toute la création.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Malik est le Souverain absolu de toute chose. Al-Ghazali explique que la royauté véritable n'appartient qu'a Allah car Il est le seul a ne dépendre de rien et dont tout depend. Ibn al-Qayyim distingue Al-Malik (le Roi), Al-Maalik (le Possesseur) et Malik al-Mulk (le détenteur de la royauté).",
+    "scholarly_summary": "Al-Malik est le Souverain absolu de toute chose. Al-Ghazali expliqué que la royauté véritable n'appartient qu'a Allah car Il est le seul a ne dépendre de rien et dont tout depend. Ibn al-Qayyim distingue Al-Malik (le Roi), Al-Maalik (le Possesseur) et Malik al-Mulk (le détenteur de la royauté).",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -253,7 +253,40 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "mulk", "definition": "Terme arabe signifiant 'royaume', 'souveraineté'. Racine du nom Al-Malik."}],
+  "glossary": [
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "mulk",
+      "definition": "Terme arabe signifiant 'royaume', 'souveraineté'. Racine du nom Al-Malik."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -263,6 +296,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.608Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.608Z",
+  "content_fixed_at": "2026-03-04T16:31:33.409Z"
 }
-

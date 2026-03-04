@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-afuw",
   "arabic": "الْعَفُوُّ",
   "transliteration": "Al-'Afuw",
@@ -64,7 +64,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -78,8 +78,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/745",
-      "precise_locator": "Page dédiée au Nom Al-'Afuw dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-'Afuw signifie Celui qui efface les péchés complètement. Al-Ghazali explique la différence avec Al-Ghafur : Al-Ghafur couvre le péché (il reste dans le registre), tandis que Al-'Afuw l'efface totalement comme s'il n'avait jamais existé."
+      "précise_locator": "Page dédiée au Nom Al-'Afuw dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-'Afuw signifie Celui qui efface les péchés complètement. Al-Ghazali expliqué la différence avec Al-Ghafur : Al-Ghafur couvre le péché (il reste dans le registre), tandis que Al-'Afuw l'efface totalement comme s'il n'avait jamais existé."
     },
     {
       "category": "encyclopedia",
@@ -87,7 +87,7 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-'Afuw",
       "source_url": "https://www.islamweb.net/ar/article/233833",
-      "precise_locator": "Article dédié au Nom Al-'Afuw",
+      "précise_locator": "Article dédié au Nom Al-'Afuw",
       "summary_fr": "Article savant détaillé sur le Nom Al-'Afuw avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
@@ -96,8 +96,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=4&tAyahNo=149&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 4, Ayah 149 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 4:149 ou le Nom Al-'Afuw est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 4, Ayah 149 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom L'Indulgent."
     },
     {
       "category": "tafsir",
@@ -105,8 +105,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=4&tAyahNo=149&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 4, Ayah 149 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 4:149 ou le Nom Al-'Afuw est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 4, Ayah 149 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom L'Indulgent."
     },
     {
       "category": "tafsir",
@@ -114,8 +114,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=4&tAyahNo=149&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 4, Ayah 149 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 4:149 ou le Nom Al-'Afuw est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 4, Ayah 149 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom L'Indulgent."
     },
     {
       "category": "tafsir",
@@ -123,14 +123,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=4&tAyahNo=149&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 4, Ayah 149 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 4:149 ou le Nom Al-'Afuw est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 4, Ayah 149 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom L'Indulgent."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui efface complètement les péchés et pardonne avec grande indulgence.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-'Afuw signifie Celui qui efface les péchés complètement. Al-Ghazali explique la différence avec Al-Ghafur : Al-Ghafur couvre le péché (il reste dans le registre), tandis que Al-'Afuw l'efface totalement comme s'il n'avait jamais existé.",
+    "scholarly_summary": "Al-'Afuw signifie Celui qui efface les péchés complètement. Al-Ghazali expliqué la différence avec Al-Ghafur : Al-Ghafur couvre le péché (il reste dans le registre), tandis que Al-'Afuw l'efface totalement comme s'il n'avait jamais existé.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -284,9 +284,46 @@
     }
   ],
   "glossary": [
-    { "term": "'afw", "definition": "Terme arabe signifiant 'pardon', 'effacement'. Racine du nom Al-'Afuw." },
-    { "term": "Al-Ghafur", "definition": "L'un des 99 noms d'Allah signifiant 'Le Tout-Pardonnant', qui couvre les péchés." },
-    { "term": "Laylat al-Qadr", "definition": "La Nuit du Destin, nuit bénie du mois de Ramadan durant laquelle le Coran fut révélé." }
+    {
+      "term": "'afw",
+      "definition": "Terme arabe signifiant 'pardon', 'effacement'. Racine du nom Al-'Afuw."
+    },
+    {
+      "term": "Al-Ghafur",
+      "definition": "L'un des 99 noms d'Allah signifiant 'Le Tout-Pardonnant', qui couvre les péchés."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "Laylat al-Qadr",
+      "definition": "La Nuit du Destin, nuit bénie du mois de Ramadan durant laquelle le Coran fut révélé."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
   ],
   "editorial_review": {
     "status": "needs_human_review",
@@ -297,5 +334,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.585Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.585Z",
+  "content_fixed_at": "2026-03-04T16:31:32.942Z"
 }

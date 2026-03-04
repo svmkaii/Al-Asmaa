@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-khafid",
   "arabic": "الْخَافِضُ",
   "transliteration": "Al-Khafid",
@@ -46,14 +46,14 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Al-Khafid)",
-      "summary_fr": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est attesté dans les listes de hadiths. Al-Ghazali explique qu'Il abaisse les incredules et les arrogants par Son decret."
+      "précise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Al-Khafid)",
+      "summary_fr": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est attesté dans les listes de hadiths. Al-Ghazali expliqué qu'Il abaisse les incredules et les arrogants par Son décret."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui abaisse les orgueilleux et les injustes.",
     "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est attesté dans les listes de hadiths. Al-Ghazali explique qu'Il abaisse les incredules et les arrogants par Son decret.",
+    "scholarly_summary": "Al-Khafid signifie Celui qui abaisse les orgueilleux et les tyrans. Ce Nom n'apparait pas directement dans le Coran comme attribut divin mais est attesté dans les listes de hadiths. Al-Ghazali expliqué qu'Il abaisse les incredules et les arrogants par Son décret.",
     "nuances": [],
     "prohibited_overclaims": [
       "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
@@ -97,7 +97,36 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "khafd", "definition": "Terme arabe signifiant 'abaissement'. Racine du nom Al-Khafid."}],
+  "glossary": [
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "khafd",
+      "definition": "Terme arabe signifiant 'abaissement'. Racine du nom Al-Khafid."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -107,7 +136,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.605Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.605Z",
+  "content_fixed_at": "2026-03-04T16:31:33.348Z"
 }
-
-

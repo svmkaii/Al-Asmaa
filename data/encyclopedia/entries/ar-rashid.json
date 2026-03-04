@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "ar-rashid",
   "arabic": "الرَّشِيدُ",
   "transliteration": "Ar-Rashid",
@@ -46,8 +46,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/523",
-      "precise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Ar-Rashid)",
-      "summary_fr": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est attesté uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut."
+      "précise_locator": "Section générale Asma Allah al-Husna (pas de page individuelle pour Ar-Rashid)",
+      "summary_fr": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalité parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est attesté uniquement dans les listes de hadiths. Al-Ghazali l'expliqué comme Celui dont les actes atteignent toujours leur but sans aucun defaut."
     },
     {
       "category": "fatwa",
@@ -55,14 +55,14 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Ar-Rashid",
       "source_url": "https://islamqa.info/ar/answers/5457",
-      "precise_locator": "Réponse savante sur le Nom Ar-Rashid",
+      "précise_locator": "Réponse savante sur le Nom Ar-Rashid",
       "summary_fr": "Explication du Nom Ar-Rashid selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui dirige toute chose vers sa finalité avec sagesse parfaite.",
     "évidence_type_note": "Ce Nom est attesté dans la tradition du hadith. Il n'apparait pas dans le Coran sous cette forme.",
-    "scholarly_summary": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalite parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est attesté uniquement dans les listes de hadiths. Al-Ghazali l'explique comme Celui dont les actes atteignent toujours leur but sans aucun defaut.",
+    "scholarly_summary": "Ar-Rashid signifie le Guide par excellence, Celui dont la sagesse dirige toute chose vers sa finalité parfaite. Ce Nom ne figure PAS dans le Coran comme attribut divin direct (11:87 est une parole moqueuse des mecreants). Il est attesté uniquement dans les listes de hadiths. Al-Ghazali l'expliqué comme Celui dont les actes atteignent toujours leur but sans aucun defaut.",
     "nuances": [
       {
         "label": "Explication hanbali (IslamQA)",
@@ -123,7 +123,44 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "rushd", "definition": "Terme arabe signifiant 'droiture', 'bonne direction'. Racine du nom Ar-Rashid."}],
+  "glossary": [
+    {
+      "term": "Ahl al-Sunnah",
+      "definition": "Les gens de la Sunnah, désignant les musulmans sunnites qui suivent la voie prophétique et le consensus des compagnons."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "fatwa",
+      "definition": "Avis juridique rendu par un savant musulman qualifié."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "rushd",
+      "definition": "Terme arabe signifiant 'droiture', 'bonne direction'. Racine du nom Ar-Rashid."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -133,7 +170,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.635Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.635Z",
+  "content_fixed_at": "2026-03-04T16:31:33.915Z"
 }
-
-

@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-karim",
   "arabic": "الْكَرِيمُ",
   "transliteration": "Al-Karim",
@@ -40,7 +40,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -54,8 +54,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/801",
-      "precise_locator": "Page dédiée au Nom Al-Karim dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Karim signifie le Très-Genereux, noble dans Son essence et Ses actes. Al-Ghazali explique qu'Il est Celui qui pardonne quand Il peut punir, qui tient Ses promesses, qui donne sans qu'on Lui demande, et dont la générosité n'a aucune limite."
+      "précise_locator": "Page dédiée au Nom Al-Karim dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Karim signifie le Très-Genereux, noble dans Son essence et Ses actes. Al-Ghazali expliqué qu'Il est Celui qui pardonne quand Il peut punir, qui tient Ses promesses, qui donne sans qu'on Lui demande, et dont la générosité n'a aucune limite."
     },
     {
       "category": "encyclopedia",
@@ -63,7 +63,7 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Karim",
       "source_url": "https://www.islamweb.net/ar/article/235360",
-      "precise_locator": "Article dédié au Nom Al-Karim",
+      "précise_locator": "Article dédié au Nom Al-Karim",
       "summary_fr": "Article savant détaillé sur le Nom Al-Karim avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
@@ -72,8 +72,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=82&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 82, Ayah 6 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 82:6 ou le Nom Al-Karim est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 82, Ayah 6 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Généreux."
     },
     {
       "category": "tafsir",
@@ -81,8 +81,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=82&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 82, Ayah 6 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 82:6 ou le Nom Al-Karim est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 82, Ayah 6 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Généreux."
     },
     {
       "category": "tafsir",
@@ -90,8 +90,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=82&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 82, Ayah 6 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 82:6 ou le Nom Al-Karim est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 82, Ayah 6 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Généreux."
     },
     {
       "category": "tafsir",
@@ -99,14 +99,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=82&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 82, Ayah 6 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 82:6 ou le Nom Al-Karim est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 82, Ayah 6 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Généreux."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Le Très Généreux dont les dons sont sans limite et sans condition.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Karim signifie le Très-Genereux, noble dans Son essence et Ses actes. Al-Ghazali explique qu'Il est Celui qui pardonne quand Il peut punir, qui tient Ses promesses, qui donne sans qu'on Lui demande, et dont la générosité n'a aucune limite.",
+    "scholarly_summary": "Al-Karim signifie le Très-Genereux, noble dans Son essence et Ses actes. Al-Ghazali expliqué qu'Il est Celui qui pardonne quand Il peut punir, qui tient Ses promesses, qui donne sans qu'on Lui demande, et dont la générosité n'a aucune limite.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -238,7 +238,40 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "karam", "definition": "Terme arabe signifiant 'générosité', 'noblesse'. Racine du nom Al-Karim."}],
+  "glossary": [
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "karam",
+      "definition": "Terme arabe signifiant 'générosité', 'noblesse'. Racine du nom Al-Karim."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -248,7 +281,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.604Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.604Z",
+  "content_fixed_at": "2026-03-04T16:31:33.331Z"
 }
-
-

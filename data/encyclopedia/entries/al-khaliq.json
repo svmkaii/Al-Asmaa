@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-khaliq",
   "arabic": "الْخَالِقُ",
   "transliteration": "Al-Khaliq",
@@ -48,7 +48,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -62,8 +62,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqadia/556",
-      "precise_locator": "Page dédiée au Nom Al-Khaliq dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Khaliq signifie le Createur qui determine la mesure de chaque chose avant de la créér. Al-Ghazali distingue Al-Khaliq (qui determine/planifie), Al-Bari' (qui fait exister a partir du néant) et Al-Musawwir (qui donne la forme). Ces trois noms decrivent les etapes de la création."
+      "précise_locator": "Page dédiée au Nom Al-Khaliq dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Khaliq signifie le Créateur qui determine la mesure de chaque chose avant de la créér. Al-Ghazali distingue Al-Khaliq (qui determine/planifie), Al-Bari' (qui fait exister a partir du néant) et Al-Musawwir (qui donne la forme). Ces trois noms decrivent les etapes de la création."
     },
     {
       "category": "tafsir",
@@ -71,8 +71,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=59&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 24 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 59:24 ou le Nom Al-Khaliq est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 24 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Créateur."
     },
     {
       "category": "tafsir",
@@ -80,8 +80,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=59&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 24 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 59:24 ou le Nom Al-Khaliq est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 24 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Créateur."
     },
     {
       "category": "tafsir",
@@ -89,8 +89,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=59&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 24 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 59:24 ou le Nom Al-Khaliq est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 24 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Créateur."
     },
     {
       "category": "tafsir",
@@ -98,14 +98,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=59&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 59, Ayah 24 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 59:24 ou le Nom Al-Khaliq est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 59, Ayah 24 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Créateur."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui qui a créé toute chose à partir du néant selon Sa volonté.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Khaliq signifie le Createur qui determine la mesure de chaque chose avant de la créér. Al-Ghazali distingue Al-Khaliq (qui determine/planifie), Al-Bari' (qui fait exister a partir du néant) et Al-Musawwir (qui donne la forme). Ces trois noms decrivent les etapes de la création.",
+    "scholarly_summary": "Al-Khaliq signifie le Créateur qui determine la mesure de chaque chose avant de la créér. Al-Ghazali distingue Al-Khaliq (qui determine/planifie), Al-Bari' (qui fait exister a partir du néant) et Al-Musawwir (qui donne la forme). Ces trois noms decrivent les etapes de la création.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -237,7 +237,40 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "khalq", "definition": "Terme arabe signifiant 'création'. Racine du nom Al-Khaliq."}],
+  "glossary": [
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "khalq",
+      "definition": "Terme arabe signifiant 'création'. Racine du nom Al-Khaliq."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -247,6 +280,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.606Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.606Z",
+  "content_fixed_at": "2026-03-04T16:31:33.359Z"
 }
-

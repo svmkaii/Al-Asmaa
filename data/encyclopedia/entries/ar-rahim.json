@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "ar-rahim",
   "arabic": "الرَّحِيمُ",
   "transliteration": "Ar-Rahim",
@@ -56,7 +56,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -70,8 +70,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/667",
-      "precise_locator": "Page dédiée au Nom Ar-Rahim dans l'encyclopédie Aqeeda",
-      "summary_fr": "Ar-Rahim désigne la miséricorde spécifique d'Allah envers Ses serviteurs croyants, les guidant vers la foi et les recompensant dans l'au-dela. Al-Qurtubi note que Ar-Rahman est un nom de majestic (jalal) et Ar-Rahim est un nom de beaute (jamal)."
+      "précise_locator": "Page dédiée au Nom Ar-Rahim dans l'encyclopédie Aqeeda",
+      "summary_fr": "Ar-Rahim désigne la miséricorde spécifique d'Allah envers Ses serviteurs croyants, les guidant vers la foi et les recompensant dans l'au-delà. Al-Qurtubi note que Ar-Rahman est un nom de majestic (jalal) et Ar-Rahim est un nom de beaute (jamal)."
     },
     {
       "category": "tafsir",
@@ -79,8 +79,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 2:163 ou le Nom Ar-Rahim est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 2, Ayah 163 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Très Miséricordieux."
     },
     {
       "category": "tafsir",
@@ -88,8 +88,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 2:163 ou le Nom Ar-Rahim est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 2, Ayah 163 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Très Miséricordieux."
     },
     {
       "category": "tafsir",
@@ -97,8 +97,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 2:163 ou le Nom Ar-Rahim est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 2, Ayah 163 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Très Miséricordieux."
     },
     {
       "category": "tafsir",
@@ -106,14 +106,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=2&tAyahNo=163&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 2, Ayah 163 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 2:163 ou le Nom Ar-Rahim est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 2, Ayah 163 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Très Miséricordieux."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la miséricorde particulière est réservée aux croyants dans l'au-delà.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Ar-Rahim désigne la miséricorde spécifique d'Allah envers Ses serviteurs croyants, les guidant vers la foi et les recompensant dans l'au-dela. Al-Qurtubi note que Ar-Rahman est un nom de majestic (jalal) et Ar-Rahim est un nom de beaute (jamal).",
+    "scholarly_summary": "Ar-Rahim désigne la miséricorde spécifique d'Allah envers Ses serviteurs croyants, les guidant vers la foi et les recompensant dans l'au-delà. Al-Qurtubi note que Ar-Rahman est un nom de majestic (jalal) et Ar-Rahim est un nom de beaute (jamal).",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -252,7 +252,52 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "rahma", "definition": "Terme arabe signifiant 'miséricorde'. Racine du nom Ar-Rahim."},{"term": "Ar-Rahman", "definition": "L'un des 99 noms d'Allah, souvent cité avec Ar-Rahim."}],
+  "glossary": [
+    {
+      "term": "Ar-Rahman",
+      "definition": "L'un des 99 noms d'Allah, souvent cité avec Ar-Rahim."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "muslim",
+      "definition": "Musulman, celui qui se soumet à Allah."
+    },
+    {
+      "term": "rahim",
+      "definition": "Utérus en arabe, partageant la même racine que rahma (miséricorde)."
+    },
+    {
+      "term": "rahma",
+      "definition": "Terme arabe signifiant 'miséricorde'. Racine du nom Ar-Rahim."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -262,6 +307,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.634Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.634Z",
+  "content_fixed_at": "2026-03-04T16:31:33.884Z"
 }
-

@@ -6,7 +6,7 @@
   "short_meaning": "Celui qui est la Vérité absolue, dont l'existence est certaine.",
   "canonical_status": {
     "in_99_list": true,
-    "note": "Retenu dans la liste de reference du projet (a verifier par revue humaine)."
+    "note": "Retenu dans la liste de référence du projet (a verifier par revue humaine)."
   },
   "primary_evidence": {
     "quran": [
@@ -43,7 +43,7 @@
       "scholar_name": "Abu al-Barakat Al-Nasafi",
       "source_title": "Madarik al-Tanzil wa Haqaiq al-Tawil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=22&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Surah 22, Ayah 6, tafsir Madarik al-Tanzil wa Haqaiq al-Tawil",
+      "précise_locator": "Surah 22, Ayah 6, tafsir Madarik al-Tanzil wa Haqaiq al-Tawil",
       "summary_fr": "Voir l'explication de Abu al-Barakat Al-Nasafi pour 22:6."
     },
     {
@@ -52,7 +52,7 @@
       "scholar_name": "Abu Abdillah Al-Qurtubi",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=22&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Surah 22, Ayah 6, tafsir Al-Jami li-Ahkam al-Quran",
+      "précise_locator": "Surah 22, Ayah 6, tafsir Al-Jami li-Ahkam al-Quran",
       "summary_fr": "Voir l'explication de Abu Abdillah Al-Qurtubi pour 22:6."
     },
     {
@@ -61,7 +61,7 @@
       "scholar_name": "Al-Baghawi",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=22&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Surah 22, Ayah 6, tafsir Maalim al-Tanzil",
+      "précise_locator": "Surah 22, Ayah 6, tafsir Maalim al-Tanzil",
       "summary_fr": "Voir l'explication de Al-Baghawi pour 22:6."
     },
     {
@@ -70,7 +70,7 @@
       "scholar_name": "Ibn al-Jawzi",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=22&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Surah 22, Ayah 6, tafsir Zad al-Masir fi Ilm al-Tafsir",
+      "précise_locator": "Surah 22, Ayah 6, tafsir Zad al-Masir fi Ilm al-Tafsir",
       "summary_fr": "Voir l'explication de Ibn al-Jawzi pour 22:6."
     }
   ],
@@ -79,7 +79,7 @@
     "nuances": [
       {
         "label": "nuance de tafsir hanafi",
-        "description": "Attribution explicite au corpus Madarik al-Tanzil wa Haqaiq al-Tawil.",
+        "description": "Attribution explicité au corpus Madarik al-Tanzil wa Haqaiq al-Tawil.",
         "source_backed": true,
         "sources": [
           "tafsir-hanafi-22-6"
@@ -87,7 +87,7 @@
       },
       {
         "label": "nuance de tafsir maliki",
-        "description": "Attribution explicite au corpus Al-Jami li-Ahkam al-Quran.",
+        "description": "Attribution explicité au corpus Al-Jami li-Ahkam al-Quran.",
         "source_backed": true,
         "sources": [
           "tafsir-maliki-22-6"
@@ -95,7 +95,7 @@
       },
       {
         "label": "nuance de tafsir shafii",
-        "description": "Attribution explicite au corpus Maalim al-Tanzil.",
+        "description": "Attribution explicité au corpus Maalim al-Tanzil.",
         "source_backed": true,
         "sources": [
           "tafsir-shafii-22-6"
@@ -103,7 +103,7 @@
       },
       {
         "label": "nuance de tafsir hanbali",
-        "description": "Attribution explicite au corpus Zad al-Masir fi Ilm al-Tafsir.",
+        "description": "Attribution explicité au corpus Zad al-Masir fi Ilm al-Tafsir.",
         "source_backed": true,
         "sources": [
           "tafsir-hanbali-22-6"
@@ -111,7 +111,7 @@
       }
     ],
     "prohibited_overclaims": [
-      "Ne pas generaliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
+      "Ne pas généraliser 'les malikites/hanafites/shafiites/hanbalites disent' sans texte explicite.",
       "Ne pas affirmer une divergence de madhhab sans preuve primaire/secondaire verifiable."
     ]
   },
@@ -132,7 +132,7 @@
     },
     {
       "id": "claim-hadith-bukhari-1120",
-      "text": "Un hadith de reference est associe a ce nom (Sahih Bukhari 1120).",
+      "text": "Un hadith de référence est associe a ce nom (Sahih Bukhari 1120).",
       "source_ids": [
         "hadith-bukhari-1120"
       ]
@@ -172,7 +172,7 @@
       "url": "https://quran.com/22:6",
       "level": 1,
       "source_type": "quran",
-      "precise_locator": "Surah 22, Ayah 6",
+      "précise_locator": "Surah 22, Ayah 6",
       "claim_ids": [
         "claim-quran-22-6"
       ]
@@ -182,7 +182,7 @@
       "url": "https://quran.com/31:30",
       "level": 1,
       "source_type": "quran",
-      "precise_locator": "Surah 31, Ayah 30",
+      "précise_locator": "Surah 31, Ayah 30",
       "claim_ids": [
         "claim-quran-31-30"
       ]
@@ -192,7 +192,7 @@
       "url": "https://sunnah.com/bukhari:1120",
       "level": 1,
       "source_type": "hadith",
-      "precise_locator": "Sahih Bukhari #1120",
+      "précise_locator": "Sahih Bukhari #1120",
       "claim_ids": [
         "claim-hadith-bukhari-1120"
       ]
@@ -203,7 +203,7 @@
       "level": 2,
       "source_type": "tafsir",
       "scholar_name": "Abu al-Barakat Al-Nasafi",
-      "precise_locator": "TafsirNo 17 / Surah 22 Ayah 6",
+      "précise_locator": "TafsirNo 17 / Surah 22 Ayah 6",
       "claim_ids": [
         "claim-tafsir-hanafi-22-6"
       ],
@@ -215,7 +215,7 @@
       "level": 2,
       "source_type": "tafsir",
       "scholar_name": "Abu Abdillah Al-Qurtubi",
-      "precise_locator": "TafsirNo 5 / Surah 22 Ayah 6",
+      "précise_locator": "TafsirNo 5 / Surah 22 Ayah 6",
       "claim_ids": [
         "claim-tafsir-maliki-22-6"
       ],
@@ -227,7 +227,7 @@
       "level": 2,
       "source_type": "tafsir",
       "scholar_name": "Al-Baghawi",
-      "precise_locator": "TafsirNo 13 / Surah 22 Ayah 6",
+      "précise_locator": "TafsirNo 13 / Surah 22 Ayah 6",
       "claim_ids": [
         "claim-tafsir-shafii-22-6"
       ],
@@ -239,11 +239,30 @@
       "level": 2,
       "source_type": "tafsir",
       "scholar_name": "Ibn al-Jawzi",
-      "precise_locator": "TafsirNo 15 / Surah 22 Ayah 6",
+      "précise_locator": "TafsirNo 15 / Surah 22 Ayah 6",
       "claim_ids": [
         "claim-tafsir-hanbali-22-6"
       ],
       "explicit_madhhab_attribution": true
     }
-  ]
+  ],
+  "glossary": [
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
+  "content_fixed_at": "2026-03-04T16:31:34.350Z"
 }

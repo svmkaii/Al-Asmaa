@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "ar-rahman",
   "arabic": "الرَّحْمَنُ",
   "transliteration": "Ar-Rahman",
@@ -17,7 +17,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 1:1",
         "source_url": "https://quran.com/1:1",
-        "relevance_note": "\"Au nom d'Allah, le Tout miséricordieux (Ar-Rahman), le Tres miséricordieux.\""
+        "relevance_note": "\"Au nom d'Allah, le Tout miséricordieux (Ar-Rahman), le Très miséricordieux.\""
       },
       {
         "surah": 55,
@@ -25,7 +25,7 @@
         "name_in_verse": true,
         "reference_label": "Quran 55:1",
         "source_url": "https://quran.com/55:1",
-        "relevance_note": "\"Ar-Rahman. Il a enseigne le Coran.\" Sourate entière dédiée a ce Nom."
+        "relevance_note": "\"Ar-Rahman. Il a enseigné le Coran.\" Sourate entière dédiée à ce Nom."
       },
       {
         "surah": 59,
@@ -51,7 +51,7 @@
         "grading": "Sahih",
         "reference_label": "Sahih Muslim 2752",
         "source_url": "https://sunnah.com/muslim:2752",
-        "relevance_note": "\"Allah a créé la miséricorde en 100 parts, Il en a retenu 99 aupres de Lui.\""
+        "relevance_note": "\"Allah a créé la miséricorde en 100 parts, Il en a retenu 99 auprès de Lui.\""
       },
       {
         "collection": "Sahih Bukhari",
@@ -64,7 +64,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -78,8 +78,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/667",
-      "precise_locator": "Page dédiée au Nom Ar-Rahman dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-dela. Ce Nom est exclusif à Allah et ne peut être attribue a aucune créature."
+      "précise_locator": "Page dédiée au Nom Ar-Rahman dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-delà. Ce Nom est exclusif à Allah et ne peut être attribue à aucune créature."
     },
     {
       "category": "tafsir",
@@ -87,8 +87,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 55, Ayah 1 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Tout Miséricordieux."
     },
     {
       "category": "tafsir",
@@ -96,8 +96,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 55, Ayah 1 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Tout Miséricordieux."
     },
     {
       "category": "tafsir",
@@ -105,8 +105,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 55, Ayah 1 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Tout Miséricordieux."
     },
     {
       "category": "tafsir",
@@ -114,14 +114,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=55&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 55, Ayah 1 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 55:1 ou le Nom Ar-Rahman est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 55, Ayah 1 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Tout Miséricordieux."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la miséricorde s'étend à toute la création, croyants comme non-croyants.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-dela. Ce Nom est exclusif à Allah et ne peut être attribue a aucune créature.",
+    "scholarly_summary": "Al-Ghazali distingue Ar-Rahman de Ar-Rahim : Ar-Rahman désigne la miséricorde universelle englobant toute la création (croyants et non-croyants), tandis que Ar-Rahim est spécifique aux croyants dans l'au-delà. Ce Nom est exclusif à Allah et ne peut être attribue à aucune créature.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -267,7 +267,52 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "rahma", "definition": "Terme arabe signifiant 'miséricorde'. Racine du nom Ar-Rahman."},{"term": "Ar-Rahim", "definition": "L'un des 99 noms d'Allah, souvent cité avec Ar-Rahman."}],
+  "glossary": [
+    {
+      "term": "Ar-Rahim",
+      "definition": "L'un des 99 noms d'Allah, souvent cité avec Ar-Rahman."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "muslim",
+      "definition": "Musulman, celui qui se soumet à Allah."
+    },
+    {
+      "term": "rahim",
+      "definition": "Utérus en arabe, partageant la même racine que rahma (miséricorde)."
+    },
+    {
+      "term": "rahma",
+      "definition": "Terme arabe signifiant 'miséricorde'. Racine du nom Ar-Rahman."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -277,6 +322,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.634Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.634Z",
+  "content_fixed_at": "2026-03-04T16:31:33.897Z"
 }
-

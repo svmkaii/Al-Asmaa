@@ -1,4 +1,4 @@
-﻿{
+{
   "slug": "al-majid-65",
   "arabic": "الْمَاجِدُ",
   "transliteration": "Al-Majid",
@@ -32,7 +32,7 @@
       {
         "collection": "Tirmidhi",
         "number": "3507",
-        "grading": "Da'if (isnad), contenu largement accepte par les savants",
+        "grading": "Da'if (isnad), contenu largement accepté par les savants",
         "reference_label": "Tirmidhi 3507",
         "source_url": "https://sunnah.com/tirmidhi:3507",
         "relevance_note": "Hadith listant les 99 noms d'Allah."
@@ -46,8 +46,8 @@
       "madhab": "multi",
       "source_title": "Al-Mawsu'ah al-'Aqadiyyah - Dorar.net",
       "source_url": "https://dorar.net/aqeeda/827",
-      "precise_locator": "Page dédiée au Nom Al-Majid dans l'encyclopédie Aqeeda",
-      "summary_fr": "Al-Majid dans ce contexte est lu avec kasra (Majid) comme attribut du Trone ou de son Possesseur. Al-Qurtubi mentionné les deux lectures (Majid/Majid) et les deux sens qui en decoulent."
+      "précise_locator": "Page dédiée au Nom Al-Majid dans l'encyclopédie Aqeeda",
+      "summary_fr": "Al-Majid dans ce contexte est lu avec kasra (Majid) comme attribut du Trone où de son Possesseur. Al-Qurtubi mentionné les deux lectures (Majid/Majid) et les deux sens qui en decoulent."
     },
     {
       "category": "encyclopedia",
@@ -55,7 +55,7 @@
       "madhab": "multi",
       "source_title": "Min Asma' Allah al-Husna: Al-Majid",
       "source_url": "https://www.islamweb.net/ar/article/237595",
-      "precise_locator": "Article dédié au Nom Al-Majid",
+      "précise_locator": "Article dédié au Nom Al-Majid",
       "summary_fr": "Article savant détaillé sur le Nom Al-Majid avec analyse linguistique, preuves coraniques et implications pour la foi."
     },
     {
@@ -64,7 +64,7 @@
       "madhab": "hanbali",
       "source_title": "Explication du Nom Al-Majid",
       "source_url": "https://islamqa.info/ar/answers/328445",
-      "precise_locator": "Réponse savante sur le Nom Al-Majid",
+      "précise_locator": "Réponse savante sur le Nom Al-Majid",
       "summary_fr": "Explication du Nom Al-Majid selon la méthodologie des Ahl al-Sunnah (perspective hanbali)."
     },
     {
@@ -73,8 +73,8 @@
       "madhab": "hanafi",
       "source_title": "Madarik al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=17&tSoraNo=85&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 85, Ayah 15 - Madarik al-Tanzil",
-      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 85, Ayah 15 - Madarik al-Tanzil",
+      "summary_fr": "Explication hanafite du verset par l'imam Al-Nasafi dans Madarik al-Tanzil, avec analyse grammaticale et juridique du Nom Le Noble."
     },
     {
       "category": "tafsir",
@@ -82,8 +82,8 @@
       "madhab": "maliki",
       "source_title": "Al-Jami li-Ahkam al-Quran",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=1&tTafsirNo=5&tSoraNo=85&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 85, Ayah 15 - Al-Jami li-Ahkam al-Quran",
-      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 85, Ayah 15 - Al-Jami li-Ahkam al-Quran",
+      "summary_fr": "Commentaire malikite de l'imam Al-Qurtubi dans Al-Jami' li-Ahkam al-Quran, explorant les implications juridiques et théologiques du Nom Le Noble."
     },
     {
       "category": "tafsir",
@@ -91,8 +91,8 @@
       "madhab": "shafii",
       "source_title": "Maalim al-Tanzil",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=13&tSoraNo=85&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 85, Ayah 15 - Maalim al-Tanzil",
-      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 85, Ayah 15 - Maalim al-Tanzil",
+      "summary_fr": "Exégèse chafiite de l'imam Al-Baghawi dans Ma'alim al-Tanzil, présentant les avis des prédécesseurs sur le sens du Nom Le Noble."
     },
     {
       "category": "tafsir",
@@ -100,14 +100,14 @@
       "madhab": "hanbali",
       "source_title": "Zad al-Masir fi Ilm al-Tafsir",
       "source_url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=2&tTafsirNo=15&tSoraNo=85&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1",
-      "precise_locator": "Tafsir de Sourate 85, Ayah 15 - Zad al-Masir fi Ilm al-Tafsir",
-      "summary_fr": "Tafsir de 85:15 ou le Nom Al-Majid est mentionné ou son sens est explique."
+      "précise_locator": "Tafsir de Sourate 85, Ayah 15 - Zad al-Masir fi Ilm al-Tafsir",
+      "summary_fr": "Analyse hanbalite d'Ibn al-Jawzi dans Zad al-Masir, synthétisant les différentes interprétations du Nom Le Noble."
     }
   ],
   "interpretation_notes": {
     "consensus_core": "Celui dont la noblesse et la gloire sont immenses et absolues.",
     "évidence_type_note": "Ce Nom apparait directement dans le Coran comme attribut divin.",
-    "scholarly_summary": "Al-Majid dans ce contexte est lu avec kasra (Majid) comme attribut du Trone ou de son Possesseur. Al-Qurtubi mentionné les deux lectures (Majid/Majid) et les deux sens qui en decoulent.",
+    "scholarly_summary": "Al-Majid dans ce contexte est lu avec kasra (Majid) comme attribut du Trone où de son Possesseur. Al-Qurtubi mentionné les deux lectures (Majid/Majid) et les deux sens qui en decoulent.",
     "nuances": [
       {
         "label": "encyclopédie Aqeeda (multi-madhab)",
@@ -248,7 +248,48 @@
       "status": "passed"
     }
   ],
-  "glossary": [{"term": "majd", "definition": "Terme arabe signifiant 'gloire', 'noblesse'. Racine du nom Al-Majid."}],
+  "glossary": [
+    {
+      "term": "Ahl al-Sunnah",
+      "definition": "Les gens de la Sunnah, désignant les musulmans sunnites qui suivent la voie prophétique et le consensus des compagnons."
+    },
+    {
+      "term": "Da'if",
+      "definition": "Faible. Grade d'un hadith dont la chaîne de transmission présente une faiblesse."
+    },
+    {
+      "term": "fatwa",
+      "definition": "Avis juridique rendu par un savant musulman qualifié."
+    },
+    {
+      "term": "hadith",
+      "definition": "Parole, acte ou approbation attribués au Prophète Muhammad ﷺ."
+    },
+    {
+      "term": "isnad",
+      "definition": "Chaîne de transmission d'un hadith, listant les rapporteurs successifs."
+    },
+    {
+      "term": "madhab",
+      "definition": "École juridique islamique. Les quatre principales sont : hanafite, malikite, chafiite et hanbalite."
+    },
+    {
+      "term": "madhhab",
+      "definition": "Variante orthographique de madhab : école juridique islamique."
+    },
+    {
+      "term": "majd",
+      "definition": "Terme arabe signifiant 'gloire', 'noblesse'. Racine du nom Al-Majid."
+    },
+    {
+      "term": "Sahih",
+      "definition": "Authentique. Grade le plus élevé pour un hadith, signifiant qu'il répond à tous les critères d'authenticité."
+    },
+    {
+      "term": "tafsir",
+      "definition": "Exégèse coranique, science de l'interprétation du Coran."
+    }
+  ],
   "editorial_review": {
     "status": "needs_human_review",
     "notes": "Sources corrigées avec liens directs par Nom - validation humaine religieuse obligatoire"
@@ -258,7 +299,6 @@
   "publication_blockers": [
     "human_review_not_approved"
   ],
-  "sources_corrected_at": "2026-02-27T10:32:40.608Z"
+  "sources_corrected_at": "2026-02-27T10:32:40.608Z",
+  "content_fixed_at": "2026-03-04T16:31:33.397Z"
 }
-
-
