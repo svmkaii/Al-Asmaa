@@ -1925,6 +1925,7 @@ app.get('/sitemap.xml', (req, res) => {
   <url><loc>${SITE_URL}/encyclopedie</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>${SITE_URL}/guide</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>${SITE_URL}/entrainement</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>${SITE_URL}/mini-jeux</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>${SITE_URL}/mentions-legales</loc><lastmod>${today}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>${SITE_URL}/politique-de-confidentialite</loc><lastmod>${today}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>${SITE_URL}/conditions-utilisation</loc><lastmod>${today}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>`;
@@ -1948,6 +1949,7 @@ Allow: /nom/
 Allow: /encyclopedie
 Allow: /guide
 Allow: /entrainement
+Allow: /mini-jeux
 Allow: /mentions-legales
 Allow: /politique-de-confidentialite
 Allow: /conditions-utilisation
