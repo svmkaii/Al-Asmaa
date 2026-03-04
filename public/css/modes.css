@@ -2351,6 +2351,33 @@ body.kids-mode .match-arabic { font-size: 1.3rem; }
   .fc-arabic { font-size: 2.5rem; }
 }
 
+/* Mobile keyboard fix - prevent overflow */
+@media (max-width: 420px) {
+  .writing-keyboard {
+    padding: 12px 8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    width: calc(100% + 16px);
+    max-width: none;
+    border-radius: 16px;
+  }
+  .wk-row {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .wk-key {
+    min-width: 36px;
+    height: 40px;
+    padding: 0 6px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+  .writing-card {
+    padding: 1.5rem 1rem;
+    overflow-x: hidden;
+  }
+}
+
 @media (min-width: 768px) {
   .fc-card { height: 460px; }
   .fc-arabic { font-size: 4.2rem; }
